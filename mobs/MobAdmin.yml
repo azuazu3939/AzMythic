@@ -41,7 +41,6 @@ Azuriter_ShopKeepers:
     PreventVanillaDamage: true 
     MaxCombatDistance: 0
     UseThreatTable: true
-    MovementSpeed: 0.2
     Interactable: true
     AlwaysShowName: true
   Skills:

@@ -155,7 +155,7 @@ Generic_onGroundトリガースキル_MCLove32_Process:
   Conditions:
   - onGround{onfail=castinstead Generic_onGroundトリガースキル_MCLove32_NO}
   Skills:
-  - skill{s=<skill.var.name>;repeat=<skill.var.repeat>;repeati=<skill.var.repeat_i>} @self
+  - vskill{s=<skill.var.name>;repeat=<skill.var.repeat>;repeati=<skill.var.repeat_i>} @self
 
 Generic_onGroundトリガースキル_MCLove32_NO:
   Skills:

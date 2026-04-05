@@ -40,7 +40,6 @@ Azuriter_ShopKeepers:
     PreventOtherDrops: false
     PreventVanillaDamage: true 
     MaxCombatDistance: 0
-    NoGravity: true
     UseThreatTable: true
     Interactable: true
     AlwaysShowName: true

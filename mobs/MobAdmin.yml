@@ -33,7 +33,7 @@ Azuriter_ShopKeepers:
   Health: 99999
   Faction: Admin
   AIGoalSelectors:
-  - goToSpawnLocation{maxrange=2;minrange=0;speed=1.25}
+  - goToSpawnLocation{maxrange=5;minrange=0;speed=1.25}
   Options:
     PreventRandomEquipment: false
     PreventMobKillDrops: false

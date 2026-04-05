@@ -1,0 +1,260 @@
+Azuriter_StepAvoid:
+  Cooldown: 0.5
+  Skills:
+  - setVar{k=skill.cause;a="<skill.var.damage-cause>";t=STRING} @self
+  - return ?!varequals{k=skill.cause;v="ENTITY_ATTACK"} ?!varequals{k=skill.cause;v="CUSTOM"} ?!varequals{k=skill.cause;v="SKILL"}
+  - sound{s=entity.arrow.hit_player;v=0.5} @self
+  - skill{s=Azuriter_StepAvoid_StepSword} @self
+  - skill{s=Azuriter_StepAvoid_HighStepSword} @self
+  - skill{s=Azuriter_StepAvoid_風上の道} @self
+  - skill{s=Azuriter_StepAvoid_風上の歩み} @self
+  - skill{s=Azuriter_StepAvoid_StepRiseSword} @self
+  - skill{s=Azuriter_StepAvoid_StepDashSword} @self
+  - skill{s=Azuriter_StepAvoid_StepHealSword} @self
+  - skill{s=Azuriter_StepAvoid_風上の軌跡} @self
+  - delay 18
+  - skill{s=Azuriter_StepAvoid_Aura_Fix} @self
+
+Azuriter_StepAvoid_Fix:
+  Cooldown: 0.5
+  Conditions:
+  - hasAura{n=STEP_AVOID} false 
+  - hasTag{t=STEP_NOW} true
+  Skills:
+  - removetag{t=STEP_NOW} @self 
+
+Azuriter_StepAvoid_Aura_Fix:
+  Cooldown: 0.5
+  Conditions:
+  - hasAura{n=STEP_AVOID} true
+  - hasTag{t=STEP_NOW} false
+  Skills:
+  - removeaura{n=STEP_AVOID} @self
+
+Azuriter_StepAvoid_Fall_Fix:
+  Cooldown: 0.5
+  Conditions:
+  - onGround true
+  - hasAura{n=FALL_CANCEL} true
+  Skills:
+  - removeaura{n=FALL_CANCEL} @self
+
+Azuriter_StepAvoid_StepSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップソード}
+  Skills:
+  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=90;vo=1;so=-2;syo=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=270;vo=1;so=2;syo=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=90;vo=1.25;so=-2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=270;vo=1.25;so=2;syo=2.5;delay=2} @self
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+
+Azuriter_StepAvoid_HighStepSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ハイステップソード}
+  Skills:
+  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=90;vo=1;so=-2;syo=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=270;vo=1;so=2;syo=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=90;vo=1.25;so=-2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=270;vo=1.25;so=2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=90;vo=1.25;so=-2.5;syo=3;delay=4} @self
+  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=270;vo=1.25;so=2.5;syo=3;delay=4} @self
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+
+Azuriter_StepAvoid_StepSword_Process:
+  Skills:
+  - delay 15
+  - missile{
+    os=[
+      - sound{s=block.trial_spawner.ominous_activate;p=2;v=0.3;audience=caster;sc=PLAYERS} @self
+    ];
+    ot=[
+      - modifyProjectile{trait=INERTIA;action=MULTIPLY;value=0.5} @self 
+    ];
+    oh=[
+      - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 40";t=FLOAT} @self
+      - setVar{k=skill.damage;a="<skill.var.damage|0> / 2";t=FLOAT} @self ?!wearing{s=HAND;i=STONE_SWORD}
+      - damage{a="<skill.var.damage>";ii=true;pi=true}
+      - modifyMana{a=5;m=give} @self
+      - sound{s=entity.zombie.attack_iron_door;v=0.5;audience=caster;sc=PLAYERS}
+      - sound{s=entity.breeze.inhale;p=2;v=0.5;audience=caster;sc=PLAYERS}
+    ];
+    conditions=[
+      - isLiving true 
+  
+    ];
+    bulletType=DISPLAY;mat=netherite_sword;scale=1.25,1.25,1.25;yaw=3.14;pitch=1.57;roll=0.785;
+    v=32;i=1;hp=false;hnp=true;mr=32;se=true;d=200;
+    in=10;ho=<skill.ho>;vo=<skill.vo>;so=<skill.so>;syo=<skill.syo>} @trigger 
+
+Azuriter_StepAvoid_StepSword_Process2:
+  Skills:
+  - delay 15
+  - missile{
+    os=[
+      - sound{s=block.trial_spawner.ominous_activate;p=2;v=0.3;audience=caster;sc=PLAYERS} @self
+    ];
+    ot=[
+      - modifyProjectile{trait=INERTIA;action=MULTIPLY;value=0.5} @self 
+    ];
+    oh=[
+      - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 60";t=FLOAT} @self
+      - setVar{k=skill.damage;a="<skill.var.damage|0> / 2";t=FLOAT} @self ?!wearing{s=HAND;i=IRON_SWORD}
+      - damage{a="<skill.var.damage>";ii=true;pi=true}
+      - modifyMana{a=5;m=give} @self 
+      - sound{s=entity.zombie.attack_iron_door;v=0.5;audience=caster;sc=PLAYERS}
+      - sound{s=entity.breeze.inhale;p=2;v=0.5;audience=caster;sc=PLAYERS}
+    ];
+    conditions=[
+      - isLiving true 
+    ];
+    bulletType=DISPLAY;mat=netherite_sword;scale=1.25,1.25,1.25;yaw=3.14;pitch=1.57;roll=0.785;
+    v=32;i=1;hp=false;hnp=true;mr=32;se=true;d=200;
+    in=10;ho=<skill.ho>;vo=<skill.vo>;so=<skill.so>;syo=<skill.syo>} @trigger 
+
+Azuriter_StepAvoid_風上の刻み:
+  Skills:
+  - mi{v=4;vo=3;vr=1.5;hr=1.5;i=1;in=18;hp=false;hnp=true;mr=24;d=100;syo=4.5;sfo=0;
+    b=DISPLAY;mat=WOODEN_SWORD;scale=1.25,1.25,1.25;yaw=3.14;pitch=1.57;roll=0.785;
+    ot=[
+      - modifyprojectile{t=INERTIA;a=MULTIPLY;v=0.6} @self
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.2} @self
+    ];
+    os=[
+      - sound{s=block.trial_spawner.ominous_activate;p=2;v=0.25;sc=PLAYERS;audience=caster} @self
+    ];
+    oh=[
+      - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 32";t=FLOAT} @self
+      - setVar{k=skill.damage;a="<skill.var.damage|0> / 2";t=FLOAT} @self ?!wearing{s=HAND;i=WOODEN_SWORD}
+      - damage{a="<skill.var.damage>";pi=true;ii=true}
+      - sound{s=entity.zombie.attack_wooden_door;sc=PLAYERS;audience=caster}
+    ];
+    conditions=[
+      - isLiving true 
+    ]} @EIR{r=24;limit=5;sort=RANDOM}
+
+Azuriter_StepAvoid_風上の道:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_風上の道}
+  Skills:
+  - modifyMana{a=100;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD} 
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+  - delay 15
+  - skill{s=Azuriter_StepAvoid_風上の刻み} @self
+
+Azuriter_StepAvoid_風上の歩み:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_風上の歩み}
+  Skills:
+  - modifyMana{a=60;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD} 
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+  - delay 15
+  - skill{s=Azuriter_StepAvoid_風上の刻み} @self
+
+Azuriter_StepAvoid_風上の軌跡:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_風上の軌跡}
+  Skills:
+  - modifyMana{a=80;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+  - delay 15
+  - skill{s=Azuriter_StepAvoid_風上の刻み} @self
+
+Azuriter_StepAvoid_StepRiseSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップライズソード}
+  Skills:
+  - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 225";t=FLOAT} @self
+  - skill{s=Generic_onGroundトリガースキル_MCLove32;s_name=Azuriter_StepAvoid_StepRiseSword_Success} @self
+  - modifyMana{a=50;m=give} @self ?wearing{s=HAND;i=DIAMOND_SWORD} 
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+
+Azuriter_StepAvoid_StepRiseSword_Success:
+  Skills:
+  - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - e:pr{pts=12;p=explosion;a=1;audience=caster;r=5} @self
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - delay 2
+  - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - e:pr{pts=12;p=explosion;a=1;audience=caster;r=7} @self
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - delay 2
+  - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - e:pr{pts=12;p=explosion;a=1;audience=caster;r=9} @self
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+
+Azuriter_StepAvoid_StepDashSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップダッシュソード}
+  Skills:
+  - modifyMana{a=50;m=give} @self ?wearing{s=HAND;i=DIAMOND_SWORD} 
+  - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 250";t=FLOAT} @self
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;audience=caster;delay=2;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;audience=caster;delay=4;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;audience=caster;delay=6;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;audience=caster;delay=8;sc=PLAYERS}
+  - delay 15
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=8;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=8;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=2;v=1.25;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
+  - delay 2
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=8;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=8;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
+  - delay 2
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=8;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=8;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
+
+Azuriter_StepAvoid_StepHealSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップヒールソード}
+  Skills:
+  - modifyMana{a=100;m=give} @self ?wearing{s=HAND;i=STONE_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;audience=caster;delay=2;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;audience=caster;delay=4;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;audience=caster;delay=6;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;audience=caster;delay=8;sc=PLAYERS}
+  - shield{a=5;ms=20;delay=10} @self ?wearing{s=HAND;i=STONE_SWORD}
+  - heal{a=8;delay=0} @self ?wearing{s=HAND;i=STONE_SWORD} 
+  - heal{a=5;delay=0} @PIR{r=16} ?wearing{s=HAND;i=STONE_SWORD}
+  - feed{a=1;o=true} @self ?wearing{s=HAND;i=STONE_SWORD}

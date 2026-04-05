@@ -1,0 +1,114 @@
+Azuriter_パラライズワールド:
+  Id: diamond_shovel
+  Display: "&9パラライズワールド"
+  Lore:
+  - "&fField1の始まりの丘などで、入手可能なアイテム。"
+  - "&f周囲の敵を鈍化、弱体化させる。"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Weapon'
+  Skills:
+  - skill{s=Azuriter_Azuriter_パラライズワールド_Skills} @self ~onUse 
+
+Azuriter_トマホーク:
+  Id: golden_axe
+  Display: "&fトマホーク"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Lore:
+    Template: ItemInfoLore_Bow_1
+  Hide:
+  - ENCHANTS
+  Attributes:
+    MainHand:
+      Damage: 40
+  Group: 'Weapon'
+  Skills: 
+  - skill{s=Azuriter_トマホーク_Skills} @self ~onUse
+  - skill{s=Azuriter_トマホーク_Skills} @self ~onInteract ?!crouching 
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 0.6
+    MaxAmount: 3
+
+Azuriter_ハルバード:
+  Id: iron_axe
+  Display: "&fハルバード"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 2
+  Lore:
+    Template: ItemInfoLore_Bow_1
+  Attributes:
+    MainHand:
+      Damage: 40
+  Group: 'Weapon'
+  Skills: 
+  - skill{s=Azuriter_ハルバード_Skills} @self ~onSwing 
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 0.6
+    MaxAmount: 3
+
+Azuriter_マナブレード_アルファ:
+  Id: diamond_sword
+  Display: "&9マナブレードα"
+  Lore: 
+  - "&fマナを消費し連撃を繰り出す。"
+  - "&fShiftスキル使用後対象の"
+  - "&fShiftなしスキルの火力が上昇する。"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Weapon'
+  Attributes:
+    MainHand:
+      Damage: 48 ADD 
+      Health: -0.25 MULTIPLY_BASE
+  Skills:
+  - skill{s=Azuriter_マナブレード_アルファ_R1S_Skills} @self ~onUse
+  - skill{s=Azuriter_マナブレード_アルファ_R1S_Skills} @self ~onInteract ?!crouching 
+  - skill{s=Azuriter_マナブレード_アルファ_L1S_Skills} @self ~onSwing
+  - skill{s=Azuriter_マナブレード_アルファ_R1NoS_Skills} @self ~onUse
+  - skill{s=Azuriter_マナブレード_アルファ_R1NoS_Skills} @self ~onInteract ?!crouching  
+  - skill{s=Azuriter_マナブレード_アルファ_L1NoS_Skills} @self ~onSwing
+
+Azuriter_エンディアム:
+  Id: mace
+  Display: "&9エンディアム"
+  Lore:
+    Template: ItemInfoLore_Bow_1
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    MainHand:
+      Damage: 32 ADD 
+      Gravity: -0.2 MULTIPLY_BASE
+      AttackSpeed: 1 MULTIPLY_BASE
+  Group: 'Weapon'
+  Skills:
+  - skill{s=Azuriter_エンディアム_R1_Skills} @self ~onUse
+  - skill{s=Azuriter_エンディアム_L1_Skills} @self ~onSwing
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to5
+    Chance: 0.6
+    MaxAmount: 5

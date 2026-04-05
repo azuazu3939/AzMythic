@@ -1,0 +1,53 @@
+FRONTIER_FISHING_TREASURE_MIMIC:
+  Type: SLIME
+  Display: "&6Treasure Mimic"
+  Health: 32
+  Damage: 6
+  Drops:
+  - gold_nugget 4to8
+  - prismarine_crystals 2to4
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - randomlookaround
+  Options:
+    PreventRandomEquipment: true
+    UseThreatTable: true
+    Despawn: true
+
+FRONTIER_FISHING_MIRE_EEL:
+  Type: GUARDIAN
+  Display: "&bMire Eel"
+  Health: 36
+  Damage: 7
+  Drops:
+  - prismarine_shard 2to4
+  - cod 1to2
+  AIGoalSelectors:
+  - clear
+  - rangedattack
+  - randomstroll
+  - randomlookaround
+  Options:
+    PreventRandomEquipment: true
+    UseThreatTable: true
+    Despawn: true
+
+FRONTIER_FISHING_SPRING_WISP:
+  Type: VEX
+  Display: "&dSpring Wisp"
+  Health: 24
+  Damage: 5
+  Drops:
+  - glow_ink_sac 1to2
+  - amethyst_shard 1to2
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  - randomlookaround
+  Options:
+    PreventRandomEquipment: true
+    UseThreatTable: true
+    Despawn: true

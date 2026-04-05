@@ -1,0 +1,64 @@
+Azuriter_Escape_Chest_1:
+  Template: Azuriter_Enemy_LootBase
+  Type: RABBIT
+  Display: "&f小さなルートチェスト"
+  Health: 100
+  Drops:
+  - money 100to400 
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - players
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: BLOCK_DISPLAY
+      Material: CHEST
+    Transform:
+      Translation: 0,0,0
+      Scale: 1,1,1
+      LeftRotation: 0,0,0,1
+      RightRotation: 0,0,0,1
+      Billboard: FIXED
+      Brightness: 15,15
+      ShadowRadius: 0.0
+      ShadowStrength: 1.0
+      ViewRange: 1.0
+  AIGoalSelectors:
+  - randomLookAround
+  - randomStroll
+  - clear
+  - fleeplayers{d=32}
+  - fleeFaction{f=monster;d=20}
+  - goToSpawn{speed=2.5;max=64;min=12}
+  - avoidSun
+  Options:
+    MaxCombatDistance: 32
+    FollowRange: 64
+    MovementSpeed: 0.45
+    Silent: true
+    Despawn: false
+  Skills:
+  - stun{t=1;cd=2} @self ~onDamaged 
+  - sound{s=entity.zombie.attack_wooden_door;p=2;sc=PLAYERS;cd=0.2} @self ~onDamaged 
+  - sound{s=entity.zombie.attack_wooden_door;p=1;sc=PLAYERS;cd=0.2} @self ~onDeath 
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.05"} @ThreatTablePlayers ~onDeath
+
+Azuriter_ショップアイコン_1:
+  Type: item_display
+  DisplayOptions:
+    Item: emerald
+    Transform: GROUND
+    Billboard: VERTICAL
+    BlockLight: 15
+    Scale: 2,2,2
+    SkyLight: 15
+    ViewRange: 1.25
+  Options:
+    Despawn: CHUNK
+  Skills:
+  - teleport @selfLocation{y=6} ~onSpawn 
+  - e:p{p=end_rod;a=1;ys=0.3;hs=0.2;audience=@PIR{r=32}} @self ~onTimer:20
+  - e:p{p=falling_nectar;a=1;audience=@PIR{r=32}} @self ~onTimer:10

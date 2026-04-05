@@ -1,0 +1,174 @@
+Azuriter_CombatGift_G1:
+  Id: chest
+  Display: "&e戦闘ギフト&f - &bG1"
+  Lore:
+  - "&f使用することで、戦闘に関連する"
+  - "&fアイテムを入手できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Gift'
+  Skills:
+  - skill{s=Azuriter_CombatGift_G1_Skill} @self ~onUse ?!crouching  
+  - skill{s=Azuriter_CombatGift_G1_Skill} @self ~onSwing 
+  - skill{s=Azuriter_CombatGift_G1_Skill_Repeat} @self ~onUse ?crouching 
+
+Azuriter_CombatGift_G1_Ticket:
+  Id: paper
+  Display: "&f戦闘ギフトG1引き換え"
+  Lore:
+  - "&f集めることでギフトトレードNPCから天井交換できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_ArmorGift_G1:
+  Id: barrel
+  Display: "&dアーマーギフト&f - &bG1"
+  Lore:
+  - "&f使用することで、防具に関連する"
+  - "&fアイテムを入手できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Gift'
+  Skills:
+  - skill{s=Azuriter_ArmorGift_G1_Skill} @self ~onUse ?!crouching 
+  - skill{s=Azuriter_ArmorGift_G1_Skill} @self ~onSwing 
+  - skill{s=Azuriter_ArmorGift_G1_Skill_Repeat} @self ~onUse ?crouching 
+
+Azuriter_ArmorGift_G1_Ticket:
+  Id: paper
+  Display: "&fアーマーギフトG1引き換え"
+  Lore:
+  - "&f集めることでギフトトレードNPCから天井交換できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_ArmorGift_G2:
+  Id: barrel
+  Display: "&dアーマーギフト&f - &bG2"
+  Lore:
+  - "&f使用することで、防具に関連する"
+  - "&fアイテムを入手できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Gift'
+  Skills:
+  - skill{s=Azuriter_ArmorGift_G2_Skill} @self ~onUse ?!crouching 
+  - skill{s=Azuriter_ArmorGift_G2_Skill} @self ~onSwing 
+  - skill{s=Azuriter_ArmorGift_G2_Skill_Repeat} @self ~onUse ?crouching 
+
+Azuriter_ArmorGift_G2_Ticket:
+  Id: paper
+  Display: "&fアーマーギフトG2引き換え"
+  Lore:
+  - "&f集めることでギフトトレードNPCから天井交換できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_MoneyGift_G1:
+  Id: chest
+  Display: "&e100Mineギフト&f - &bG1"
+  Lore:
+  - "&f使用することで、ランダムにお金を獲得できる。"
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Gift'
+  Skills:
+  - skill{s=Azuriter_MoneyGift_G1_Skill} @self ~onUse ?!crouching 
+  - skill{s=Azuriter_MoneyGift_G1_Skill} @self ~onSwing 
+  - skill{s=Azuriter_MoneyGift_G1_Skill_Repeat} @self ~onUse ?crouching 
+
+Azuriter_QuestBoss_ForestGuardianInvitation:
+  Id: paper
+  Display: "&a森護りの挑戦状"
+  Lore:
+  - "&f別ワールドの討伐戦で使う招待状。"
+  - "&7森の系統のBoss戦につながる。"
+  Options:
+    Unbreakable: true
+    Glint: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_QuestBoss_PrairieWardenInvitation:
+  Id: paper
+  Display: "&e草原番の挑戦状"
+  Lore:
+  - "&f別ワールドの討伐戦で使う招待状。"
+  - "&7平原や荒地のBoss戦につながる。"
+  Options:
+    Unbreakable: true
+    Glint: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_QuestBoss_MountainColossusInvitation:
+  Id: paper
+  Display: "&b高嶺巨兵の挑戦状"
+  Lore:
+  - "&f別ワールドの討伐戦で使う招待状。"
+  - "&7高地のBoss戦につながる。"
+  Options:
+    Unbreakable: true
+    Glint: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_QuestBoss_DeepWatcherInvitation:
+  Id: paper
+  Display: "&9洞穴監視者の挑戦状"
+  Lore:
+  - "&f別ワールドの討伐戦で使う招待状。"
+  - "&7浅層洞穴のBoss戦につながる。"
+  Options:
+    Unbreakable: true
+    Glint: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_QuestBoss_AbyssSentinelInvitation:
+  Id: paper
+  Display: "&5深淵番人の挑戦状"
+  Lore:
+  - "&f別ワールドの討伐戦で使う招待状。"
+  - "&7深層のBoss戦につながる。"
+  Options:
+    Unbreakable: true
+    Glint: true
+  ItemUpdater:
+    Version: 1
+  Group: 'Util'
+
+Azuriter_Pickaxe:
+  Id: stone_pickaxe
+  Display: "&f配布ツルハシ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_Axe:
+  Id: stone_axe
+  Display: "&f配布斧"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'

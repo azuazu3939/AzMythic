@@ -1,0 +1,174 @@
+Azuriter_Brute_Wanderer_Skills:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  Skills:
+  - skill{s=Azuriter_Brute_Wanderer_Skill_1;repeat=3;repeati=80} @self 
+  - delay <random.60to80>
+  - randomskill{s=Azuriter_Brute_Wanderer_Skill_2,Azuriter_Brute_Wanderer_Skill_3;fbs=Azuriter_Brute_Wanderer_Skill_3} @self
+  - delay <random.60to80>
+  - randomskill{s=Azuriter_Brute_Wanderer_Skill_2,Azuriter_Brute_Wanderer_Skill_3;fbs=Azuriter_Brute_Wanderer_Skill_3} @self
+  - delay <random.120to150>
+  - skill{s=Azuriter_Brute_Wanderer_Skills} @self
+
+Azuriter_Brute_Wanderer_Skill_1:
+  Skills:
+  - vskill{s=Azuriter_Brute_Wanderer_Skill_1_<skill.var.itr>;f=true} @self
+
+Azuriter_Brute_Wanderer_Skill_1_1:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=DOWN} false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_1_2:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=DOWN} false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_1_3:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=DOWN} false
+  - (varrange{k=skill.times;r=3} true && healthpercent{p=<0.7} false) false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_1_4:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=DOWN} false
+  - (varrange{k=skill.times;r=4} true && healthpercent{p=<0.4} false) false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_2:
+  Cooldown: 10
+  Skills:
+  - sound{s=entity.hoglin.death;p=2;v=2;sc=PLAYERS} @self
+  - e:p{p=angry_villager;a=32;ys=2;hs=3;audience=@PIR{r=32};vd=32;s=1.25} @self
+  - delay 15
+  - projectile{v=24;g=2.5;i=1;r=2.5;vr=3.25;vo=0.75;sfo=0;syo=1.5;mr=32;d=120;
+    ot=[
+      - endprojectile ?distanceFromTL{d=>32}
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - teleport @origin 
+      - delay 4
+      - e:p{p=explosion;a=1;cd=0.25} @origin 
+    ];
+    oh=[
+      - damage{a="<caster.damage> * 1";pi=true;ii=true}
+      - projectilevelocity{m=MULTIPLY;r=true;x=-180;z=-180} @self
+      - endprojectile{delay=8} @self
+    ];
+    oe=[
+      - e:p{p=explosion_huge;a=1} @origin 
+      - sound{s=entity.generic.explode;v=2;p=0;sc=PLAYERS} @origin 
+      - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
+      - addmask{r=10;h=25;material=RED_TERRACOTTA;d=20} @origin
+      - delay 20
+      - damage{a="<caster.damage> * 1";pi=true;ii=true} @ARadius{r=10;h=25;loc=<skill.var.loc>}
+      - sound{s=entity.generic.explode;v=0.75;sc=PLAYERS} @origin
+    ]} @TL
+
+Azuriter_Brute_Wanderer_Skill_3:
+  Cooldown: 5
+  Skills:
+  - skill{s=Azuriter_Brute_Wanderer_Skill_3_Run;repeat=2;repeati=10} @self
+
+Azuriter_Brute_Wanderer_Skill_3_Run:
+  Skills:
+  - projectile{v=24;g="<random.1to2>";i=1;r=2;vr=2;vo=1.5;mr=48;d=120;
+    b=DISPLAY;mat=GOLDEN_AXE;scale=1.5,1.5,1.5;yaw=3.14;pitch=1.57;roll=0.785;rs=1;
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.025} @self
+      - e:p{p=explosion;a=1;cd=0.5} @origin 
+    ];
+    oh=[
+      - damage{a="<caster.damage> * 1";pi=true;ii=true}
+      - sound{s=entity.zombie.attack_iron_door;p=2;sc=PLAYERS}
+      - projectilevelocity{m=MULTIPLY;r=true;x=-180;z=-180} @self
+      - endprojectile{delay=8} @self
+    ];
+    oe=[
+      - sound{s=block.anvil.land;v=2;sc=PLAYERS} @origin 
+      - addmask{r=16;h=25;material=RED_TERRACOTTA;d=20} @origin 
+      - delay 20
+      - damage{a="<caster.damage> * 0.8";pi=true;ii=true} @PNO{r=16}
+      - sound{s=entity.generic.explode;p=0;v=1.5;sc=PLAYERS} @origin 
+    ]} @TL

@@ -1,0 +1,363 @@
+Azuriter_ガーディアH:
+  Id: netherite_helmet
+  Display: "&aガーディア・ヘルメット &f&lL1"
+  EquipSlot: HEAD
+  EquipmentSet: Guardia
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Hide:
+  - ENCHANTS
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Head:
+      ArmorToughness: 32
+      Armor: 40
+      Health: 10
+      KnockbackResistance: 0.25
+      Damage: 2 ADD
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
+  - skill{s=Azuriter_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+
+Azuriter_ガーディアC:
+  Id: netherite_chestplate
+  Display: "&aガーディア・チェストプレート &f&lL1"
+  EquipSlot: CHEST
+  EquipmentSet: Guardia
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Chest:
+      ArmorToughness: 32
+      Armor: 40
+      Health: 12.5
+      KnockbackResistance: 0.25
+      Damage: 2 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ガーディアL:
+  Id: netherite_leggings
+  Display: "&aガーディア・レギンス &f&lL1"
+  EquipSlot: LEGS
+  EquipmentSet: Guardia
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Legs:
+      ArmorToughness: 32
+      Armor: 40
+      Health: 12.5
+      KnockbackResistance: 0.25
+      Damage: 2 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ガーディアB:
+  Id: netherite_boots
+  Display: "&aガーディア・ブーツ &f&lL1"
+  EquipSlot: FEET
+  EquipmentSet: Guardia
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Feet:
+      ArmorToughness: 32
+      Armor: 40
+      Health: 12.5
+      KnockbackResistance: 0.25
+      Damage: 2 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ヘルシティアH:
+  Id: leather_helmet
+  Display: "&aヘルシティア・ヘルメット &f&lL1"
+  EquipSlot: HEAD
+  EquipmentSet: Healthal
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,255,145
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Head:
+      ArmorToughness: 24
+      Armor: 28
+      Health: 10
+      Damage: 1.75 ADD
+      MovementSpeed: 0.125
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
+  - skill{s=Azuriter_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+
+Azuriter_ヘルシティアC:
+  Id: leather_chestplate
+  Display: "&aヘルシティア・チェストプレート &f&lL1"
+  EquipSlot: CHEST
+  EquipmentSet: Healthal
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,255,145
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Chest:
+      ArmorToughness: 24
+      Armor: 28
+      Health: 15
+      Damage: 1.75 ADD
+      MovementSpeed: 0.125 
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ヘルシティアL:
+  Id: leather_leggings
+  Display: "&aヘルシティア・レギンス &f&lL1"
+  EquipSlot: LEGS
+  EquipmentSet: Healthal
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,255,145
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Legs:
+      ArmorToughness: 24
+      Armor: 28
+      Health: 15
+      Damage: 1.75 ADD
+      MovementSpeed: 0.125
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ヘルシティアB:
+  Id: leather_boots
+  Display: "&aヘルシティア・ブーツ &f&lL1"
+  EquipSlot: FEET
+  EquipmentSet: Healthal
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,255,145
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Feet:
+      ArmorToughness: 24
+      Armor: 28
+      Health: 15
+      Damage: 1.75 ADD
+      MovementSpeed: 0.125
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ウィクサーH:
+  Id: leather_helmet
+  Display: "&aウィクサー・ヘルメット &f&lL1"
+  EquipSlot: HEAD
+  EquipmentSet: Weakser
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,172,255
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    Head:
+      ArmorToughness: 24
+      Armor: 27
+      Health: 10
+      Damage: 1 ADD
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
+  - skill{s=Azuriter_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+
+Azuriter_ウィクサーC:
+  Id: leather_chestplate
+  Display: "&aウィクサー・チェストプレート &f&lL1"
+  EquipSlot: CHEST
+  EquipmentSet: Weakser
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,172,255
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    Chest:
+      ArmorToughness: 24
+      Armor: 27
+      Health: 12.5
+      Damage: 1 ADD
+  Group: 'Armor'
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
+  Skills:
+
+Azuriter_ウィクサーL:
+  Id: leather_leggings
+  Display: "&aウィクサー・レギンス &f&lL1"
+  EquipSlot: LEGS
+  EquipmentSet: Weakser
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,172,255
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    Legs:
+      ArmorToughness: 24
+      Armor: 27
+      Health: 12.5
+      Damage: 1 ADD
+  Group: 'Armor'
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
+  Skills:
+
+Azuriter_ウィクサーB:
+  Id: leather_boots
+  Display: "&aウィクサー・ブーツ &f&lL1"
+  EquipSlot: FEET
+  EquipmentSet: Weakser
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to3
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Color: 55,172,255
+    Unbreakable: true
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    Feet:
+      ArmorToughness: 24
+      Armor: 27
+      Health: 12.5
+      Damage: 1 ADD
+  Group: 'Armor'
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
+  Skills:

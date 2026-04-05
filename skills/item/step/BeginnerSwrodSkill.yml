@@ -1,0 +1,114 @@
+Azuriter_風上の道_R1_Skills:
+  Cooldown: 5
+  Conditions:
+  - wearing{m=Azuriter_風上の道;s=HAND} true
+  - hasMana{m=>30;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self 
+    ]}
+  - matCooldown{m=WOODEN_SWORD} false 
+  - hasTag{t=STEP_NOW} castinstead Azuriter_StepAvoid_Fix
+  - hasAura{n=FALL_CANCEL} castinstead Azuriter_StepAvoid_Fall_Fix
+  Skills:
+  - modifyMana{a=30;m=consume} @self 
+  - setMaterialCooldown{m=WOODEN_SWORD;d=100} @self
+  - setVar{k=skill.count;a="0";t=INTEGER} @self
+  - addtag{t=STEP_NOW} @self
+  - ondamaged{t=18;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.05,CUSTOM 0.05";rd=true;
+    oh=[ 
+      - skill{s=Azuriter_StepAvoid} @self
+    ]} @self
+  
+  - removetag{t=STEP_NOW;delay=18} @self
+  - projectile{
+    ot=[
+      - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
+      - lunge{v=1.2;vy="(-0.125 * <skill.var.count>) + 0.5"} @self
+      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0"} @self
+    ];
+    os=[
+      - lunge{v=5;vy=0.25} @self
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self 
+      - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster} @self 
+    ];
+    oe=[
+      - removeaura{n=FALL_CANCEL;delay=2} @self
+    ];
+    i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=80} @forward{lockpitch=true} ?!crouching 
+  #projectileで行ったが廃止
+
+Azuriter_風上の歩み_R1_Skills:
+  Cooldown: 3
+  Conditions:
+  - wearing{m=Azuriter_風上の歩み;s=HAND} true
+  - hasMana{m=>40;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self 
+    ]}
+  - matCooldown{m=WOODEN_SWORD} false 
+  - hasTag{t=STEP_NOW} castinstead Azuriter_StepAvoid_Fix
+  - hasAura{n=FALL_CANCEL} castinstead Azuriter_StepAvoid_Fall_Fix
+  Skills:
+  - modifyMana{a=40;m=consume} @self 
+  - setMaterialCooldown{m=WOODEN_SWORD;d=60} @self
+  - setVar{k=skill.count;a="0";t=INTEGER} @self
+  - addtag{t=STEP_NOW} @self
+  - ondamaged{t=12;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.1,CUSTOM 0.1";rd=true;
+    oh=[ 
+      - skill{s=Azuriter_StepAvoid} @self
+    ]} @self
+
+  - removetag{t=STEP_NOW;delay=12} @self
+  - projectile{
+    ot=[
+      - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
+      - lunge{v=1.2;vy="(-0.125 * <skill.var.count>) + 0.5"} @self
+      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0"} @self
+    ];
+    os=[
+      - lunge{v=3.5;vy=0.25} @self
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self 
+      - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster} @self 
+    ];
+    oe=[
+      - removeaura{n=FALL_CANCEL;delay=2} @self
+    ];
+    i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=20} @forward{lockpitch=true} ?!crouching 
+
+Azuriter_風上の軌跡_R1_Skills:
+  Cooldown: 3
+  Conditions:
+  - wearing{m=Azuriter_風上の軌跡;s=HAND} true
+  - hasMana{m=>50;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self 
+    ]}
+  - matCooldown{m=WOODEN_SWORD} false 
+  - hasTag{t=STEP_NOW} castinstead Azuriter_StepAvoid_Fix
+  - hasAura{n=FALL_CANCEL} castinstead Azuriter_StepAvoid_Fall_Fix
+  Skills:
+  - modifyMana{a=50;m=consume} @self 
+  - setMaterialCooldown{m=WOODEN_SWORD;d=60} @self
+  - setVar{k=skill.count;a="0";t=INTEGER} @self
+  - addtag{t=STEP_NOW} @self
+  - ondamaged{t=15;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.05,CUSTOM 0.05";rd=true;
+    oh=[ 
+      - skill{s=Azuriter_StepAvoid} @self
+    ]} @self
+
+  - removetag{t=STEP_NOW;delay=15} @self
+  - projectile{
+    ot=[
+      - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
+      - lunge{v=1.2;vy="(-0.125 * <skill.var.count>) + 0.5"} @self
+      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0"} @self
+    ];
+    os=[
+      - lunge{v=3.5;vy=0.25} @self
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self 
+      - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster} @self 
+    ];
+    oe=[
+      - removeaura{n=FALL_CANCEL;delay=2} @self
+    ];
+    i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=40} @forward{lockpitch=true} ?!crouching 

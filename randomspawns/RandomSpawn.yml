@@ -1,0 +1,450 @@
+Azuriter_Neutral_Zombie_Spawn:
+  Type: Azuriter_Neutral_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.2
+  Cooldown: 0.5
+  Priority: 100
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+
+Azuriter_Big_Zombie_Spawn:
+  Type: Azuriter_Big_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.1
+  Cooldown: 60
+  Priority: 25
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+
+Azuriter_High_Zombie_Spawn:
+  Type: Azuriter_High_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.15
+  Cooldown: 0.5
+  Priority: 100
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+
+Azuriter_Elite_Zombie_Spawn:
+  Type: Azuriter_Elite_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.025
+  Cooldown: 120
+  Priority: 15
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+
+Azuriter_Warrior_Zombie_Spawn:
+  Type: Azuriter_Warrior_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Cooldown: 3
+  Chance: 0.05
+  Priority: 50
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+
+Azuriter_letthelater_Spawn:
+  Type: Azuriter_letthelater
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 1
+  PositionType: LAND
+  Chance: 0.15
+  Priority: 200
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_letthelater} true
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Boss_Feldos;amount=>0;radius=64} false
+
+Azuriter_Altwolf_Spawn:
+  Type: Azuriter_Altwolf
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 1
+  PositionType: LAND
+  Chance: 0.15
+  Priority: 200
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Altwolf} true
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Boss_Wedler;amount=>0;radius=64} false
+
+Azuriter_BigCamela_Spawn:
+  Type: Azuriter_BigCamela
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 1
+  PositionType: LAND
+  Chance: 0.15
+  Priority: 200
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_BigCamela}
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Boss_Basamos;amount=>0;radius=64} false
+
+Azuriter_Armor_Zombie_Spawn:
+  Type: Azuriter_Armor_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.2
+  Cooldown: 0.5
+  Priority: 100
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Armor_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Armor_Zombie;amount=<10;radius=32} true
+
+Azuriter_ArmorFull_Zombie_Spawn:
+  Type: Azuriter_ArmorFull_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.1
+  Cooldown: 10
+  Priority: 25
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Armor_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_ArmorFull_Zombie;amount=<3;radius=32} true
+
+Azuriter_Elder_Zombie_Spawn:
+  Type: Azuriter_Elder_Zombie
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.005
+  Cooldown: 120
+  Priority: 10
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Armor_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Elder_Zombie;amount=<1;radius=48} true
+
+Azuriter_Escape_Chest_1_Spawn:
+  Type: Azuriter_Escape_Chest_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.05
+  Cooldown: 180
+  Priority: 1
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Elaeste} true
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsinradius{a=<1;r=32;t=Azuriter_Escape_Chest_1} false 
+  - playerInRadius{a=<1;d=>20} true
+
+Azuriter_Escape_Chest_1_Spawn:
+  Type: Azuriter_Escape_Chest_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.05
+  Cooldown: 300
+  Priority: 1
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Escape_Chest_1} true
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsinradius{a=<1;r=32;t=Azuriter_Escape_Chest_1} false 
+  - playerInRadius{a=<1;d=>20} true
+
+
+Azuriter_トライアル_1_1_Spawn:
+  Type: Azuriter_トライアル_1_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.01
+  Cooldown: 300
+  Priority: 5
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_2_1_Spawn:
+  Type: Azuriter_トライアル_2_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.01
+  Cooldown: 300
+  Priority: 5
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_1_1_Spawn_2:
+  Type: Azuriter_トライアル_1_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.005
+  Cooldown: 300
+  Priority: 3
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_2_1_Spawn_2:
+  Type: Azuriter_トライアル_2_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.005
+  Cooldown: 300
+  Priority: 3
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_3_1_Spawn:
+  Type: Azuriter_トライアル_3_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.01
+  Cooldown: 300
+  Priority: 5
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_4_1_Spawn:
+  Type: Azuriter_トライアル_4_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.01
+  Cooldown: 300
+  Priority: 5
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Armor_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - outside true 
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_3_1_Spawn_2:
+  Type: Azuriter_トライアル_3_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.005
+  Cooldown: 300
+  Priority: 3
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_4_1_Spawn_2:
+  Type: Azuriter_トライアル_4_1
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.005
+  Cooldown: 300
+  Priority: 3
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Armor_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - outside true 
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true

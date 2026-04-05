@@ -1,0 +1,791 @@
+Azuriter_Surface_Raw_Wood:
+  Id: oak_log
+  Display: "地上木材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Bark:
+  Id: spruce_log
+  Display: "地上樹皮"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Hardwood:
+  Id: dark_oak_log
+  Display: "地上硬木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Softwood:
+  Id: birch_log
+  Display: "地上軟木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_TropicalWood:
+  Id: jungle_log
+  Display: "地上熱帯木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MeadowWood:
+  Id: oak_log
+  Display: "草原木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_PrairieWood:
+  Id: birch_log
+  Display: "草原淡木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_UplandWood:
+  Id: dark_oak_log
+  Display: "林冠木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_HighlandWood:
+  Id: spruce_log
+  Display: "高地木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_BasinWood:
+  Id: mangrove_log
+  Display: "湿地木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_FairyWood:
+  Id: cherry_log
+  Display: "妖精木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_CandyWood:
+  Id: cherry_log
+  Display: "菓子木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Fiber:
+  Id: wheat
+  Display: "地上繊維"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MeadowCrop:
+  Id: wheat
+  Display: "草原作物"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_PrairieCrop:
+  Id: carrot
+  Display: "草原畑作"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_UplandCrop:
+  Id: potato
+  Display: "林地作物"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_HighlandCrop:
+  Id: beetroot
+  Display: "高地作物"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_BasinCrop:
+  Id: sugar_cane
+  Display: "湿地作物"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_FairyCrop:
+  Id: torchflower_seeds
+  Display: "妖精作物"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_CandyCrop:
+  Id: melon_seeds
+  Display: "菓子作物"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Leaf:
+  Id: oak_leaves
+  Display: "地上葉材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Twig:
+  Id: stick
+  Display: "地上小枝"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Sprout:
+  Id: oak_sapling
+  Display: "地上芽材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Fruit:
+  Id: sweet_berries
+  Display: "地上果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MeadowFruit:
+  Id: sweet_berries
+  Display: "草原果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_PrairieFruit:
+  Id: glow_berries
+  Display: "草原光果"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_UplandFruit:
+  Id: sweet_berries
+  Display: "林地果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_HighlandFruit:
+  Id: glow_berries
+  Display: "高地果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_BasinFruit:
+  Id: cocoa_beans
+  Display: "湿地果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_FairyFruit:
+  Id: glow_berries
+  Display: "妖精果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_CandyFruit:
+  Id: sweet_berries
+  Display: "菓子果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Berry:
+  Id: glow_berries
+  Display: "地上果実"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Cocoa:
+  Id: cocoa_beans
+  Display: "地上カカオ"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Flower:
+  Id: dandelion
+  Display: "地上花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MeadowFlower:
+  Id: dandelion
+  Display: "草原花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_PrairieFlower:
+  Id: sunflower
+  Display: "草原大花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_UplandFlower:
+  Id: blue_orchid
+  Display: "林地花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_HighlandFlower:
+  Id: cornflower
+  Display: "高地花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_BasinFlower:
+  Id: pink_tulip
+  Display: "湿地花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_FairyFlower:
+  Id: allium
+  Display: "妖精花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_CandyFlower:
+  Id: pink_tulip
+  Display: "菓子花材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_Flower_Bouquet:
+  Id: sunflower
+  Display: "地上花束"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_WindscarSteppeScrub:
+  Id: dead_bush
+  Display: "風削りの低木"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_WindscarSteppeFlower:
+  Id: cornflower
+  Display: "風削りの花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_WindscarSteppeBloom:
+  Id: sunflower
+  Display: "風削りの花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_SaltwashPlainScrub:
+  Id: fern
+  Display: "塩原の葦"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_SaltwashPlainFlower:
+  Id: white_tulip
+  Display: "塩原の花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_SaltwashPlainBloom:
+  Id: peony
+  Display: "塩原の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_RedHeathScrub:
+  Id: fern
+  Display: "赤ヒースの枝葉"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_RedHeathFlower:
+  Id: allium
+  Display: "赤ヒースの花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_RedHeathBloom:
+  Id: rose_bush
+  Display: "赤ヒースの花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_LichenFlatsScrub:
+  Id: moss_carpet
+  Display: "地衣の葉片"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_LichenFlatsFlower:
+  Id: cornflower
+  Display: "地衣の花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_LichenFlatsBloom:
+  Id: lilac
+  Display: "地衣の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_ScoriaBarrensScrub:
+  Id: dead_bush
+  Display: "スコリア苔"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_ScoriaBarrensFlower:
+  Id: torchflower
+  Display: "スコリアの花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_ScoriaBarrensBloom:
+  Id: sunflower
+  Display: "スコリアの花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_SilverReedlandScrub:
+  Id: fern
+  Display: "銀草の穂"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_SilverReedlandFlower:
+  Id: blue_orchid
+  Display: "銀草の花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_SilverReedlandBloom:
+  Id: peony
+  Display: "銀草の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_AmberGrasslandScrub:
+  Id: wheat
+  Display: "琥珀草"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_AmberGrasslandFlower:
+  Id: orange_tulip
+  Display: "琥珀の花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_AmberGrasslandBloom:
+  Id: sunflower
+  Display: "琥珀の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_ChalkBloomFieldScrub:
+  Id: azalea
+  Display: "白亜の茎"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_ChalkBloomFieldFlower:
+  Id: white_tulip
+  Display: "白亜の花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_ChalkBloomFieldBloom:
+  Id: lilac
+  Display: "白亜の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MoonpetalMoorScrub:
+  Id: flowering_azalea
+  Display: "月花の枝葉"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MoonpetalMoorFlower:
+  Id: allium
+  Display: "月花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_MoonpetalMoorBloom:
+  Id: peony
+  Display: "月花の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_GlasspetalSteppeScrub:
+  Id: azalea
+  Display: "玻璃花の茎"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_GlasspetalSteppeFlower:
+  Id: azure_bluet
+  Display: "玻璃花"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'
+
+Azuriter_Surface_GlasspetalSteppeBloom:
+  Id: lilac
+  Display: "玻璃花の花房"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Surface'

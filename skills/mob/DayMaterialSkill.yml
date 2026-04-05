@@ -1,0 +1,39 @@
+Azuriter_DayMaterial_Day:
+  Cooldown: 1
+  Conditions:
+  - day 
+  Skills:
+  - glow{t=99999999;i=20;c=DARK_PURPLE} @self
+  - aura{n=DayMaterial_Day;i=10;t=99999999;cod=false;
+    ot=[
+      - remove @self ?!day 
+    ]} @self
+  - skill{s=Azuriter_DayMaterial_Buff} @self
+
+Azuriter_DayMaterial_Buff:
+  Conditions:
+  - (hasAura{n=DayMaterial_NoDay} || hasAura{n=DayMaterial_Day})
+  Skills:
+  - potion{t=SPEED;l=2;d=100;p=false;a=false} @self 
+  - potion{t=STRENGTH;l=1;d=100;p=false;a=false} @self 
+  - potion{t=RESISTANCE;l=1;d=100;p=false;a=false} @self 
+
+Azuriter_DayMaterial_NoDay:
+  Cooldown: 1
+  Conditions:
+  - day false 
+  Skills:
+  - glow{t=99999999;i=20;color=YELLOW} @self
+  - aura{n=DayMaterial_NoDay;i=10;t=99999999;cod=false;
+    ot=[
+      - remove @self ?day 
+    ]} @self
+  - skill{s=Azuriter_DayMaterial_Buff} @self
+
+Azuriter_DayMaterial_Day_Drop:
+  Skills:
+  - cmd{c="mlg <target.name> Azuriter_黒マテリア 1 1"} @ThreatTablePlayers{c=[ - hasAura{n=Azuriter_Player_EnterCombat} true ]} ?day ?hasAura{n=DayMaterial_Day}
+
+Azuriter_DayMaterial_NoDay_Drop:
+  Skills:
+  - cmd{c="mlg <target.name> Azuriter_白マテリア 1 1"} @ThreatTablePlayers{c=[ - hasAura{n=Azuriter_Player_EnterCombat} true ]} ?!day ?hasAura{n=DayMaterial_NoDay}

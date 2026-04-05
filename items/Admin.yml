@@ -1,0 +1,41 @@
+Azuriter_Admin_Sword:
+  Id: diamond_sword
+  Display: "&4&lアドミンソード"
+  ItemUpdater:
+    Version: 1
+  Group: 'Admin-Multi-Melee-Weapon'
+  Attributes:
+    MainHand:
+      Damage: 10000 ADD
+
+Azuriter_操作Boss:
+  Id: stick
+  Display: "&f操作Boss"
+  Lore:
+  - "&fボス右クリ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Admin-Melee-Weapon'
+  Attributes:
+    MainHand:
+      Damage: 10000 ADD
+  Skills:
+  - signal{s=Azuriter_Boss_Stick} @trigger ~onInteract ?~hasTag{t=BOSS}
+  - onDamaged{n=Azuriter_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onSwing 
+  - onDamaged{n=Azuriter_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onDamaged 
+  - onDamaged{n=Azuriter_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onUse 
+  - auraRemove{n=Azuriter_NoCombat} @self ~onSwapitems 
+
+Azuriter_Admin_Sword_2:
+  Id: diamond_sword
+  Display: "&4&lアドミンソード"
+  ItemUpdater:
+    Version: 1
+  Group: 'Admin-Melee-Weapon'
+  Attributes:
+    MainHand:
+      Damage: 20 ADD
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.5 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 25.0 ADDITIVE
+  - HEALTH 20to30 ADDITIVE

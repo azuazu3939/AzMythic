@@ -1,0 +1,86 @@
+Diamond_S1End:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 1
+    Skills:
+    - skill{s=Azuriter_シリーズエンド1_Skills} @self ~onKill
+    - skill{s=Azuriter_シリーズエンド1_Skills} @self ~onDamaged
+    - skill{s=Azuriter_シリーズエンド1_Skills} @self ~onSwing
+    - skill{s=Azuriter_シリーズエンド1_Skills}@self ~onAttack
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onKill
+    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onDamaged
+    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onSwing
+    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onAttack
+
+Guardia:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_ガーディア_Full} @self ~onKill
+    - skill{s=Azuriter_ガーディア_Full} @self ~onDamaged
+    - skill{s=Azuriter_ガーディア_Full} @self ~onSwing
+    - skill{s=Azuriter_ガーディア_Full} @self ~onAttack
+
+    - skill{s=Azuriter_ガーディア_Full_Combat} @self ~onAttack
+    - skill{s=Azuriter_ガーディア_Full_Combat} @self ~onDamaged
+
+Healthal:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_ヘルシティア_Full} @self ~onKill
+    - skill{s=Azuriter_ヘルシティア_Full} @self ~onDamaged
+    - skill{s=Azuriter_ヘルシティア_Full} @self ~onSwing
+    - skill{s=Azuriter_ヘルシティア_Full} @self ~onAttack
+
+    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onAttack
+    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onDamaged
+    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onSwing
+    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onUse
+    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onKill
+
+Attacker:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 1
+    Skills:
+    - skill{s=Azuriter_アタッカー_Skills} @self ~onKill
+    - skill{s=Azuriter_アタッカー_Skills} @self ~onDamaged
+    - skill{s=Azuriter_アタッカー_Skills} @self ~onSwing
+    - skill{s=Azuriter_アタッカー_Skills} @self ~onAttack
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_アタッカー_Full} @self ~onKill
+    - skill{s=Azuriter_アタッカー_Full} @self ~onDamaged
+    - skill{s=Azuriter_アタッカー_Full} @self ~onSwing
+    - skill{s=Azuriter_アタッカー_Full} @self ~onAttack
+
+Defender:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 1
+    Skills:
+    - skill{s=Azuriter_ディフェンス_Skills} @self ~onKill
+    - skill{s=Azuriter_ディフェンス_Skills} @self ~onDamaged
+    - skill{s=Azuriter_ディフェンス_Skills} @self ~onSwing
+    - skill{s=Azuriter_ディフェンス_Skills} @self ~onAttack
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_ディフェンス_Full} @self ~onKill
+    - skill{s=Azuriter_ディフェンス_Full} @self ~onDamaged
+    - skill{s=Azuriter_ディフェンス_Full} @self ~onSwing
+    - skill{s=Azuriter_ディフェンス_Full} @self ~onAttack
+
+Weakser:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_ウィクサー_Full} @self ~onKill
+    - skill{s=Azuriter_ウィクサー_Full} @self ~onDamaged
+    - skill{s=Azuriter_ウィクサー_Full} @self ~onSwing
+    - skill{s=Azuriter_ウィクサー_Full} @self ~onAttack

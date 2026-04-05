@@ -1,0 +1,317 @@
+Azuriter_Augment_力のジェム_1:
+  Id: glowstone_dust
+  Display: '&c&l力のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f攻撃力 0.25~1"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&c&l力のジェム'  
+    Icon: ''
+    Stats:
+    - ATTACK_DAMAGE <random.float.0.25to1{round=2}> ADDITIVE
+
+Azuriter_Augment_守備のジェム_1:
+  Id: gunpowder
+  Display: '&3&l守備のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f防御力 4~8"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&3&l守備のジェム'  
+    Icon: ''
+    Stats:
+    - ARMOR <random.float.4to8{round=2}> ADDITIVE
+    - HEALTH 4 ADDITIVE
+
+Azuriter_Augment_忍耐のジェム_1:
+  Id: gunpowder
+  Display: '&6&l忍耐のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f防具強度 4~8"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&6&l忍耐のジェム'  
+    Icon: ''
+    Stats:
+    - ARMOR_TOUGHNESS <random.float.4to8{round=2}> ADDITIVE
+    - HEALTH 4 ADDITIVE
+
+Azuriter_Augment_回復のジェム_1:
+  Id: pink_petals
+  Display: '&d&l回復のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f自然回復力 0.5~1"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&d&l回復のジェム'  
+    Icon: ''
+    Stats:
+    - HEALTH_REGENERATION <random.float.0.5to1{round=2}> ADDITIVE
+    - HEALTH 2 ADDITIVE
+
+Azuriter_Augment_背水のジェム_1:
+  Id: pink_petals
+  Display: '&d&l背水のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f自然回復力 -0.5~-0.25"
+  - "&f攻撃力 0.75~1.5"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&d&l背水のジェム'  
+    Icon: ''
+    Stats:
+    - HEALTH_REGENERATION <random.float.-0.5to-0.25{round=2}> ADDITIVE
+    - ATTACK_DAMAGE <random.float.0.75to1.5{round=2}> ADDITIVE
+
+Azuriter_Augment_体力のジェム_1:
+  Id: redstone
+  Display: '&a&l体力のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f最大体力 4~8"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&a&l体力のジェム'  
+    Icon: ''
+    Stats:
+    - HEALTH <random.float.4to8{round=2}> ADDITIVE
+
+Azuriter_Augment_速度のジェム_1:
+  Id: sugar
+  Display: '&f&l速度のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f移動速度 5%~15%"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&f&l速度のジェム'  
+    Icon: ''
+    Stats:
+    - MOVEMENT_SPEED <random.float.0.05to0.15{round=2}> ADDITIVE_MULTIPLIER
+
+Azuriter_Augment_速攻のジェム_1:
+  Id: sugar
+  Display: '&e&l速攻のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f攻撃速度 5%~15%"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&e&l速攻のジェム'  
+    Icon: ''
+    Stats:
+    - ATTACK_SPEED <random.float.0.05to0.15{round=2}> ADDITIVE_MULTIPLIER
+
+Azuriter_Augment_汎用のジェム_1:
+  Id: diamond
+  Display: '&e&l汎用のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f最大体力 1"
+  - "&f防御力 1"
+  - "&f防具強度 1"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&e&l汎用のジェム'  
+    Icon: ''
+    Stats:
+    - HEALTH 2 ADDITIVE
+    - ARMOR_TOUGHNESS 4 ADDITIVE
+    - ARMOR 4 ADDITIVE
+
+Azuriter_Augment_贄のジェム_1:
+  Id: glowstone_dust
+  Display: '&c&l贄のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f攻撃力 0.5~1"
+  - "&f最大体力 -5%"
+  - "&f防御力 -5%"
+  - "&f防具強度 -5%"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&c&l贄のジェム'  
+    Icon: ''
+    Stats:
+    - ATTACK_DAMAGE <random.float.0.5to1{round=2}> ADDITIVE
+    - HEALTH -0.05 ADDITIVE_MULTIPLIER
+    - ARMOR_TOUGHNESS -0.05 ADDITIVE_MULTIPLIER
+    - ARMOR -0.05 ADDITIVE_MULTIPLIER
+
+Azuriter_Augment_矢走のジェム_1:
+  Id: glowstone_dust
+  Display: '&c&l矢走のジェム'
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&f攻撃力 0.25~0.5"
+  - "&f攻撃速度 12.5%"
+  - "&f移動速度 5%~10%"
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&c&l矢走のジェム'  
+    Icon: ''
+    Stats:
+    - ATTACK_DAMAGE <random.float.0.25to0.5{round=2}> ADDITIVE
+    - ATTACK_SPEED 0.125 ADDITIVE_MULTIPLIER
+    - MOVEMENT_SPEED <random.float.0.05to0.1{round=2}> ADDITIVE_MULTIPLIER
+
+Azuriter_Augment_会心のジェム_1:
+  Id: blaze_powder
+  Display: '&6&l会心のジェム'
+  ItemUpdater:
+    Version: 1
+  Lore:
+  - "&fクリティカル率 5%~10%"
+  Group: 'Augment'
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&6&l会心のジェム'  
+    Icon: ''
+    Stats:
+    - CRITICAL_STRIKE_CHANCE <random.float.0.05to0.1{round=2}> ADDITIVE
+
+Azuriter_Augment_会心攻撃のジェム_1:
+  Id: blaze_powder
+  Display: '&6&l会心攻撃のジェム'
+  Lore:
+  - "&fクリティカルダメージ 5~10"
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&6&l会心攻撃のジェム'  
+    Icon: ''
+    Stats:
+    - CRITICAL_STRIKE_DAMAGE <random.float.0.05to0.1{round=2}> ADDITIVE
+
+Azuriter_Augment_戦棍のジェム_1:
+  Id: blaze_rod
+  Display: '&8&l戦棍のジェム'
+  Lore:
+  - "&f攻撃時マナを5回復する"
+  - "&f攻撃力 0.75~1"
+  - "&f攻撃速度 -15%"
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&8&l戦棍のジェム'  
+    Icon: ''
+    Stats:
+    - ATTACK_DAMAGE <random.float.0.75to1{round=2}> ADDITIVE
+    - ATTACK_SPEED -0.15 ADDITIVE_MULTIPLIER
+    Skills:
+    - modifyMana{a=5;m=give} @self ~onAttack 
+
+Azuriter_Augment_魔力のジェム_1:
+  Id: blaze_rod
+  Display: '&5&l魔力のジェム'
+  Lore:
+  - "&f攻撃時マナを5回復する"
+  Group: 'Augment'
+  ItemUpdater:
+    Version: 1
+  Augmentation:
+    Type: Gem_1
+    Tooltip: '&5&l魔力のジェム'  
+    Icon: ''
+    Skills:
+    - modifyMana{a=5;m=give} @self ~onAttack 
+
+#### Options
+
+Azuriter_Augment_Remover_1:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &c&lジェム・リムーバー'
+  ItemUpdater:
+    Version: 1
+  AugmentationRemover:
+    Type: Gem_1 
+    DestroySocket: false
+    ReturnAugment: false
+
+Azuriter_Augment_Remover_2:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &c&lジェム・リムーバー &b&l[Protect]'
+  ItemUpdater:
+    Version: 1
+  AugmentationRemover:
+    Type: Gem_1 
+    DestroySocket: false
+    ReturnAugment: true
+
+Azuriter_Augment_Unlocker_1:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &b&lジェム・解錠キー &f&lRank1'
+  ItemUpdater:
+    Version: 1
+  AugmentationSocket:
+    Type: Gem_1 
+    MaxSockets: 1
+
+
+Azuriter_Augment_Unlocker_2:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &b&lジェム・解錠キー &f&lRank2'
+  ItemUpdater:
+    Version: 1
+  AugmentationSocket:
+    Type: Gem_1 
+    MaxSockets: 2
+
+Azuriter_Augment_Unlocker_3:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &b&lジェム・解錠キー &f&lRank3'
+  ItemUpdater:
+    Version: 1
+  AugmentationSocket:
+    Type: Gem_1 
+    MaxSockets: 3
+
+
+Azuriter_Augment_Unlocker_4:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &b&lジェム・解錠キー &f&lRank4'
+  ItemUpdater:
+    Version: 1
+  AugmentationSocket:
+    Type: Gem_1 
+    MaxSockets: 4
+
+Azuriter_Augment_Unlocker_5:
+  Material: NETHERITE_SCRAP
+  Display: '&e&lG1 &b&lジェム・解錠キー &f&lRank5'
+  ItemUpdater:
+    Version: 1
+  AugmentationSocket:
+    Type: Gem_1 
+    MaxSockets: 5

@@ -1,0 +1,319 @@
+Azuriter_Boss_Feldos:
+  Template: Azuriter_Enemy_RaidBoss_Base
+  Display: "<#c20a0a>&l焔獣フェルドス&R"
+  Type: hoglin
+  Health: 47500
+  Armor: 130
+  Damage: 36
+  Drops:
+  - money 30to50 1
+  Options:
+    Silent: true 
+    Scale: 3
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    MaxCombatDistance: 32
+    FollowRange: 10
+    Adult: true
+    ImmuneToZombification: true
+  DamageModifiers:
+  - SUFFOCATION 0
+  - FALL 0
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  - gotoowner
+  - MoveTowardsTargetConditional{
+    s=1;maxrange=32;
+    targetConditions=[
+      - isPlayer true
+      - distanceFromTL{d=64} true
+    ]}
+  - goToSpawn{speed=2;max=80;min=1}
+  - moveTowardsTarget
+  - float
+  BossBar:
+    Enabled: true
+    Title: <caster.name>
+    Range: 32
+    Color: WHITE
+    Style: SEGMENTED_10
+  Skills:
+  - tracklocation @selfLocation ~onSpawn 
+  - attribute{attr=ARMOR_TOUGHNESS;a=140} @self ~onSpawn
+  - setVar{k=caster.1;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.2;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.3;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.4;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.5;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn 
+
+  - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
+  - skill:Generic_Enemy_MCLove32_EnterCombat{down_tick=125;shield_break=1500;heal_percent=0.01} @self ~onEntercombat
+  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK} @T ~onEntercombat
+  
+  - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
+   
+  - potionclear{t=STRENGTH} @self ~onDamaged >70%
+  - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
+  - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
+
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_炎核 1 0.2"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_焔獣の炎殻 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_城壁の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
+
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
+
+  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1} @self ~onSignal:raid_boss_skill1
+  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2} @self ~onSignal:raid_boss_skill2
+  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3} @self ~onSignal:raid_boss_skill3
+  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4} @self ~onSignal:raid_boss_skill4
+  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5} @self ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+
+  - classexp{a=<random.450to600>} @TTP ~onDeath 
+
+Azuriter_Boss_Wedler:
+  Template: Azuriter_Enemy_RaidBoss_Base
+  Display: "<#15d455>&l風牙狼ウィデラー&R"
+  Type: wolf
+  Health: 45000
+  Armor: 135
+  Damage: 36
+  Drops:
+  - money 30to50 1
+  Options:
+    Variant: black
+    Silent: true 
+    Scale: 3.5
+    MovementSpeed: 0.275
+    KnockbackResistance: 1
+    MaxCombatDistance: 32
+    FollowRange: 10
+  DamageModifiers:
+  - SUFFOCATION 0
+  - FALL 0
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  - gotoowner
+  - MoveTowardsTargetConditional{
+    s=1;maxrange=32;
+    targetConditions=[
+      - isPlayer true
+      - distanceFromTL{d=64} true
+    ]}
+  - goToSpawn{speed=2;max=80;min=1}
+  - float
+  BossBar:
+    Enabled: true
+    Title: <caster.name>
+    Range: 32
+    Color: WHITE
+    Style: SEGMENTED_10
+  Skills:
+  - tracklocation @selfLocation ~onSpawn 
+  - attribute{attr=ARMOR_TOUGHNESS;a=150} @self ~onSpawn
+  - setVar{k=caster.1;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.2;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.3;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.4;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.5;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.6;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.7;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7";t=STRING} @self ~onSpawn 
+
+  - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
+  - skill:Generic_Enemy_MCLove32_EnterCombat{down_tick=115;shield_break=1600;heal_percent=0.01} @self ~onEntercombat
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK} @T ~onEntercombat
+
+  - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
+  
+  - potionclear{t=STRENGTH} @self ~onDamaged >70%
+  - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
+  - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
+
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_風核 1 0.2"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_風牙狼の皮 1 0.7"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_堅牢の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
+  
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
+
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1} @self ~onSignal:raid_boss_skill1
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2} @self ~onSignal:raid_boss_skill2
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3} @self ~onSignal:raid_boss_skill3
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4} @self ~onSignal:raid_boss_skill4
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5} @self ~onSignal:raid_boss_skill5
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6} @self ~onSignal:raid_boss_skill6
+  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7} @self ~onSignal:raid_boss_skill7
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill6
+  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill7
+
+  - classexp{a=<random.450to600>} @TTP ~onDeath 
+
+Azuriter_Boss_Basamos:
+  Template: Azuriter_Enemy_RaidBoss_Base
+  Display: "<#dac469>&l幻想獣バサモス&R"
+  Health: 42500
+  Armor: 120
+  Damage: 37
+  Drops:
+  - money 30to50 1
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: ENTITY
+      EntityType: CAMEL
+    Transform:
+      Translation: 0,0,0
+      Scale: 2.5,1,1
+    Living:
+      Baby: false
+      Silent: true
+      Glowing: false
+      Invulnerable: false
+      Gravity: true
+      Pose: STANDING
+      HealthDisplay: false
+    Combat:
+      HurtTint: true
+      KnockbackProfile: default
+      HeadTrack: true
+      HitboxScale: 2.5,2.5,2.5
+  Options:
+    Silent: true 
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    MaxCombatDistance: 24
+    Scale: 1.25
+    PreventVanillaDamage: true
+    FollowRange: 16
+  DamageModifiers:
+  - SUFFOCATION 0
+  - FALL 0
+  AITargetSelectors:
+  - clear
+  - attacker
+  #- nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  AIGoalSelectors:
+  - clear
+  - meleeAttack{}
+  - MoveTowardsTargetConditional{
+    s=1;maxrange=32;
+    targetConditions=[
+      - isPlayer true
+      - distanceFromTL{d=64} true
+    ]}
+  - goToSpawn{speed=2;max=80;min=1}
+  BossBar:
+    Enabled: true
+    Title: <caster.name>
+    Range: 32
+    Color: WHITE
+    Style: SEGMENTED_10
+  Skills:
+  - tracklocation @selfLocation ~onSpawn 
+  - attribute{attr=ARMOR_TOUGHNESS;a=130} @self ~onSpawn
+  - setVar{k=caster.1;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.2;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.3;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn 
+  - setVar{k=caster.4;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.5;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn 
+
+  - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
+  - skill{s=Generic_Enemy_MCLove32_EnterCombat;down_tick=90;shield_break=1000;heal_percent=0.01} @self ~onEntercombat
+  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK} @T ~onEntercombat
+
+  - attribute{attribute=FOLLOW_RANGE;a=16;delay=5} @self ~onDropCombat
+
+  - potionclear{t=STRENGTH} @self ~onDamaged >70%
+  - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
+  - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
+
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.2"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_幻想獣の皮 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_安寧の球界 1 0.75"} @ThreatTablePlayers ~onDeath
+
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
+
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+
+  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1} @self ~onSignal:raid_boss_skill1
+  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2} @self ~onSignal:raid_boss_skill2
+  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3} @self ~onSignal:raid_boss_skill3
+  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4} @self ~onSignal:raid_boss_skill4
+  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5} @self ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+
+  - classexp{a=<random.450to600>} @TTP ~onDeath 

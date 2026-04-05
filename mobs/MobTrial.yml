@@ -1,0 +1,97 @@
+Azuriter_Big_Zombie_Trial:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&f大きなゾンビ"
+  Health: 500
+  Damage: 10
+  Drops:
+  - money 1to5
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  Equipment:
+  - LEATHER_HELMET{color=RED} HEAD
+  Options:
+    MaxCombatDistance: 48
+    MovementSpeed: 0.235
+    Scale: 2
+    FollowRange: 4
+    Despawn: CHUNK
+  Skills:
+  - tracklocation @casterSpawnLocation ~onSpawn 
+
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.002"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_バラケタ装備片 1 0.5"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_白マテリア 1 0.5"} @ThreatTablePlayers ~onDeath ?!day
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.001"} @ThreatTablePlayers ~onDeath
+
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=25} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=1} @EIR{r=20;ignore=players} ~onEntercombat 
+  - potion{t=WEAKNESS;d=100;l=0;p=false} @trigger ~onAttack 
+  - remove{delay=18000} @self ~onSpawn 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+      - signal{s=trial_drop_2} @MIR{r=32;t=Azuriter_トライアル_2_1}
+    ];cd=2} @trigger ~onDeath
+  - classexp{a=10} @TTP ~onDeath 
+
+Azuriter_Elite_Zombie_Trial:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&fエリートゾンビ"
+  Health: 1200
+  Damage: 15
+  Drops:
+  - money 15to40
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS 
+  - IRON_BOOTS FEET
+  - IRON_SWORD HAND
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+    KnockbackResistance: 1
+    Scale: 2
+    Despawn: CHUNK
+  Skills:
+  - tracklocation @casterSpawnLocation ~onSpawn 
+
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.002"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.1to5> 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_加工鉄片 1 0.5"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.8to14> 0.4"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_黒マテリア 1 1"} @ThreatTablePlayers ~onDeath ?day
+  - cmd{c="mlgo <target.name> Azuriter_ハイソール 1 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.001"} @ThreatTablePlayers ~onDeath
+  
+  - attribute{attr=ARMOR_TOUGHNESS;a=60} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=60} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=40} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - skill{s=Azuriter_Elite_Zombie_Skills} @self ~onEntercombat 
+  - remove{delay=18000} @self ~onSpawn 
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+      - signal{s=trial_drop_3} @MIR{r=32;t=Azuriter_トライアル_3_1}
+    ];cd=2} @trigger ~onDeath 
+  - classexp{a=25} @TTP ~onDeath 

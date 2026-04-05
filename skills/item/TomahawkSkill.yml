@@ -1,0 +1,13 @@
+Azuriter_トマホーク_Skills:
+  Cooldown: 20
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_トマホーク}
+  - matCooldown{m=GOLDEN_AXE} false
+  Skills:
+  - setMaterialCooldown{m=GOLDEN_AXE;d=400} @self
+  - damage{a="<caster.damage> + 125";ii=true;pi=true;e=RED} @EIR{r=8;ignore=players;c=[ - isLiving true ]}
+  - blockwave{d=25;m=GOLD_BLOCK;r=5;ry=1;sv=true;vy=0.9;shape=sphere} @selfLocation 
+  - throw{v=3.5;vy=0.5} @EIR{r=8;ignore=players} ?crouching 
+  - sound{s=entity.wither.break_block;p=0.5;v=0.35;sc=PLAYERS} @self
+  - e:p{p=block_crack;m=DIRT;a=50;vs=0.1;hs=3.5;y=0.5;audience=caster} @self
+  - sound{s=block.anvil.place;p=0.5;v=0.35;sc=PLAYERS;delay=16} @self

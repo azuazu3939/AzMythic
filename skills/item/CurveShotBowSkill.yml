@@ -1,0 +1,46 @@
+Azuriter_カーブショットボウ_Skills:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_カーブショットボウ}
+  - matCooldown{m=BOW} false 
+  Skills:
+  - setVar{k=caster.shot_ct;a="max(60 - <az.attack_speed.double> * 10, 8)";t=INTEGER} @self
+  - setMaterialCooldown{m=BOW;d="<caster.var.shot_ct|60>"} @self
+
+  - setVar{k=skill.damage;a="<caster.damage> * 0.75";t=FLOAT} @self
+  - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> + 1";t=INTEGER} @self
+  - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.shot_ct|0>;repeati=0} @self
+  - delay 2
+  - skill{s=Azuriter_カーブショットボウ_Skills_Shot;repeat=3;repeati=0} @self
+  - delay 2
+  - skill{s=Azuriter_カーブショットボウ_Skills_Shot;repeat=3;repeati=0} @self
+  - delay 2
+  - skill{s=Azuriter_カーブショットボウ_Skills_Shot;repeat=3;repeati=0} @self
+  - delay 250
+  - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> - 1";t=INTEGER} @self
+  - setVar{k=caster.shot_ct;a="0";t=INTEGER} @self ?varrange{k=caster.shot_ct;r=<0}
+
+Azuriter_カーブショットボウ_Skills_Shot:
+  Skills:
+  - missile{
+    os=[
+      - sound{s=entity.arrow.shoot;audience=caster;v=0.3} @self
+    ];
+    ot=[
+      - modifyprojectile{t=INERTIA;a=MULTIPLY;v=0.95;delay=10} @self 
+      - e:p{p=electric_spark;a=1;ys=0.05;hs=0.05;audience=caster} @origin 0.5
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.025} @self 
+    ];
+    oh=[
+      - aura{n="Azuriter_カーブショットボウ_Skills_Shot<caster.var.shot_ct|0>";t=20;i=10}
+      - damage{a=<skill.var.damage>;pi=true;ii=true;dc=PROJECTILE} 
+      - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
+      - sound{s=entity.arrow.hit;audience=caster}
+      - sound{s=entity.arrow.hit_player;audience=caster;v=0.75} @self
+      - modifyMana{a=3;m=give} @self
+    ];
+    c=[
+      - isliving true
+      - hasAura{n="Azuriter_カーブショットボウ_Skills_Shot<caster.var.shot_ct|0>"} false
+    ];
+    v=16;in=16;vr=3;hr=2.5;hp=false;hnp=true;i=1;sdir=@forward{fo=0;rot=<random.-45to45>;lockpitch=true};vo=0.3;mr=36;
+    b=ARROW} @forward{f=30;lockpitch=true}

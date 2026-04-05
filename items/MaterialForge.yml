@@ -1,0 +1,676 @@
+Azuriter_Forge_Alloy_Iron:
+  Id: IRON_INGOT
+  Display: '&f鉄インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Steel:
+  Id: IRON_INGOT
+  Display: '&7鋼インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Copper:
+  Id: COPPER_INGOT
+  Display: '&6銅インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Bronze:
+  Id: COPPER_INGOT
+  Display: '&6青銅インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Gold:
+  Id: GOLD_INGOT
+  Display: '&e金インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Electrum:
+  Id: GOLD_INGOT
+  Display: '&e琥珀金インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Lapis:
+  Id: LAPIS_LAZULI
+  Display: '&9蒼晶インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Redstone:
+  Id: REDSTONE
+  Display: '&c紅晶インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_QuartzSteel:
+  Id: QUARTZ
+  Display: '&f石英鋼インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_ObsidianSteel:
+  Id: OBSIDIAN
+  Display: '&8黒曜鋼インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_PrismarineSteel:
+  Id: PRISMARINE_SHARD
+  Display: '&b海鋼インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Amethyst:
+  Id: AMETHYST_SHARD
+  Display: '&d紫晶インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_EmeraldSteel:
+  Id: EMERALD
+  Display: '&a翠鋼インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_DiamondSteel:
+  Id: DIAMOND
+  Display: '&b金剛鋼インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_NetherFlame:
+  Id: NETHERITE_SCRAP
+  Display: '&cネザー炎鍛材'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Aetherite:
+  Id: RESPAWN_ANCHOR
+  Display: '&dエーテライトインゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_Manaril:
+  Id: AMETHYST_CLUSTER
+  Display: '&5マナリルインゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_AzuroMalachite:
+  Id: IRON_INGOT
+  Display: '&f鉄地金'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier1 forge素材'
+    - '&8軽量で魔力伝導が高い基礎地金'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_IoliteSteel:
+  Id: GOLD_INGOT
+  Display: '&e金地金'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier2 forge素材'
+    - '&8火力重視の中層鍛造地金'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_AzureLapis:
+  Id: QUARTZ
+  Display: '&f石英晶材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier2 forge素材'
+    - '&8品質調整に使う石英系晶材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_GildedAurum:
+  Id: LAPIS_LAZULI
+  Display: '&9ラピス晶材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier2 forge素材'
+    - '&8高純度加工向けの青晶材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_VerdantCopper:
+  Id: REDSTONE
+  Display: '&c紅晶鍛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier1 forge素材'
+    - '&8加工補助に優れる紅晶鍛材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_EmberRedstone:
+  Id: REDSTONE
+  Display: '&c焔赤石鍛材'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_VerdureEmerald:
+  Id: EMERALD
+  Display: '&a翠鍛晶材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier3 forge素材'
+    - '&8補助加工向けの高純度晶材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_PrismDiamond:
+  Id: DIAMOND
+  Display: '&b星彩金剛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier3 forge素材'
+    - '&8上位武具を支える高硬度晶材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_ChrysoShatta:
+  Id: COPPER_INGOT
+  Display: '&6銅地金'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier1 forge素材'
+    - '&8防具寄りの重厚な銅地金'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_LuminiteSilver:
+  Id: AMETHYST_SHARD
+  Display: '&d紫晶鍛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier2 forge素材'
+    - '&8魔力加工向けの紫晶鍛材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_FerricCoal:
+  Id: COAL
+  Display: '&8石炭鍛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier1 forge素材'
+    - '&8燃料系鍛造を支える圧縮鍛材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_NetherQuartz:
+  Id: QUARTZ
+  Display: '&fネザー石英インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_DuskQuartz:
+  Id: QUARTZ
+  Display: '&5宵影石英材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier3 forge素材'
+    - '&8純度と魔力を両立する宵影の石英鍛材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_DeepObsidian:
+  Id: OBSIDIAN
+  Display: '&8黒曜鍛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier3 forge素材'
+    - '&8深層魔工向けの黒曜鍛材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_PrismarineCore:
+  Id: PRISMARINE_CRYSTALS
+  Display: '&b海晶核インゴット'
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_StoneveinTuff:
+  Id: TUFF
+  Display: '&7石脈鍛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier1 forge素材'
+    - '&8浅層洞窟由来の石脈鍛材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_EchoCalcite:
+  Id: CALCITE
+  Display: '&f残響晶材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier2 forge素材'
+    - '&8封印遺構系の残響晶材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_SigilObsidian:
+  Id: GILDED_BLACKSTONE
+  Display: '&8印章鍛材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier3 forge素材'
+    - '&8迷宮刻印を宿した鍛造材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Alloy_MoonlitAethercore:
+  Id: AMETHYST_CLUSTER
+  Display: '&d月光核材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Tier4 forge素材'
+    - '&8聖域鍛造を支える月光核材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Process_StonebinderFlux:
+  Id: TUFF
+  Display: '&7石脈溶剤'
+  Options:
+    Glint: true
+  Lore:
+    - '&7前処理材 / Tier1'
+    - '&8鉱石と石材を束ねる基礎前処理材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Process_EchoBinder:
+  Id: CALCITE
+  Display: '&f残響結着材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7前処理材 / Tier2'
+    - '&8結晶系 forge素材を安定化する結着材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Process_SigilBinder:
+  Id: GILDED_BLACKSTONE
+  Display: '&8印章結着材'
+  Options:
+    Glint: true
+  Lore:
+    - '&7前処理材 / Tier3'
+    - '&8深層鍛造の圧と刻印を整える結着材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Forge_Process_MoonwellCatalyst:
+  Id: AMETHYST_SHARD
+  Display: '&d月泉触媒'
+  Options:
+    Glint: true
+  Lore:
+    - '&7前処理材 / Tier4'
+    - '&8終盤聖域鍛造の流路を開く触媒'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_MinersSigil:
+  Id: ECHO_SHARD
+  Display: '&b採鉱刻印'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility sigil'
+    - '&8石脈素材を束ねて刻んだ採掘用の刻印'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_LoggersSigil:
+  Id: MANGROVE_PROPAGULE
+  Display: '&a伐採刻印'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility sigil'
+    - '&8木質繊維と樹皮を編み込んだ伐採用の刻印'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_HarvestersSigil:
+  Id: GLOW_BERRIES
+  Display: '&e農耕刻印'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility sigil'
+    - '&8作物と花材の流れを整える農業用の刻印'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_PioneersCore:
+  Id: RECOVERY_COMPASS
+  Display: '&d開拓者のコア'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility core'
+    - '&8採掘・伐採・農耕の刻印を束ねた上位中核素材'
+    - '&8今後の専用装備や強化素材の芯になる'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_MinersCompass:
+  Id: COMPASS
+  Display: '&b採鉱羅針盤'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility tool'
+    - '&8鉱脈の流れを読む採掘者向けの羅針盤'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_LoggersBundle:
+  Id: BUNDLE
+  Display: '&a伐採束具'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility tool'
+    - '&8樹皮と枝材を束ねた伐採者向けの携行具'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_HarvestSatchel:
+  Id: BUNDLE
+  Display: '&e収穫サッチェル'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility tool'
+    - '&8花材と果実を整えて運ぶ農耕者向けの袋'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_FrontierEmblem:
+  Id: LODESTONE
+  Display: '&d辺境章'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility relic'
+    - '&8開拓者の導線を刻んだ上位ユーティリティ章'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_MinersResin:
+  Id: HONEYCOMB
+  Display: '&7採鉱樹脂'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility reagent'
+    - '&8石脈と粉材を束ねる鍛造用の基礎樹脂'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_LoggersPitch:
+  Id: CHARCOAL
+  Display: '&8伐採ピッチ'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility reagent'
+    - '&8木質材から抽出した粘性の高い結着材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_HarvestSpore:
+  Id: SPORE_BLOSSOM
+  Display: '&a収穫胞子'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility reagent'
+    - '&8花材と果実から引き出した再生寄りの胞子材'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_FrontierThread:
+  Id: STRING
+  Display: '&f開拓糸'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility reagent'
+    - '&8前線補修と高位鍛造の両方に使える強化繊維'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_GeodeWhetstone:
+  Id: AMETHYST_SHARD
+  Display: '&d晶洞砥石'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility reagent'
+    - '&8高硬度鍛材の研磨工程を支える砥石'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_GroveOil:
+  Id: HONEY_BOTTLE
+  Display: '&a樹苑オイル'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility reagent'
+    - '&8木質と植物系鍛造材の流れを整える調整油'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_MinersTonic:
+  Id: POTION
+  Display: '&b採鉱トニック'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility consumable'
+    - '&8採掘前線向けに調整した視界強化と掘削支援の薬液'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_LoggersTea:
+  Id: POTION
+  Display: '&a伐採茶'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility consumable'
+    - '&8伐採のテンポと足運びを整える樹葉茶'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_HarvestTonic:
+  Id: POTION
+  Display: '&e収穫トニック'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility consumable'
+    - '&8採取と農耕向けの巡りを整える滋養液'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'
+
+Azuriter_Utility_FrontierRation:
+  Id: PUMPKIN_PIE
+  Display: '&6辺境携行食'
+  Options:
+    Glint: true
+  Lore:
+    - '&7Utility consumable'
+    - '&8前線作業を長く支える補給食'
+  ItemUpdater:
+    Version: 1
+  Group: 'ForgeResource'

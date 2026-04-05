@@ -1,0 +1,48 @@
+FRONTIER_WILD_CATTLE:
+  Type: COW
+  Display: "&fFrontier Wild Cattle"
+  Health: 24
+  Damage: 0
+  Drops:
+  - leather 2to4
+  - beef 1to3
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  - randomLookAround
+  - randomStroll
+  - fleeplayers{d=14}
+  Options:
+    Despawn: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    PreventRandomEquipment: true
+    Silent: false
+    MovementSpeed: 0.22
+    FollowRange: 6
+    UseThreatTable: false
+
+FRONTIER_WILD_RABBIT:
+  Type: RABBIT
+  Display: "&fFrontier Wild Rabbit"
+  Health: 10
+  Damage: 0
+  Drops:
+  - rabbit_hide 1to2
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  - randomLookAround
+  - randomStroll
+  - fleeplayers{d=16}
+  Options:
+    Despawn: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    PreventRandomEquipment: true
+    Silent: false
+    MovementSpeed: 0.3
+    FollowRange: 8
+    UseThreatTable: false

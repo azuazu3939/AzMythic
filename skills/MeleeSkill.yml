@@ -1,0 +1,133 @@
+Azuriter_Melee_Weapon:
+  Skills:
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster} @self
+  - signal{s=delete_object}
+  - damage{a="<skill.var.dmg> * 1.2";pi=true;ii=true}
+
+Azuriter_Melee_Weapon_Full:
+  Skills:
+  - damage{a="<skill.var.dmg> * 1.2";pi=true;ii=true}
+  - signal{s=delete_object}
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.55;delay=1} @self
+
+Azuriter_Melee_Weapon_10:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage>";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon_Full @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_10:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage>";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon_Full @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_9:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.9";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_9:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.9";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_8:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.8";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_8:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.8";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_7:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.7";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_7:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.7";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_6:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.6";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_6:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.6";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_5:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.5";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_5:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.5";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_4:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.4";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_4:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.4";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_3:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.3";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_3:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.3";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_2:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.2";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_2:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.2";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Melee_Weapon_1:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.1";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Multi_Melee_Weapon_1:
+  Cooldown: 0.1
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.1";t=FLOAT} @self
+  - meta:Azuriter_Melee_Weapon @EIC{r=8;a=60;ignore=players;limit=3;sort=NEAREST;p=true;yo=1}

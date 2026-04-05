@@ -1,0 +1,242 @@
+Azuriter_Fishing_Fish_ReedfinCarp:
+  Id: COD
+  Display: "&a葦ひれのコイ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_PondLoach:
+  Id: COD
+  Display: "&a池ドジョウ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_AmberScaleTrout:
+  Id: SALMON
+  Display: "&b琥珀鱗のマス"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_MistglassPerch:
+  Id: TROPICAL_FISH
+  Display: "&b霧硝子のパーチ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_ReedshadeTench:
+  Id: COD
+  Display: "&b葦影のテンチ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_MoonwellKoi:
+  Id: TROPICAL_FISH
+  Display: "&b月泉のコイ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_SlatePike:
+  Id: SALMON
+  Display: "&b岩板のパイク"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_BloomTetra:
+  Id: TROPICAL_FISH
+  Display: "&6花咲きテトラ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_PrismEel:
+  Id: PUFFERFISH
+  Display: "&6プリズムウナギ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_SilverrunGrayling:
+  Id: SALMON
+  Display: "&6銀流のグレイリング"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_DuskRay:
+  Id: PUFFERFISH
+  Display: "&6夕闇のエイ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_FrostjawChar:
+  Id: SALMON
+  Display: "&6霜牙のイワナ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_StarfinAngler:
+  Id: TROPICAL_FISH
+  Display: "&d星ひれアンコウ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_MoonveilOrfe:
+  Id: TROPICAL_FISH
+  Display: "&d月隠れオルフェ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Fish_AbyssalLanternfish:
+  Id: PUFFERFISH
+  Display: "&d深淵のランタンフィッシュ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Material_FishOil:
+  Id: HONEY_BOTTLE
+  Display: "&e魚油"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Material_BrightScale:
+  Id: PRISMARINE_CRYSTALS
+  Display: "&b輝鱗"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Material_BrineBone:
+  Id: BONE
+  Display: "&f塩骨"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Material_PondPearl:
+  Id: ENDER_PEARL
+  Display: "&d池真珠"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Treasure_SunkenCache:
+  Id: CHEST
+  Display: "&6沈んだ箱"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Treasure_PearlCluster:
+  Id: HEART_OF_THE_SEA
+  Display: "&6真珠の塊"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Treasure_AntiqueReel:
+  Id: TRIPWIRE_HOOK
+  Display: "&6古いリール"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Treasure_WeatheredCharm:
+  Id: NAUTILUS_SHELL
+  Display: "&6古びたお守り"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Hazard_BombMinnow:
+  Id: GUNPOWDER
+  Display: "&c爆弾ミノー"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Hazard_ShockJelly:
+  Id: SLIME_BALL
+  Display: "&c感電クラゲ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_GrilledFish:
+  Id: COOKED_COD
+  Display: "&e焼き魚"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_FocusTonic:
+  Id: HONEY_BOTTLE
+  Display: "&b集中トニック"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_PondLureLantern:
+  Id: LANTERN
+  Display: "&b誘い灯"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_SalvageFloat:
+  Id: NAUTILUS_SHELL
+  Display: "&bサルベージ浮き"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_TidalHookCatalyst:
+  Id: TRIPWIRE_HOOK
+  Display: "&d潮鉤の触媒"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+
+Azuriter_Fishing_Rod_Reedcaster:
+  Id: FISHING_ROD
+  Display: "&a葦投げの釣り竿"
+  Lore:
+  - "&f連射 x2"
+  - "&fオーバードライブ: 連射+1"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+  Options:
+    Unbreakable: true
+
+Azuriter_Fishing_Rod_TidalArc:
+  Id: FISHING_ROD
+  Display: "&d潮弧の釣り竿"
+  Lore:
+  - "&f連射 x2"
+  - "&fオーバードライブ: 連射+1 / ダメージ+30%"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+  Options:
+    Unbreakable: true
+
+Azuriter_Fishing_AnglerBoots:
+  Id: LEATHER_BOOTS
+  Display: "&b釣り人のブーツ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Fishing'
+  Options:
+    Unbreakable: true

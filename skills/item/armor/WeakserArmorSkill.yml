@@ -1,0 +1,6 @@
+Azuriter_ウィクサー_Full:
+  Cooldown: 10
+  Skills:
+  - potion{t=REGENERATION;d=500;l=1;p=false} @self
+  - potion{t=SPEED;d=500;l=0;p=false} @self
+  - heal{a=5} @self

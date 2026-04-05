@@ -1,0 +1,131 @@
+Azuriter_Resource_Cobbled_Deepslate:
+  Id: cobbled_deepslate
+  Display: "深層石材"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Deepslate:
+  Id: deepslate
+  Display: "深層岩"
+  Options:
+    Glint: true
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Cobblestone:
+  Id: cobblestone
+  Display: "丸石"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Stone:
+  Id: stone
+  Display: "石"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Diorite:
+  Id: diorite
+  Display: "閃緑岩"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Granite:
+  Id: granite
+  Display: "花崗岩"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Andesite:
+  Id: andesite
+  Display: "安山岩"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Calcite:
+  Id: calcite
+  Display: "方解石"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Tuff:
+  Id: tuff
+  Display: "凝灰岩"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Prismarine:
+  Id: prismarine
+  Display: "プリズマリン"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Netherrack:
+  Id: netherrack
+  Display: "ネザーラック"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'
+
+Azuriter_Resource_Obsidian:
+  Id: obsidian
+  Display: "黒曜石"
+  Options:
+    Glint: true 
+  Lore:
+    Template: MaterialInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Group: 'Resource'

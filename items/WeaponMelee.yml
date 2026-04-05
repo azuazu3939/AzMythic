@@ -1,0 +1,209 @@
+Azuriter_風上の道:
+  Id: wooden_sword
+  Display: "&6風上の道"
+  ItemUpdater:
+    Version: 5
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 20 ADD
+      Armor: 10 ADD
+      ArmorToughness: 10 ADD
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills: 
+  - skill{s=Azuriter_風上の道_R1_Skills} @self ~onUse 
+  - skill{s=Azuriter_風上の道_R1_Skills} @self ~onInteract ?!crouching 
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 3
+
+
+Azuriter_風上の歩み:
+  Id: wooden_sword
+  Display: "&6風上の歩み"
+  ItemUpdater:
+    Version: 4
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 20 ADD
+      Armor: 12 ADD
+      ArmorToughness: 12 ADD
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills: 
+  - skill{s=Azuriter_風上の歩み_R1_Skills} @self ~onUse 
+  - skill{s=Azuriter_風上の歩み_R1_Skills} @self ~onInteract ?!crouching 
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 3
+
+Azuriter_風上の軌跡:
+  Id: wooden_sword
+  Display: "&6風上の軌跡"
+  ItemUpdater:
+    Version: 5
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 28 ADD
+      Armor: 20 ADD
+      ArmorToughness: 20 ADD
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills: 
+  - skill{s=Azuriter_風上の軌跡_R1_Skills} @self ~onUse 
+  - skill{s=Azuriter_風上の軌跡_R1_Skills} @self ~onInteract ?!crouching 
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 3
+
+Azuriter_ステップソード:
+  Id: stone_sword
+  Display: "&aステップソード"
+  ItemUpdater:
+    Version: 4
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 20 ADD 
+      Armor: 15 ADD
+      ArmorToughness: 15 ADD
+      AttackSpeed: -0.3 MULTIPLY_BASE
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills: 
+  - skill{s=Azuriter_ステップソード_R1_Skills} @self ~onUse
+  - skill{s=Azuriter_ステップソード_R1_Skills} @self ~onInteract ?!crouching
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 3
+
+Azuriter_ハイステップソード:
+  Id: iron_sword
+  Display: "&9ハイステップソード"
+  ItemUpdater:
+    Version: 4
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 28 ADD
+      Armor: 18 ADD
+      ArmorToughness: 18 ADD
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills: 
+  - skill{s=Azuriter_ハイステップソード_R1_Skills} @self ~onUse
+  - skill{s=Azuriter_ハイステップソード_R1_Skills} @self ~onInteract ?!crouching 
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to2
+    Chance: 1
+    MaxAmount: 3
+
+Azuriter_ステップライズソード:
+  Id: stone_sword
+  Display: "&9ステップライズソード"
+  ItemUpdater:
+    Version: 4
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 32 ADD
+      Armor: 25 ADD
+      ArmorToughness: 25 ADD
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Azuriter_ステップライズソード_R1_Skills} @self ~onUse 
+  - skill{s=Azuriter_ステップライズソード_R1_Skills} @self ~onInteract ?!crouching
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to5
+    Chance: 0.6
+    MaxAmount: 5
+
+Azuriter_ステップダッシュソード:
+  Id: stone_sword
+  Display: "&9ステップダッシュソード"
+  ItemUpdater:
+    Version: 4
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 35 ADD
+      Armor: 25 ADD
+      ArmorToughness: 25 ADD
+  Group: 'Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Azuriter_ステップダッシュソード_R1_Skills} @self ~onUse
+  - skill{s=Azuriter_ステップダッシュソード_R1_Skills} @self ~onInteract ?!crouching  
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to5
+    Chance: 0.6
+    MaxAmount: 5
+
+Azuriter_ステップヒールソード:
+  Id: stone_sword
+  Display: "&9ステップヒールソード"
+  ItemUpdater:
+    Version: 1
+  Lore:
+    Template: ItemInfoLore_Sword_1
+  Options: 
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      Damage: 30 ADD
+      Armor: 25 ADD
+      ArmorToughness: 25 ADD
+  Group: 'Multi-Melee-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Azuriter_ステップヒールソード_R1_Skills} @self ~onUse
+  - skill{s=Azuriter_ステップヒールソード_R1_Skills} @self ~onInteract ?!crouching  
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to5
+    Chance: 0.6
+    MaxAmount: 5

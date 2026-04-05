@@ -1,0 +1,79 @@
+Azuriter_バックパック_1:
+  Material: PLAYER_HEAD
+  Model: minecraft:player_head
+  Display: "#E3680E>Basic Backpack"
+  Lore: []
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjliMThiMDI0NTNkYjFiYTI1NjRjMWY5Yzk2N2ZkYWE0ZjNmOGY5NWQ2OTcyNjVkNGJkZTY2MjBkNjhkZWVhYiJ9fX0=
+  Enchantments: []
+  NBT:
+    PublicBukkitValues:
+      backpackplus:backpackused: int/0
+      backpackplus:backpacktier: int/1
+  ItemUpdater:
+    Version: 1
+  Model: 99999
+
+Azuriter_バックパック_2:
+  Material: PLAYER_HEAD
+  Model: minecraft:player_head
+  Display: "<#E0B715>Golden Backpack"
+  Lore: []
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGZhMDU2ZDdhZTMwMzYwNzZmYzJhYTE0MTk4Y2U1ZWVlMTUxMGEzMDlmNDMyNDU4MDEwYWMwM2ZjMDZkNGUwOCJ9fX0=
+  Enchantments: []
+  NBT:
+    PublicBukkitValues:
+      backpackplus:backpackused: int/0
+      backpackplus:backpacktier: int/2
+  ItemUpdater:
+    Version: 1
+  Model: 99999
+
+Azuriter_バックパック_3:
+  Material: PLAYER_HEAD
+  Model: minecraft:player_head
+  Display: "<#00C2C6>Diamond Backpack"
+  Lore: []
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmIwOWRmOGYzODc1Yjk1YzlkMDU3NzI4MTUyZjlmNDRlNTQwZmQ3YWY4MjVkZjQ0YjNkYjQxNTVjY2VlYzQyOSJ9fX0=
+  Enchantments: []
+  NBT:
+    PublicBukkitValues:
+      backpackplus:backpackused: int/0
+      backpackplus:backpacktier: int/3
+  ItemUpdater:
+    Version: 1
+  Model: 99999
+
+Azuriter_バックパック_フード:
+  Material: PLAYER_HEAD
+  Model: minecraft:player_head
+  Display: "<#E09936>Lunch BackPack"
+  Lore: 
+  - "&f飯だけ入るランチボックス！！"
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmY1NjEyNjUzMmVhMDYyMjljOWUzNGEwYzc2OGRlODE3YmFjYjI2NTgzZTIzZjNlZWNlYjAyNDc4ZjNkMjJhYiJ9fX0=
+  Enchantments: []
+  NBT:
+    PublicBukkitValues:
+      backpackplus:backpackused: int/0
+      backpackplus:backpacktier: int/100
+  ItemUpdater:
+    Version: 1
+  Model: 99999
+
+Azuriter_バックパック_ジェム:
+  Material: PLAYER_HEAD
+  Model: minecraft:player_head
+  Display: "<#99FF3A>Gem BackPack"
+  Lore: 
+  - "&fジェム・装飾系だけ入るボックス！！"
+  Enchantments: []
+  NBT:
+    PublicBukkitValues:
+      backpackplus:backpackused: int/0
+      backpackplus:backpacktier: int/101
+  ItemUpdater:
+    Version: 1
+  Model: 99999

@@ -1,0 +1,519 @@
+Azuriter_Neutral_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&fゾンビ"
+  Health: 20
+  Damage: 10
+  Drops:
+  - money 1to4 0.2
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=16;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=20;a=>0;t=Azuriter_Big_Zombie,Azuriter_Elite_Zombie} true ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_粗悪な装備片 <random.1to3> 0.4"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_粗悪な装備片 <random.4to8> 0.05"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_白マテリア 1 0.05"} @ThreatTablePlayers ~onDeath ?!day
+  - attribute{attr=ARMOR_TOUGHNESS;a=10} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=20} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=10} @self ~onSpawn ?day  
+  - skill{s=Azuriter_DayMaterial_NoDay} @self ~onSpawn 0.1
+  - skill{s=Azuriter_DayMaterial_NoDay_Drop} @self ~onDeath 
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+    ];cd=2} @trigger ~onDeath 
+  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.015
+  
+  - classexp{a=1} @TTP ~onDeath 
+
+Azuriter_Big_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&f大きなゾンビ"
+  Health: 200
+  Damage: 10
+  Drops:
+  - money 1to5
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  Equipment:
+  - LEATHER_HELMET{color=RED} HEAD
+  Options:
+    MaxCombatDistance: 48
+    MovementSpeed: 0.235
+    Scale: 2
+    FollowRange: 4
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.002"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_バラケタ装備片 1 0.5"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_白マテリア 1 0.5"} @ThreatTablePlayers ~onDeath ?!day
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=25} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
+  - skill{s=Azuriter_DayMaterial_NoDay} @self ~onSpawn 0.15
+  - skill{s=Azuriter_DayMaterial_NoDay_Drop} @self ~onDeath    
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=1} @EIR{r=20;ignore=players} ~onEntercombat 
+  - potion{t=WEAKNESS;d=100;l=0;p=false} @trigger ~onAttack 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.03"} @ThreatTablePlayers ~onDeath
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+      - signal{s=trial_drop_2} @MIR{r=32;t=Azuriter_トライアル_2_1}
+    ];cd=2} @trigger ~onDeath
+  - skill{s=Azuriter_Big_Zombie_Summon} @self ~onDeath 0.25
+
+  - classexp{a=10} @TTP ~onDeath 
+
+Azuriter_Warrior_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&f戦士ゾンビ"
+  Health: 100
+  Damage: 15
+  Drops:
+  - money 4to8 0.6
+  Equipment:
+  - IRON_HELMET HEAD
+  - LEATHER_CHESTPLATE CHEST
+  - WOODEN_SWORD HAND
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.1to3> 0.5"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.4to8> 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_黒マテリア 1 0.05"} @ThreatTablePlayers ~onDeath ?day
+  - attribute{attr=ARMOR_TOUGHNESS;a=20} @self ~onSpawn 
+  - skill{s=Azuriter_DayMaterial_Day} @self ~onSpawn 0.15
+  - skill{s=Azuriter_DayMaterial_Day_Drop} @self ~onDeath 
+  - attribute{attr=ARMOR;a=35} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - skill{s=Azuriter_Warrior_Zombie_Skills} @self ~onEntercombat 
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+    ];cd=2} @trigger ~onDeath 
+  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.015
+
+  - classexp{a=<random.3to5>} @TTP ~onDeath 
+
+Azuriter_High_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Type: baby_zombie
+  Display: "&fハイゾンビ"
+  Health: 45
+  Damage: 15
+  Equipment:
+  - IRON_HELMET HEAD
+  - WOODEN_AXE HAND
+  Drops:
+  - money 3to6 0.5
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=16;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=20;a=>0;t=Azuriter_Big_Zombie,Azuriter_Elite_Zombie} true ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+    Scale: 1.5
+    MovementSpeed: 0.225
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.1to3> 0.3"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.4to8> 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイソール 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_黒マテリア 1 0.02"} @ThreatTablePlayers ~onDeath ?day
+  - attribute{attr=ARMOR_TOUGHNESS;a=40} @self ~onSpawn 
+  - skill{s=Azuriter_DayMaterial_Day} @self ~onSpawn 0.1
+  - skill{s=Azuriter_DayMaterial_Day_Drop} @self ~onDeath  
+  - attribute{attr=ARMOR;a=50} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=30} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=1} @self ~onSpawn ?!day
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+    ];cd=2} @trigger ~onDeath 
+  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.015
+
+  - classexp{a=<random.2to3>} @TTP ~onDeath 
+
+Azuriter_Elite_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&fエリートゾンビ"
+  Health: 500
+  Damage: 15
+  Drops:
+  - money 15to40
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS 
+  - IRON_BOOTS FEET
+  - IRON_SWORD HAND
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+    KnockbackResistance: 1
+    Scale: 2
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.002"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.1to5> 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_加工鉄片 1 0.5"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_鉄片 <random.8to14> 0.4"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_黒マテリア 1 1"} @ThreatTablePlayers ~onDeath ?day
+  - cmd{c="mlgo <target.name> Azuriter_ハイソール 1 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=60} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=60} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=40} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - skill{s=Azuriter_Elite_Zombie_Skills} @self ~onEntercombat 
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+    ];cd=2} @trigger ~onDeath 
+  - skill{s=Azuriter_Elite_Zombie_Summon} @self ~onDeath 0.25
+
+  - classexp{a=25} @TTP ~onDeath 
+
+Azuriter_letthelater:
+  Template: Azuriter_Enemy_F1Base
+  Type: skeleton
+  Display: "&fレットザレーター"
+  Health: 100
+  Damage: 20
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - BOW HAND
+  Drops:
+  - money 5to8 0.4
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Feldos} true ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 12
+    Scale: 0.75
+    MovementSpeed: 0.05
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=12} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_タレットレーザー_骨 1 0.3"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_タレットレーザー_頭 1 0.03"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_城壁の守護石 1 0.01"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=40} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=25} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=1} @self ~onSpawn ?!day
+  - cancelEvent{sync=true} @self ~onShoot 
+  - skill{s=Azuriter_レットザレーター_Skills} @self ~onShoot 
+
+  - classexp{a=<random.1to13>} @TTP ~onDeath 
+
+Azuriter_Altwolf:
+  Template: Azuriter_Enemy_F1Base
+  Type: wolf
+  Display: "&fアルトゥルフ"
+  Health: 85
+  Damage: 25
+  Drops:
+  - money 3to5 0.75
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Wedler} true ]}
+  Options:
+    MaxCombatDistance: 48
+    Scale: 1.5
+    KnockbackResistance: 0.8
+    MovementSpeed: 0.225
+    AttackSpeed: 20
+    NoDamageTicks: 0
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Altwolf_牙 1 0.03"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Altwolf_粗皮 1 0.3"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_堅牢の守護石 1 0.01"} @ThreatTablePlayers ~onDeath
+
+  - attribute{attr=ARMOR_TOUGHNESS;a=75} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=75} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=50} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=1} @self ~onSpawn ?day
+  - potion{t=SPEED;d=99999999;l=1} @self ~onSpawn ?day
+
+  - classexp{a=<random.1to13>} @TTP ~onDeath 
+
+Azuriter_BigCamela:
+  Template: Azuriter_Enemy_Generic
+  Display: "&fビッグキャムラ"
+  Health: 150
+  Damage: 32
+  Drops:
+  - money 6to9 0.5
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: ENTITY
+      EntityType: CAMEL
+    Transform:
+      Translation: 0,0,0
+      Scale: 1.25,1,1
+    Living:
+      Baby: false
+      Silent: true
+      Glowing: false
+      Invulnerable: false
+      Gravity: true
+      Pose: STANDING
+      HealthDisplay: false
+    Combat:
+      HurtTint: true
+      KnockbackProfile: default
+      HeadTrack: true
+      HitboxScale: 1.25,1.25,1.25
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Basamos} true ]}
+  Options:
+    MaxCombatDistance: 48
+    KnockbackResistance: 0.8
+    MovementSpeed: 0.225
+    AttackSpeed: 20
+    NoDamageTicks: 0
+    Scale: 1.25
+    Silent: true
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath  
+  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.15"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ビッグな生肉 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ビッグなレザー 1 0.3"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_安寧の球界 1 0.01"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=80} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=80} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=50} @self ~onSpawn ?day
+
+  - classexp{a=<random.1to13>} @TTP ~onDeath 
+
+#### Rank2
+
+Azuriter_Armor_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&f革ゾンビ"
+  Health: 200
+  Damage: 25
+  Equipment:
+  - WOODEN_SWORD HAND
+  - LEATHER_HELMET HEAD
+  - LEATHER_CHESTPLATE CHEST
+  Drops:
+  - money 5to10 0.6
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=48;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=48;a=>0;t=Azuriter_Boss_マスターゾンビ} true ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+    MovementSpeed: 0.215
+    KnockbackResistance: 0.4
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_粗悪な装備片 <random.1to3> 0.25"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.0005"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
+
+  - attribute{attr=ARMOR_TOUGHNESS;a=50} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=80} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=50} @self ~onSpawn ?day  
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=ABSORPTION;d=99999999;l=9} @self ~onSpawn ?!day
+  - leap{v=350} @trigger ~onDamaged 0.25
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+      - signal{s=trial_drop_4} @MIR{r=32;t=Azuriter_トライアル_4_1}
+    ];cd=2} @trigger ~onDeath 
+  - skill{s=Azuriter_Armor_Zombie_Summon} @self ~onDeath 0.015
+
+  - classexp{a=10} @TTP ~onDeath 
+
+Azuriter_ArmorFull_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&f赤革ゾンビ"
+  Health: 420
+  Damage: 27
+  Equipment:
+  - WOODEN_AXE HAND
+  - WOODEN_SWORD OFFHAND
+  - LEATHER_HELMET{Color=RED} HEAD
+  - LEATHER_CHESTPLATE CHEST
+  - LEATHER_LEGGINGS LEGS
+  - LEATHER_BOOTS FEET
+  Drops:
+  - money 8to16 0.6
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=48;speed=1.25;safespeed=1;conditions=[ - mobsInRadius{r=48;a=>0;t=Azuriter_Boss_マスターゾンビ} true ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+    KnockbackResistance: 0.6
+    MovementSpeed: 0.25
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_粗悪な装備片 <random.1to3> 0.5"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_粗悪な装備片 <random.4to8> 0.1"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_バラケタ装備片 1 0.01"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.01"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.001"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+
+  - attribute{attr=ARMOR_TOUGHNESS;a=60} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=90} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=60} @self ~onSpawn ?day  
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=ABSORPTION;d=99999999;l=19} @self ~onSpawn ?!day
+  - skill{s=Azuriter_ArmorFull_Zombie_Summon} @self ~onDeath 0.05
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+      - signal{s=trial_drop_4} @MIR{r=32;t=Azuriter_トライアル_4_1}
+    ];cd=2} @trigger ~onDeath 
+  - skill{s=Azuriter_Armor_Zombie_Summon} @self ~onDeath 0.015
+
+  - classexp{a=<random.11to15>} @TTP ~onDeath 
+
+Azuriter_Elder_Zombie:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&fエルダーゾンビ"
+  Health: 1350
+  Damage: 28
+  Equipment:
+  - STONE_SWORD HAND
+  - SHIELD OFFHAND
+  - LEATHER_HELMET{Color=RED} HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  Drops:
+  - money 12to24 0.8
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - fleeConditional{distance=48;speed=1.25;safespeed=1;conditions=[ - mobsInRadius{r=48;a=>0;t=Azuriter_Boss_マスターゾンビ} true ]}
+  Options:
+    MaxCombatDistance: 48
+    FollowRange: 4
+    KnockbackResistance: 1
+    MovementSpeed: 0.215
+    Scale: 1.25
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat 
+  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath 
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.002"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath
+
+  - attribute{attr=ARMOR_TOUGHNESS;a=70} @self ~onSpawn 
+  - attribute{attr=ARMOR;a=100} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=70} @self ~onSpawn ?day  
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+
+  - potion{t=RESISTANCE;d=200;l=1} @EIR{r=32;ignore=players} ~onDamaged 
+  - potion{t=SPEED;d=200;l=1} @EIR{r=32;ignore=players} ~onDamaged 
+
+  - potionclear{t=RESISTANCE,SPEED} @EIR{r=40;ignore=players} ~onDeath 
+  - skill{s=Azuriter_Elder_Zombie_Summon} @trigger ~onDeath
+  - sudo{
+    s=[
+      - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
+      - signal{s=trial_drop_4} @MIR{r=32;t=Azuriter_トライアル_4_1}
+    ];cd=2} @trigger ~onDeath 
+  
+  - classexp{a=<random.40to70>} @TTP ~onDeath 

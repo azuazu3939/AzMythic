@@ -1,0 +1,88 @@
+Azuriter_カーブショットボウ:
+  Id: bow
+  Display: "&aカーブショットボウ"
+  Options:
+    Unbreakable: true
+  Lore:
+    Template: ItemInfoLore_Bow_1
+  ItemUpdater:
+    Version: 3
+  Attributes:
+    MainHand:
+      Damage: 28 ADD 
+      Armor: -0.25 MULTIPLY_BASE
+      ArmorToughness: -0.25 MULTIPLY_BASE
+      Health: -0.2 MULTIPLY_BASE
+      MovementSpeed: 0.4 MULTIPLY_BASE
+      AttackSpeed: 0.5 MULTIPLY_BASE
+  Group: 'Range-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Azuriter_カーブショットボウ_Skills} @self ~onUse
+  - skill{s=Azuriter_カーブショットボウ_Skills} @self ~onInteract ?!crouching  
+  - cancelEvent{sync=true} @self ~onUse
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 3
+
+
+Azuriter_ファイアバレットボウ:
+  Id: bow
+  Display: "&9ファイアバレットボウ"
+  Options:
+    Unbreakable: true
+  Lore:
+    Template: ItemInfoLore_Bow_1
+  ItemUpdater:
+    Version: 3
+  Attributes:
+    MainHand:
+      Damage: 36 ADD 
+      MovementSpeed: 0.25 MULTIPLY_BASE
+      Health: -0.2 MULTIPLY_BASE
+      Armor: -0.25 MULTIPLY_BASE
+      ArmorToughness: -0.25 MULTIPLY_BASE
+      AttackSpeed: 0.5 MULTIPLY_BASE
+  Group: 'Range-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Azuriter_ファイアバレットボウ_Skills} @self ~onUse
+  - skill{s=Azuriter_ファイアバレットボウ_Skills} @self ~onInteract ?!crouching 
+  - cancelEvent{sync=true} @self ~onUse
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 3
+
+Azuriter_エンピュリアボウ:
+  Id: bow
+  Display: "&9エンピュリアボウ"
+  Options:
+    Unbreakable: true
+  Lore:
+    Template: ItemInfoLore_Bow_1
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    MainHand:
+      Damage: 32 ADD 
+      MovementSpeed: 0.35 MULTIPLY_BASE
+      AttackSpeed: 0.25 MULTIPLY_BASE
+  Group: 'Range-Weapon'
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=Azuriter_エンピュリアボウ_Skills} @self ~onUse
+  - skill{s=Azuriter_エンピュリアボウ_Skills} @self ~onInteract ?!crouching  
+  - skill{s=Azuriter_エンピュリアボウ_バースト_Skills} @self ~onSwing 
+  - cancelEvent{sync=true} @self ~onUse
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1to5
+    Chance: 0.6
+    MaxAmount: 5

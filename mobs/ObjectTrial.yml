@@ -1,0 +1,283 @@
+Azuriter_トライアル_1_1:
+  Template: Azuriter_Enemy_Trial_Base
+  DisplayOptions:
+    Text: "[&6&l★&f×1] &f&lゾンビを&a&l30体&f&l倒す"
+  Skills:
+  - skill{
+    s=[
+      - setVar{k=caster.count;a="<caster.var.count|0> + 1";t=INTEGER} @self
+      - barSet{name="<caster.uuid>";display="[&6&l★&f×1] &f&lゾンビを&a&l30体&f&l倒す &r- &b&l進行度";value="min(1.0, <caster.var.count|0> / 30.0)";color=GREEN;style=SEGMENTED_10} @self
+      - sound{s=block.note_block.pling;v=2} @self
+
+      - skill{
+        s=[
+          - barRemove{name="<caster.uuid>"} 
+          - sound{s=entity.player.levelup;p=2;v=2}
+          - skill{s=Azuriter_トライアル_1_Drop1}
+          - suicide
+
+        ]} @self ?!varrange{k=caster.count;r=<30}
+      
+      - aura{n=トライアル1;rd=true;t=600} @trigger ?!varrange{k=caster.count;r=>29} 
+
+    ]} @self ~onSignal:trial_drop_1 
+  - barCreate{name="<caster.uuid>";display="[&6&l★&f×1] &f&lゾンビを&a&l30体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn 
+
+Azuriter_トライアル_2_1:
+  Template: Azuriter_Enemy_Trial_Base
+  DisplayOptions:
+    Text: "[&6&l★&f×2] &f&l大きなゾンビを&a&l10体&f&l倒す"
+  Skills:
+  - summon{t=Azuriter_Big_Zombie_Trial;a=<random.1to2>;r=8;s=true;delay=50} @self ~onTimer:200 ?children{a=<1}
+  - skill{
+    s=[
+      - setVar{k=caster.count;a="<caster.var.count|0> + 1";t=INTEGER} @self 
+      - sound{s=block.note_block.pling;v=2} @self
+      - barSet{name="<caster.uuid>";display="[&6&l★&f×2] &f&l大きなゾンビを&a&l10体&f&l倒す &r- &b&l進行度";value="min(1.0, <caster.var.count|0> / 10.0)";color=GREEN;style=SEGMENTED_10} @self
+
+      - skill{
+        s=[
+          - barRemove{name="<caster.uuid>"}
+          - sound{s=entity.player.levelup;p=2;v=2}
+          - skill{s=Azuriter_トライアル_2_Drop1}
+          - suicide
+        
+        ]} @self ?!varrange{k=caster.count;r=<10}
+      
+      - aura{n=トライアル2;rd=true;t=600} ?!varrange{k=caster.count;r=>9} 
+
+    ]} @self ~onSignal:trial_drop_2 
+  - barCreate{name="<caster.uuid>";display="[&6&l★&f×2] &f&l大きなゾンビを&a&l10体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn 
+
+Azuriter_トライアル_3_1:
+  Template: Azuriter_Enemy_Trial_Base
+  DisplayOptions:
+    Text: "[&6&l★&f×3] &f&lエリートゾンビを&a&l10体&f&l倒す"
+  Skills:
+  - summon{t=Azuriter_Elite_Zombie_Trial;a=<random.1to2>;r=8;s=true;delay=50} @self ~onTimer:200 ?children{a=<1}
+  - skill{
+    s=[
+      - setVar{k=caster.count;a="<caster.var.count|0> + 1";t=INTEGER} @self 
+      - sound{s=block.note_block.pling;v=2} @self
+      - barSet{name="<caster.uuid>";display="[&6&l★&f×3] &f&lエリートゾンビを&a&l10体&f&l倒す &r- &b&l進行度";value="min(1.0, <caster.var.count|0> / 10.0)";color=GREEN;style=SEGMENTED_10} @self
+
+      - skill{
+        s=[
+          - barRemove{name="<caster.uuid>"}
+          - sound{s=entity.player.levelup;p=2;v=2}
+          - skill{s=Azuriter_トライアル_3_Drop1}
+          - suicide
+
+        ]} @self ?!varrange{k=caster.count;r=<10}
+
+      - aura{n=トライアル3;rd=true;t=600} @trigger ?!varrange{k=caster.count;r=>9}   
+
+    ]} @self ~onSignal:trial_drop_3 
+  - barCreate{name="<caster.uuid>";display="[&6&l★&f×3] &f&lエリートゾンビを&a&l10体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn  
+
+
+Azuriter_トライアル_4_1:
+  Template: Azuriter_Enemy_Trial_Base
+  DisplayOptions:
+    Text: "[&6&l★&f×4] &f&l革ゾンビを&a&l30体&f&l倒す"
+  Skills:
+  - skill{
+    s=[
+      - setVar{k=caster.count;a="<caster.var.count|0> + 1";t=INTEGER} @self 
+      - sound{s=block.note_block.pling;v=2} @self
+      - barSet{name="<caster.uuid>";display="[&6&l★&f×4] &f&l革ゾンビを&a&l30体&f&l倒す &r- &b&l進行度";value="min(1.0, <caster.var.count|0> / 30.0)";color=GREEN;style=SEGMENTED_10} @self
+
+      - skill{
+        s=[
+          - barRemove{name="<caster.uuid>"}
+          - sound{s=entity.player.levelup;p=2;v=2}
+          - skill{s=Azuriter_トライアル_4_Drop1}
+          - suicide
+
+        ]} @self ?!varrange{k=caster.count;r=<30}
+
+      - aura{n=トライアル4;rd=true;t=600} @trigger ?!varrange{k=caster.count;r=>29}
+
+    ]} @self ~onSignal:trial_drop_4 
+  - barCreate{name="<caster.uuid>";display="[&6&l★&f×4] &f&l革ゾンビを&a&l30体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn  
+
+
+Azuriter_トライアル_5_1:
+  Template: Azuriter_Enemy_Trial_Base
+  Display: "[&d&l★&f×5] &c&lマスターゾンビ&f&lを1体倒す"
+  DisplayOptions:
+    Text: "[&d&l★&f×5] &c&lマスターゾンビ&f&lを1体倒す"
+  Skills:
+  - skill{
+    s=[
+      - barCreate{name="<caster.uuid>";display="[&d&l★&f×5] &c&lマスターゾンビ&f&lを1体倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1}
+      - summon{a=1;s=true;r=0;m=Azuriter_Boss_マスターゾンビ;pitch=0;
+        then=[
+          - e:p{p=explosion_huge;a=1} @origin
+          - sound{s=entity.lightning_bolt.impact;v=4} @origin
+          ];delay=40}
+
+    ]} @self ~onSpawn  
+  
+  - skill{
+    s=[
+      - skill{s=Azuriter_トライアル_5_Drop1}
+      - barRemove{name="<caster.uuid>"}
+      - suicide
+    ]} @self ~onSignal:trial_drop_5
+
+  - skill{
+    s=[
+      - setVar{k=skill.hp;a="(min(<target.hp> / <target.mhp>, 1.0))";t=FLOAT} @MIR{r=48;t=Azuriter_Boss_マスターゾンビ;limit=1;sort=NEAREST}
+      - barSet{name="<caster.uuid>";display="[&d&l★&f×5] &c&lマスターゾンビ&f&lを1体倒す &r- &b&l進行度";value="1.0 - <skill.var.hp|1.0>";color=GREEN;style=SEGMENTED_10} @self
+    ]}  @self ~onTimer:20 
+
+Azuriter_トライアル_1_2:
+  Template: Azuriter_Enemy_Trial_Base
+  Display: "[&d&l★&f×1] &9&lソール・ワンダラー&f&lを1体倒す"
+  DisplayOptions:
+    Text: "[&d&l★&f×1] &9&lソール・ワンダラー&f&lを1体倒す"
+  Skills:
+  - skill{
+    s=[
+      - barCreate{name="<caster.uuid>";display="[&d&l★&f×1] &9&lソール・ワンダラー&f&lを1体倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10}
+      - summon{a=1;s=true;r=0;m=Azuriter_Boss_ソール_ワンダラー;
+        then=[
+        - e:p{p=explosion_huge;a=1} @origin
+        - sound{s=entity.blaze.death;p=0;v=4} @origin
+      ];delay=40}
+
+    ]} @self ~onSpawn 
+     
+  - skill{
+    s=[
+      - skill{s=Azuriter_トライアル_1_Drop2} @self
+      - barRemove{name="<caster.uuid>"}
+      - suicide
+
+    ]} @self ~onSignal:trial_drop_1_2   
+
+  - skill{
+    s=[
+      - setVar{k=skill.hp;a="(min(<target.hp> / <target.mhp>, 1.0))";t=FLOAT} @MIR{r=48;t=Azuriter_Boss_ソール_ワンダラー;limit=1;sort=NEAREST}
+      - barSet{name="<caster.uuid>";display="[&d&l★&f×1] &9&lソール・ワンダラー&f&lを1体倒す &r- &b&l進行度";value="1.0 - <skill.var.hp|1.0>";color=GREEN;style=SEGMENTED_10} @self
+    ]}  @self ~onTimer:20 
+  
+  - skill{
+    s=[
+      - summon{m=Azuriter_Soul_Wanderer_Soul1;a=1;r=0} @ring{r=16;p=8}
+      - delay 1
+      - signal{s=soul_fire_spawned} @MIR{r=36;t=Azuriter_Boss_ソール_ワンダラー}
+    ]} @self ~onSignal:soul_fire_spawn
+
+Azuriter_トライアル_2_2:
+  Template: Azuriter_Enemy_Trial_Base
+  Display: "[&d&l★&f×2] &6&lブルート・ワンダラー&f&lを1体倒す"
+  DisplayOptions:
+    Text: "[&d&l★&f×2] &6&lブルート・ワンダラー&f&lを1体倒す"
+  Skills:
+  - skill{
+    s=[
+      - barCreate{name="<caster.uuid>";display="[&d&l★&f×2] &6&lブルート・ワンダラー&f&lを1体倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10}
+      - summon{a=1;s=true;r=0;m=Azuriter_Boss_ブルート_ワンダラー;then=[
+        - e:p{p=explosion_huge;a=1} @origin
+        - sound{s=entity.piglin_brute.angry;v=4} @origin
+      ];delay=40}
+
+    ]} @self ~onSpawn 
+
+  - skill{
+    s=[
+      - skill{s=Azuriter_トライアル_2_Drop2} @self
+      - barRemove{name="<caster.uuid>";delay=1}
+      - suicide
+
+    ]} @self ~onSignal:trial_drop_2_2
+
+  - skill{
+    s=[
+      - setVar{k=skill.hp;a="(min(<target.hp> / <target.mhp>, 1.0))";t=FLOAT} @MIR{r=48;t=Azuriter_Boss_ブルート_ワンダラー;limit=1;sort=NEAREST}
+      - barSet{name="<caster.uuid>";display="[&d&l★&f×2] &6&lブルート・ワンダラー&f&lを1体倒す &r- &b&l進行度";value="1.0 - <skill.var.hp|1.0>";color=GREEN;style=SEGMENTED_10} @self
+    ]}  @self ~onTimer:20 
+  
+
+#####モブスキル用#####
+
+Azuriter_Soul_Wanderer_Soul1:
+  Template: Azuriter_Enemy_Base
+  Display: "[&d&l★&f×1] &9&lソール・ワンダラー"
+  Health: 999999999
+  Damage: 20
+  DamageModifiers:
+  - FALL 0
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: BLOCK_DISPLAY
+      Material: SOUL_FIRE
+    Transform:
+      Translation: 0,0,0
+      Scale: 1,1,1
+      LeftRotation: 0,0,0,1
+      RightRotation: 0,0,0,1
+      Billboard: FIXED
+      Brightness: 15,15
+      ShadowRadius: 0.0
+      ShadowStrength: 1.0
+      ViewRange: 1.0
+  Options:
+    MaxCombatDistance: 0
+    PassthroughDamage: false
+    LockPitch: true
+    Scale: 0.5
+    NoAI: true
+    Interactable: false
+    Silent: true
+  Skills:
+  - skill{
+    s=[
+      - teleport @selfLocation{y=-3.0}
+      - tracklocation{delay=1} @selfLocation 
+      - sound{s=entity.blaze.ambient;sc=PLAYERS;v=2;audience=@PIR{r=32}} @self
+      - e:p{p=cloud;a=15;hs=1;s=1;audience=@PIR{r=32};vd=32} @self
+      - look{f=true;delay=1} @parent 
+      - delay 200
+      - remove @self
+    ]} @self ~onSpawn
+
+Azuriter_Soul_Wanderer_Soul2:
+  Template: Azuriter_Enemy_Base
+  Display: "[&d&l★&f×1] &9&lソール・ワンダラー"
+  Health: 999999999
+  Damage: 20
+  DamageModifiers:
+  - FALL 0
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: BLOCK_DISPLAY
+      Material: SOUL_FIRE
+    Transform:
+      Translation: 0,0,0
+      Scale: 0.5,0.5,0.5
+      LeftRotation: 0,0,0,1
+      RightRotation: 0,0,0,1
+      Billboard: FIXED
+      Brightness: 15,15
+      ShadowRadius: 0.0
+      ShadowStrength: 1.0
+      ViewRange: 1.0
+  Options:
+    MaxCombatDistance: 0
+    PassthroughDamage: false
+    LockPitch: true
+    Scale: 0.5
+    NoAI: true
+    Interactable: false
+    Silent: true
+  Skills:
+  - skill{
+    s=[
+      - sound{s=entity.blaze.ambient;sc=PLAYERS;v=2;audience=@PIR{r=32}} @self
+      - e:p{p=cloud;a=15;hs=1;s=1;audience=@PIR{r=32};vd=32} @self
+    ]} @self ~onSpawn

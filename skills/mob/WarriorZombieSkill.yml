@@ -1,0 +1,30 @@
+Azuriter_Warrior_Zombie_Skills:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  Skills:
+  - delay <random.10to100>
+  - jump{v=1.2} @self
+  - delay 4
+  - potion{t=SLOW_FALLING;l=0;d=15;p=true} @self
+  - projectile{
+    ot=[
+      - delay 4
+      - leap{v=250} @origin
+    ];
+    oe=[
+      - delay 12
+      - sound{s=entity.generic.explode;sc=NEUTRAL;p=2} @self
+      - e:pr{p=cloud;pts=32;a=3;vs=0.05;hs=0.05;d=true;dir=0,1,0;s=1.25;audience=nearby;r=3;size=0.75;y=0.5} @origin
+      - addMask{b=RED_TERRACOTTA;r=8;d=20}
+      - setvar{k=skill.loc;val="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
+      - delay 20
+      - damage{a="<caster.damage> + 4";pi=true;ii=true} @ARadius{r=8;loc=<skill.var.loc>}
+      - sound{s=entity.generic.explode;sc=NEUTRAL;p=0.5;delay=34} @self
+      - e:pr{p=explosion;pts=8;r=4;a=1;delay=36} @origin
+      - e:pr{p=explosion;pts=12;r=7;a=1;delay=40} @origin
+      - e:pr{p=explosion;pts=16;r=10;a=1;delay=44} @origin
+    ];
+    v=40;sfo=0;syo=0;i=1;hp=false;d=200;g=1;tyo=-1;vr=2} @TL 
+  - delay 100
+  - skill{s=Azuriter_Warrior_Zombie_Skills} @self

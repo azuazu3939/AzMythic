@@ -1,0 +1,47 @@
+Azuriter_Admin_Mob_DamageTest:
+  Template: Azuriter_Enemy_Base
+  Health: 99999
+  Damage: 1
+  Faction: Admin
+  Options:
+    Silent: true
+    PreventVanillaDamage: true 
+    NoAI: true
+    Interactable: true
+  Skills:
+  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @trigger ~onDamaged ?!hasTag{t=ALL}
+  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @PIR{r=16} ~onDamaged ?hasTag{t=ALL}
+  - heal{a="<caster.mhp>"} @self ~onTimer:200
+  - skill{
+    s=[
+      - addtag{t=LOG} @self ?hasTag{t=ALL}
+      - removetag{t=LOG;delay=20} @self ?hasTag{t=ALL}
+
+      - message{m="ダメージ表示を個別に変更しました。"} ?hasTag{t=ALL}
+      - removetag{t=ALL} @self ?hasTag{t=ALL}
+
+      - return ?hasTag{t=LOG}
+
+      - message{m="ダメージ表示を周囲に変更しました。"} ?!hasTag{t=ALL}
+      - addtag{t=ALL} @self ?!hasTag{t=ALL}
+  
+    ];cd=1.2} @trigger ~onInteract 
+
+Azuriter_ShopKeepers:
+  Type: VILLAGER
+  Display: "&a&lNPCショップ"
+  Health: 99999
+  Faction: Admin
+  AIGoalSelectors:
+  - goToSpawnLocation{maxrange=2;minrange=0;speed=2}
+  Options:
+    PreventRandomEquipment: false
+    PreventMobKillDrops: false
+    PreventOtherDrops: false
+    PreventVanillaDamage: true 
+    MaxCombatDistance: 0
+    UseThreatTable: true
+    MovementSpeed: 0.125
+    Interactable: true
+    AlwaysShowName: true
+  Skills:

@@ -1,0 +1,177 @@
+Azuriter_お肉:
+  Id: cooked_beef
+  Display: "&fお肉"
+  ItemUpdater:
+    Version: 3
+  Group: 'Food'
+
+Azuriter_ウルフード:
+  Id: cooked_mutton
+  Display: "&fウルフード"
+  Lore:
+  - "&f夜目に長ける能力を一時的に得る。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Skills:
+  - potion{t=NIGHT_VISION;l=0;d=36000;p=false} @self ~onConsume 
+
+Azuriter_ビッグステーキ:
+  Id: cooked_beef
+  Display: "&aビッグステーキ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Skills:
+  - potion{t=SATURATION;d=200;p=false} @self ~onConsume 
+  - potion{t=NIGHT_VISION;d=216000;p=false} @self ~onConsume
+  - heal{a=6} @self ~onConsume 
+
+Azuriter_高揚の灯:
+  Id: campfire
+  Display: "&e&l高揚の灯"
+  Lore:
+  - "&f消費することで、30秒間クリティカル率を15%上昇させる。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Enchantments:
+  - INFINITY 3
+  Hide:
+  - ENCHANTS
+  Options:
+    StackSize: 8
+  Consumable:
+    ConsumeSeconds: 1
+    HasParticles: false
+    Animation: EAT
+    Sound: block.trial_spawner.about_to_spawn_item
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=CAMPFIRE;d=180} @self
+      - stataura{n=高揚の灯;d=600;stat=CRITICAL_STRIKE_CHANCE;type=ADDITIVE;val=0.15} @self
+    ]} @self ~onConsume ?!materialIsOnCooldown{m=CAMPFIRE}
+
+Azuriter_光明の灯:
+  Id: soul_campfire
+  Display: "&e&l光明の灯"
+  Lore:
+  - "&f消費することで、30秒間クリティカルダメージをを15上昇させる。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Enchantments:
+  - INFINITY 3
+  Hide:
+  - ENCHANTS
+  Options:
+    StackSize: 8
+  Consumable:
+    ConsumeSeconds: 1
+    HasParticles: false
+    Animation: EAT
+    Sound: block.trial_spawner.about_to_spawn_item
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=SOUL_CAMPFIRE;d=180} @self
+      - stataura{n=光明の灯;d=600;stat=CRITICAL_STRIKE_DAMAGE;type=ADDITIVE;val=0.15} @self
+    ]} @self ~onConsume ?!materialIsOnCooldown{m=SOUL_CAMPFIRE}
+
+Azuriter_城壁の守護石:
+  Id: obsidian
+  Display: "&b&l城壁の守護石"
+  Lore:
+  - "&f消費することで、10分間防御力をを15上昇させる。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Enchantments:
+  - INFINITY 3
+  Options:
+    StackSize: 8
+  Consumable:
+    ConsumeSeconds: 1
+    HasParticles: false
+    Animation: EAT
+    Sound: block.trial_spawner.about_to_spawn_item
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=OBSIDIAN;d=12000} @self
+      - stataura{n=城壁の守護石;d=12000;stat=ARMOR;type=ADDITIVE;val=15} @self
+    ]} @self ~onConsume ?!materialIsOnCooldown{m=OBSIDIAN}
+
+Azuriter_堅牢の守護石:
+  Id: crying_obsidian
+  Display: "&b&l堅牢の守護石"
+  Lore:
+  - "&f消費することで、10分間防具強度をを15上昇させる。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Enchantments:
+  - INFINITY 3
+  Hide:
+  - ENCHANTS
+  Options:
+    StackSize: 8
+  Consumable:
+    ConsumeSeconds: 1
+    HasParticles: false
+    Animation: EAT
+    Sound: block.trial_spawner.about_to_spawn_item
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=CRYING_OBSIDIAN;d=12000} @self
+      - stataura{n=堅牢の守護石;d=12000;stat=ARMOR_TOUGHNESS;type=ADDITIVE;val=15} @self
+    ]} @self ~onConsume ?!materialIsOnCooldown{m=CRYING_OBSIDIAN}
+
+Azuriter_安寧の球界:
+  Id: melon
+  Display: "&a&l安寧の球界"
+  Lore:
+  - "&f消費することで、10分間最大体力をを15上昇させる。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Enchantments:
+  - INFINITY 3
+  Hide:
+  - ENCHANTS
+  Options:
+    StackSize: 8
+  Consumable:
+    ConsumeSeconds: 1
+    HasParticles: false
+    Animation: EAT
+    Sound: block.trial_spawner.about_to_spawn_item
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=MELON;d=12000} @self
+      - stataura{n=安寧の球界;d=12000;stat=HEALTH;type=ADDITIVE;val=15} @self
+    ]} @self ~onConsume ?!materialIsOnCooldown{m=MELON}
+
+Azuriter_不滅の心臓:
+  Id: creaking_heart
+  Display: "&c&l不滅の心臓"
+  Lore:
+  - "&f体力を全損する際に、消費され蘇生として機能する。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Food'
+  Enchantments:
+  - INFINITY 10
+  Hide:
+  - ENCHANTS
+  Options:
+    StackSize: 2
+  DeathProtection:
+    ConsumeEffects:
+    - sound{s=entity.zombie_villager.cure;audience=caster} @self
+    - heal_percent{m=0.5} @self
+    - potion{t=RESISTANCE;l=1;d=50;p=false;i=false} @self
+    - potion{t=REGENERATION;l=3;d=50;p=false;i=false} @self

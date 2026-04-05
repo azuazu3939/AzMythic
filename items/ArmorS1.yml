@@ -1,0 +1,532 @@
+Azuriter_ビギナーH:
+  Id: leather_helmet
+  Display: "&fビギナーヘルメット"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      ArmorToughness: 2 ADD 
+      Armor: 3 ADD 
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_HealthColor} @self ~onSwing 
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_HealthColor} @self ~onAttack
+
+Azuriter_ビギナーC:
+  Id: leather_chestplate
+  Display: "&fビギナーチェストプレート"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      ArmorToughness: 2 ADD 
+      Armor: 8 ADD 
+  Group: 'Armor'
+
+Azuriter_ビギナーL:
+  Id: leather_leggings
+  Display: "&fビギナーレギンス"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      ArmorToughness: 2 ADD 
+      Armor: 6 ADD 
+  Group: 'Armor'
+
+Azuriter_ビギナーB:
+  Id: leather_boots
+  Display: "&fビギナーブーツ"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      ArmorToughness: 2 ADD 
+      Armor: 3 ADD 
+  Group: 'Armor'
+
+Azuriter_トラベラーH:
+  Id: leather_helmet
+  Display: "&fトラベラーヘルメット"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+    Color: 90,184,73
+  Attributes:
+    Head:
+      ArmorToughness: 4 ADD 
+      Armor: 8 ADD 
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_HealthColor} @self ~onSwing 
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_HealthColor} @self ~onAttack
+
+Azuriter_トラベラーC:
+  Id: leather_chestplate
+  Display: "&fトラベラーチェストプレート"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+    Color: 90,184,73
+  Attributes:
+    Chest:
+      ArmorToughness: 4 ADD 
+      Armor: 8 ADD 
+  Group: 'Armor'
+
+Azuriter_トラベラーL:
+  Id: leather_leggings
+  Display: "&fトラベラーレギンス"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+    Color: 90,184,73
+  Attributes:
+    Legs:
+      ArmorToughness: 4 ADD 
+      Armor: 8 ADD 
+  Group: 'Armor'
+
+Azuriter_トラベラーB:
+  Id: leather_boots
+  Display: "&fトラベラーブーツ"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  Options:
+    Unbreakable: true
+    Color: 90,184,73
+  Attributes:
+    Feet:
+      ArmorToughness: 4 ADD 
+      Armor: 8 ADD 
+  Group: 'Armor'
+
+Azuriter_ディフェンスH:
+  Id: leather_helmet
+  Display: "&fディフェンダーヘルメット"
+  EquipSlot: HEAD
+  EquipmentSet: Defender
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 28,30,137
+  Attributes:
+    Head:
+      ArmorToughness: 9 ADD 
+      Armor: 15 ADD
+      Health: 2 ADD
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_HealthColor} @self ~onSwing 
+  - skill{s=Azuriter_HealthColor} @self ~onJoin
+  - skill{s=Azuriter_HealthColor} @self ~onAttack
+
+Azuriter_ディフェンスC:
+  Id: leather_chestplate
+  Display: "&fディフェンダーチェストプレート"
+  EquipSlot: CHEST
+  EquipmentSet: Defender
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 28,30,137
+  Attributes:
+    Chest:
+      ArmorToughness: 9 ADD 
+      Armor: 12 ADD 
+      Health: 4 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ディフェンスL:
+  Id: leather_leggings
+  Display: "&fディフェンダーレギンス"
+  EquipSlot: LEGS
+  EquipmentSet: Defender
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 28,30,137
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Legs:
+      ArmorToughness: 12 ADD 
+      Armor: 16 ADD 
+      Health: 2 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_ディフェンスB:
+  Id: leather_boots
+  Display: "&fディフェンダーブーツ"
+  EquipSlot: FEET
+  EquipmentSet: Defender
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 28,30,137
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Feet:
+      ArmorToughness: 12 ADD 
+      Armor: 18 ADD 
+      Health: 1 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_アタッカーH:
+  Id: leather_helmet
+  Display: "&fアタッカーヘルメット"
+  EquipSlot: HEAD
+  EquipmentSet: Attacker
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 228,32,32
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Head:
+      ArmorToughness: 4 ADD 
+      Armor: 8 ADD
+      Damage: 1 ADD
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_HealthColor} @self ~onSwing 
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_HealthColor} @self ~onAttack
+
+Azuriter_アタッカーC:
+  Id: leather_chestplate
+  Display: "&fアタッカーチェストプレート"
+  EquipSlot: CHEST
+  EquipmentSet: Attacker
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 228,32,32
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Chest:
+      ArmorToughness: 8 ADD 
+      Armor: 10 ADD
+      Damage: 1 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_アタッカーL:
+  Id: leather_leggings
+  Display: "&fアタッカーレギンス"
+  EquipSlot: LEGS
+  EquipmentSet: Attacker
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 228,32,32
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Legs:
+      ArmorToughness: 6 ADD 
+      Armor: 10 ADD
+      Damage: 1 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_アタッカーB:
+  Id: leather_boots
+  Display: "&fアタッカーブーツ"
+  EquipSlot: FEET
+  EquipmentSet: Attacker
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 228,32,32
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Feet:
+      ArmorToughness: 4 ADD 
+      Armor: 8 ADD
+      Damage: 1 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_シリーズエンド1H:
+  Material: diamond_helmet
+  Display: "&aシリーズエンド・I・ヘルメット"
+  EquipSlot: HEAD
+  EquipmentSet: Diamond_S1End
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 2
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 3
+  Attributes:
+    Head:
+      ArmorToughness: 25 ADD 
+      Armor: 32 ADD
+      Health: 10 ADD
+      Damage: 2.5 ADD
+  Group: 'Armor'
+  Skills:
+  - skill{s=Azuriter_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
+  - skill{s=Azuriter_HealthColor} @self ~onSwing 
+  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_HealthColor} @self ~onAttack
+
+Azuriter_シリーズエンド1C:
+  Material: diamond_chestplate
+  Display: "&aシリーズエンド・I・チェストプレート"
+  EquipSlot: CHEST
+  EquipmentSet: Diamond_S1End
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 2
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 3
+  Attributes:
+    Chest:
+      ArmorToughness: 25 ADD 
+      Armor: 32 ADD 
+      Health: 10 ADD
+      Damage: 2.5 ADD
+  Group: 'Armor'
+
+Azuriter_シリーズエンド1L:
+  Material: diamond_leggings
+  Display: "&aシリーズエンド・I・レギンス"
+  EquipSlot: LEGS
+  EquipmentSet: Diamond_S1End
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 2
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 3
+  Attributes:
+    Legs:
+      ArmorToughness: 25 ADD 
+      Armor: 32 ADD 
+      Health: 10 ADD
+      Damage: 2.5 ADD
+  Group: 'Armor'
+
+Azuriter_シリーズエンド1B:
+  Material: diamond_boots
+  Display: "&aシリーズエンド・I・ブーツ"
+  EquipSlot: FEET
+  EquipmentSet: Diamond_S1End
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: Gem_1
+    Amount: 2
+    Chance: 1
+    MaxAmount: 3
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 3
+  Attributes:
+    Feet:
+      ArmorToughness: 25 ADD 
+      Armor: 32 ADD 
+      Health: 10 ADD
+      Damage: 2.5 ADD
+  Group: 'Armor'

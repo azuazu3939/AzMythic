@@ -1,0 +1,344 @@
+Azuriter_粗悪な装備片:
+  Id: leather
+  Display: "&f粗悪な装備片"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&f質も量も足りないが、集めれば使えるだろう。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_バラケタ装備片:
+  Id: leather
+  Display: "&fバラケタ装備片"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&f集めればまだまだ使えるだろう。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+  Hide:
+  - ENCHANTS
+  Enchantments:
+  - UNBREAKING 1
+
+Azuriter_白マテリア:
+  Id: white_dye
+  Display: "&a白マテリア"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&f物体の正常化を促進する。"
+  - "&f影ある場所に光あり。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_鉄片:
+  Id: iron_ingot
+  Display: "&f鉄片"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&f比較的強度が良い。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_加工鉄片:
+  Id: iron_ingot
+  Display: "&f加工鉄片"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&fこれは良いものだ!"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+  Hide:
+  - ENCHANTS
+  Enchantments:
+  - UNBREAKING 2
+
+Azuriter_ハイソール:
+  Id: blaze_powder
+  Display: "&fハイソール"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&f時が経てど、失われぬ強い心力。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_黒マテリア:
+  Id: black_dye
+  Display: "&a黒マテリア"
+  Lore:
+  - "&f名もなき冒険者たちの遺品。"
+  - "&f物体の安定性を促進する。"
+  - "&f光ある場所に影あり。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_シリーズエンド1Material:
+  Id: diamond
+  Display: "&aシリーズエンド・I・マテリア"
+  Lore:
+  - "&f魂の情熱をもって、丹精に練り上げた代物。"
+  - "&f素材屋から入手可能。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_Altwolf_牙:
+  Id: ghast_tear
+  Display: "&fアルトゥルフの牙"
+  Lore:
+  - "&fウィデラーの住処などで、"
+  - "&f入手可能なアイテム、希少性がある。"
+  Enchantments:
+  - SHARPNESS 1
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_Altwolf_粗皮:
+  Id: leather
+  Display: "&fアルトゥルフの粗皮"
+  Lore:
+  - "&fウィデラーの住処などで、"
+  - "&f入手可能なアイテム、耐久性が良い。"
+  Enchantments:
+  - UNBREAKING 3
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_風核:
+  Id: wind_charge
+  Display: "&9風核"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+  Skills:
+  - cancelEvent{sync=true} @self ~onUse
+  - cancelEvent{sync=true} @self ~onRightclick
+  - cancelEvent{sync=true} @self ~onThrow
+
+Azuriter_風牙狼の皮:
+  Id: leather
+  Display: "&a風牙狼の皮"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_炎核:
+  Id: fire_charge
+  Display: "&9炎核"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_焔獣の炎殻:
+  Id: blaze_powder
+  Display: "&a焔獣の炎殻"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_タレットレーザー_骨:
+  Id: bone_block
+  Display: "&fレットザレーターの骨"
+  Lore:
+  - "&fフェルドスの住処などで、"
+  - "&f入手可能なアイテム、耐久性が良い。"
+  Enchantments:
+  - UNBREAKING 3
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_タレットレーザー_頭:
+  Id: skeleton_skull
+  Display: "&fレットザレーターの頭骨"
+  Lore:
+  - "&fフェルドスの住処などで、"
+  - "&f入手可能なアイテム、希少性がある。"
+  Enchantments:
+  - MENDING 1
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_砂核:
+  Id: honeycomb
+  Display: "&9砂核"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+  Skills:
+  - cancelEvent{sync=true} @self ~onUse
+  - cancelEvent{sync=true} @self ~onRightclick 
+  - cancelEvent{sync=true} @self ~onThrow
+
+Azuriter_幻想獣の皮:
+  Id: rabbit_hide
+  Display: "&a幻想獣の皮"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_ビッグな生肉:
+  Id: beef
+  Display: "&fビッグな生肉"
+  Lore:
+  - "&fバサモスの住処などで、"
+  - "&f入手可能なアイテム、希少なお肉。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_ビッグなレザー:
+  Id: leather
+  Display: "&fビッグなレザー"
+  Lore:
+  - "&fバサモスの住処などで、"
+  - "&f入手可能なアイテム、大きな革。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_トライアラン勲章:
+  Id: book
+  Display: "&eトライアラン勲章"
+  Lore:
+  - "&fトライアルクリア報酬。"
+  - "&f/shopで様々なものと交換できる。"
+  ItemUpdater:
+    Version: 1
+  Enchantments:
+  - INFINITY 1
+  Hide:
+  - ENCHANTS
+  Group: 'Material'
+
+
+Azuriter_包装されたバックパック1:
+  Id: paper
+  Display: "&f包装されたバックパック"
+  Lore:
+  - "&f未使用のベーシックバックパックを包装したもの。"
+  ItemUpdater:
+    Version: 2
+  Enchantments:
+  - UNBREAKING 5
+  Hide:
+  - ENCHANTS
+  Group: 'Material'
+
+Azuriter_包装されたバックパック2:
+  Id: paper
+  Display: "&f包装されたバックパック"
+  Lore:
+  - "&f未使用のゴールデンバックパックを包装したもの。"
+  ItemUpdater:
+    Version: 2
+  Enchantments:
+  - UNBREAKING 5
+  Hide:
+  - ENCHANTS
+  Group: 'Material'
+
+
+### 敵視
+
+Azuriter_アンガスタ:
+  Id: blaze_powder
+  Display: "&e&lアンガスタ"
+  Lore:
+  - "&f食べることで、周囲からの敵視を少し上げる"
+  ItemUpdater:
+    Version: 1
+  Enchantments:
+  - EFFICIENCY 1
+  Hide:
+  - ENCHANTS
+  Group: 'Material'
+  Consumable:
+    ConsumeSeconds: 2
+    HasParticles: false
+    Animation: EAT
+    Sound: entity.blaze.ambient
+    #ConsumeEffects: []
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=blaze_powder;d=2400}
+      - sudoskill{
+        s=[
+          - threat{m=ADD;a=1} @trigger 
+        ];cat=true} @EIR{r=48;limit=16;sort=NEAREST;ignore=players}
+    ];repeat=19;repeati=100;cd=120} @self ~onConsume 
+
+
+### TP
+
+Azuriter_リタン:
+  Id: feather
+  Display: "&e&lリタン"
+  Lore:
+  - "&f食べることで、サーバーの初期位置へ即座に戻れる。"
+  ItemUpdater:
+    Version: 2
+  Enchantments:
+  - INFINITY 5
+  Hide:
+  - ENCHANTS
+  Group: 'Material'
+  Consumable:
+    ConsumeSeconds: 2
+    HasParticles: false
+    Animation: SPEAR
+    Sound: entity.enderman.teleport
+    #ConsumeEffects: []
+  Skills:
+  - skill{
+    s=[
+      - setMaterialCooldown{m=FEATHER;d=20}
+      - cmd{c="spawn <caster.name>";cd=1}
+    ]} @self ~onConsume
+
+### Paper
+
+Azuriter_Feldos_Summon_Paper:
+  Id: paper
+  Display: "&fフェルドスの召喚紙"
+  Lore:
+  - "&f紙には32と書かれている…"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_Wedler_Summon_Paper:
+  Id: paper
+  Display: "&fウィデラーの召喚紙"
+  Lore:
+  - "&f紙には32と書かれている…"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
+Azuriter_Basamos_Summon_Paper:
+  Id: paper
+  Display: "&fバサモスの召喚紙"
+  Lore:
+  - "&f紙には32と書かれている…"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'

@@ -1,0 +1,244 @@
+Azuriter_Master_Zombie_Skills:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  Skills:
+  - randomskill{skills=Azuriter_Master_Zombie_Skill_1 5,Azuriter_Master_Zombie_Skill_2 3,Azuriter_Master_Zombie_Skill_3 6,Azuriter_Master_Zombie_Skill_4 2,Azuriter_Master_Zombie_Skill_5 4;fbs=Azuriter_Master_Zombie_Skill_1} @self
+  - delay 200
+  - skill{s=Azuriter_Master_Zombie_Skills} @self
+
+Azuriter_Master_Zombie_Skill_1:
+  Cooldown: 1
+  Conditions:
+  - incombat true 
+  - hasTag{t=DOWN} false
+  Skills:
+  - setVar{k=skill.up;a="0.75";t=FLOAT} @self
+  - skill{s=Azuriter_Master_Zombie_Skill_1_Random;repeat=<random.1to3>;repeati=<random.15to30>} @self
+
+Azuriter_Master_Zombie_Skill_1_Random:
+  Conditions:
+  - incombat true 
+  Skills:
+  - setVar{k=skill.up;a="<skill.var.up|0.75> + 0.25";t=FLOAT} @self
+  - skill{s=Azuriter_Master_Zombie_Skill_1_Repeat;repeat=15;repeati=0} @self
+
+Azuriter_Master_Zombie_Skill_1_Repeat:
+  Skills:
+  - setVar{k=skill.syo<skill.var.itr>;a="<random.0to12>";t=INTEGER} @self
+  - setVar{k=skill.sso<skill.var.itr>;a="<random.-16to16>";t=INTEGER} @self
+  - projectile{v=1;i=1;mr=28;sfo=-8;syo=2;tyo=2;fo=true;origin=@selfLocation{so=<skill.var.sso<skill.var.itr>>;y=<skill.var.syo<skill.var.itr>>;cpitch=0};
+    b=DISPLAY;mat=IRON_SWORD;scale=1.5,1.5,1.5;yaw=3.14;pitch=1.57;roll=0.785;vr=2;r=2;
+    d=400;se=false;
+    os=[
+      - e:p{p=end_rod;a=5;ys=0.75;hs=0.25;delay=4;vd=32;audience=@PNO{r=32}} @origin
+    ];
+    oh=[
+      - damage{a="<caster.damage> * <skill.var.up|0.5>";pi=true;ii=true}
+      - throw{v=4;v=0.25}
+      - sound{s=item.trident.return;sc=PLAYERS;p=1;v=0.5} 
+      - sound{s=entity.zombie.attack_iron_door;p=2;v=0.5} 
+    ];
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1.25} @origin 
+    ]} @selfLocation{so=<skill.var.sso<skill.var.itr>>;y=<skill.var.syo<skill.var.itr>>;cpitch=0}
+
+Azuriter_Master_Zombie_Skill_2:
+  Cooldown: 30
+  Conditions:
+  - incombat true
+  - healthpercent{p=<50%} true
+  - hasTag{t=DOWN} false
+  Skills:
+  - stun{t=200} @self
+  - sound{s=entity.zombie_villager.cure;v=3;sc=PLAYERS} @self
+  - message{m="マスターゾンビが自己強化を図ろうとししている！相手を弱体化し妨害しよう！！"} @PIR{r=32}
+  - o{auraName=Master_Orb_1;r=3;hr=2.5;sp=0;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.25;hs=0.25;size=5;vd=32;audience=@PNO{r=32}} @origin 
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Master_Orb_2;r=3;hr=2.5;sp=40;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin 
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Master_Orb_3;r=3;hr=2.5;sp=80;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Master_Orb_4;r=3;hr=2.5;sp=120;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Master_Orb_5;r=3;hr=2.5;sp=160;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+  
+  - o{auraName=Master_Orb_6;r=3;hr=2.5;sp=200;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - skill{s=Azuriter_Master_Zombie_Skill_2_Check} @self
+
+Azuriter_Master_Zombie_Skill_2_Check:
+  Conditions:
+  - hasPotion{t=WEAKNESS} false 
+  Skills:
+  - sound{s=entity.zombie_villager.converted;v=3;sc=PLAYERS} @self
+  - potion{t=RESISTANCE;l=2;d=600;p=false} @self
+  - e:p{p=explosion_emitter;d=true;dir=0,1,0;s=0.5;a=25;vs=0.15;hs=2;a=5;vd=32;audience=@PNO{r=32}} @self
+
+Azuriter_Master_Zombie_Skill_3:
+  Cooldown: 10
+  Conditions:
+  - incombat true 
+  - hasTag{t=DOWN} false
+  Skills:
+  - skill{s=Azuriter_Master_Zombie_Skill_3_Random;repeat=<random.2to6>;repeati=60} @self
+
+Azuriter_Master_Zombie_Skill_3_Random:
+  Conditions:
+  - incombat true 
+  Skills:
+  - skill{s=Azuriter_Master_Zombie_Skill_3_Repeat;repeat=5;repeati=0} @self
+
+Azuriter_Master_Zombie_Skill_3_Repeat:
+  Skills:
+  - setVar{k=skill.sfo<skill.var.itr>;a="<random.-32to32>";t=INTEGER} @self
+  - setVar{k=skill.sso<skill.var.itr>;a="<random.-32to32>";t=INTEGER} @self
+  - projectile{v=10;i=1;mr=48;syo=20;fo=true;origin=@selfLocation{so=<skill.var.sso<skill.var.itr>>;fo=<skill.var.sfo<skill.var.itr>>};
+    b=DISPLAY;mat=NETHERITE_SWORD;scale=1.5,1.5,1.5;yaw=0;pitch=0;pitch=3.14;vr=2;r=2;
+    sb=true;d=400;hp=false;se=false;stpcond=[ - incombat false ];
+    ohb=[
+      - modifyprojectile{t=VELOCITY;a=SET;v=0} @self
+      - addMask{b=RED_TERRACOTTA;r=8;d=20;h=19} @origin
+      - e:pr{p=flame;a=1;ys=0.05;hs=0.05;pts=60;r=8;audience=@PNO{r=32};vd=32;y=<random.float.1to1.5>} @origin 
+      - damage{a="<caster.damage> * 1.5";pi=true;ii=true;delay=20} @PNO{r=8}
+      - sound{s=item.trident.return;sc=PLAYERS;p=1;v=1.25} @origin 
+      - sound{s=item.trident.thunder;sc=PLAYERS;p=2;v=1.25} @origin 
+      - sound{s=entity.zombie.attack_iron_door;p=2;v=1.5;delay=70} @origin 
+    ];
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1.25} @origin 
+    ]} @selfLocation{so=<skill.var.sso<skill.var.itr>>;fo=<skill.var.sfo<skill.var.itr>>}
+
+Azuriter_Master_Zombie_HighDrop:
+  Skills:
+  - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.25"} @self
+  - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G2 1 0.05"} @self
+  
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.005"} @self
+
+  - cmd{c="mlgo <target.name> Azuriter_ウィクサーH 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_ウィクサーC 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_ウィクサーL 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_ウィクサーB 1 0.005"} @self
+
+Azuriter_Master_Zombie_Skill_4:
+  Cooldown: 30
+  Conditions:
+  - incombat true
+  - hasTag{t=DOWN} false
+  Skills:
+  - skill{s=Azuriter_Master_Zombie_Skill_4_Repeat;repeat=9;repeati=30} @self
+  - delay 600
+  - skill{s=Azuriter_Master_Zombie_Skill_4_Final} @self 0.5 ?healthpercent{p=<0.7}
+  - skill{s=Azuriter_Master_Zombie_Skill_4_Final} @self 0.5 ?healthpercent{p=<0.4}
+
+Azuriter_Master_Zombie_Skill_4_Repeat:
+  Skills:
+  - projectile{v=0.01;i=1;mr=48;sfo=-5;syo=12;
+    b=DISPLAY;mat=GOLDEN_SWORD;scale=2.5,2.5,2.5;yaw=3.14;pitch=1.57;roll=0.785;vr=2;r=2;
+    d=200;se=true;
+    os=[
+      - e:p{p=dragon_breath;a=5;ys=0.75;hs=0.25;delay=4;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=VELOCITY;a=SET;v=2;delay=12} @self
+    ];
+    oe=[
+      - damage{a="<caster.damage> * 1.25";pi=true;ii=true} @PNO{r=4}
+      - sound{s=item.trident.return;sc=PLAYERS;p=1;v=0.5} @origin 
+      - sound{s=entity.zombie.attack_iron_door;p=2;v=0.5} @origin  
+      - skill{s=Azuriter_Master_Zombie_Skill_4_AreaDamage} @origin
+    ];
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1} @origin 
+    ]} @TL
+
+Azuriter_Master_Zombie_Skill_4_AreaDamage:
+  Skills:
+  - totem{d=1200;i=20;hp=true;hnp=false;se=false;sb=false;fo=true;
+    b=DISPLAY;mat=GOLDEN_SWORD;scale=2.5,2.5,2.5;yaw=0;pitch=0;roll=0.785;byo=3;enchanted=true;
+    ot=[
+      - e:ps{p=angryvillager;a=10;r=8;delay=10;vd=32;audience=@PNO{r=32}} @origin 
+      - damage{a="<caster.damage> * 1.75";pi=true;ii=true;delay=30} @PNO{r=8}
+      - potion{t=WEAKNESS;l=0;d=50;p=false;delay=30} @PNO{r=8;c=[ - hasAura{n=STEP_AVOID} false ]}
+      - sound{s=item.shield.break;sc=PLAYERS;delay=30;v=0.8} @origin 
+    ];
+    os=[
+      - addMask{b=RED_TERRACOTTA;r=8;d=1200;h=19} @origin 
+    ]}
+
+Azuriter_Master_Zombie_Skill_4_Final:
+  Cooldown: 5
+  Skills:
+  - jump{v=-3} @self
+  - delay 10
+  - stun{t=160} @self #スタン維持
+  - addMask{b=RED_TERRACOTTA;r=24;d=100} @selfLocation
+  - e:pr{p=crit_magic;a=1;ys=0.05;hs=0.05;pts=256;r=24;audience=@PNO{r=48};vd=48;y=1;repeat=8;repeati=10} @selfLocation 
+  - damage{a="<caster.damage> * 3";pi=true;ii=true;delay=120;repeat=24;repeati=1} @PIR{r=24} #大技なので@PIRからいじらない
+  - sound{s=entity.wither.death;sc=PLAYERS;v=1.5;p=1.414;delay=120} @self 
+  - bloodyScreen{d=3;c=true;repeat=125;repeati=1} @PIR{r=24}
+
+Azuriter_Master_Zombie_Skill_5:
+  Cooldown: 12
+  Conditions:
+  - incombat true
+  - hasTag{t=DOWN} false
+  Skills:
+  - addmask{shape=cone;r=32;angle=45;material=RED_TERRACOTTA;duration=20;h=25} @selfLocation{cpitch=0}
+  - setvar{k=skill.loc;val="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>,<caster.l.yaw>";t=STRING} @self
+  - delay 20
+  - damage{a="<caster.damage> * 2";pi=true;ii=true} @ACone{a=45;r=32;h=25;loc=<skill.var.loc>}

@@ -1,0 +1,51 @@
+Azuriter_Pickaxe:
+  Id: stone_pickaxe
+  Display: "&f配布ツルハシ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_Axe:
+  Id: stone_axe
+  Display: "&f配布斧"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_Pickaxe_1:
+  Id: stone_pickaxe
+  Display: "&f堅実ツルハシ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+  Enchantments:
+  - EFFICIENCY 3
+  - UNBREAKING 3
+
+Azuriter_Axe_1:
+  Id: stone_axe
+  Display: "&f堅実斧"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+  Enchantments:
+  - EFFICIENCY 3
+  - UNBREAKING 3
+
+Azuriter_Overload_Pickaxe:
+  Id: stone_pickaxe
+  Display: "&c赤熱動ツルハシ"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+  Enchantments:
+  - EFFICIENCY 6
+
+Azuriter_Overload_Axe:
+  Id: stone_axe
+  Display: "&c赤熱動斧"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+  Enchantments:
+  - EFFICIENCY 6

@@ -158,17 +158,3 @@ Azuriter_QuestBoss_AbyssSentinelInvitation:
   ItemUpdater:
     Version: 1
   Group: 'Util'
-
-Azuriter_Pickaxe:
-  Id: stone_pickaxe
-  Display: "&f配布ツルハシ"
-  ItemUpdater:
-    Version: 1
-  Group: 'Tools'
-
-Azuriter_Axe:
-  Id: stone_axe
-  Display: "&f配布斧"
-  ItemUpdater:
-    Version: 1
-  Group: 'Tools'

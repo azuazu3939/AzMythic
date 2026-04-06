@@ -43,8 +43,7 @@ Azuriter_Escape_Chest_1:
   - sound{s=entity.zombie.attack_wooden_door;p=2;sc=PLAYERS;cd=0.2} @self ~onDamaged 
   - sound{s=entity.zombie.attack_wooden_door;p=1;sc=PLAYERS;cd=0.2} @self ~onDeath 
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.05"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_お肉 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
 
 Azuriter_ショップアイコン_1:
   Type: item_display

@@ -7,8 +7,12 @@ Azuriter_Neutral_Zombie:
   - money 1to4 0.2
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=16;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=20;a=>0;t=Azuriter_Big_Zombie,Azuriter_Elite_Zombie} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4
@@ -45,7 +49,11 @@ Azuriter_Big_Zombie:
   - money 1to5
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Equipment:
   - LEATHER_HELMET{color=RED} HEAD
   Options:
@@ -94,7 +102,11 @@ Azuriter_Warrior_Zombie:
   - WOODEN_SWORD HAND
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4
@@ -136,8 +148,12 @@ Azuriter_High_Zombie:
   - money 3to6 0.5
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - attacker
   - fleeConditional{distance=16;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=20;a=>0;t=Azuriter_Big_Zombie,Azuriter_Elite_Zombie} true ]}
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4
@@ -182,7 +198,11 @@ Azuriter_Elite_Zombie:
   - IRON_SWORD HAND
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4
@@ -228,8 +248,12 @@ Azuriter_letthelater:
   - money 5to8 0.4
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Feldos} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 12
@@ -264,8 +288,12 @@ Azuriter_Altwolf:
   - money 3to5 0.75
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Wedler} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     Scale: 1.5
@@ -322,8 +350,12 @@ Azuriter_BigCamela:
       HitboxScale: 1.25,1.25,1.25
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Basamos} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     KnockbackResistance: 0.8
@@ -363,8 +395,12 @@ Azuriter_Armor_Zombie:
   - money 5to10 0.6
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=48;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=48;a=>0;t=Azuriter_Boss_マスターゾンビ} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4
@@ -418,8 +454,12 @@ Azuriter_ArmorFull_Zombie:
   - money 8to16 0.6
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=48;speed=1.25;safespeed=1;conditions=[ - mobsInRadius{r=48;a=>0;t=Azuriter_Boss_マスターゾンビ} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4
@@ -475,8 +515,12 @@ Azuriter_Elder_Zombie:
   - money 12to24 0.8
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
   - fleeConditional{distance=48;speed=1.25;safespeed=1;conditions=[ - mobsInRadius{r=48;a=>0;t=Azuriter_Boss_マスターゾンビ} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack 
+  - nothing{c=[ - samefaction true ]}
   Options:
     MaxCombatDistance: 48
     FollowRange: 4

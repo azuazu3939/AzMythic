@@ -4,6 +4,8 @@ Azuriter_Pickaxe:
   ItemUpdater:
     Version: 1
   Group: 'Tools'
+  Hide:
+  - ENCHANTS
 
 Azuriter_Axe:
   Id: stone_axe
@@ -11,6 +13,8 @@ Azuriter_Axe:
   ItemUpdater:
     Version: 1
   Group: 'Tools'
+  Hide:
+  - ENCHANTS
 
 Azuriter_Pickaxe_1:
   Id: stone_pickaxe
@@ -18,6 +22,8 @@ Azuriter_Pickaxe_1:
   ItemUpdater:
     Version: 1
   Group: 'Tools'
+  Hide:
+  - ENCHANTS
   Enchantments:
   - EFFICIENCY 3
   - UNBREAKING 3
@@ -28,6 +34,8 @@ Azuriter_Axe_1:
   ItemUpdater:
     Version: 1
   Group: 'Tools'
+  Hide:
+  - ENCHANTS
   Enchantments:
   - EFFICIENCY 3
   - UNBREAKING 3
@@ -38,12 +46,16 @@ Azuriter_Overload_Pickaxe:
   ItemUpdater:
     Version: 1
   Group: 'Tools'
+  Hide:
+  - ENCHANTS
   Enchantments:
   - EFFICIENCY 6
 
 Azuriter_Overload_Axe:
   Id: stone_axe
   Display: "&c赤熱動斧"
+  Hide:
+  - ENCHANTS
   ItemUpdater:
     Version: 1
   Group: 'Tools'

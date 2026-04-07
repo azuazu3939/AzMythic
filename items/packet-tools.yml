@@ -1,0 +1,300 @@
+defaults:
+  max-lore-obtainables: 3
+  default-profiles:
+    pickaxe: mining_stable_pickaxe
+    axe: logging_stable_axe
+    shovel: mining_stable_shovel
+    hoe: harvesting_stable_hoe
+    shears: foraging_stable_shears
+
+locations:
+  cave:
+    biomes:
+      - amber_reach
+      - hollow_belfry
+      - tuff_labyrinth
+      - verdant_catacomb
+      - void_bloom
+  forest:
+    biomes:
+      - surface_upland
+      - surface_lakeside_woods
+      - surface_fairy_grove
+      - surface_candy_forest
+      - surface_headwater_glen
+  grassland:
+    biomes:
+      - surface_meadow
+      - surface_prairie
+      - surface_open_pasture
+      - surface_amber_grassland
+      - surface_chalk_bloom_field
+      - surface_glasspetal_steppe
+      - surface_grazing_steppe
+      - surface_windscar_steppe
+  wetland:
+    biomes:
+      - surface_misty_basin
+      - surface_open_mire
+      - surface_lowfen
+      - surface_reed_marsh
+      - surface_silver_reedland
+      - surface_moonpetal_moor
+      - surface_moonwell_springs
+  mountain:
+    biomes:
+      - surface_highland
+      - surface_granite_peaks
+  arid:
+    biomes:
+      - surface_saltwash_plain
+      - surface_red_heath
+      - surface_lichen_flats
+      - surface_scoria_barrens
+
+personality-modifiers:
+  delicate:
+    speed-multiplier: 0.88
+    amount-multiplier: 0.95
+    uncommon-chance-multiplier: 1.08
+    rare-chance-multiplier: 1.20
+    tagged-chance-multiplier: 1.10
+    location-bonus-multiplier: 1.08
+  stable:
+    common-chance-multiplier: 1.04
+    uncommon-chance-multiplier: 1.02
+    empty-roll-multiplier: 0.75
+    location-bonus-multiplier: 1.05
+  fast:
+    speed-multiplier: 1.18
+    amount-multiplier: 1.16
+    common-chance-multiplier: 1.06
+    rare-chance-multiplier: 0.88
+    tagged-chance-multiplier: 0.94
+    stamina-cost-multiplier: 1.08
+  deep:
+    speed-multiplier: 0.94
+    rare-chance-multiplier: 1.28
+    tagged-chance-multiplier: 1.18
+    empty-roll-multiplier: 1.22
+    stamina-cost-multiplier: 1.06
+  rough:
+    speed-multiplier: 1.08
+    amount-multiplier: 1.24
+    common-chance-multiplier: 1.12
+    rare-chance-multiplier: 0.78
+    tagged-chance-multiplier: 0.88
+    empty-roll-multiplier: 1.08
+    stamina-cost-multiplier: 1.18
+
+profiles:
+  mining_stable_pickaxe:
+    family: mining
+    tool-kinds: [ pickaxe ]
+    mythic-item-ids:
+      - Azuriter_Pickaxe
+      - Azuriter_Pickaxe_1
+    forge-equipment-types: [ pickaxe ]
+    obtainables:
+      - Azuriter_Forge_Process_StonebinderFlux
+      - Azuriter_Forge_Process_EchoBinder
+      - Azuriter_Forge_Process_MoonwellCatalyst
+      - Azuriter_Forge_Process_SigilBinder
+      - Azuriter_Forge_Alloy_AzureLapis
+      - Azuriter_Forge_Alloy_AzuroMalachite
+      - Azuriter_Forge_Alloy_ChrysoShatta
+      - Azuriter_Forge_Alloy_DeepObsidian
+      - Azuriter_Forge_Alloy_DuskQuartz
+      - Azuriter_Forge_Alloy_EchoCalcite
+      - Azuriter_Forge_Alloy_FerricCoal
+      - Azuriter_Forge_Alloy_GildedAurum
+      - Azuriter_Forge_Alloy_IoliteSteel
+      - Azuriter_Forge_Alloy_LuminiteSilver
+      - Azuriter_Forge_Alloy_MoonlitAethercore
+      - Azuriter_Forge_Alloy_NetherFlame
+      - Azuriter_Forge_Alloy_PrismDiamond
+      - Azuriter_Forge_Alloy_SigilObsidian
+      - Azuriter_Forge_Alloy_StoneveinTuff
+      - Azuriter_Forge_Alloy_VerdantCopper
+      - Azuriter_Forge_Alloy_VerdureEmerald
+      - my_amethyst_shard
+      - my_biome_relic
+    personalities: [ stable ]
+    locations: [ cave, mountain ]
+    enchant-tags: [ gathering, mining, stable, cave ]
+
+  mining_fast_pickaxe:
+    family: mining
+    tool-kinds: [ pickaxe ]
+    mythic-item-ids:
+      - Azuriter_Overload_Pickaxe
+    obtainables:
+      - Azuriter_Forge_Process_StonebinderFlux
+      - Azuriter_Forge_Process_EchoBinder
+      - Azuriter_Forge_Process_MoonwellCatalyst
+      - Azuriter_Forge_Process_SigilBinder
+      - Azuriter_Forge_Alloy_AzureLapis
+      - Azuriter_Forge_Alloy_AzuroMalachite
+      - Azuriter_Forge_Alloy_ChrysoShatta
+      - Azuriter_Forge_Alloy_DeepObsidian
+      - Azuriter_Forge_Alloy_DuskQuartz
+      - Azuriter_Forge_Alloy_EchoCalcite
+      - Azuriter_Forge_Alloy_FerricCoal
+      - Azuriter_Forge_Alloy_GildedAurum
+      - Azuriter_Forge_Alloy_IoliteSteel
+      - Azuriter_Forge_Alloy_LuminiteSilver
+      - Azuriter_Forge_Alloy_MoonlitAethercore
+      - Azuriter_Forge_Alloy_NetherFlame
+      - Azuriter_Forge_Alloy_PrismDiamond
+      - Azuriter_Forge_Alloy_SigilObsidian
+      - Azuriter_Forge_Alloy_StoneveinTuff
+      - Azuriter_Forge_Alloy_VerdantCopper
+      - Azuriter_Forge_Alloy_VerdureEmerald
+      - my_amethyst_shard
+      - my_biome_relic
+    personalities: [ fast ]
+    locations: [ cave, mountain ]
+    enchant-tags: [ gathering, mining, fast, cave ]
+
+  mining_stable_shovel:
+    family: mining
+    tool-kinds: [ shovel ]
+    forge-equipment-types: [ shovel ]
+    obtainables:
+      - Azuriter_Forge_Process_StonebinderFlux
+      - Azuriter_Forge_Process_EchoBinder
+      - Azuriter_Forge_Process_MoonwellCatalyst
+      - Azuriter_Forge_Alloy_StoneveinTuff
+      - Azuriter_Forge_Alloy_AzureLapis
+      - Azuriter_Forge_Alloy_DuskQuartz
+      - Azuriter_Forge_Alloy_FerricCoal
+    personalities: [ stable ]
+    locations: [ cave, arid, mountain ]
+    enchant-tags: [ gathering, mining, stable, soil ]
+
+  logging_stable_axe:
+    family: logging
+    tool-kinds: [ axe ]
+    mythic-item-ids:
+      - Azuriter_Axe
+      - Azuriter_Axe_1
+    forge-equipment-types: [ axe ]
+    obtainables:
+      - Azuriter_Surface_Bark
+      - Azuriter_Surface_Raw_Wood
+      - Azuriter_Surface_Fiber
+      - Azuriter_Surface_Twig
+      - Azuriter_Surface_Leaf
+      - Azuriter_Surface_Hardwood
+      - Azuriter_Surface_Softwood
+      - Azuriter_Surface_TropicalWood
+      - Azuriter_Surface_MeadowWood
+      - Azuriter_Surface_PrairieWood
+      - Azuriter_Surface_UplandWood
+      - Azuriter_Surface_HighlandWood
+      - Azuriter_Surface_BasinWood
+      - Azuriter_Surface_FairyWood
+      - Azuriter_Surface_CandyWood
+    personalities: [ stable ]
+    locations: [ forest, grassland ]
+    enchant-tags: [ gathering, logging, stable, wood ]
+
+  logging_fast_axe:
+    family: logging
+    tool-kinds: [ axe ]
+    mythic-item-ids:
+      - Azuriter_Overload_Axe
+    obtainables:
+      - Azuriter_Surface_Bark
+      - Azuriter_Surface_Raw_Wood
+      - Azuriter_Surface_Fiber
+      - Azuriter_Surface_Twig
+      - Azuriter_Surface_Leaf
+      - Azuriter_Surface_Hardwood
+      - Azuriter_Surface_Softwood
+      - Azuriter_Surface_TropicalWood
+      - Azuriter_Surface_MeadowWood
+      - Azuriter_Surface_PrairieWood
+      - Azuriter_Surface_UplandWood
+      - Azuriter_Surface_HighlandWood
+      - Azuriter_Surface_BasinWood
+      - Azuriter_Surface_FairyWood
+      - Azuriter_Surface_CandyWood
+    personalities: [ fast ]
+    locations: [ forest, grassland ]
+    enchant-tags: [ gathering, logging, fast, wood ]
+
+  harvesting_stable_hoe:
+    family: harvesting
+    tool-kinds: [ hoe ]
+    forge-equipment-types: [ hoe ]
+    obtainables:
+      - Azuriter_Surface_MeadowCrop
+      - Azuriter_Surface_MeadowFruit
+      - Azuriter_Surface_PrairieCrop
+      - Azuriter_Surface_PrairieFruit
+      - Azuriter_Surface_UplandCrop
+      - Azuriter_Surface_UplandFruit
+      - Azuriter_Surface_HighlandCrop
+      - Azuriter_Surface_HighlandFruit
+      - Azuriter_Surface_BasinCrop
+      - Azuriter_Surface_BasinFruit
+      - Azuriter_Surface_FairyCrop
+      - Azuriter_Surface_FairyFruit
+      - Azuriter_Surface_CandyCrop
+      - Azuriter_Surface_CandyFruit
+      - Azuriter_Surface_Berry
+      - Azuriter_Surface_Cocoa
+    personalities: [ stable ]
+    locations: [ grassland, wetland ]
+    enchant-tags: [ gathering, harvesting, stable, crop ]
+
+  foraging_stable_shears:
+    family: foraging
+    tool-kinds: [ shears ]
+    obtainables:
+      - Azuriter_Surface_Flower
+      - Azuriter_Surface_Berry
+      - Azuriter_Surface_Sprout
+      - Azuriter_Surface_Flower_Bouquet
+      - Azuriter_Surface_Cocoa
+      - Azuriter_Surface_AmberGrasslandBloom
+      - Azuriter_Surface_AmberGrasslandFlower
+      - Azuriter_Surface_AmberGrasslandScrub
+      - Azuriter_Surface_ChalkBloomFieldBloom
+      - Azuriter_Surface_ChalkBloomFieldFlower
+      - Azuriter_Surface_ChalkBloomFieldScrub
+      - Azuriter_Surface_GlasspetalSteppeBloom
+      - Azuriter_Surface_GlasspetalSteppeFlower
+      - Azuriter_Surface_GlasspetalSteppeScrub
+      - Azuriter_Surface_LichenFlatsBloom
+      - Azuriter_Surface_LichenFlatsFlower
+      - Azuriter_Surface_LichenFlatsScrub
+      - Azuriter_Surface_MeadowFlower
+      - Azuriter_Surface_PrairieFlower
+      - Azuriter_Surface_UplandFlower
+      - Azuriter_Surface_HighlandFlower
+      - Azuriter_Surface_BasinFlower
+      - Azuriter_Surface_FairyFlower
+      - Azuriter_Surface_CandyFlower
+      - Azuriter_Surface_MoonpetalMoorBloom
+      - Azuriter_Surface_MoonpetalMoorFlower
+      - Azuriter_Surface_MoonpetalMoorScrub
+      - Azuriter_Surface_RedHeathBloom
+      - Azuriter_Surface_RedHeathFlower
+      - Azuriter_Surface_RedHeathScrub
+      - Azuriter_Surface_SaltwashPlainBloom
+      - Azuriter_Surface_SaltwashPlainFlower
+      - Azuriter_Surface_SaltwashPlainScrub
+      - Azuriter_Surface_ScoriaBarrensBloom
+      - Azuriter_Surface_ScoriaBarrensFlower
+      - Azuriter_Surface_ScoriaBarrensScrub
+      - Azuriter_Surface_SilverReedlandBloom
+      - Azuriter_Surface_SilverReedlandFlower
+      - Azuriter_Surface_SilverReedlandScrub
+      - Azuriter_Surface_WindscarSteppeBloom
+      - Azuriter_Surface_WindscarSteppeFlower
+      - Azuriter_Surface_WindscarSteppeScrub
+    personalities: [ stable ]
+    locations: [ forest, wetland, grassland ]
+    enchant-tags: [ gathering, foraging, stable, bloom ]

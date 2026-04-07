@@ -1,0 +1,471 @@
+materials:
+  forge_stonebinder_flux:
+    mmid: Azuriter_Forge_Process_StonebinderFlux
+    display-name: 石脈溶剤
+    tier: common
+    tags: [ forge, cave ]
+  forge_echo_binder:
+    mmid: Azuriter_Forge_Process_EchoBinder
+    display-name: 残響結着材
+    tier: uncommon
+    tags: [ forge, cave ]
+  forge_moonwell_catalyst:
+    mmid: Azuriter_Forge_Process_MoonwellCatalyst
+    display-name: 月泉触媒
+    tier: rare
+    tags: [ forge, deep, moonwell ]
+  forge_sigil_binder:
+    mmid: Azuriter_Forge_Process_SigilBinder
+    display-name: 印章結着材
+    tier: uncommon
+    tags: [ forge, deep ]
+  forge_alloy_azure_lapis:
+    mmid: Azuriter_Forge_Alloy_AzureLapis
+    display-name: 石英晶材
+    tier: common
+    tags: [ forge ]
+  forge_alloy_azuro_malachite:
+    mmid: Azuriter_Forge_Alloy_AzuroMalachite
+    display-name: 鉄地金
+    tier: uncommon
+    tags: [ forge ]
+  forge_alloy_chryso_shatta:
+    mmid: Azuriter_Forge_Alloy_ChrysoShatta
+    display-name: 銅地金
+    tier: uncommon
+    tags: [ forge ]
+  forge_alloy_deep_obsidian:
+    mmid: Azuriter_Forge_Alloy_DeepObsidian
+    display-name: 黒曜鍛材
+    tier: rare
+    tags: [ forge, deep ]
+  forge_alloy_dusk_quartz:
+    mmid: Azuriter_Forge_Alloy_DuskQuartz
+    display-name: 宵影石英材
+    tier: common
+    tags: [ forge ]
+  forge_alloy_echo_calcite:
+    mmid: Azuriter_Forge_Alloy_EchoCalcite
+    display-name: 残響晶材
+    tier: uncommon
+    tags: [ forge ]
+  forge_alloy_ferric_coal:
+    mmid: Azuriter_Forge_Alloy_FerricCoal
+    display-name: 石炭鍛材
+    tier: common
+    tags: [ forge ]
+  forge_alloy_gilded_aurum:
+    mmid: Azuriter_Forge_Alloy_GildedAurum
+    display-name: ラピス晶材
+    tier: uncommon
+    tags: [ forge ]
+  forge_alloy_iolite_steel:
+    mmid: Azuriter_Forge_Alloy_IoliteSteel
+    display-name: 金地金
+    tier: uncommon
+    tags: [ forge ]
+  forge_alloy_luminite_silver:
+    mmid: Azuriter_Forge_Alloy_LuminiteSilver
+    display-name: 紫晶鍛材
+    tier: uncommon
+    tags: [ forge ]
+  forge_moonlit_aethercore:
+    mmid: Azuriter_Forge_Alloy_MoonlitAethercore
+    display-name: 月光核材
+    tier: rare
+    tags: [ forge, moonwell, deep ]
+  forge_alloy_nether_flame:
+    mmid: Azuriter_Forge_Alloy_NetherFlame
+    display-name: ネザー炎鍛材
+    tier: rare
+    tags: [ forge, deep ]
+  forge_prism_diamond:
+    mmid: Azuriter_Forge_Alloy_PrismDiamond
+    display-name: 星彩金剛材
+    tier: rare
+    tags: [ forge, deep ]
+  forge_sigil_obsidian:
+    mmid: Azuriter_Forge_Alloy_SigilObsidian
+    display-name: 印章鍛材
+    tier: rare
+    tags: [ forge, deep ]
+  forge_alloy_stonevein_tuff:
+    mmid: Azuriter_Forge_Alloy_StoneveinTuff
+    display-name: 石脈鍛材
+    tier: common
+    tags: [ forge ]
+  forge_alloy_verdant_copper:
+    mmid: Azuriter_Forge_Alloy_VerdantCopper
+    display-name: 紅晶鍛材
+    tier: common
+    tags: [ forge ]
+  forge_alloy_verdure_emerald:
+    mmid: Azuriter_Forge_Alloy_VerdureEmerald
+    display-name: 翠鍛晶材
+    tier: rare
+    tags: [ forge, deep ]
+  mining_amethyst_shard:
+    mmid: my_amethyst_shard
+    display-name: アメジストの欠片
+    tier: uncommon
+    tags: [ cave, crystal ]
+  mining_biome_relic:
+    mmid: my_biome_relic
+    display-name: バイオームレリック
+    tier: rare
+    tags: [ cave, relic, deep ]
+  surface_bark:
+    mmid: Azuriter_Surface_Bark
+    display-name: 地上樹皮
+    tier: common
+    tags: [ wood, forest ]
+  surface_raw_wood:
+    mmid: Azuriter_Surface_Raw_Wood
+    display-name: 地上木材
+    tier: common
+    tags: [ wood, forest ]
+  surface_fiber:
+    mmid: Azuriter_Surface_Fiber
+    display-name: 地上繊維
+    tier: common
+    tags: [ wood, plant ]
+  surface_twig:
+    mmid: Azuriter_Surface_Twig
+    display-name: 地上小枝
+    tier: common
+    tags: [ wood, forest ]
+  surface_leaf:
+    mmid: Azuriter_Surface_Leaf
+    display-name: 地上葉材
+    tier: common
+    tags: [ wood, forest ]
+  surface_hardwood:
+    mmid: Azuriter_Surface_Hardwood
+    display-name: 地上硬木
+    tier: common
+    tags: [ wood ]
+  surface_softwood:
+    mmid: Azuriter_Surface_Softwood
+    display-name: 地上軟木
+    tier: common
+    tags: [ wood ]
+  surface_tropical_wood:
+    mmid: Azuriter_Surface_TropicalWood
+    display-name: 地上熱帯木
+    tier: common
+    tags: [ wood ]
+  surface_meadow_wood:
+    mmid: Azuriter_Surface_MeadowWood
+    display-name: 草原木
+    tier: common
+    tags: [ wood, grassland ]
+  surface_prairie_wood:
+    mmid: Azuriter_Surface_PrairieWood
+    display-name: 草原淡木
+    tier: common
+    tags: [ wood, grassland ]
+  surface_upland_wood:
+    mmid: Azuriter_Surface_UplandWood
+    display-name: 林冠木
+    tier: common
+    tags: [ wood, forest ]
+  surface_highland_wood:
+    mmid: Azuriter_Surface_HighlandWood
+    display-name: 高地木
+    tier: common
+    tags: [ wood, mountain ]
+  surface_basin_wood:
+    mmid: Azuriter_Surface_BasinWood
+    display-name: 湿地木
+    tier: common
+    tags: [ wood, wetland ]
+  surface_fairy_wood:
+    mmid: Azuriter_Surface_FairyWood
+    display-name: 妖精木
+    tier: common
+    tags: [ wood, forest ]
+  surface_candy_wood:
+    mmid: Azuriter_Surface_CandyWood
+    display-name: 菓子木
+    tier: common
+    tags: [ wood, forest ]
+  surface_meadow_crop:
+    mmid: Azuriter_Surface_MeadowCrop
+    display-name: 草原作物
+    tier: common
+    tags: [ crop, grassland ]
+  surface_meadow_fruit:
+    mmid: Azuriter_Surface_MeadowFruit
+    display-name: 草原果実
+    tier: common
+    tags: [ fruit, grassland ]
+  surface_prairie_crop:
+    mmid: Azuriter_Surface_PrairieCrop
+    display-name: 草原畑作
+    tier: common
+    tags: [ crop, grassland ]
+  surface_prairie_fruit:
+    mmid: Azuriter_Surface_PrairieFruit
+    display-name: 草原光果
+    tier: common
+    tags: [ fruit, grassland ]
+  surface_upland_crop:
+    mmid: Azuriter_Surface_UplandCrop
+    display-name: 林地作物
+    tier: common
+    tags: [ crop, forest ]
+  surface_upland_fruit:
+    mmid: Azuriter_Surface_UplandFruit
+    display-name: 林地果実
+    tier: common
+    tags: [ fruit, forest ]
+  surface_highland_crop:
+    mmid: Azuriter_Surface_HighlandCrop
+    display-name: 高地作物
+    tier: common
+    tags: [ crop, mountain ]
+  surface_highland_fruit:
+    mmid: Azuriter_Surface_HighlandFruit
+    display-name: 高地果実
+    tier: common
+    tags: [ fruit, mountain ]
+  surface_basin_crop:
+    mmid: Azuriter_Surface_BasinCrop
+    display-name: 湿地作物
+    tier: common
+    tags: [ crop, wetland ]
+  surface_basin_fruit:
+    mmid: Azuriter_Surface_BasinFruit
+    display-name: 湿地果実
+    tier: common
+    tags: [ fruit, wetland ]
+  surface_fairy_crop:
+    mmid: Azuriter_Surface_FairyCrop
+    display-name: 妖精作物
+    tier: common
+    tags: [ crop, forest ]
+  surface_fairy_fruit:
+    mmid: Azuriter_Surface_FairyFruit
+    display-name: 妖精果実
+    tier: common
+    tags: [ fruit, forest ]
+  surface_candy_crop:
+    mmid: Azuriter_Surface_CandyCrop
+    display-name: 菓子作物
+    tier: common
+    tags: [ crop, forest ]
+  surface_candy_fruit:
+    mmid: Azuriter_Surface_CandyFruit
+    display-name: 菓子果実
+    tier: common
+    tags: [ fruit, forest ]
+  surface_berry:
+    mmid: Azuriter_Surface_Berry
+    display-name: 地上果実
+    tier: common
+    tags: [ fruit, wetland ]
+  surface_cocoa:
+    mmid: Azuriter_Surface_Cocoa
+    display-name: 地上カカオ
+    tier: common
+    tags: [ fruit ]
+  surface_flower:
+    mmid: Azuriter_Surface_Flower
+    display-name: 地上花材
+    tier: common
+    tags: [ flower, grassland ]
+  surface_sprout:
+    mmid: Azuriter_Surface_Sprout
+    display-name: 地上芽材
+    tier: common
+    tags: [ flower, wetland ]
+  surface_flower_bouquet:
+    mmid: Azuriter_Surface_Flower_Bouquet
+    display-name: 地上花束
+    tier: uncommon
+    tags: [ flower, bloom ]
+  surface_amber_grassland_bloom:
+    mmid: Azuriter_Surface_AmberGrasslandBloom
+    display-name: 琥珀の花房
+    tier: uncommon
+    tags: [ flower, bloom, grassland ]
+  surface_amber_grassland_flower:
+    mmid: Azuriter_Surface_AmberGrasslandFlower
+    display-name: 琥珀の花
+    tier: common
+    tags: [ flower, grassland ]
+  surface_amber_grassland_scrub:
+    mmid: Azuriter_Surface_AmberGrasslandScrub
+    display-name: 琥珀草
+    tier: common
+    tags: [ plant, grassland ]
+  surface_chalk_bloom_field_bloom:
+    mmid: Azuriter_Surface_ChalkBloomFieldBloom
+    display-name: 白亜の花房
+    tier: uncommon
+    tags: [ flower, bloom, grassland ]
+  surface_chalk_bloom_field_flower:
+    mmid: Azuriter_Surface_ChalkBloomFieldFlower
+    display-name: 白亜の花
+    tier: uncommon
+    tags: [ flower, bloom, grassland ]
+  surface_chalk_bloom_field_scrub:
+    mmid: Azuriter_Surface_ChalkBloomFieldScrub
+    display-name: 白亜の茎
+    tier: uncommon
+    tags: [ flower, bloom, plant, grassland ]
+  surface_glasspetal_steppe_bloom:
+    mmid: Azuriter_Surface_GlasspetalSteppeBloom
+    display-name: 玻璃花の花房
+    tier: uncommon
+    tags: [ flower, bloom, grassland ]
+  surface_glasspetal_steppe_flower:
+    mmid: Azuriter_Surface_GlasspetalSteppeFlower
+    display-name: 玻璃花
+    tier: common
+    tags: [ flower, grassland ]
+  surface_glasspetal_steppe_scrub:
+    mmid: Azuriter_Surface_GlasspetalSteppeScrub
+    display-name: 玻璃花の茎
+    tier: common
+    tags: [ plant, grassland ]
+  surface_lichen_flats_bloom:
+    mmid: Azuriter_Surface_LichenFlatsBloom
+    display-name: 地衣の花房
+    tier: uncommon
+    tags: [ flower, bloom, arid ]
+  surface_lichen_flats_flower:
+    mmid: Azuriter_Surface_LichenFlatsFlower
+    display-name: 地衣の花
+    tier: common
+    tags: [ flower, arid ]
+  surface_lichen_flats_scrub:
+    mmid: Azuriter_Surface_LichenFlatsScrub
+    display-name: 地衣の葉片
+    tier: common
+    tags: [ plant, arid ]
+  surface_meadow_flower:
+    mmid: Azuriter_Surface_MeadowFlower
+    display-name: 草原花材
+    tier: common
+    tags: [ flower, grassland ]
+  surface_prairie_flower:
+    mmid: Azuriter_Surface_PrairieFlower
+    display-name: 草原大花
+    tier: common
+    tags: [ flower, grassland ]
+  surface_upland_flower:
+    mmid: Azuriter_Surface_UplandFlower
+    display-name: 林地花材
+    tier: common
+    tags: [ flower, forest ]
+  surface_highland_flower:
+    mmid: Azuriter_Surface_HighlandFlower
+    display-name: 高地花材
+    tier: common
+    tags: [ flower, mountain ]
+  surface_basin_flower:
+    mmid: Azuriter_Surface_BasinFlower
+    display-name: 湿地花材
+    tier: common
+    tags: [ flower, wetland ]
+  surface_fairy_flower:
+    mmid: Azuriter_Surface_FairyFlower
+    display-name: 妖精花材
+    tier: common
+    tags: [ flower, forest ]
+  surface_candy_flower:
+    mmid: Azuriter_Surface_CandyFlower
+    display-name: 菓子花材
+    tier: common
+    tags: [ flower, forest ]
+  surface_moonpetal_moor_bloom:
+    mmid: Azuriter_Surface_MoonpetalMoorBloom
+    display-name: 月花の花房
+    tier: uncommon
+    tags: [ flower, bloom, wetland ]
+  surface_moonpetal_moor_flower:
+    mmid: Azuriter_Surface_MoonpetalMoorFlower
+    display-name: 月花
+    tier: common
+    tags: [ flower, wetland ]
+  surface_moonpetal_moor_scrub:
+    mmid: Azuriter_Surface_MoonpetalMoorScrub
+    display-name: 月花の枝葉
+    tier: common
+    tags: [ plant, wetland ]
+  surface_red_heath_bloom:
+    mmid: Azuriter_Surface_RedHeathBloom
+    display-name: 赤ヒースの花房
+    tier: uncommon
+    tags: [ flower, bloom, arid ]
+  surface_red_heath_flower:
+    mmid: Azuriter_Surface_RedHeathFlower
+    display-name: 赤ヒースの花
+    tier: common
+    tags: [ flower, arid ]
+  surface_red_heath_scrub:
+    mmid: Azuriter_Surface_RedHeathScrub
+    display-name: 赤ヒースの枝葉
+    tier: common
+    tags: [ plant, arid ]
+  surface_saltwash_plain_bloom:
+    mmid: Azuriter_Surface_SaltwashPlainBloom
+    display-name: 塩原の花房
+    tier: uncommon
+    tags: [ flower, bloom, arid ]
+  surface_saltwash_plain_flower:
+    mmid: Azuriter_Surface_SaltwashPlainFlower
+    display-name: 塩原の花
+    tier: common
+    tags: [ flower, arid ]
+  surface_saltwash_plain_scrub:
+    mmid: Azuriter_Surface_SaltwashPlainScrub
+    display-name: 塩原の葦
+    tier: common
+    tags: [ plant, arid ]
+  surface_scoria_barrens_bloom:
+    mmid: Azuriter_Surface_ScoriaBarrensBloom
+    display-name: スコリアの花房
+    tier: uncommon
+    tags: [ flower, bloom, arid ]
+  surface_scoria_barrens_flower:
+    mmid: Azuriter_Surface_ScoriaBarrensFlower
+    display-name: スコリアの花
+    tier: common
+    tags: [ flower, arid ]
+  surface_scoria_barrens_scrub:
+    mmid: Azuriter_Surface_ScoriaBarrensScrub
+    display-name: スコリア苔
+    tier: common
+    tags: [ plant, arid ]
+  surface_silver_reedland_bloom:
+    mmid: Azuriter_Surface_SilverReedlandBloom
+    display-name: 銀草の花房
+    tier: uncommon
+    tags: [ flower, bloom, wetland ]
+  surface_silver_reedland_flower:
+    mmid: Azuriter_Surface_SilverReedlandFlower
+    display-name: 銀草の花
+    tier: common
+    tags: [ flower, wetland ]
+  surface_silver_reedland_scrub:
+    mmid: Azuriter_Surface_SilverReedlandScrub
+    display-name: 銀草の穂
+    tier: common
+    tags: [ plant, wetland ]
+  surface_windscar_steppe_bloom:
+    mmid: Azuriter_Surface_WindscarSteppeBloom
+    display-name: 風削りの花房
+    tier: uncommon
+    tags: [ flower, bloom, grassland ]
+  surface_windscar_steppe_flower:
+    mmid: Azuriter_Surface_WindscarSteppeFlower
+    display-name: 風削りの花
+    tier: common
+    tags: [ flower, grassland ]
+  surface_windscar_steppe_scrub:
+    mmid: Azuriter_Surface_WindscarSteppeScrub
+    display-name: 風削りの低木
+    tier: common
+    tags: [ plant, grassland ]

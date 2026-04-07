@@ -7,6 +7,10 @@ Azuriter_粗悪な装備片:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_バラケタ装備片:
   Id: leather
@@ -17,10 +21,10 @@ Azuriter_バラケタ装備片:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
-  Enchantments:
-  - UNBREAKING 1
 
 Azuriter_白マテリア:
   Id: white_dye
@@ -32,6 +36,10 @@ Azuriter_白マテリア:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_鉄片:
   Id: iron_ingot
@@ -42,6 +50,10 @@ Azuriter_鉄片:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_加工鉄片:
   Id: iron_ingot
@@ -52,10 +64,10 @@ Azuriter_加工鉄片:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
-  Enchantments:
-  - UNBREAKING 2
 
 Azuriter_ハイソール:
   Id: blaze_powder
@@ -66,6 +78,10 @@ Azuriter_ハイソール:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_黒マテリア:
   Id: black_dye
@@ -77,6 +93,10 @@ Azuriter_黒マテリア:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_シリーズエンド1Material:
   Id: diamond
@@ -94,8 +114,8 @@ Azuriter_Altwolf_牙:
   Lore:
   - "&fウィデラーの住処などで、"
   - "&f入手可能なアイテム、希少性がある。"
-  Enchantments:
-  - SHARPNESS 1
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   ItemUpdater:
@@ -108,8 +128,8 @@ Azuriter_Altwolf_粗皮:
   Lore:
   - "&fウィデラーの住処などで、"
   - "&f入手可能なアイテム、耐久性が良い。"
-  Enchantments:
-  - UNBREAKING 3
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   ItemUpdater:
@@ -119,6 +139,10 @@ Azuriter_Altwolf_粗皮:
 Azuriter_風核:
   Id: wind_charge
   Display: "&9風核"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   ItemUpdater:
     Version: 1
   Group: 'Material'
@@ -133,6 +157,10 @@ Azuriter_風牙狼の皮:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_炎核:
   Id: fire_charge
@@ -140,6 +168,10 @@ Azuriter_炎核:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_焔獣の炎殻:
   Id: blaze_powder
@@ -147,6 +179,10 @@ Azuriter_焔獣の炎殻:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_タレットレーザー_骨:
   Id: bone_block
@@ -154,8 +190,8 @@ Azuriter_タレットレーザー_骨:
   Lore:
   - "&fフェルドスの住処などで、"
   - "&f入手可能なアイテム、耐久性が良い。"
-  Enchantments:
-  - UNBREAKING 3
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   ItemUpdater:
@@ -168,8 +204,8 @@ Azuriter_タレットレーザー_頭:
   Lore:
   - "&fフェルドスの住処などで、"
   - "&f入手可能なアイテム、希少性がある。"
-  Enchantments:
-  - MENDING 1
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   ItemUpdater:
@@ -182,6 +218,10 @@ Azuriter_砂核:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   Skills:
   - cancelEvent{sync=true} @self ~onUse
   - cancelEvent{sync=true} @self ~onRightclick 
@@ -193,6 +233,10 @@ Azuriter_幻想獣の皮:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_ビッグな生肉:
   Id: beef
@@ -203,6 +247,10 @@ Azuriter_ビッグな生肉:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_ビッグなレザー:
   Id: leather
@@ -213,6 +261,10 @@ Azuriter_ビッグなレザー:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
 
 Azuriter_トライアラン勲章:
   Id: book
@@ -222,8 +274,8 @@ Azuriter_トライアラン勲章:
   - "&f/shopで様々なものと交換できる。"
   ItemUpdater:
     Version: 1
-  Enchantments:
-  - INFINITY 1
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   Group: 'Material'
@@ -236,8 +288,8 @@ Azuriter_包装されたバックパック1:
   - "&f未使用のベーシックバックパックを包装したもの。"
   ItemUpdater:
     Version: 2
-  Enchantments:
-  - UNBREAKING 5
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   Group: 'Material'
@@ -249,8 +301,8 @@ Azuriter_包装されたバックパック2:
   - "&f未使用のゴールデンバックパックを包装したもの。"
   ItemUpdater:
     Version: 2
-  Enchantments:
-  - UNBREAKING 5
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   Group: 'Material'
@@ -265,8 +317,8 @@ Azuriter_アンガスタ:
   - "&f食べることで、周囲からの敵視を少し上げる"
   ItemUpdater:
     Version: 1
-  Enchantments:
-  - EFFICIENCY 1
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   Group: 'Material'
@@ -296,8 +348,8 @@ Azuriter_リタン:
   - "&f食べることで、サーバーの初期位置へ即座に戻れる。"
   ItemUpdater:
     Version: 2
-  Enchantments:
-  - INFINITY 5
+  Options:
+    Glint: true
   Hide:
   - ENCHANTS
   Group: 'Material'
@@ -321,6 +373,10 @@ Azuriter_Feldos_Summon_Paper:
   Display: "&fフェルドスの召喚紙"
   Lore:
   - "&f紙には32と書かれている…"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   ItemUpdater:
     Version: 1
   Group: 'Material'
@@ -330,6 +386,10 @@ Azuriter_Wedler_Summon_Paper:
   Display: "&fウィデラーの召喚紙"
   Lore:
   - "&f紙には32と書かれている…"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   ItemUpdater:
     Version: 1
   Group: 'Material'
@@ -337,6 +397,10 @@ Azuriter_Wedler_Summon_Paper:
 Azuriter_Basamos_Summon_Paper:
   Id: paper
   Display: "&fバサモスの召喚紙"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   Lore:
   - "&f紙には32と書かれている…"
   ItemUpdater:

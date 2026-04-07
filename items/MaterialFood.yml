@@ -1,6 +1,10 @@
 Azuriter_お肉:
   Id: cooked_beef
   Display: "&fお肉"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   ItemUpdater:
     Version: 3
   Group: 'Food'
@@ -13,6 +17,10 @@ Azuriter_ウルフード:
   ItemUpdater:
     Version: 1
   Group: 'Food'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   Skills:
   - potion{t=NIGHT_VISION;l=0;d=36000;p=false} @self ~onConsume 
 
@@ -22,6 +30,10 @@ Azuriter_ビッグステーキ:
   ItemUpdater:
     Version: 1
   Group: 'Food'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
   Skills:
   - potion{t=SATURATION;d=200;p=false} @self ~onConsume 
   - potion{t=NIGHT_VISION;d=216000;p=false} @self ~onConsume
@@ -35,12 +47,11 @@ Azuriter_高揚の灯:
   ItemUpdater:
     Version: 1
   Group: 'Food'
-  Enchantments:
-  - INFINITY 3
+  Options:
+    Glint: true
+    StackSize: 8
   Hide:
   - ENCHANTS
-  Options:
-    StackSize: 8
   Consumable:
     ConsumeSeconds: 1
     HasParticles: false
@@ -61,12 +72,11 @@ Azuriter_光明の灯:
   ItemUpdater:
     Version: 1
   Group: 'Food'
-  Enchantments:
-  - INFINITY 3
+  Options:
+    Glint: true
+    StackSize: 8
   Hide:
   - ENCHANTS
-  Options:
-    StackSize: 8
   Consumable:
     ConsumeSeconds: 1
     HasParticles: false
@@ -87,10 +97,11 @@ Azuriter_城壁の守護石:
   ItemUpdater:
     Version: 1
   Group: 'Food'
-  Enchantments:
-  - INFINITY 3
   Options:
+    Glint: true
     StackSize: 8
+  Hide:
+  - ENCHANTS
   Consumable:
     ConsumeSeconds: 1
     HasParticles: false
@@ -111,12 +122,11 @@ Azuriter_堅牢の守護石:
   ItemUpdater:
     Version: 1
   Group: 'Food'
-  Enchantments:
-  - INFINITY 3
+  Options:
+    Glint: true
+    StackSize: 8
   Hide:
   - ENCHANTS
-  Options:
-    StackSize: 8
   Consumable:
     ConsumeSeconds: 1
     HasParticles: false
@@ -137,12 +147,11 @@ Azuriter_安寧の球界:
   ItemUpdater:
     Version: 1
   Group: 'Food'
-  Enchantments:
-  - INFINITY 3
+  Options:
+    Glint: true
+    StackSize: 8
   Hide:
   - ENCHANTS
-  Options:
-    StackSize: 8
   Consumable:
     ConsumeSeconds: 1
     HasParticles: false
@@ -163,12 +172,11 @@ Azuriter_不滅の心臓:
   ItemUpdater:
     Version: 1
   Group: 'Food'
-  Enchantments:
-  - INFINITY 10
+  Options:
+    Glint: true
+    StackSize: 4
   Hide:
   - ENCHANTS
-  Options:
-    StackSize: 2
   DeathProtection:
     ConsumeEffects:
     - sound{s=entity.zombie_villager.cure;audience=caster} @self

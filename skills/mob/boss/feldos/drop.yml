@@ -1,4 +1,5 @@
-Azuriter_Boss_Feldos_HighDrop:
+# フェルドスの討伐報酬。
+Azuriter_Mob_Boss_Feldos_DropHigh:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_焔獣の炎殻 1 0.8"} @self
   - cmd{c="mlg <caster.name> Azuriter_炎核 1 0.05"} @self
@@ -19,6 +20,6 @@ Azuriter_Boss_Feldos_HighDrop:
   - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.005"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.005"} @self
 
-Azuriter_Boss_Feldos_SpawnDrop:
+Azuriter_Mob_Boss_Feldos_DropSpawn:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_焔獣の炎殻 1 0.05"} @self

@@ -1,4 +1,4 @@
-Azuriter_バサモスサンド_幻想1_Effect:
+Azuriter_Mob_Boss_Basamos_SandEffect1:
   Skills:
   - missile{v=0.5;i=1;in=4;vr=10;sb=false;hp=false;hitself=true;hr=1.5;syo=2;sfo=0;origin=@trigger;fo=true;
     ot=[

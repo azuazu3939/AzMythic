@@ -1,4 +1,5 @@
-Azuriter_レットザレーター_Skills:
+# レットザレーターの射撃処理。
+Azuriter_Mob_Common_Letthelater_Shot:
   Cooldown: 5
   Skills:
   - setVar{k=skill.time;a="24";t=INTEGER} @self

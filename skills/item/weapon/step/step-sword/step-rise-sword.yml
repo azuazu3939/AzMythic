@@ -1,4 +1,4 @@
-Azuriter_ステップライズソード_R1_Skills:
+Azuriter_Item_Weapon_Step_StepRiseSword_R1_Use:
   Cooldown: 12
   Conditions:
   - wearing{s=HAND;i=Azuriter_ステップライズソード}

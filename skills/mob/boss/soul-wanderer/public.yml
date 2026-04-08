@@ -1,10 +1,11 @@
-Azuriter_Soul_Wanderer_Skills:
+# ソウルワンダラー本体の行動ループ。
+Azuriter_Mob_Boss_SoulWanderer_Loop:
   Cooldown: 1
   Conditions:
   - incombat true
   Skills:
-  - randomskill{skills=Azuriter_Soul_Wanderer_Skill_1 2,Azuriter_Soul_Wanderer_Skill_2 3;fbs=Azuriter_Soul_Wanderer_Skill_1} @self
+  - randomskill{skills=Azuriter_Mob_Boss_SoulWanderer_Attack1 2,Azuriter_Mob_Boss_SoulWanderer_Attack2 3;fbs=Azuriter_Mob_Boss_SoulWanderer_Attack1} @self
 
-  - skill{s=Azuriter_Soul_Wanderer_Skill_2} @self
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Attack2} @self
   - delay <random.120to200>
-  - skill{s=Azuriter_Soul_Wanderer_Skills} @self
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Loop} @self

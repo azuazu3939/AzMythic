@@ -1,4 +1,4 @@
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5:
+Azuriter_Mob_Boss_Feldos_Attack5:
   Cooldown: 3
   Conditions:
   - incombat true
@@ -14,11 +14,11 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5:
   - delay 10
   - jump{v=1.25} @self
   - delay 2
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround;s_repeat_i=1;s_repeat=39} @self
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Feldos_Attack5_OnGround;s_repeat_i=1;s_repeat=39} @self
   - delay 40
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround:
+Azuriter_Mob_Boss_Feldos_Attack5_OnGround:
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_EnemyDown} false

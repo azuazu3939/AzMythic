@@ -31,21 +31,21 @@ Azuriter_Boss_マスターゾンビ:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
 
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Master_Zombie_Skill_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Master_Zombie_Skill_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Master_Zombie_Skill_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Master_Zombie_Skill_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Master_Zombie_Skill_5";t=STRING} @self ~onSpawn
-  - skill{s=Azuriter_Master_Zombie_Skill_1} @self ~onSignal:raid_boss_skill1
-  - skill{s=Azuriter_Master_Zombie_Skill_2} @self ~onSignal:raid_boss_skill2
-  - skill{s=Azuriter_Master_Zombie_Skill_3} @self ~onSignal:raid_boss_skill3
-  - skill{s=Azuriter_Master_Zombie_Skill_4} @self ~onSignal:raid_boss_skill4
-  - skill{s=Azuriter_Master_Zombie_Skill_5} @self ~onSignal:raid_boss_skill5
-  - message{m="<trigger.name>が、Azuriter_Master_Zombie_Skill_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
-  - message{m="<trigger.name>が、Azuriter_Master_Zombie_Skill_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
-  - message{m="<trigger.name>が、Azuriter_Master_Zombie_Skill_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
-  - message{m="<trigger.name>が、Azuriter_Master_Zombie_Skill_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
-  - message{m="<trigger.name>が、Azuriter_Master_Zombie_Skill_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_MasterZombie_Attack1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_MasterZombie_Attack2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_MasterZombie_Attack3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_MasterZombie_Attack4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_MasterZombie_Attack5";t=STRING} @self ~onSpawn
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack1} @self ~onSignal:raid_boss_skill1
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack2} @self ~onSignal:raid_boss_skill2
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack3} @self ~onSignal:raid_boss_skill3
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack4} @self ~onSignal:raid_boss_skill4
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack5} @self ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
 
   - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
@@ -88,7 +88,7 @@ Azuriter_Boss_マスターゾンビ:
   - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
 
-  - skill{s=Azuriter_Master_Zombie_Skills} @self ~onEntercombat
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Loop} @self ~onEntercombat
   - signal{s=trial_drop_5;cd=2} @parent ~onDeath
 
   - classexp{a=<random.450to550>} @TTP ~onDeath
@@ -152,8 +152,8 @@ Azuriter_Boss_ソール_ワンダラー:
   - attribute{attr=ARMOR;a=30} @self ~onDamaged ?day
   - potion{t=SPEED;d=200;l=0} @self ~onDamaged ?!day
 
-  - skill{s=Azuriter_Soul_Wanderer_Skills} @self ~onEntercombat
-  - skill{s=Azuriter_Soul_Wanderer_Signal} @self ~onSignal:soul_fire_spawned
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Loop} @self ~onEntercombat
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Signal} @self ~onSignal:soul_fire_spawned
 
   - signal{s=trial_drop_1_2;cd=2} @parent ~onDeath
 
@@ -205,7 +205,7 @@ Azuriter_Boss_ブルート_ワンダラー:
   - attribute{attr=ARMOR;a=30} @self ~onDamaged ?day
   - potion{t=SPEED;d=200;l=0} @self ~onDamaged ?!day
 
-  - skill{s=Azuriter_Brute_Wanderer_Skills} @self ~onEntercombat
+  - skill{s=Azuriter_Mob_Boss_BruteWanderer_Loop} @self ~onEntercombat
   - signal{s=trial_drop_2_2;cd=2} @parent ~onDeath
 
   - classexp{a=<random.150to200>} @TTP ~onDeath

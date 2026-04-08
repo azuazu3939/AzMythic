@@ -17,8 +17,8 @@ Azuriter_バサモスサンド_幻1:
   Skills:
   - attribute{attr=ARMOR_TOUGHNESS;a=50} @self ~onSpawn
   - remove{delay=800} @self ~onSpawn
-  - sound{s=entity.wind_charge.wind_burst;sc=AMBIENT;v=0.75} @self ~onDespawn 
-  - e:p{p=explosion_emitter;a=2;size=0.5;s=1;ys=1;hs=1} @self ~onDespawn 
+  - sound{s=entity.wind_charge.wind_burst;sc=AMBIENT;v=0.75} @self ~onDespawn
+  - e:p{p=explosion_emitter;a=2;size=0.5;s=1;ys=1;hs=1} @self ~onDespawn
 
 Azuriter_バサモスサンド_幻2:
   Template: Azuriter_Enemy_Base
@@ -39,8 +39,8 @@ Azuriter_バサモスサンド_幻2:
   Skills:
   - attribute{attr=ARMOR_TOUGHNESS;a=50} @self ~onSpawn
   - remove{delay=800} @self ~onSpawn
-  - sound{s=entity.wind_charge.wind_burst;sc=AMBIENT;v=0.75} @self ~onDespawn 
-  - e:p{p=explosion_emitter;a=1;size=0.5;s=1;ys=1;hs=1;vd=32;audience=@PNO{r=32}} @self ~onDespawn 
+  - sound{s=entity.wind_charge.wind_burst;sc=AMBIENT;v=0.75} @self ~onDespawn
+  - e:p{p=explosion_emitter;a=1;size=0.5;s=1;ys=1;hs=1;vd=32;audience=@PNO{r=32}} @self ~onDespawn
 
 
 Azuriter_バサモスサンド_幻想1:
@@ -63,11 +63,11 @@ Azuriter_バサモスサンド_幻想1:
     Glowing: true
   Skills:
   - attribute{attr=ARMOR_TOUGHNESS;a=120} @self ~onSpawn
-  - sound{s=entity.wind_charge.wind_burst;p=0.75;sc=AMBIENT} @self ~onDespawn 
-  - e:pl{p=crit_magic;ys=0.25;hs=0.25;a=2;size=1;repeat=299;repeati=4;tyo=3.25;syo=2.75;vd=48;audience=@PNO{r=48}} @MIR{r=32;t=Azuriter_Boss_Basamos;limit=1;sort=NEAREST} ~onSpawn 
-  - sound{s=entity.guardian.attack;p=2;v=1;sc=AMBIENT;repeat=239;repeati=5} @self ~onSpawn 
-  - sound{s=block.anvil.place;P=2;sc=AMBIENT;v=0.5;cd=0.5} @trigger ~onDamaged 
-  - sudoskill{s=Azuriter_バサモスサンド_幻想1_Effect;cat=true} @MIR{r=32;t=Azuriter_Boss_Basamos;limit=1;sort=NEAREST} ~onDespawn
+  - sound{s=entity.wind_charge.wind_burst;p=0.75;sc=AMBIENT} @self ~onDespawn
+  - e:pl{p=crit_magic;ys=0.25;hs=0.25;a=2;size=1;repeat=299;repeati=4;tyo=3.25;syo=2.75;vd=48;audience=@PNO{r=48}} @MIR{r=32;t=Azuriter_Boss_Basamos;limit=1;sort=NEAREST} ~onSpawn
+  - sound{s=entity.guardian.attack;p=2;v=1;sc=AMBIENT;repeat=239;repeati=5} @self ~onSpawn
+  - sound{s=block.anvil.place;P=2;sc=AMBIENT;v=0.5;cd=0.5} @trigger ~onDamaged
+  - sudoskill{s=Azuriter_Mob_Boss_Basamos_SandEffect1;cat=true} @MIR{r=32;t=Azuriter_Boss_Basamos;limit=1;sort=NEAREST} ~onDespawn
   - remove{delay=800} @self ~onSpawn
 
 Azuriter_バサモスサンド_幻想2:
@@ -89,8 +89,8 @@ Azuriter_バサモスサンド_幻想2:
     Silent: true
   Skills:
   - attribute{attr=ARMOR_TOUGHNESS;a=120} @self ~onSpawn
-  - sound{s=entity.wind_charge.wind_burst;p=0.75;sc=AMBIENT} @self ~onDespawn 
-  - e:pl{p=crit_magic;ys=0.25;hs=0.25;a=1;size=1;repeat=199;repeati=2;tyo=0.5;syo=2.75;delay=1;audience=target} @owner ~onSpawn 
+  - sound{s=entity.wind_charge.wind_burst;p=0.75;sc=AMBIENT} @self ~onDespawn
+  - e:pl{p=crit_magic;ys=0.25;hs=0.25;a=1;size=1;repeat=199;repeati=2;tyo=0.5;syo=2.75;delay=1;audience=target} @owner ~onSpawn
   - e:p{p=explosion_emitter;a=2;size=2;s=1;ys=1;hs=1;vd=32;audience=@PNO{r=32}} @self ~onDeath
-  - e:p{p=explosion_emitter;a=2;size=2;s=1;ys=1;hs=1;vd=32;audience=@PNO{r=32}} @self ~onDespawn 
+  - e:p{p=explosion_emitter;a=2;size=2;s=1;ys=1;hs=1;vd=32;audience=@PNO{r=32}} @self ~onDespawn
   - remove{delay=800} @self ~onSpawn

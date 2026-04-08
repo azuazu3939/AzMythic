@@ -87,7 +87,7 @@ Azuriter_Elite_Zombie_Trial:
   - attribute{attr=ARMOR;a=40} @self ~onSpawn ?day
   - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
   - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
-  - skill{s=Azuriter_Elite_Zombie_Skills} @self ~onEntercombat
+  - skill{s=Azuriter_Mob_Common_EliteZombie_Loop} @self ~onEntercombat
   - remove{delay=18000} @self ~onSpawn
   - sudo{
     s=[

@@ -1,4 +1,4 @@
-Azuriter_アタッカー_Skills:
+Azuriter_Item_Armor_Attacker_Use:
   Cooldown: 1
   Skills:
   - potion{t=STRENGTH;d=60;l=0;p=false} @self

@@ -44,15 +44,15 @@ Azuriter_Boss_Feldos:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=140} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Feldos_Attack1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Feldos_Attack2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Feldos_Attack3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_Feldos_Attack4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="Azuriter_Mob_Boss_Feldos_Attack5";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=125;shield_break=1500;heal_percent=0.01} @self ~onEntercombat
-  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK} @T ~onEntercombat
+  - skill{s=Azuriter_Mob_Boss_Feldos_Loop} @T ~onEntercombat
 
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
 
@@ -84,16 +84,16 @@ Azuriter_Boss_Feldos:
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
 
-  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1} @self ~onSignal:raid_boss_skill1
-  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2} @self ~onSignal:raid_boss_skill2
-  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3} @self ~onSignal:raid_boss_skill3
-  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4} @self ~onSignal:raid_boss_skill4
-  - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5} @self ~onSignal:raid_boss_skill5
-  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
-  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
-  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
-  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
-  - message{m="<trigger.name>が、OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+  - skill{s=Azuriter_Mob_Boss_Feldos_Attack1} @self ~onSignal:raid_boss_skill1
+  - skill{s=Azuriter_Mob_Boss_Feldos_Attack2} @self ~onSignal:raid_boss_skill2
+  - skill{s=Azuriter_Mob_Boss_Feldos_Attack3} @self ~onSignal:raid_boss_skill3
+  - skill{s=Azuriter_Mob_Boss_Feldos_Attack4} @self ~onSignal:raid_boss_skill4
+  - skill{s=Azuriter_Mob_Boss_Feldos_Attack5} @self ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
 
   - classexp{a=<random.450to600>} @TTP ~onDeath
 
@@ -141,17 +141,17 @@ Azuriter_Boss_Wedler:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=150} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill6;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill7;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Wedler_Attack1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Wedler_Attack2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Wedler_Attack3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_Wedler_Attack4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="Azuriter_Mob_Boss_Wedler_Attack5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill6;a="Azuriter_Mob_Boss_Wedler_Attack6";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill7;a="Azuriter_Mob_Boss_Wedler_Attack7";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=115;shield_break=1600;heal_percent=0.01} @self ~onEntercombat
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK} @T ~onEntercombat
+  - skill{s=Azuriter_Mob_Boss_Wedler_Loop} @T ~onEntercombat
 
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
 
@@ -183,20 +183,20 @@ Azuriter_Boss_Wedler:
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
 
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1} @self ~onSignal:raid_boss_skill1
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2} @self ~onSignal:raid_boss_skill2
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3} @self ~onSignal:raid_boss_skill3
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4} @self ~onSignal:raid_boss_skill4
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5} @self ~onSignal:raid_boss_skill5
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6} @self ~onSignal:raid_boss_skill6
-  - skill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7} @self ~onSignal:raid_boss_skill7
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill6
-  - message{m="<trigger.name>が、OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill7
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack1} @self ~onSignal:raid_boss_skill1
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack2} @self ~onSignal:raid_boss_skill2
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack3} @self ~onSignal:raid_boss_skill3
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack4} @self ~onSignal:raid_boss_skill4
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack5} @self ~onSignal:raid_boss_skill5
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack6} @self ~onSignal:raid_boss_skill6
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack7} @self ~onSignal:raid_boss_skill7
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack6を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill6
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Wedler_Attack7を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill7
 
   - classexp{a=<random.450to600>} @TTP ~onDeath
 
@@ -263,15 +263,15 @@ Azuriter_Boss_Basamos:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=130} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Basamos_Attack1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Basamos_Attack2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Basamos_Attack3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_Basamos_Attack4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="Azuriter_Mob_Boss_Basamos_Attack5";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill{s=Azuriter_Core_Enemy_EnterCombat;down_tick=90;shield_break=1000;heal_percent=0.01} @self ~onEntercombat
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK} @T ~onEntercombat
+  - skill{s=Azuriter_Mob_Boss_Basamos_Loop} @T ~onEntercombat
 
   - attribute{attribute=FOLLOW_RANGE;a=16;delay=5} @self ~onDropCombat
 
@@ -305,15 +305,15 @@ Azuriter_Boss_Basamos:
 
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
 
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1} @self ~onSignal:raid_boss_skill1
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2} @self ~onSignal:raid_boss_skill2
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3} @self ~onSignal:raid_boss_skill3
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4} @self ~onSignal:raid_boss_skill4
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5} @self ~onSignal:raid_boss_skill5
-  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
-  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
-  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
-  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
-  - message{m="<trigger.name>が、OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack1} @self ~onSignal:raid_boss_skill1
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack2} @self ~onSignal:raid_boss_skill2
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack3} @self ~onSignal:raid_boss_skill3
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack4} @self ~onSignal:raid_boss_skill4
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack5} @self ~onSignal:raid_boss_skill5
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Basamos_Attack1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Basamos_Attack2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Basamos_Attack3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Basamos_Attack4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
+  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Basamos_Attack5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
 
   - classexp{a=<random.450to600>} @TTP ~onDeath

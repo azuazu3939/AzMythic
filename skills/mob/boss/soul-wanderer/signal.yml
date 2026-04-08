@@ -1,16 +1,16 @@
-Azuriter_Soul_Wanderer_Signal:
+Azuriter_Mob_Boss_SoulWanderer_Signal:
   Cooldown: 10
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
-  - skill{s=Azuriter_Soul_Wanderer_Signal_Run} @self
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Signal_Run} @self
   - delay 60
-  - skill{s=Azuriter_Soul_Wanderer_Signal_Run} @self ?healthpercent{p=<0.7}
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Signal_Run} @self ?healthpercent{p=<0.7}
   - delay 60
-  - skill{s=Azuriter_Soul_Wanderer_Signal_Run} @self ?healthpercent{p=<0.35}
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Signal_Run} @self ?healthpercent{p=<0.35}
 
-Azuriter_Soul_Wanderer_Signal_Run:
+Azuriter_Mob_Boss_SoulWanderer_Signal_Run:
   Skills:
   - teleportto{l=@MIR{r=36;t=Azuriter_Soul_Wanderer_Soul1;sort=RANDOM;limit=1}} @self
   - potion{t=SLOW;l=50;d=60;p=false} @self

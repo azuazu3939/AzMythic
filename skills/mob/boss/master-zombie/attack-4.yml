@@ -1,15 +1,15 @@
-Azuriter_Master_Zombie_Skill_4:
+Azuriter_Mob_Boss_MasterZombie_Attack4:
   Cooldown: 30
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
-  - skill{s=Azuriter_Master_Zombie_Skill_4_Repeat;repeat=9;repeati=30} @self
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack4_Repeat;repeat=9;repeati=30} @self
   - delay 600
-  - skill{s=Azuriter_Master_Zombie_Skill_4_Final} @self 0.5 ?healthpercent{p=<0.7}
-  - skill{s=Azuriter_Master_Zombie_Skill_4_Final} @self 0.5 ?healthpercent{p=<0.4}
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack4_Final} @self 0.5 ?healthpercent{p=<0.7}
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack4_Final} @self 0.5 ?healthpercent{p=<0.4}
 
-Azuriter_Master_Zombie_Skill_4_Repeat:
+Azuriter_Mob_Boss_MasterZombie_Attack4_Repeat:
   Skills:
   - projectile{v=0.01;i=1;mr=48;sfo=-5;syo=12;
     b=DISPLAY;mat=GOLDEN_SWORD;scale=2.5,2.5,2.5;yaw=3.14;pitch=1.57;roll=0.785;vr=2;r=2;
@@ -22,14 +22,14 @@ Azuriter_Master_Zombie_Skill_4_Repeat:
       - damage{a="<caster.damage> * 1.25";pi=true;ii=true} @PNO{r=4}
       - sound{s=item.trident.return;sc=PLAYERS;p=1;v=0.5} @origin
       - sound{s=entity.zombie.attack_iron_door;p=2;v=0.5} @origin
-      - skill{s=Azuriter_Master_Zombie_Skill_4_AreaDamage} @origin
+      - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack4_AreaDamage} @origin
     ];
     ot=[
       - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
       - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1} @origin
     ]} @TL
 
-Azuriter_Master_Zombie_Skill_4_AreaDamage:
+Azuriter_Mob_Boss_MasterZombie_Attack4_AreaDamage:
   Skills:
   - totem{d=1200;i=20;hp=true;hnp=false;se=false;sb=false;fo=true;
     b=DISPLAY;mat=GOLDEN_SWORD;scale=2.5,2.5,2.5;yaw=0;pitch=0;roll=0.785;byo=3;enchanted=true;
@@ -43,7 +43,7 @@ Azuriter_Master_Zombie_Skill_4_AreaDamage:
       - addMask{b=RED_TERRACOTTA;r=8;d=1200;h=19} @origin
     ]}
 
-Azuriter_Master_Zombie_Skill_4_Final:
+Azuriter_Mob_Boss_MasterZombie_Attack4_Final:
   Cooldown: 5
   Skills:
   - jump{v=-3} @self

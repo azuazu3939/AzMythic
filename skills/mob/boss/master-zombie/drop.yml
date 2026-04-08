@@ -1,4 +1,5 @@
-Azuriter_Master_Zombie_HighDrop:
+# マスターゾンビの討伐報酬。
+Azuriter_Mob_Boss_MasterZombie_DropHigh:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.25"} @self
   - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G2 1 0.05"} @self

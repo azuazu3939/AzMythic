@@ -1,8 +1,8 @@
-Azuriter_Brute_Wanderer_Skill_1:
+Azuriter_Mob_Boss_BruteWanderer_Attack1:
   Skills:
-  - vskill{s=Azuriter_Brute_Wanderer_Skill_1_<skill.var.itr>;f=true} @self
+  - vskill{s=Azuriter_Mob_Boss_BruteWanderer_Attack1_Phase<skill.var.itr>;f=true} @self
 
-Azuriter_Brute_Wanderer_Skill_1_1:
+Azuriter_Mob_Boss_BruteWanderer_Attack1_Phase1:
   Cooldown: 1
   Conditions:
   - incombat true
@@ -27,7 +27,7 @@ Azuriter_Brute_Wanderer_Skill_1_1:
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
   - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
 
-Azuriter_Brute_Wanderer_Skill_1_2:
+Azuriter_Mob_Boss_BruteWanderer_Attack1_Phase2:
   Cooldown: 1
   Conditions:
   - incombat true
@@ -52,7 +52,7 @@ Azuriter_Brute_Wanderer_Skill_1_2:
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
   - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
 
-Azuriter_Brute_Wanderer_Skill_1_3:
+Azuriter_Mob_Boss_BruteWanderer_Attack1_Phase3:
   Cooldown: 1
   Conditions:
   - incombat true
@@ -78,7 +78,7 @@ Azuriter_Brute_Wanderer_Skill_1_3:
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
   - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
 
-Azuriter_Brute_Wanderer_Skill_1_4:
+Azuriter_Mob_Boss_BruteWanderer_Attack1_Phase4:
   Cooldown: 1
   Conditions:
   - incombat true

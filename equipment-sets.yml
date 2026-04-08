@@ -3,10 +3,10 @@ Diamond_S1End:
   Bonuses:
   - Pieces: 1
     Skills:
-    - skill{s=Azuriter_シリーズエンド1_Skills} @self ~onKill
-    - skill{s=Azuriter_シリーズエンド1_Skills} @self ~onDamaged
-    - skill{s=Azuriter_シリーズエンド1_Skills} @self ~onSwing
-    - skill{s=Azuriter_シリーズエンド1_Skills}@self ~onAttack
+    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use}@self ~onAttack
   - Pieces: 4
     Skills:
     - skill{s=Azuriter_シリーズエンド1_Full} @self ~onKill
@@ -48,10 +48,10 @@ Attacker:
   Bonuses:
   - Pieces: 1
     Skills:
-    - skill{s=Azuriter_アタッカー_Skills} @self ~onKill
-    - skill{s=Azuriter_アタッカー_Skills} @self ~onDamaged
-    - skill{s=Azuriter_アタッカー_Skills} @self ~onSwing
-    - skill{s=Azuriter_アタッカー_Skills} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Attacker_Use} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Attacker_Use} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Attacker_Use} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Attacker_Use} @self ~onAttack
   - Pieces: 4
     Skills:
     - skill{s=Azuriter_アタッカー_Full} @self ~onKill
@@ -64,10 +64,10 @@ Defender:
   Bonuses:
   - Pieces: 1
     Skills:
-    - skill{s=Azuriter_ディフェンス_Skills} @self ~onKill
-    - skill{s=Azuriter_ディフェンス_Skills} @self ~onDamaged
-    - skill{s=Azuriter_ディフェンス_Skills} @self ~onSwing
-    - skill{s=Azuriter_ディフェンス_Skills} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Defense_Use} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Defense_Use} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Defense_Use} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Defense_Use} @self ~onAttack
   - Pieces: 4
     Skills:
     - skill{s=Azuriter_ディフェンス_Full} @self ~onKill

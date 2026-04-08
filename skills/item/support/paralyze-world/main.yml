@@ -1,4 +1,4 @@
-Azuriter_Azuriter_パラライズワールド_Skills:
+Azuriter_Item_Support_ParalyzeWorld_Use:
   Cooldown: 15
   Conditions:
   - wearing{s=HAND;m=Azuriter_パラライズワールド} true

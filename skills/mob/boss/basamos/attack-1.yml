@@ -1,4 +1,4 @@
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1:
+Azuriter_Mob_Boss_Basamos_Attack1:
   Cooldown: 12
   Conditions:
   - incombat true
@@ -7,16 +7,16 @@ OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1:
   - setVar{var=skill.dmg;val="(<caster.damage> + 1) / 3 * 2";t=FLOAT} @self
   - skill:Azuriter_Core_Enemy_DamageBuff @self
   - setVar{k=caster.Azuriter_Mob_Var_BasamosAttack1YawOffset;a="0";t=INTEGER} @self
-  - meta{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Run;repeat=9;repeati=5} @self
+  - meta{s=Azuriter_Mob_Boss_Basamos_Attack1_Run;repeat=9;repeati=5} @self
 
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Run:
+Azuriter_Mob_Boss_Basamos_Attack1_Run:
   Skills:
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process1;f=true} @forward{lockpitch=true;y=2}
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process2;f=true} @forward{lockpitch=true;y=2}
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process3;f=true} @forward{lockpitch=true;y=2}
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack1_Process1;f=true} @forward{lockpitch=true;y=2}
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack1_Process2;f=true} @forward{lockpitch=true;y=2}
+  - skill{s=Azuriter_Mob_Boss_Basamos_Attack1_Process3;f=true} @forward{lockpitch=true;y=2}
   - setVar{k=caster.Azuriter_Mob_Var_BasamosAttack1YawOffset;a="<caster.var.Azuriter_Mob_Var_BasamosAttack1YawOffset> + 20";t=INTEGER} @self
 
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process1:
+Azuriter_Mob_Boss_Basamos_Attack1_Process1:
   Skills:
   - projectile{
     ot=[
@@ -35,7 +35,7 @@ OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process1:
     b=MOB;mm=Azuriter_バサモスサンド_幻1;bmd=true;
     ho=<caster.var.Azuriter_Mob_Var_BasamosAttack1YawOffset>}
 
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process2:
+Azuriter_Mob_Boss_Basamos_Attack1_Process2:
   Skills:
   - projectile{
     ot=[
@@ -54,7 +54,7 @@ OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process2:
     b=MOB;mm=Azuriter_バサモスサンド_幻1;bmd=true;
     ho="120 + <caster.var.Azuriter_Mob_Var_BasamosAttack1YawOffset>"}
 
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1_Process3:
+Azuriter_Mob_Boss_Basamos_Attack1_Process3:
   Skills:
   - projectile{
     ot=[

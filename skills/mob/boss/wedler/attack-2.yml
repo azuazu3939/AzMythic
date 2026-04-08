@@ -1,4 +1,4 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
+Azuriter_Mob_Boss_Wedler_Attack2:
   Cooldown: 5
   Conditions:
   - incombat true
@@ -18,11 +18,11 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
   - sound{s=block.trial_spawner.ominous_activate;p=2;v=2} @self
   - leap{v=-1050} @forward{f=10;y=-5}
   - delay 10
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack2_Process @self
   - delay 100
   - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
+Azuriter_Mob_Boss_Wedler_Attack2_Process:
   Skills:
   - setVar{var=skill.tick;val="0";t=INTEGER} @self
   - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=3} @self
@@ -33,7 +33,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
       - e:ps{p=cloud;a=50;s=0.2;r=1;cd=0.2} @origin
 
       - setVar{var=skill.tick;val="<skill.var.tick> + 1";t=INTEGER} @self
-      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick @self
+      - skill:Azuriter_Mob_Boss_Wedler_Attack2_Process_Tick @self
     ];
     oh=[
       - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
@@ -53,7 +53,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
     ];
     v=2;i=1;vr=3;hr=3;se=false;syo=2;sfo=3;c=[ - samefaction false ]} @forward{f=10;y=-5}
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick:
+Azuriter_Mob_Boss_Wedler_Attack2_Process_Tick:
   Conditions:
   - (varrange{var=skill.tick;val=5} || varrange{var=skill.tick;val=10} || varrange{var=skill.tick;val=15} || varrange{var=skill.tick;val=20}) true
   Skills:

@@ -1,4 +1,4 @@
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4:
+Azuriter_Mob_Boss_Feldos_Attack4:
   Cooldown: 25
   Conditions:
   - incombat true
@@ -39,19 +39,19 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4:
     ];
     oe=[
       - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
-      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend} @self ?varrange{k=skill.chance;r=1}
-      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend} @self ?!varrange{k=skill.chance;r=1}
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_NoExtend} @self ?varrange{k=skill.chance;r=1}
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_Extend} @self ?!varrange{k=skill.chance;r=1}
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ?varrange{k=skill.chance;r=1}
     ];
     v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
     mr=24;vr=3;hr=3} @TL
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
+Azuriter_Mob_Boss_Feldos_Attack4_Extend:
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   - hasTag{t=Azuriter_Core_Tag_AttackBusy} true
-  - varrange{k=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;r=>4} castinstead OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend_ForceEnd
+  - varrange{k=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;r=>4} castinstead Azuriter_Mob_Boss_Feldos_Attack4_Extend_ForceEnd
   Skills:
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
   - setVar{var=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;val="<caster.var.Azuriter_Mob_Var_FeldosAttack4ExtendCount|0> + 1";t=INTEGER} @self
@@ -65,8 +65,8 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
       - teleport @origin
       - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
       - look{f=true} @projectileforward
-      - meta{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave;ho=90;delay=25} @self 0.75
-      - meta{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave;ho=270;delay=25} @self 0.75
+      - meta{s=Azuriter_Mob_Boss_Feldos_Attack4_Wave;ho=90;delay=25} @self 0.75
+      - meta{s=Azuriter_Mob_Boss_Feldos_Attack4_Wave;ho=270;delay=25} @self 0.75
     ];
     oh=[
       - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
@@ -85,22 +85,22 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
     ];
     oe=[
       - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
-      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend} @self ?!varrange{k=skill.chance;r=1}
-      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend} @self ?varrange{k=skill.chance;r=1}
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_Extend} @self ?!varrange{k=skill.chance;r=1}
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_NoExtend} @self ?varrange{k=skill.chance;r=1}
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ?varrange{k=skill.chance;r=1}
     ];
     v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
     mr=24;vr=3;hr=3} @TL
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend:
+Azuriter_Mob_Boss_Feldos_Attack4_NoExtend:
   Skills:
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-30} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=60} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-60} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=0} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=30} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=-30} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=60} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=-60} @self
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave:
+Azuriter_Mob_Boss_Feldos_Attack4_Wave:
   Skills:
   - setVar{k=skill.wave;a="0";t=INTEGER} @self
   - projectile{
@@ -119,7 +119,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave:
     ];
     v=12;i=2;vr=2;hr=2;ho=<skill.ho>;syo=0;sfo=1;se=false;sb=false;mr=20} @selfLocation{cpitch=0}
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend_ForceEnd:
+Azuriter_Mob_Boss_Feldos_Attack4_Extend_ForceEnd:
   Skills:
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
   - potion{t=WEAKNESS;l=1;d=200;p=false} @self

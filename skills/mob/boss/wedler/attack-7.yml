@@ -1,4 +1,4 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7:
+Azuriter_Mob_Boss_Wedler_Attack7:
   Cooldown: 1
   Conditions:
   - incombat true
@@ -11,11 +11,11 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7:
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
   - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=3} @self
   - setVar{k=skill.tick;a="200";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7_Run{repeat=9;repeati=10}
+  - skill:Azuriter_Mob_Boss_Wedler_Attack7_Run{repeat=9;repeati=10}
   - delay 60
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7_Run:
+Azuriter_Mob_Boss_Wedler_Attack7_Run:
   Skills:
   - missile{
     os=[

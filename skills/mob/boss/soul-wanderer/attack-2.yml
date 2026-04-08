@@ -1,18 +1,18 @@
-Azuriter_Soul_Wanderer_Skill_2:
+Azuriter_Mob_Boss_SoulWanderer_Attack2:
   Cooldown: 15
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
-  - skill{s=Azuriter_Soul_Wanderer_Skill_2_Random;repeat=<random.2to5>;repeati=60} @self
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Attack2_Random;repeat=<random.2to5>;repeati=60} @self
 
-Azuriter_Soul_Wanderer_Skill_2_Random:
+Azuriter_Mob_Boss_SoulWanderer_Attack2_Random:
   Conditions:
   - incombat true
   Skills:
-  - skill{s=Azuriter_Soul_Wanderer_Skill_2_Repeat;repeat=14;repeati=3} @self
+  - skill{s=Azuriter_Mob_Boss_SoulWanderer_Attack2_Repeat;repeat=14;repeati=3} @self
 
-Azuriter_Soul_Wanderer_Skill_2_Repeat:
+Azuriter_Mob_Boss_SoulWanderer_Attack2_Repeat:
   Skills:
   - setVar{k=skill.sfo<skill.var.itr>;a="<random.-32to32>";t=INTEGER} @self
   - setVar{k=skill.sso<skill.var.itr>;a="<random.-32to32>";t=INTEGER} @self

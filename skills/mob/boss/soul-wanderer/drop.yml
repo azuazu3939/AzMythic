@@ -1,4 +1,5 @@
-Azuriter_Soul_Wanderer_HighDrop:
+# ソウルワンダラーの討伐報酬。
+Azuriter_Mob_Boss_SoulWanderer_DropHigh:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.025"} @self
 

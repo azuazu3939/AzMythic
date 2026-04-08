@@ -5,7 +5,7 @@ Azuriter_風上の道:
     Version: 5
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -15,9 +15,9 @@ Azuriter_風上の道:
   Group: 'Melee-Weapon'
   Hide:
   - ENCHANTS
-  Skills: 
-  - skill{s=Azuriter_風上の道_R1_Skills} @self ~onUse 
-  - skill{s=Azuriter_風上の道_R1_Skills} @self ~onInteract ?!crouching 
+  Skills:
+  - skill{s=Azuriter_Item_Weapon_Step_WindRoad_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_WindRoad_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -32,7 +32,7 @@ Azuriter_風上の歩み:
     Version: 4
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -42,9 +42,9 @@ Azuriter_風上の歩み:
   Group: 'Melee-Weapon'
   Hide:
   - ENCHANTS
-  Skills: 
-  - skill{s=Azuriter_風上の歩み_R1_Skills} @self ~onUse 
-  - skill{s=Azuriter_風上の歩み_R1_Skills} @self ~onInteract ?!crouching 
+  Skills:
+  - skill{s=Azuriter_Item_Weapon_Step_WindWalk_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_WindWalk_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -58,7 +58,7 @@ Azuriter_風上の軌跡:
     Version: 5
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -68,9 +68,9 @@ Azuriter_風上の軌跡:
   Group: 'Melee-Weapon'
   Hide:
   - ENCHANTS
-  Skills: 
-  - skill{s=Azuriter_風上の軌跡_R1_Skills} @self ~onUse 
-  - skill{s=Azuriter_風上の軌跡_R1_Skills} @self ~onInteract ?!crouching 
+  Skills:
+  - skill{s=Azuriter_Item_Weapon_Step_WindTrace_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_WindTrace_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -84,20 +84,20 @@ Azuriter_ステップソード:
     Version: 4
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
-      Damage: 20 ADD 
+      Damage: 20 ADD
       Armor: 15 ADD
       ArmorToughness: 15 ADD
       AttackSpeed: -0.3 MULTIPLY_BASE
   Group: 'Melee-Weapon'
   Hide:
   - ENCHANTS
-  Skills: 
-  - skill{s=Azuriter_ステップソード_R1_Skills} @self ~onUse
-  - skill{s=Azuriter_ステップソード_R1_Skills} @self ~onInteract ?!crouching
+  Skills:
+  - skill{s=Azuriter_Item_Weapon_Step_StepSword_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_StepSword_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -111,7 +111,7 @@ Azuriter_ハイステップソード:
     Version: 4
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -121,9 +121,9 @@ Azuriter_ハイステップソード:
   Group: 'Melee-Weapon'
   Hide:
   - ENCHANTS
-  Skills: 
-  - skill{s=Azuriter_ハイステップソード_R1_Skills} @self ~onUse
-  - skill{s=Azuriter_ハイステップソード_R1_Skills} @self ~onInteract ?!crouching 
+  Skills:
+  - skill{s=Azuriter_Item_Weapon_Step_HighStepSword_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_HighStepSword_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1to2
@@ -137,7 +137,7 @@ Azuriter_ステップライズソード:
     Version: 4
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -148,8 +148,8 @@ Azuriter_ステップライズソード:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_ステップライズソード_R1_Skills} @self ~onUse 
-  - skill{s=Azuriter_ステップライズソード_R1_Skills} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Step_StepRiseSword_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_StepRiseSword_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1to5
@@ -163,7 +163,7 @@ Azuriter_ステップダッシュソード:
     Version: 4
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -174,8 +174,8 @@ Azuriter_ステップダッシュソード:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_ステップダッシュソード_R1_Skills} @self ~onUse
-  - skill{s=Azuriter_ステップダッシュソード_R1_Skills} @self ~onInteract ?!crouching  
+  - skill{s=Azuriter_Item_Weapon_Step_StepDashSword_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_StepDashSword_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1to5
@@ -189,7 +189,7 @@ Azuriter_ステップヒールソード:
     Version: 1
   Lore:
     Template: ItemInfoLore_Sword_1
-  Options: 
+  Options:
     Unbreakable: true
   Attributes:
     MainHand:
@@ -200,8 +200,8 @@ Azuriter_ステップヒールソード:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_ステップヒールソード_R1_Skills} @self ~onUse
-  - skill{s=Azuriter_ステップヒールソード_R1_Skills} @self ~onInteract ?!crouching  
+  - skill{s=Azuriter_Item_Weapon_Step_StepHealSword_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_StepHealSword_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1to5

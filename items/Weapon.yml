@@ -12,7 +12,7 @@ Azuriter_パラライズワールド:
     Version: 1
   Group: 'Weapon'
   Skills:
-  - skill{s=Azuriter_Azuriter_パラライズワールド_Skills} @self ~onUse
+  - skill{s=Azuriter_Item_Support_ParalyzeWorld_Use} @self ~onUse
 
 Azuriter_トマホーク:
   Id: golden_axe

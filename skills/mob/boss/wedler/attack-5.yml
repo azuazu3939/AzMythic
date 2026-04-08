@@ -1,4 +1,4 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5:
+Azuriter_Mob_Boss_Wedler_Attack5:
   Cooldown: 1
   Conditions:
   - incombat true

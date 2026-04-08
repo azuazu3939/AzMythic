@@ -1,4 +1,4 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
+Azuriter_Mob_Boss_Wedler_Attack4:
   Cooldown: 1
   Conditions:
   - incombat true
@@ -20,7 +20,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
       - look{f=true} @T
     ];
     oe=[
-      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK
+      - skill:Azuriter_Mob_Boss_Wedler_Loop
     ];
     v=10;syo=0;sfo=0;i=1;md=120;hs=true;hfs=0;mdh=10;mch=10;hr=3;mr=10;hnp=true;c=[ - samefaction false ]} @T
   - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self

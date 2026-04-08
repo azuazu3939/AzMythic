@@ -1,4 +1,5 @@
-Azuriter_Boss_Wedler_HighDrop:
+# ウィデラーの討伐報酬。
+Azuriter_Mob_Boss_Wedler_DropHigh:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_風牙狼の皮 1 0.8"} @self
   - cmd{c="mlg <caster.name> Azuriter_風核 1 0.05"} @self
@@ -19,6 +20,6 @@ Azuriter_Boss_Wedler_HighDrop:
   - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.005"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.005"} @self
 
-Azuriter_Boss_Wedler_SpawnDrop:
+Azuriter_Mob_Boss_Wedler_DropSpawn:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_風牙狼の皮 1 0.05"} @self

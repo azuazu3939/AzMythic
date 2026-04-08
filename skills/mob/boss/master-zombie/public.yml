@@ -1,8 +1,9 @@
-Azuriter_Master_Zombie_Skills:
+# マスターゾンビ本体の行動ループ。
+Azuriter_Mob_Boss_MasterZombie_Loop:
   Cooldown: 1
   Conditions:
   - incombat true
   Skills:
-  - randomskill{skills=Azuriter_Master_Zombie_Skill_1 5,Azuriter_Master_Zombie_Skill_2 3,Azuriter_Master_Zombie_Skill_3 6,Azuriter_Master_Zombie_Skill_4 2,Azuriter_Master_Zombie_Skill_5 4;fbs=Azuriter_Master_Zombie_Skill_1} @self
+  - randomskill{skills=Azuriter_Mob_Boss_MasterZombie_Attack1 5,Azuriter_Mob_Boss_MasterZombie_Attack2 3,Azuriter_Mob_Boss_MasterZombie_Attack3 6,Azuriter_Mob_Boss_MasterZombie_Attack4 2,Azuriter_Mob_Boss_MasterZombie_Attack5 4;fbs=Azuriter_Mob_Boss_MasterZombie_Attack1} @self
   - delay 200
-  - skill{s=Azuriter_Master_Zombie_Skills} @self
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Loop} @self

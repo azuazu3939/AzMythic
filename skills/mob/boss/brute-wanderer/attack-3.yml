@@ -1,9 +1,9 @@
-Azuriter_Brute_Wanderer_Skill_3:
+Azuriter_Mob_Boss_BruteWanderer_Attack3:
   Cooldown: 5
   Skills:
-  - skill{s=Azuriter_Brute_Wanderer_Skill_3_Run;repeat=2;repeati=10} @self
+  - skill{s=Azuriter_Mob_Boss_BruteWanderer_Attack3_Run;repeat=2;repeati=10} @self
 
-Azuriter_Brute_Wanderer_Skill_3_Run:
+Azuriter_Mob_Boss_BruteWanderer_Attack3_Run:
   Skills:
   - projectile{v=24;g="<random.1to2>";i=1;r=2;vr=2;vo=1.5;mr=48;d=120;
     b=DISPLAY;mat=GOLDEN_AXE;scale=1.5,1.5,1.5;yaw=3.14;pitch=1.57;roll=0.785;rs=1;

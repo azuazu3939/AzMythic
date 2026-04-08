@@ -1,3 +1,4 @@
+# レイド戦のランキング表示とソート値更新を扱う。
 Azuriter_Core_Enemy_Ranking_ShowEntry:
   Skills:
   - delay 0
@@ -12,8 +13,7 @@ Azuriter_Core_Enemy_Ranking_ShowEntry:
   - message{m="<skill.var.sortRank>"} @playerByName{n=<skill.var.player>} ?varset{k=skill.player}
   - vskill{s=<skill.var.do>;repeat=<skill.var.reward>;repeati=1} @playerByName{n=<skill.var.player>} ?varset{k=skill.player}
 
-#
-
+# ランキング表示用のソート値リストへ値を積む。
 Azuriter_Core_Enemy_Ranking_PushValue:
   Skills:
   - addVar{k=caster.Azuriter_Core_Var_RankingSortList;a=<skill.value>} @self ?varset{k=caster.Azuriter_Core_Var_RankingSortList}

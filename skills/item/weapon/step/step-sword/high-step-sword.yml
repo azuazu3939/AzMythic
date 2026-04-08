@@ -1,4 +1,4 @@
-Azuriter_ハイステップソード_R1_Skills:
+Azuriter_Item_Weapon_Step_HighStepSword_R1_Use:
   Cooldown: 2
   Conditions:
   - wearing{m=Azuriter_ハイステップソード;s=HAND} true

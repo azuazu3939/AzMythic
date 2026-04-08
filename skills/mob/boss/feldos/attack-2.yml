@@ -1,4 +1,4 @@
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2:
+Azuriter_Mob_Boss_Feldos_Attack2:
   Cooldown: 12
   Conditions:
   - incombat true

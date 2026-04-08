@@ -1,4 +1,5 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK:
+# ウィデラー本体の行動ループ。
+Azuriter_Mob_Boss_Wedler_Loop:
   Conditions:
   - incombat true
   TargetConditions:
@@ -6,14 +7,14 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK:
   - isplayer true
   Skills:
   - randomskill{s=
-    OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1,
-    OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2,
-    OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3,
-    OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5,
-    OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6,
-    OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7;
-    fbs=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4;
+    Azuriter_Mob_Boss_Wedler_Attack1,
+    Azuriter_Mob_Boss_Wedler_Attack2,
+    Azuriter_Mob_Boss_Wedler_Attack3,
+    Azuriter_Mob_Boss_Wedler_Attack5,
+    Azuriter_Mob_Boss_Wedler_Attack6,
+    Azuriter_Mob_Boss_Wedler_Attack7;
+    fbs=Azuriter_Mob_Boss_Wedler_Attack4;
     repeati=20;repeat=2} @self
   - clearpotion{t=INVISIBILITY} @self
   - delay <random.120to160>
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK @T
+  - skill:Azuriter_Mob_Boss_Wedler_Loop @T

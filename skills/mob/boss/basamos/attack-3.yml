@@ -1,4 +1,4 @@
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3:
+Azuriter_Mob_Boss_Basamos_Attack3:
   Cooldown: 8
   Conditions:
   - incombat true

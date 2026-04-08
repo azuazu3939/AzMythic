@@ -1,4 +1,4 @@
-Azuriter_Master_Zombie_Skill_5:
+Azuriter_Mob_Boss_MasterZombie_Attack5:
   Cooldown: 12
   Conditions:
   - incombat true

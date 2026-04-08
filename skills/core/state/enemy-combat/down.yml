@@ -1,3 +1,4 @@
+# ダウン状態の付与と復帰後の再開処理をまとめる。
 Azuriter_Core_Enemy_Down:
   Conditions:
   - hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_7} false
@@ -13,5 +14,3 @@ Azuriter_Core_Enemy_Down:
   - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self
   - sound{s=block.anvil.use;v=3;p=2} @self
   - skill:Azuriter_Core_Enemy_EnterCombat_NextCycle @self
-
-#

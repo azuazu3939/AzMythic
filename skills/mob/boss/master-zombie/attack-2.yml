@@ -1,4 +1,4 @@
-Azuriter_Master_Zombie_Skill_2:
+Azuriter_Mob_Boss_MasterZombie_Attack2:
   Cooldown: 30
   Conditions:
   - incombat true
@@ -59,9 +59,9 @@ Azuriter_Master_Zombie_Skill_2:
   - delay 40
   - return ?hasPotion{t=WEAKNESS}
   - delay 40
-  - skill{s=Azuriter_Master_Zombie_Skill_2_Check} @self
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack2_Check} @self
 
-Azuriter_Master_Zombie_Skill_2_Check:
+Azuriter_Mob_Boss_MasterZombie_Attack2_Check:
   Conditions:
   - hasPotion{t=WEAKNESS} false
   Skills:

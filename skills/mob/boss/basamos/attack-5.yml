@@ -1,4 +1,4 @@
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5:
+Azuriter_Mob_Boss_Basamos_Attack5:
   Cooldown: 30
   Conditions:
   - incombat true
@@ -9,11 +9,11 @@ OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5:
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - sound{s=entity.evoker.prepare_summon;v=2;sc=AMBIENT;repeat=2;repeati=10} @self
   - delay 50
-  - sudoskill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5_CastPlayer} @TTP{limit=3;sort=NEAREST;ignore=creative,spectator}
+  - sudoskill{s=Azuriter_Mob_Boss_Basamos_Attack5_CastPlayer} @TTP{limit=3;sort=NEAREST;ignore=creative,spectator}
   - delay 60
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5_CastPlayer:
+Azuriter_Mob_Boss_Basamos_Attack5_CastPlayer:
   Skills:
   - o{
     r=15;vr=6;hr=3.5;hp=false;d=600;oy=3;p=360;sp=0;hitself=true;c=1;hnp=true;

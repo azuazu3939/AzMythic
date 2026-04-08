@@ -1,4 +1,4 @@
-Azuriter_ディフェンス_Skills:
+Azuriter_Item_Armor_Defense_Use:
   Cooldown: 1
   Skills:
   - heal{a=1} @self

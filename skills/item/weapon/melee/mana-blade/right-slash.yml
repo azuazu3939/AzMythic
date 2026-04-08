@@ -1,3 +1,4 @@
+# マナブレードαの右始動通常派生。
 Azuriter_Item_Melee_ManaBladeAlpha_RightSlash:
   Cooldown: 0.25
   Conditions:
@@ -31,5 +32,3 @@ Azuriter_Item_Melee_ManaBladeAlpha_RightSlash:
     c=[
       - isliving true
     ]} @self
-
-# 左始動の通常派生。

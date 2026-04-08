@@ -1,4 +1,4 @@
-Azuriter_シリーズエンド1_Skills:
+Azuriter_Item_Armor_SeriesEnd1_Use:
   Cooldown: 10
   Skills:
   - potion{t=REGENERATION;d=500;l=0;p=false} @self

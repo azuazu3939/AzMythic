@@ -1,4 +1,4 @@
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1:
+Azuriter_Mob_Boss_Feldos_Attack1:
   Cooldown: 5
   Conditions:
   - incombat true
@@ -8,9 +8,9 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1:
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
   - skill:Azuriter_Core_Enemy_DamageBuff @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process @self
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process:
+Azuriter_Mob_Boss_Feldos_Attack1_Process:
   Skills:
   - addtag{t=Azuriter_Mob_Tag_FeldosAimToggle} @self
   - sound{s=entity.zoglin.step;v=1.5;repeat=5;repeati=2} @self
@@ -33,17 +33,17 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process:
     ];
     oe=[
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
-      - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish
+      - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish
     ];
     v=6;vr=3;hr=3;i=1;se=false;sfo=0;syo=0;mr=20;d=40;sb=false;hs=true;hfs=0;mdh=10;mch=10;c=[ - samefaction false ]} @forward{lockpitch=true;fo=5}
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish:
+Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish:
   Skills:
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-30} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=0} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=30} @self
+  - skill:Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile{ho=-30} @self
 
-OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile:
+Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile:
   Skills:
   - projectile{
     ot=[

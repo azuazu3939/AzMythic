@@ -1,3 +1,4 @@
+# 敵の戦闘サイクル開始からシールド初期化までを管理する。
 Azuriter_Core_Enemy_EnterCombat:
   Conditions:
   - incombat true
@@ -20,8 +21,7 @@ Azuriter_Core_Enemy_EnterCombat:
   - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self
   - skill:Azuriter_Core_Enemy_EnterCombat @self
 
-#
-
+# 与ダメ対象数を初期化して集計の起点を作る。
 Azuriter_Core_Enemy_EnterCombat_DamageCount:
   Skills:
   - setVar{k=caster.Azuriter_Core_Var_TargetCount;a="0";t=INTEGER} @self
@@ -30,8 +30,7 @@ Azuriter_Core_Enemy_EnterCombat_DamageCount:
       - setVar{k=target.Azuriter_Core_Var_TargetCount;a="<target.var.Azuriter_Core_Var_TargetCount|0> + 1";t=INTEGER} @trigger
     ];cat=true} @TTP
 
-#
-
+# 戦闘中の被ダメ蓄積とシールド破壊判定を受け持つ。
 Azuriter_Core_Enemy_EnterCombat_DamageAura:
   Skills:
   - setVar{var=skill.dmg;val="0";t=FLOAT} @self
@@ -44,8 +43,7 @@ Azuriter_Core_Enemy_EnterCombat_DamageAura:
         - skill:Azuriter_Core_Enemy_EnterCombat_DamageBreak @self
       ]} @self
 
-#
-
+# しきい値を超えた瞬間にシールド段階を進める。
 Azuriter_Core_Enemy_EnterCombat_DamageBreak:
   Conditions:
   - varrange{var=skill.temp;val=<0} true
@@ -56,15 +54,13 @@ Azuriter_Core_Enemy_EnterCombat_DamageBreak:
   - setVar{n=skill.shield;a="<skill.var.shield> + 1";t=INTEGER} @self
   - skill:Azuriter_Core_Enemy_Down @self
 
-#
-
+# シールド段数の表示オブジェクトを初期化する。
 Azuriter_Core_Enemy_EnterCombat_InitShields:
   Skills:
   - setVar{n=skill.count;a="0";t=INTEGER} @self
   - skill:Azuriter_Core_Enemy_EnterCombat_InitShieldNode{repeat=<skill.var.point>;repeati=0} @self
 
-#
-
+# 個別のシールドノードを生成する。
 Azuriter_Core_Enemy_EnterCombat_InitShieldNode:
   Skills:
   - setVar{n=skill.count_point;a="<skill.var.count> * <skill.var.multiple>";t=INTEGER} @self
@@ -75,11 +71,10 @@ Azuriter_Core_Enemy_EnterCombat_InitShieldNode:
       auraName=Azuriter_Core_Aura_EnemyShieldNode_<skill.var.count>} @self
   - setVar{n=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
 
-#
-
+# ダウン終了後に次の戦闘サイクルを開始する。
 Azuriter_Core_Enemy_EnterCombat_NextCycle:
   Skills:
   - delay 20
   - skill:Azuriter_Core_Enemy_EnterCombat @self
 
-#@Param / FLOAT: <skill.var.dmg>
+# パラメータ: FLOAT <skill.var.dmg>

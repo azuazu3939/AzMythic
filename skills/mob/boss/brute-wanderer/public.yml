@@ -1,12 +1,13 @@
-Azuriter_Brute_Wanderer_Skills:
+# ブルートワンダラー本体の行動ループ。
+Azuriter_Mob_Boss_BruteWanderer_Loop:
   Cooldown: 1
   Conditions:
   - incombat true
   Skills:
-  - skill{s=Azuriter_Brute_Wanderer_Skill_1;repeat=3;repeati=80} @self
+  - skill{s=Azuriter_Mob_Boss_BruteWanderer_Attack1;repeat=3;repeati=80} @self
   - delay <random.60to80>
-  - randomskill{s=Azuriter_Brute_Wanderer_Skill_2,Azuriter_Brute_Wanderer_Skill_3;fbs=Azuriter_Brute_Wanderer_Skill_3} @self
+  - randomskill{s=Azuriter_Mob_Boss_BruteWanderer_Attack2,Azuriter_Mob_Boss_BruteWanderer_Attack3;fbs=Azuriter_Mob_Boss_BruteWanderer_Attack3} @self
   - delay <random.60to80>
-  - randomskill{s=Azuriter_Brute_Wanderer_Skill_2,Azuriter_Brute_Wanderer_Skill_3;fbs=Azuriter_Brute_Wanderer_Skill_3} @self
+  - randomskill{s=Azuriter_Mob_Boss_BruteWanderer_Attack2,Azuriter_Mob_Boss_BruteWanderer_Attack3;fbs=Azuriter_Mob_Boss_BruteWanderer_Attack3} @self
   - delay <random.120to150>
-  - skill{s=Azuriter_Brute_Wanderer_Skills} @self
+  - skill{s=Azuriter_Mob_Boss_BruteWanderer_Loop} @self

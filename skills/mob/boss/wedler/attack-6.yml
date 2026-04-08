@@ -1,4 +1,4 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6:
+Azuriter_Mob_Boss_Wedler_Attack6:
   Cooldown: 1
   Conditions:
   - incombat true
@@ -8,16 +8,16 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6:
   Skills:
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - delay 20
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Wedler_Attack6_Sphere}
   - delay 24
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Wedler_Attack6_Sphere}
   - delay 40
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Wedler_Attack6_Sphere}
   - delay 16
   - clearpotion{t=INVISIBILITY} @self
   - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
+Azuriter_Mob_Boss_Wedler_Attack6_Sphere:
   Skills:
   - clearpotion{t=INVISIBILITY} @self
   - delay 4
@@ -33,7 +33,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
       - e:ps{p=sweep_attack;a=20;r=2} @origin
       - e:ps{p=cloud;a=30;s=0.2;r=1;cd=0.2} @origin
       - setVar{var=skill.tick;val="<skill.var.tick> + 1";t=INTEGER} @self
-      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick @self
+      - skill:Azuriter_Mob_Boss_Wedler_Attack2_Process_Tick @self
     ];
     oh=[
       - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}

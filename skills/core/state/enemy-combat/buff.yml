@@ -1,3 +1,4 @@
+# シールド残数と体力帯に応じたダメージ補正を計算する。
 Azuriter_Core_Enemy_DamageBuff:
   Skills:
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_0} #<skill.var.point>の数の分だけ生成する
@@ -10,5 +11,3 @@ Azuriter_Core_Enemy_DamageBuff:
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_7}
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.2";t=FLOAT} @self ?hasTag{t=Azuriter_Core_Tag_MidHealth}
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.25";t=FLOAT} @self ?hasTag{t=Azuriter_Core_Tag_LowHealth}
-
-#

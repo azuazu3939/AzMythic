@@ -1,20 +1,20 @@
-Azuriter_Master_Zombie_Skill_1:
+Azuriter_Mob_Boss_MasterZombie_Attack1:
   Cooldown: 1
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - setVar{k=skill.up;a="0.75";t=FLOAT} @self
-  - skill{s=Azuriter_Master_Zombie_Skill_1_Random;repeat=<random.1to3>;repeati=<random.15to30>} @self
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack1_Random;repeat=<random.1to3>;repeati=<random.15to30>} @self
 
-Azuriter_Master_Zombie_Skill_1_Random:
+Azuriter_Mob_Boss_MasterZombie_Attack1_Random:
   Conditions:
   - incombat true
   Skills:
   - setVar{k=skill.up;a="<skill.var.up|0.75> + 0.25";t=FLOAT} @self
-  - skill{s=Azuriter_Master_Zombie_Skill_1_Repeat;repeat=15;repeati=0} @self
+  - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack1_Repeat;repeat=15;repeati=0} @self
 
-Azuriter_Master_Zombie_Skill_1_Repeat:
+Azuriter_Mob_Boss_MasterZombie_Attack1_Repeat:
   Skills:
   - setVar{k=skill.syo<skill.var.itr>;a="<random.0to12>";t=INTEGER} @self
   - setVar{k=skill.sso<skill.var.itr>;a="<random.-16to16>";t=INTEGER} @self

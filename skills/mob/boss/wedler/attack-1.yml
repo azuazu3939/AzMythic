@@ -1,4 +1,4 @@
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1:
+Azuriter_Mob_Boss_Wedler_Attack1:
   Cooldown: 3
   Conditions:
   - incombat true
@@ -12,23 +12,23 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1:
   - stun{t=180;f=true} @self
   - sound{s=entity.wolf.growl;p=0;v=1.5} @self
   - setVar{var=skill.size;val="1";t=FLOAT} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Effect{repeat=3;repeati=8} @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Effect{repeat=3;repeati=8} @self
   - delay 35
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
   - skill:Azuriter_Core_Enemy_DamageBuff @self
   - setVar{var=skill.ho;val="90";t=INTEGER} @self
   - sound{s=entity.wolf.howl;delay=10;v=1.5} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process{repeat=44;repeati=1} @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process{repeat=44;repeati=1} @self
   - delay 150
   - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Effect:
+Azuriter_Mob_Boss_Wedler_Attack1_Effect:
   Skills:
   - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @selfLocation
   - e:pr{r=8;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @selfLocation
   - e:pr{r=10;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @selfLocation
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Projectile_Effect:
+Azuriter_Mob_Boss_Wedler_Attack1_Projectile_Effect:
   Skills:
   - setvar{var=skill.x;val="<random.float.-1to1>";t=FLOAT} @self
   - setvar{var=skill.y;val="<random.float.-1to1>";t=FLOAT} @self
@@ -37,236 +37,236 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Projectile_Effect:
   - e:p{p=cloud;a=1;vs=<skill.var.size>;hs=<skill.var.size>;s=0.1;d=true;dr=true;origin=@origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>};fo=true} @origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>}
   - e:p{p=sweep_attack;a=1;vs=<skill.var.size>;hs=<skill.var.size>;s=0.1;d=true;dr=true;origin=@origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>};fo=true} @origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>}
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process:
+Azuriter_Mob_Boss_Wedler_Attack1_Process:
   Skills:
-  - vskill{s=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V<skill.var.itr>;f=true} @self
+  - vskill{s=Azuriter_Mob_Boss_Wedler_Attack1_Process_V<skill.var.itr>;f=true} @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V1:
-  Skills:
-  - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
-
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V2:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V1:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V3:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V2:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V4:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V3:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V5:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V4:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V6:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V5:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V7:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V6:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V8:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V7:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V9:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V8:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V10:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V9:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V11:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V10:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V12:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V11:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V13:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V12:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V14:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V13:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V15:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V14:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V16:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V15:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V17:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V16:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V18:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V17:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V19:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V18:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V20:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V19:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V21:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V20:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V22:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V21:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V23:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V22:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V24:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V23:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V25:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V24:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V26:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V25:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V27:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V26:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V28:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V27:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V29:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V28:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V30:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V29:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V31:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V30:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V32:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V31:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V33:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V32:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V34:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V33:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V35:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V34:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V36:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V35:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V37:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V36:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V38:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V37:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V39:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V38:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V40:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V39:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V41:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V40:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V42:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V41:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V43:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V42:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V44:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V43:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_V45:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V44:
   Skills:
   - setVar{var=skill.delay;val="45";t=INTEGER} @self
-  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_V45:
+  Skills:
+  - setVar{var=skill.delay;val="45";t=INTEGER} @self
+  - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot @self
+
+Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot:
   Skills:
   - setVar{var=skill.ho;val="<skill.var.ho> - 4 * <skill.var.itr>";t=INTEGER} @self
   - projectile{
@@ -274,13 +274,13 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot:
       - setVar{var=skill.delay;val="<skill.var.delay> - 1";t=INTEGER} @self
       - e:p{p=spark;a=5;vs=0.5;hs=0.25;delay=<skill.var.delay>} @origin
       - look{f=true;delay=<skill.var.delay>} @projectileforward
-      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Projectile_Effect{delay=<skill.var.delay>} @origin 0.4
-      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot_Damage{delay=<skill.var.delay>} @ENO{r=5;c=[ - samefaction false ];ignore=players}
-      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot_Damage{delay=<skill.var.delay>} @PlayersNearOrigin{r=4.5}
+      - skill:Azuriter_Mob_Boss_Wedler_Attack1_Projectile_Effect{delay=<skill.var.delay>} @origin 0.4
+      - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot_Damage{delay=<skill.var.delay>} @ENO{r=5;c=[ - samefaction false ];ignore=players}
+      - skill:Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot_Damage{delay=<skill.var.delay>} @PlayersNearOrigin{r=4.5}
     ];
     v=12;se=false;sb=false;mr=40;i=1;sfo=3;syo=3;tyo=3;md=40;ho=<skill.var.ho>;hnp=true;c=[ - samefaction false ]} @forward{lockpitch=true}
 
-OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot_Damage:
+Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot_Damage:
   TargetConditions:
   - hasAura{n=Azuriter_Mob_Aura_WedlerAttack1Hit} false
   Skills:

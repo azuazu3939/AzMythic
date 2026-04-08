@@ -1,4 +1,4 @@
-Azuriter_Soul_Wanderer_Skill_1:
+Azuriter_Mob_Boss_SoulWanderer_Attack1:
   Cooldown: 5
   Conditions:
   - incombat true

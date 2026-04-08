@@ -1,4 +1,5 @@
-OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK:
+# バサモス本体の行動ループ。
+Azuriter_Mob_Boss_Basamos_Loop:
   Conditions:
   - incombat true
   TargetConditions:
@@ -8,12 +9,12 @@ OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK:
   - addtag{t=Azuriter_Mob_Tag_BasamosCharge} ?!night
   - removetag{t=Azuriter_Mob_Tag_BasamosCharge} ?night
   - randomskill{s=
-    OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1,
-    OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2,
-    OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3,
-    OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4,
-    OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5;
-    fbs=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1;
+    Azuriter_Mob_Boss_Basamos_Attack1,
+    Azuriter_Mob_Boss_Basamos_Attack2,
+    Azuriter_Mob_Boss_Basamos_Attack3,
+    Azuriter_Mob_Boss_Basamos_Attack4,
+    Azuriter_Mob_Boss_Basamos_Attack5;
+    fbs=Azuriter_Mob_Boss_Basamos_Attack1;
     repeat=1;repeati=100} @self
   - delay <random.180to260>
-  - skill{s=OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK} @T
+  - skill{s=Azuriter_Mob_Boss_Basamos_Loop} @T

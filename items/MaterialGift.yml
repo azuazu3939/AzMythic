@@ -10,9 +10,9 @@ Azuriter_CombatGift_G1:
     Version: 1
   Group: 'Gift'
   Skills:
-  - skill{s=Azuriter_CombatGift_G1_Skill} @self ~onUse ?!crouching  
-  - skill{s=Azuriter_CombatGift_G1_Skill} @self ~onSwing 
-  - skill{s=Azuriter_CombatGift_G1_Skill_Repeat} @self ~onUse ?crouching 
+  - skill{s=Azuriter_Core_Gift_Combat_G1_Use} @self ~onUse ?!crouching
+  - skill{s=Azuriter_Core_Gift_Combat_G1_Use} @self ~onSwing
+  - skill{s=Azuriter_Core_Gift_Combat_G1_BulkUse} @self ~onUse ?crouching
 
 Azuriter_CombatGift_G1_Ticket:
   Id: paper
@@ -37,9 +37,9 @@ Azuriter_ArmorGift_G1:
     Version: 1
   Group: 'Gift'
   Skills:
-  - skill{s=Azuriter_ArmorGift_G1_Skill} @self ~onUse ?!crouching 
-  - skill{s=Azuriter_ArmorGift_G1_Skill} @self ~onSwing 
-  - skill{s=Azuriter_ArmorGift_G1_Skill_Repeat} @self ~onUse ?crouching 
+  - skill{s=Azuriter_Core_Gift_Armor_G1_Use} @self ~onUse ?!crouching
+  - skill{s=Azuriter_Core_Gift_Armor_G1_Use} @self ~onSwing
+  - skill{s=Azuriter_Core_Gift_Armor_G1_BulkUse} @self ~onUse ?crouching
 
 Azuriter_ArmorGift_G1_Ticket:
   Id: paper
@@ -64,9 +64,9 @@ Azuriter_ArmorGift_G2:
     Version: 1
   Group: 'Gift'
   Skills:
-  - skill{s=Azuriter_ArmorGift_G2_Skill} @self ~onUse ?!crouching 
-  - skill{s=Azuriter_ArmorGift_G2_Skill} @self ~onSwing 
-  - skill{s=Azuriter_ArmorGift_G2_Skill_Repeat} @self ~onUse ?crouching 
+  - skill{s=Azuriter_Core_Gift_Armor_G2_Use} @self ~onUse ?!crouching
+  - skill{s=Azuriter_Core_Gift_Armor_G2_Use} @self ~onSwing
+  - skill{s=Azuriter_Core_Gift_Armor_G2_BulkUse} @self ~onUse ?crouching
 
 Azuriter_ArmorGift_G2_Ticket:
   Id: paper
@@ -90,9 +90,9 @@ Azuriter_MoneyGift_G1:
     Version: 1
   Group: 'Gift'
   Skills:
-  - skill{s=Azuriter_MoneyGift_G1_Skill} @self ~onUse ?!crouching 
-  - skill{s=Azuriter_MoneyGift_G1_Skill} @self ~onSwing 
-  - skill{s=Azuriter_MoneyGift_G1_Skill_Repeat} @self ~onUse ?crouching 
+  - skill{s=Azuriter_Core_Gift_Money_G1_Use} @self ~onUse ?!crouching
+  - skill{s=Azuriter_Core_Gift_Money_G1_Use} @self ~onSwing
+  - skill{s=Azuriter_Core_Gift_Money_G1_BulkUse} @self ~onUse ?crouching
 
 Azuriter_QuestBoss_ForestGuardianInvitation:
   Id: paper

@@ -2,8 +2,8 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK:
   Conditions:
   - incombat true
   TargetConditions:
-  - hasAura{n=Azuriter_NoCombat} false 
-  - isplayer true 
+  - hasAura{n=Azuriter_NoCombat} false
+  - isplayer true
   Skills:
   - randomskill{s=
     OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1,
@@ -23,9 +23,9 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1:
   Conditions:
   - incombat true
   - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=ATTACK} false
   - targetWithin{d=16}
-  - targetinlineofsight 
+  - targetinlineofsight
   Skills:
   - addtag{t=ATTACK} @self
   - look{f=true;repeat=79;repeati=1} @T
@@ -35,7 +35,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1:
   - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Effect{repeat=3;repeati=8} @self
   - delay 35
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - setVar{var=skill.ho;val="90";t=INTEGER} @self
   - sound{s=entity.wolf.howl;delay=10;v=1.5} @self
   - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process{repeat=44;repeati=1} @self
@@ -50,10 +50,10 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Effect:
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Projectile_Effect:
   Skills:
-  - setvar{var=skill.x;val="<random.float.-1to1>";t=FLOAT} @self 
-  - setvar{var=skill.y;val="<random.float.-1to1>";t=FLOAT} @self 
+  - setvar{var=skill.x;val="<random.float.-1to1>";t=FLOAT} @self
+  - setvar{var=skill.y;val="<random.float.-1to1>";t=FLOAT} @self
   - setvar{var=skill.z;val="<random.float.-1to1>";t=FLOAT} @self
-  - setvar{var=skill.size;val="(50 - <skill.var.delay>) * 0.025 + 0.25";t=FLOAT} @self 
+  - setvar{var=skill.size;val="(50 - <skill.var.delay>) * 0.025 + 0.25";t=FLOAT} @self
   - e:p{p=cloud;a=1;vs=<skill.var.size>;hs=<skill.var.size>;s=0.1;d=true;dr=true;origin=@origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>};fo=true} @origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>}
   - e:p{p=sweep_attack;a=1;vs=<skill.var.size>;hs=<skill.var.size>;s=0.1;d=true;dr=true;origin=@origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>};fo=true} @origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>}
 
@@ -304,7 +304,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot_Damage:
   TargetConditions:
   - hasAura{n=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_HIT} false
   Skills:
-  - aura{n=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_HIT;i=20;t=100} 
+  - aura{n=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_HIT;i=20;t=100}
   - damage{a="<skill.var.dmg> * 2.15";pi=true;ii=true;e=GREEN;tag=ATTACK}
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
@@ -312,7 +312,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
   Conditions:
   - incombat true
   - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=ATTACK} false
   - targetWithin{d=10}
   Skills:
   - addtag{t=ATTACK} @self
@@ -321,7 +321,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
   - potion{t=SLOWNESS;l=7;d=20;p=false} @self
   - potion{t=SLOW_FALLING;l=7;d=25;p=false} @self
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - sound{s=entity.wolf.ambient;p=0.75;v=1.5} @self
   - delay 10
   - sound{s=block.trial_spawner.ominous_activate;p=2;v=2} @self
@@ -337,7 +337,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
   - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=3} @self
   - projectile{
     ot=[
-      - e:ps{p=spark;a=50;r=1} @origin 
+      - e:ps{p=spark;a=50;r=1} @origin
       - e:ps{p=sweep_attack;a=20;r=2} @origin
       - e:ps{p=cloud;a=50;s=0.2;r=1;cd=0.2} @origin
 
@@ -373,8 +373,8 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3:
   Conditions:
   - incombat true
   - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false 
-  - targetnotwithin{d=16} 
+  - hasTag{t=ATTACK} false
+  - targetnotwithin{d=16}
   Skills:
   - addtag{t=ATTACK} @self
   - look{f=true} @T
@@ -382,7 +382,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3:
   - potion{t=SLOWNESS;l=7;d=20;p=false} @self
   - potion{t=SLOW_FALLING;l=7;d=25;p=false} @self
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - sound{s=entity.wolf.ambient;p=0.75;v=1.5;repeat=1;repeati=10} @self
   - delay 20
   - projectile{
@@ -401,7 +401,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
   Conditions:
   - incombat true
   - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=ATTACK} false
   Skills:
   - addtag{t=ATTACK} @self
   - look{f=true} @T
@@ -409,7 +409,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
   - potion{t=SLOWNESS;l=7;d=20;p=false} @self
   - potion{t=SLOW_FALLING;l=7;d=25;p=false} @self
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - sound{s=entity.wolf.ambient;p=0.75;v=1.5;repeat=1;repeati=10} @self
   - delay 20
   - projectile{
@@ -434,7 +434,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5:
   - addtag{t=ATTACK} @self
   - look{f=true} @T
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - e:pr{p=angry_villager;ys=1;r=2;a=3;d=true;dir=0,1,0;s=5;size=1.5;pts=16} @self
   - delay 10
   - sound{s=entity.wolf.growl;p=0} @self
@@ -467,11 +467,11 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6:
   Skills:
   - addtag{t=ATTACK} @self
   - delay 20
-  - skill:Generic_onGroundトリガースキル_MCLove32{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
   - delay 24
-  - skill:Generic_onGroundトリガースキル_MCLove32{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
   - delay 40
-  - skill:Generic_onGroundトリガースキル_MCLove32{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
   - delay 16
   - clearpotion{t=INVISIBILITY} @self
   - removeTag{t=ATTACK} @self
@@ -484,11 +484,11 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
   - delay 10
   - look{f=true} @T
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - setVar{var=skill.tick;val="0";t=INTEGER} @self
   - missile{
     ot=[
-      - e:ps{p=spark;a=30;r=1} @origin 
+      - e:ps{p=spark;a=30;r=1} @origin
       - e:ps{p=sweep_attack;a=20;r=2} @origin
       - e:ps{p=cloud;a=30;s=0.2;r=1;cd=0.2} @origin
       - setVar{var=skill.tick;val="<skill.var.tick> + 1";t=INTEGER} @self
@@ -541,7 +541,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7_Run:
       - setVar{k=skill.tick;a="<skill.var.tick> - 10";t=INTEGER} @self
     ];
     ot=[
-      - e:ps{p=spark;a=10;r=0.5} @origin 
+      - e:ps{p=spark;a=10;r=0.5} @origin
       - e:ps{p=sweep_attack;a=5;r=1} @origin
       - e:ps{p=cloud;a=10;s=0.2;r=0.5;cd=0.2} @origin
     ];
@@ -564,7 +564,7 @@ Azuriter_Boss_Wedler_HighDrop:
   - cmd{c="mlg <caster.name> Azuriter_風牙狼の皮 1 0.8"} @self
   - cmd{c="mlg <caster.name> Azuriter_風核 1 0.05"} @self
   - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.15"} @self
-  
+
   - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.005"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.005"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.005"} @self
@@ -582,4 +582,4 @@ Azuriter_Boss_Wedler_HighDrop:
 
 Azuriter_Boss_Wedler_SpawnDrop:
   Skills:
-  - cmd{c="mlg <caster.name> Azuriter_風牙狼の皮 1 0.05"} @self 
+  - cmd{c="mlg <caster.name> Azuriter_風牙狼の皮 1 0.05"} @self

@@ -16,16 +16,16 @@ Azuriter_ビギナーH:
     Unbreakable: true
   Attributes:
     Head:
-      ArmorToughness: 2 ADD 
-      Armor: 3 ADD 
+      ArmorToughness: 2 ADD
+      Armor: 3 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_HealthColor} @self ~onSwing 
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
-  - skill{s=Azuriter_HealthColor} @self ~onAttack
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
+  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
 Azuriter_ビギナーC:
   Id: leather_chestplate
@@ -45,8 +45,8 @@ Azuriter_ビギナーC:
     Unbreakable: true
   Attributes:
     Chest:
-      ArmorToughness: 2 ADD 
-      Armor: 8 ADD 
+      ArmorToughness: 2 ADD
+      Armor: 8 ADD
   Group: 'Armor'
 
 Azuriter_ビギナーL:
@@ -67,8 +67,8 @@ Azuriter_ビギナーL:
     Unbreakable: true
   Attributes:
     Legs:
-      ArmorToughness: 2 ADD 
-      Armor: 6 ADD 
+      ArmorToughness: 2 ADD
+      Armor: 6 ADD
   Group: 'Armor'
 
 Azuriter_ビギナーB:
@@ -89,8 +89,8 @@ Azuriter_ビギナーB:
     Unbreakable: true
   Attributes:
     Feet:
-      ArmorToughness: 2 ADD 
-      Armor: 3 ADD 
+      ArmorToughness: 2 ADD
+      Armor: 3 ADD
   Group: 'Armor'
 
 Azuriter_トラベラーH:
@@ -112,16 +112,16 @@ Azuriter_トラベラーH:
     Color: 90,184,73
   Attributes:
     Head:
-      ArmorToughness: 4 ADD 
-      Armor: 8 ADD 
+      ArmorToughness: 4 ADD
+      Armor: 8 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_HealthColor} @self ~onSwing 
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
-  - skill{s=Azuriter_HealthColor} @self ~onAttack
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
+  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
 Azuriter_トラベラーC:
   Id: leather_chestplate
@@ -142,8 +142,8 @@ Azuriter_トラベラーC:
     Color: 90,184,73
   Attributes:
     Chest:
-      ArmorToughness: 4 ADD 
-      Armor: 8 ADD 
+      ArmorToughness: 4 ADD
+      Armor: 8 ADD
   Group: 'Armor'
 
 Azuriter_トラベラーL:
@@ -165,8 +165,8 @@ Azuriter_トラベラーL:
     Color: 90,184,73
   Attributes:
     Legs:
-      ArmorToughness: 4 ADD 
-      Armor: 8 ADD 
+      ArmorToughness: 4 ADD
+      Armor: 8 ADD
   Group: 'Armor'
 
 Azuriter_トラベラーB:
@@ -188,8 +188,8 @@ Azuriter_トラベラーB:
     Color: 90,184,73
   Attributes:
     Feet:
-      ArmorToughness: 4 ADD 
-      Armor: 8 ADD 
+      ArmorToughness: 4 ADD
+      Armor: 8 ADD
   Group: 'Armor'
 
 Azuriter_ディフェンスH:
@@ -213,17 +213,17 @@ Azuriter_ディフェンスH:
     Color: 28,30,137
   Attributes:
     Head:
-      ArmorToughness: 9 ADD 
+      ArmorToughness: 9 ADD
       Armor: 15 ADD
       Health: 2 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_HealthColor} @self ~onSwing 
-  - skill{s=Azuriter_HealthColor} @self ~onJoin
-  - skill{s=Azuriter_HealthColor} @self ~onAttack
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
+  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
 Azuriter_ディフェンスC:
   Id: leather_chestplate
@@ -246,8 +246,8 @@ Azuriter_ディフェンスC:
     Color: 28,30,137
   Attributes:
     Chest:
-      ArmorToughness: 9 ADD 
-      Armor: 12 ADD 
+      ArmorToughness: 9 ADD
+      Armor: 12 ADD
       Health: 4 ADD
   Group: 'Armor'
   Skills:
@@ -273,8 +273,8 @@ Azuriter_ディフェンスL:
     Version: 2
   Attributes:
     Legs:
-      ArmorToughness: 12 ADD 
-      Armor: 16 ADD 
+      ArmorToughness: 12 ADD
+      Armor: 16 ADD
       Health: 2 ADD
   Group: 'Armor'
   Skills:
@@ -300,8 +300,8 @@ Azuriter_ディフェンスB:
     Version: 2
   Attributes:
     Feet:
-      ArmorToughness: 12 ADD 
-      Armor: 18 ADD 
+      ArmorToughness: 12 ADD
+      Armor: 18 ADD
       Health: 1 ADD
   Group: 'Armor'
   Skills:
@@ -327,17 +327,17 @@ Azuriter_アタッカーH:
     Version: 2
   Attributes:
     Head:
-      ArmorToughness: 4 ADD 
+      ArmorToughness: 4 ADD
       Armor: 8 ADD
       Damage: 1 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_HealthColor} @self ~onSwing 
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
-  - skill{s=Azuriter_HealthColor} @self ~onAttack
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
+  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
 Azuriter_アタッカーC:
   Id: leather_chestplate
@@ -360,7 +360,7 @@ Azuriter_アタッカーC:
     Version: 2
   Attributes:
     Chest:
-      ArmorToughness: 8 ADD 
+      ArmorToughness: 8 ADD
       Armor: 10 ADD
       Damage: 1 ADD
   Group: 'Armor'
@@ -387,7 +387,7 @@ Azuriter_アタッカーL:
     Version: 2
   Attributes:
     Legs:
-      ArmorToughness: 6 ADD 
+      ArmorToughness: 6 ADD
       Armor: 10 ADD
       Damage: 1 ADD
   Group: 'Armor'
@@ -414,7 +414,7 @@ Azuriter_アタッカーB:
     Version: 2
   Attributes:
     Feet:
-      ArmorToughness: 4 ADD 
+      ArmorToughness: 4 ADD
       Armor: 8 ADD
       Damage: 1 ADD
   Group: 'Armor'
@@ -440,18 +440,18 @@ Azuriter_シリーズエンド1H:
     Version: 3
   Attributes:
     Head:
-      ArmorToughness: 25 ADD 
+      ArmorToughness: 25 ADD
       Armor: 32 ADD
       Health: 10 ADD
       Damage: 2.5 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
-  - skill{s=Azuriter_HealthColor} @self ~onSwing 
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
-  - skill{s=Azuriter_HealthColor} @self ~onAttack
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
+  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
 Azuriter_シリーズエンド1C:
   Material: diamond_chestplate
@@ -473,8 +473,8 @@ Azuriter_シリーズエンド1C:
     Version: 3
   Attributes:
     Chest:
-      ArmorToughness: 25 ADD 
-      Armor: 32 ADD 
+      ArmorToughness: 25 ADD
+      Armor: 32 ADD
       Health: 10 ADD
       Damage: 2.5 ADD
   Group: 'Armor'
@@ -499,8 +499,8 @@ Azuriter_シリーズエンド1L:
     Version: 3
   Attributes:
     Legs:
-      ArmorToughness: 25 ADD 
-      Armor: 32 ADD 
+      ArmorToughness: 25 ADD
+      Armor: 32 ADD
       Health: 10 ADD
       Damage: 2.5 ADD
   Group: 'Armor'
@@ -525,8 +525,8 @@ Azuriter_シリーズエンド1B:
     Version: 3
   Attributes:
     Feet:
-      ArmorToughness: 25 ADD 
-      Armor: 32 ADD 
+      ArmorToughness: 25 ADD
+      Armor: 32 ADD
       Health: 10 ADD
       Damage: 2.5 ADD
   Group: 'Armor'

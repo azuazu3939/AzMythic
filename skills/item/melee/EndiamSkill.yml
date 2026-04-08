@@ -1,4 +1,4 @@
-Azuriter_エンディアム_R1_Skills:
+Azuriter_Item_Melee_Endiam_R1:
   Cooldown: 0.3
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンディアム}
@@ -14,13 +14,13 @@ Azuriter_エンディアム_R1_Skills:
   - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> + 1";t=INTEGER} @self
   - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> - 1";t=INTEGER;delay=60} @self
   - setVar{k=skill.chance;a="<random.1to2>";t=INTEGER} @self
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=135;damage=120;effect=Azuriter_エンディアム_L1_Skill_Effect} ?varrange{k=skill.chance;r="1"}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=45;damage=120;effect=Azuriter_エンディアム_L1_Skill_Effect} ?varrange{k=skill.chance;r="2"}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=120;effect=Azuriter_Item_Melee_Endiam_L1_Effect} ?varrange{k=skill.chance;r="1"}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=120;effect=Azuriter_Item_Melee_Endiam_L1_Effect} ?varrange{k=skill.chance;r="2"}
   - lunge{yv=0.75;delay=2} @self
   - delay 10
-  - skill{s=Azuriter_エンディアム_Finish} @self
+  - skill{s=Azuriter_Item_Melee_Endiam_Finish} @self
 
-Azuriter_エンディアム_L1_Skills:
+Azuriter_Item_Melee_Endiam_L1:
   Cooldown: 0.2
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンディアム}
@@ -46,8 +46,8 @@ Azuriter_エンディアム_L1_Skills:
       - endprojectile @self ?!surface{r=<6}
     ];
     oe=[
-      - skill{s=Azuriter_P_Slash_Skill_Process;roll=135;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect;jump=true}
-      - skill{s=Azuriter_P_Slash_Skill_Process;roll=45;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect;jump=true;delay=4}
+      - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect;jump=true}
+      - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect;jump=true;delay=4}
     ];
     oh=[
       - sound{s=entity.zombie.attack_iron_door;p=0;audience=caster} @origin
@@ -68,14 +68,14 @@ Azuriter_エンディアム_L1_Skills:
     ];
     v=32;i=1;hp=false;hnp=true;vr=1.5;r=2;vo=0.1;in=8;d=20;se=false} @TL{d=32;cpitch=0}
   - delay 10
-  - skill{s=Azuriter_エンディアム_Finish} @self
+  - skill{s=Azuriter_Item_Melee_Endiam_Finish} @self
 
-Azuriter_エンディアム_L1_Skill_Effect:
+Azuriter_Item_Melee_Endiam_L1_Effect:
   Skills:
   - e:p{p=fireworks_spark;size=2;a=2;ys=0.075;hs=0.075;s=0.05;audience=caster} @origin
   - e:p{p=sweep_attack;size=2;a=3;ys=0.25;hs=0.25;s=0.05;audience=caster;delay=4} @origin
 
-Azuriter_エンディアム_Finish:
+Azuriter_Item_Melee_Endiam_Finish:
   Cooldown: 10
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンディアム}
@@ -84,14 +84,14 @@ Azuriter_エンディアム_Finish:
   Skills:
   - setVar{k=caster.Endiam;a="0";t=INTEGER} @self
   - setMaterialCooldown{m=MACE;d=100} @self
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=0;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=45;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=90;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=135;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=180;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=225;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=270;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
-  - skill{s=Azuriter_P_Slash_Skill_Process;roll=315;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=0;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=90;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=180;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=225;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=270;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=315;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
 
   - sound{s=block.vault.close_shutter;p=0;audience=caster} @self
   - sound{s=block.vault.close_shutter;p=1;audience=caster;delay=4} @self

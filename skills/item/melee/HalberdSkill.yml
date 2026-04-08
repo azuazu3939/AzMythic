@@ -1,4 +1,4 @@
-Azuriter_ハルバード_Skills:
+Azuriter_Item_Melee_Halberd_Use:
   Cooldown: 20
   Conditions:
   - wearing{s=HAND;i=Azuriter_ハルバード}

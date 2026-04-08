@@ -1,4 +1,4 @@
-Hub:
+Azuriter_Core_Command_Hub:
   Command:
     Id: hub
     Completions:

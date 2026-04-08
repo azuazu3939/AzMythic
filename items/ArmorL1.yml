@@ -25,11 +25,11 @@ Azuriter_ガーディアH:
       Damage: 2 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
-  - skill{s=Azuriter_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
 
 Azuriter_ガーディアC:
   Id: netherite_chestplate
@@ -143,11 +143,11 @@ Azuriter_ヘルシティアH:
       MovementSpeed: 0.125
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
-  - skill{s=Azuriter_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
 
 Azuriter_ヘルシティアC:
   Id: leather_chestplate
@@ -174,7 +174,7 @@ Azuriter_ヘルシティアC:
       Armor: 28
       Health: 15
       Damage: 1.75 ADD
-      MovementSpeed: 0.125 
+      MovementSpeed: 0.125
   Group: 'Armor'
   Skills:
 
@@ -263,11 +263,11 @@ Azuriter_ウィクサーH:
       Damage: 1 ADD
   Group: 'Armor'
   Skills:
-  - skill{s=Azuriter_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_HealthColor} @self ~onHeal
-  - skill{s=Azuriter_HealthColor} @self ~onRespawn 
-  - skill{s=Azuriter_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_HealthColor} @self ~onJoin 
+  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
+  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
+  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
+  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
+  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
 
 Azuriter_ウィクサーC:
   Id: leather_chestplate

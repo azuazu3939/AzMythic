@@ -3,11 +3,11 @@
 #Usage
 #<skill.shield_break>が高いほど、ダウンは遅い。
 #@Param / INTEGER: <skill.down_tick> / INTEGER: <skill.shield_break> / FLOAT: <skill.heal_percent>
-Generic_Enemy_MCLove32_EnterCombat:
+Azuriter_Core_Enemy_EnterCombat:
   Conditions:
   - incombat true
   - hasTag{t=START} false
-  - hasTag{t=DOWN} castinstead Generic_Enemy_MCLove32_NEXT
+  - hasTag{t=DOWN} castinstead Azuriter_Core_Enemy_EnterCombat_NextCycle
   Skills:
   - addtag{t=START} @self
   - setVar{n=skill.point;a="8";t=INTEGER} @self
@@ -16,17 +16,17 @@ Generic_Enemy_MCLove32_EnterCombat:
   - setVar{n=skill.shield;a="0";t=INTEGER} @self
   - setVar{n=caster.downCount;a="<caster.var.downCount|0>";t=INTEGER} @self
   - setVar{n=skill.downTick;a="<skill.down_tick>";t=INTEGER} @self
-  - meta:Generic_Enemy_MCLove32_EnterCombat_Damaged_Count @self
+  - meta:Azuriter_Core_Enemy_EnterCombat_DamageCount @self
   - delay 1
-  - skill:Generic_Enemy_MCLove32_EnterCombat_Damaged{break=<skill.shield_break>} @self
-  - skill:Generic_Enemy_MCLove32_EnterCombat_Process_EnterCombat @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_DamageAura{break=<skill.shield_break>} @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_InitShields @self
   - delay 1200
   - heal{a="<caster.mhp> * <skill.heal_percent>"} @self
   - removetag{t=START} @self
-  - skill:Generic_Enemy_MCLove32_EnterCombat @self
+  - skill:Azuriter_Core_Enemy_EnterCombat @self
 
 #
-Generic_Enemy_MCLove32_EnterCombat_Damaged_Count:
+Azuriter_Core_Enemy_EnterCombat_DamageCount:
   Skills:
   - setVar{k=caster.target_amount;a="0";t=INTEGER} @self
   - sudoskill{
@@ -35,7 +35,7 @@ Generic_Enemy_MCLove32_EnterCombat_Damaged_Count:
     ];cat=true} @TTP
 
 #
-Generic_Enemy_MCLove32_EnterCombat_Damaged:
+Azuriter_Core_Enemy_EnterCombat_DamageAura:
   Skills:
   - setVar{var=skill.dmg;val="0";t=FLOAT} @self
   - setVar{var=skill.break;val="<caster.mhp> * (1 + <caster.var.target_amount> * 0.1) * <skill.break> / 10000 / 7 * (1 + <caster.var.downCount> * 0.5)";t=FLOAT} @self
@@ -44,11 +44,11 @@ Generic_Enemy_MCLove32_EnterCombat_Damaged:
       oh=[
         - setVar{var=skill.dmg;val="<skill.var.dmg> + <skill.var.damage-amount>";t=FLOAT} @self
         - setVar{var=skill.temp;val="<skill.var.break> - <skill.var.dmg>";t=FLOAT} @self
-        - skill:Generic_Enemy_MCLove32_EnterCombat_DamagedAndBreak @self
+        - skill:Azuriter_Core_Enemy_EnterCombat_DamageBreak @self
       ]} @self
 
 #
-Generic_Enemy_MCLove32_EnterCombat_DamagedAndBreak:
+Azuriter_Core_Enemy_EnterCombat_DamageBreak:
   Conditions:
   - varrange{var=skill.temp;val=<0} true
   Skills:
@@ -56,16 +56,16 @@ Generic_Enemy_MCLove32_EnterCombat_DamagedAndBreak:
   - auraRemove{n=Generic_Enemy_MCLove32_Aura<skill.var.shield>} @self
   - auraRemove{n=Generic_Enemy_MCLove32_Damaged} ?varrange{k=skill.shield;r=7} #変更時追加入力必須
   - setVar{n=skill.shield;a="<skill.var.shield> + 1";t=INTEGER} @self
-  - skill:Generic_Enemy_MCLove32_Down @self
+  - skill:Azuriter_Core_Enemy_Down @self
 
 #
-Generic_Enemy_MCLove32_EnterCombat_Process_EnterCombat:
+Azuriter_Core_Enemy_EnterCombat_InitShields:
   Skills:
   - setVar{n=skill.count;a="0";t=INTEGER} @self
-  - skill:Generic_Enemy_MCLove32_EnterCombat_Process{repeat=<skill.var.point>;repeati=0} @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_InitShieldNode{repeat=<skill.var.point>;repeati=0} @self
 
 #
-Generic_Enemy_MCLove32_EnterCombat_Process:
+Azuriter_Core_Enemy_EnterCombat_InitShieldNode:
   Skills:
   - setVar{n=skill.count_point;a="<skill.var.count> * <skill.var.multiple>";t=INTEGER} @self
   - auraRemove{n=Generic_Enemy_MCLove32_Aura<skill.var.count>} @self
@@ -76,30 +76,30 @@ Generic_Enemy_MCLove32_EnterCombat_Process:
   - setVar{n=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
 
 #
-Generic_Enemy_MCLove32_Down:
+Azuriter_Core_Enemy_Down:
   Conditions:
   - hasAura{n=Generic_Enemy_MCLove32_Aura7} false
   Skills:
   - addtag{t=DOWN} @self
   - sound{s=item.shield.break;v=3;p=0} @self
   - potion{t=GLOWING;d=<skill.var.downTick>;l=0;or=true} @self
-  - ondamaged{n=Generic_Enemy_MCLove32_Down;damagemod="ENTITY_ATTACK 1.5";t=<skill.var.downTick>;i=1} @self
+  - ondamaged{n=Azuriter_Core_Enemy_Down;damagemod="ENTITY_ATTACK 1.5";t=<skill.var.downTick>;i=1} @self
   - stun{t=<skill.var.downTick>;g=true} @self
   - delay <skill.var.downTick>
   - setVar{n=caster.downCount;a="<caster.var.downCount|0> + 1";t=INTEGER} @self
   - removetag{t=DOWN} @self
   - removetag{t=START} @self
   - sound{s=block.anvil.use;v=3;p=2} @self
-  - skill:Generic_Enemy_MCLove32_NEXT @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_NextCycle @self
 
 #
-Generic_Enemy_MCLove32_NEXT:
+Azuriter_Core_Enemy_EnterCombat_NextCycle:
   Skills:
   - delay 20
-  - skill:Generic_Enemy_MCLove32_EnterCombat @self
+  - skill:Azuriter_Core_Enemy_EnterCombat @self
 
 #@Param / FLOAT: <skill.var.dmg>
-Generic_Enemy_MCLove32_BUFF:
+Azuriter_Core_Enemy_DamageBuff:
   Skills:
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Generic_Enemy_MCLove32_Aura0} #<skill.var.point>の数の分だけ生成する
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Generic_Enemy_MCLove32_Aura1}
@@ -113,7 +113,7 @@ Generic_Enemy_MCLove32_BUFF:
   - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.25";t=FLOAT} @self ?hasTag{t=LOW_HEALTH}
 
 #
-Generic_Enemy_MCLove32_SHOW_RANKING_LISTING:
+Azuriter_Core_Enemy_Ranking_ShowEntry:
   Skills:
   - delay 0
   - setVar{k=skill.name;a=<skill.key>;t=STRING} @self
@@ -128,19 +128,19 @@ Generic_Enemy_MCLove32_SHOW_RANKING_LISTING:
   - vskill{s=<skill.var.do>;repeat=<skill.var.reward>;repeati=1} @playerByName{n=<skill.var.player>} ?varset{k=skill.player}
 
 #
-Generic_Enemy_MCLove32_SHOW_RANKING_SortList:
+Azuriter_Core_Enemy_Ranking_PushValue:
   Skills:
   - addVar{k=caster.sortL;a=<skill.value>} @self ?varset{k=caster.sortL}
   - setVar{k=caster.sortL;a=<skill.value>;t=LIST} @self ?!varset{k=caster.sortL}
 
-Generic_ターゲットランダムプレイヤー_MCLove32:
+Azuriter_Core_Target_RandomPlayer:
   Conditions:
   - incombat true
   Skills:
   - setTarget @TTP{sort=RANDOM;limit=1} ?targets{a=>0}
 
 #設定可能なパラメータ (s_name、s_repeat、s_repeat_i)
-Generic_onGroundトリガースキル_MCLove32:
+Azuriter_Core_Trigger_OnGround:
   Skills:
   - setVar{k=skill.name;a="<skill.s_name>";t=STRING} @self
   - setVar{k=skill.repeat_c;a="<skill.s_repeat>";t=STRING} @self
@@ -151,84 +151,84 @@ Generic_onGroundトリガースキル_MCLove32:
   - setVar{k=skill.repeat;a="<skill.s_repeat>";t=INTEGER} @self ?!varequals{k=skill.repeat_c;v="[Undefined]"}
   - setVar{k=skill.repeat_i;a="<skill.s_repeat_i>";t=INTEGER} @self ?!varequals{k=skill.repeat_i_c;v="[Undefined]"}
 
-  - skill{s=Generic_onGroundトリガースキル_MCLove32_Process} @self ?!varequals{k=skill.name;v="[Undefined]"}
+  - skill{s=Azuriter_Core_Trigger_OnGround_Process} @self ?!varequals{k=skill.name;v="[Undefined]"}
 
-Generic_onGroundトリガースキル_MCLove32_Process:
+Azuriter_Core_Trigger_OnGround_Process:
   Conditions:
-  - onGround{onfail=castinstead Generic_onGroundトリガースキル_MCLove32_NO}
+  - onGround{onfail=castinstead Azuriter_Core_Trigger_OnGround_Wait}
   Skills:
   - vskill{s=<skill.var.name>;repeat=<skill.var.repeat>;repeati=<skill.var.repeat_i>} @self
 
-Generic_onGroundトリガースキル_MCLove32_NO:
+Azuriter_Core_Trigger_OnGround_Wait:
   Skills:
   - delay 1
-  - skill{s=Generic_onGroundトリガースキル_MCLove32_Process} @self
+  - skill{s=Azuriter_Core_Trigger_OnGround_Process} @self
 
-Azuriter_Enemy_RaidBoss_操作:
+Azuriter_Core_RaidBoss_Control:
   Cooldown: 1
   Skills:
   - setVar{k=skill.repeat;a="19";t=INTEGER} @self
-  - skill{s=Azuriter_Enemy_RaidBoss_操作_Repeat;repeat=<skill.var.repeat>;repeati=1} @self
+  - skill{s=Azuriter_Core_RaidBoss_Control_Repeat;repeat=<skill.var.repeat>;repeati=1} @self
 
-Azuriter_Enemy_RaidBoss_操作_Repeat:
+Azuriter_Core_RaidBoss_Control_Repeat:
   Skills:
   - setVar{k=skill.<skill.var.itr>;a="<caster.var.<skill.var.itr>>";t=STRING} @self
-  - skill{s=Azuriter_Enemy_RaidBoss_操作_Repeat_Message;count=<skill.var.itr>} @trigger ?!varequals{k=skill.<skill.var.itr>;v="[Undefined]"} ?varset{k=caster.<skill.var.itr>}
+  - skill{s=Azuriter_Core_RaidBoss_Control_Message;count=<skill.var.itr>} @trigger ?!varequals{k=skill.<skill.var.itr>;v="[Undefined]"} ?varset{k=caster.<skill.var.itr>}
 
-Azuriter_Enemy_RaidBoss_操作_Repeat_Message:
+Azuriter_Core_RaidBoss_Control_Message:
   Skills:
   - message{m=""}
   - setVar{k=skill.temp;a="<skill.var.<skill.count>>";t=STRING} @self
   - setVar{k=skill.msg;a="raid_boss_skill<skill.count>";t=STRING} @self
   - jsonmessage{m="[{'text':'&6<skill.count>. &fスキル &a<skill.var.temp> &fを実行する。','clickEvent':{'action':'run_command','value':'/mm signal <caster.uuid> <skill.var.msg>'}}]"}
 
-Azuriter_Enemy_RaidBoss_Base_Heal:
+Azuriter_Core_RaidBoss_IdleHeal:
   Skills:
   - heal{a=<caster.mhp>} @self ?!incombat
 
-Azuriter_Cloud:
+Azuriter_Core_Particle_Cloud:
   Skills:
   - setvar{var=skill.x;val="<random.float.-5to5>";t=FLOAT} @self
   - setvar{var=skill.y;val="<random.float.-5to5>";t=FLOAT} @self
   - setvar{var=skill.z;val="<random.float.-5to5>";t=FLOAT} @self
   - e:p{p=cloud;a=5;s=1;size=2;d=true;dr=true;origin=@origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>};fo=true} @origin{x=<skill.var.x>;y=<skill.var.y>;z=<skill.var.z>}
 
-Generic_Enemy_Trial_Options:
+Azuriter_Core_Trial_Options:
   Cooldown: 0.5
   Skills:
-  - sudoskill{s=Generic_Enemy_Trial_Option_1} @children ?children{a=>0}
-  - sudoskill{s=Generic_Enemy_Trial_Option_2} @children ?children{a=>0}
-  - skill{s=Generic_Enemy_Trial_Option_3} @self ?children{a=>0}
-  - skill{s=Generic_Enemy_Trial_Option_4} @self ?children{a=>0}
+  - sudoskill{s=Azuriter_Core_Trial_ChildHeal} @children ?children{a=>0}
+  - sudoskill{s=Azuriter_Core_Trial_ChildRangeReset} @children ?children{a=>0}
+  - skill{s=Azuriter_Core_Trial_DistanceCheck} @self ?children{a=>0}
+  - skill{s=Azuriter_Core_Trial_DistanceReset} @self ?children{a=>0}
 
-Generic_Enemy_Trial_Option_1:
+Azuriter_Core_Trial_ChildHeal:
   Skills:
   - heal{a="<caster.mhp> * 0.0005"} @self
 
-Generic_Enemy_Trial_Option_2:
+Azuriter_Core_Trial_ChildRangeReset:
   Conditions:
   - distanceFromTL{d=>32}
   Skills:
   - heal{a="<caster.mhp> * 0.1"} @self
   - teleportto{c=@trackedLocation} @self
 
-Generic_Enemy_Trial_Option_3:
+Azuriter_Core_Trial_DistanceCheck:
   Conditions:
-  - playerNotWithin{d=32} orelsecast Generic_Enemy_Trial_Option_3_false
+  - playerNotWithin{d=32} orelsecast Azuriter_Core_Trial_DistanceCheck_Clear
   Skills:
   - aura{n=DISTANCE_CHECK;ms=11;rd=true;150;i=20} @self
 
-Generic_Enemy_Trial_Option_3_false:
+Azuriter_Core_Trial_DistanceCheck_Clear:
   Skills:
   - removeaura{n=DISTANCE_CHECK} @self
 
-Generic_Enemy_Trial_Option_4:
+Azuriter_Core_Trial_DistanceReset:
   Conditions:
   - hasAuraStacks{n=DISTANCE_CHECK;s=11}
   Skills:
-  - sudoskill{s=Generic_Enemy_Trial_Option_4_Reset} @children
+  - sudoskill{s=Azuriter_Core_Trial_ResetChild} @children
 
-Generic_Enemy_Trial_Option_4_Reset:
+Azuriter_Core_Trial_ResetChild:
   Skills:
   - heal{a="<caster.mhp> * 1"} @self
   - removetag{t=ACTION} @self

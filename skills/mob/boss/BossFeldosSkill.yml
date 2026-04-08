@@ -2,8 +2,8 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK:
   Conditions:
   - incombat true
   TargetConditions:
-  - hasAura{n=Azuriter_NoCombat} false 
-  - isplayer true 
+  - hasAura{n=Azuriter_NoCombat} false
+  - isplayer true
   Skills:
   - randomskill{s=
     OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1,
@@ -14,7 +14,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK:
     fbs=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_0} @self
   - sound{s=entity.blaze.burn;p=0;v=0.25} @self
   - ignite{d=100} @PIR{r=5}
-  - potion{t=WEAKNESS;l=0;d=400} @self ?raining 
+  - potion{t=WEAKNESS;l=0;d=400} @self ?raining
   - delay 160
   - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK @T
 
@@ -30,11 +30,11 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1:
   Conditions:
   - incombat true
   - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=ATTACK} false
   Skills:
   - addtag{t=ATTACK} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process @self
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process:
@@ -42,7 +42,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process:
   - addtag{t=TAG} @self
   - sound{s=entity.zoglin.step;v=1.5;repeat=5;repeati=2} @self
   - delay 20
-  - look{f=true} @T 
+  - look{f=true} @T
   - delay 5
   - projectile{
     ot=[
@@ -62,12 +62,12 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process:
       - removetag{t=ATTACK} @self
       - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish
     ];
-    v=6;vr=3;hr=3;i=1;se=false;sfo=0;syo=0;mr=20;d=40;sb=false;hs=true;hfs=0;mdh=10;mch=10;c=[ - samefaction false ]} @forward{lockpitch=true;fo=5} 
+    v=6;vr=3;hr=3;i=1;se=false;sfo=0;syo=0;mr=20;d=40;sb=false;hs=true;hfs=0;mdh=10;mch=10;c=[ - samefaction false ]} @forward{lockpitch=true;fo=5}
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish:
   Skills:
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self 
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self 
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self
   - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-30} @self
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile:
@@ -90,13 +90,13 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2:
   - hasTag{t=DOWN} false
   Skills:
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - e:pr{p=end_rod;a=3;ys=0.05;hs=0.1;pts=48;d=true;dir=0,1,0;s=1;r=12} @selfLocation{y=1}
   - delay 25
   - projectile{
     ot=[
-      - e:p{p=flame;a=3;ys=1;hs=1;s=0.5} @origin 
-      - e:p{p=explosion;size=2;a=1;delay=2} @origin 
+      - e:p{p=flame;a=3;ys=1;hs=1;s=0.5} @origin
+      - e:p{p=explosion;size=2;a=1;delay=2} @origin
     ];
     oh=[
       - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=RED;tag=ATTACK}
@@ -108,9 +108,9 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2:
     oe=[
       - e:p{p=explosion_huge;a=1} @origin
       - sound{s=entity.generic.explode} @origin
-      - sound{s=entity.wither.ambient;p=0} @origin   
+      - sound{s=entity.wither.ambient;p=0} @origin
     ];
-    b=DISPLAY;mat=OBSIDIAN;scale=3,3,3;rs=0.25;ys=0.25;ps=0.25;sfo=2;se=false;vr=2.75;hr=2.75;hs=true;hfs=2.5;mch=0;mdh=20;v=12;i=1} @forward 
+    b=DISPLAY;mat=OBSIDIAN;scale=3,3,3;rs=0.25;ys=0.25;ps=0.25;sfo=2;se=false;vr=2.75;hr=2.75;hs=true;hfs=2.5;mch=0;mdh=20;v=12;i=1} @forward
 
 #メテオ
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3:
@@ -121,7 +121,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3:
   Skills:
   - setVar{var=skill.count;val="1";t=INTEGER} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3_Run{repeat=<random.0to3>;repeati=40} @self
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3_Run:
@@ -130,7 +130,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3_Run:
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3_Meteor:
   Skills:
-  - sound{s=block.beacon.ambient;p=2;v=0.5} @targetedLoc 
+  - sound{s=block.beacon.ambient;p=2;v=0.5} @targetedLoc
   - e:pr{r=4;pts=10;a=1;s=0.2;d=true;dir=0,-1,0;p=flame} @targetedLoc{y=0.5}
   - e:pr{r=4;pts=10;a=1;s=0.2;d=true;dir=0,-1,0;p=flame} @targetedLoc{y=1}
   - e:pr{r=4;pts=10;a=1;s=0.2;d=true;dir=0,-1,0;p=flame} @targetedLoc{y=1.5}
@@ -149,24 +149,24 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4:
   Conditions:
   - incombat true
   - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=ATTACK} false
   Skills:
   - addtag{t=ATTACK} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - setVar{var=caster.extends;val="0";t=INTEGER} @self
   - projectile{
     ot=[
       - endprojectile @self ?hasTag{t=DOWN}
-      - setProjectileDirection{m=0.1} @TL 
+      - setProjectileDirection{m=0.1} @TL
       - teleport @origin
       - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
       - look{f=true} @projectileforward
     ];
     oh=[
-      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self 
+      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=STEP_AVOID} false ]}
-      - damage{a="<skill.var.dmg> * 2.25";pi=true;ii=true;e=RED;tag=ATTACK} 
+      - damage{a="<skill.var.dmg> * 2.25";pi=true;ii=true;e=RED;tag=ATTACK}
       - delay 5
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=STEP_AVOID} false ]}
       - delay 2
@@ -174,14 +174,14 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4:
       - throw{v=10;vy=20} @targeted{c=[ - hasAura{n=STEP_AVOID} false ]}
     ];
     os=[
-      - sound{s=entity.hoglin.death;p=0;sc=PLAYERS;repeat=19;repeati=2;v=2} @self 
+      - sound{s=entity.hoglin.death;p=0;sc=PLAYERS;repeat=19;repeati=2;v=2} @self
       - delay 30
-      - sound{s=entity.hoglin.death;p=0.8;sc=PLAYERS;repeat=9;repeati=2;v=2} @self 
+      - sound{s=entity.hoglin.death;p=0.8;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
       - e:p{p=villager_angry;a=20;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
       - delay 10
-      - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=9;repeati=2;v=2} @self 
+      - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
       - delay 20
-      - modifyprojectile{t=VELOCITY;a=SET;v=30} @self 
+      - modifyprojectile{t=VELOCITY;a=SET;v=30} @self
     ];
     oe=[
       - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
@@ -190,7 +190,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4:
       - removetag{t=ATTACK} @self ?varrange{k=skill.chance;r=1}
     ];
     v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
-    mr=24;vr=3;hr=3} @TL 
+    mr=24;vr=3;hr=3} @TL
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
   Conditions:
@@ -201,13 +201,13 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
   Skills:
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
   - setVar{var=caster.extends;val="<caster.var.extends|0> + 1";t=INTEGER} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
-  - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=4;repeati=2;v=2} @self 
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=4;repeati=2;v=2} @self
   - delay 30
   - projectile{
     ot=[
       - endprojectile @self ?hasTag{t=DOWN}
-      - setProjectileDirection{m=0.1} @TL 
+      - setProjectileDirection{m=0.1} @TL
       - teleport @origin
       - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
       - look{f=true} @projectileforward
@@ -215,9 +215,9 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
       - meta{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave;ho=270;delay=25} @self 0.75
     ];
     oh=[
-      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self 
+      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=STEP_AVOID} false ]}
-      - damage{a="<skill.var.dmg> * 1.5";pi=true;ii=true;e=RED;tag=ATTACK} 
+      - damage{a="<skill.var.dmg> * 1.5";pi=true;ii=true;e=RED;tag=ATTACK}
       - delay 5
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=STEP_AVOID} false ]}
       - delay 2
@@ -227,7 +227,7 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
     os=[
       - e:p{p=villager_angry;a=20;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
       - delay 30
-      - modifyprojectile{t=VELOCITY;a=SET;v=20} @self 
+      - modifyprojectile{t=VELOCITY;a=SET;v=20} @self
     ];
     oe=[
       - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
@@ -236,15 +236,15 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
       - removetag{t=ATTACK} @self ?varrange{k=skill.chance;r=1}
     ];
     v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
-    mr=24;vr=3;hr=3} @TL 
+    mr=24;vr=3;hr=3} @TL
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend:
   Skills:
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self 
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self 
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self
   - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-30} @self
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=60} @self 
-  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-60} @self 
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=60} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-60} @self
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave:
   Skills:
@@ -275,27 +275,27 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5:
   Cooldown: 3
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false 
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=DOWN} false
+  - hasTag{t=ATTACK} false
   Skills:
   - addtag{t=ATTACK} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Generic_Enemy_MCLove32_BUFF @self
-  - potion{t=SLOWNESS;l=7;d=10;p=false} @self 
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - potion{t=SLOWNESS;l=7;d=10;p=false} @self
   - sound{s=entity.ender_dragon.flap;v=2} @self
   - sound{s=entity.breeze.idle_air;p=0;v=2} @self
   - delay 10
   - jump{v=1.25} @self
   - delay 2
-  - skill:Generic_onGroundトリガースキル_MCLove32{s_name=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround;s_repeat_i=1;s_repeat=39} @self
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround;s_repeat_i=1;s_repeat=39} @self
   - delay 40
   - removetag{t=ATTACK} @self
 
 OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround:
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false 
-  - hasTag{t=ATTACK} false 
+  - hasTag{t=DOWN} false
+  - hasTag{t=ATTACK} false
   Skills:
   - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;e=RED;tag=ATTACK} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4";c=[ - hasAura{n=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround} false - surface{r=<5} true ]}
   - aura{n=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround;t=40} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4"}
@@ -304,10 +304,10 @@ OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5_OnGround:
 
 Azuriter_Boss_Feldos_HighDrop:
   Skills:
-  - cmd{c="mlg <caster.name> Azuriter_焔獣の炎殻 1 0.8"} @self 
+  - cmd{c="mlg <caster.name> Azuriter_焔獣の炎殻 1 0.8"} @self
   - cmd{c="mlg <caster.name> Azuriter_炎核 1 0.05"} @self
   - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.15"} @self
-  
+
   - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.005"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.005"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.005"} @self
@@ -325,7 +325,7 @@ Azuriter_Boss_Feldos_HighDrop:
 
 Azuriter_Boss_Feldos_SpawnDrop:
   Skills:
-  - cmd{c="mlg <caster.name> Azuriter_焔獣の炎殻 1 0.05"} @self 
+  - cmd{c="mlg <caster.name> Azuriter_焔獣の炎殻 1 0.05"} @self
 
 OpenField_Enemy_Boss_MCLove32_Remove:
   Skills:

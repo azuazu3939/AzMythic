@@ -1,4 +1,4 @@
-Azuriter_Warrior_Zombie_Skills:
+Azuriter_Mob_WarriorZombie_Combat:
   Cooldown: 5
   Conditions:
   - incombat true
@@ -25,6 +25,6 @@ Azuriter_Warrior_Zombie_Skills:
       - e:pr{p=explosion;pts=12;r=7;a=1;delay=40} @origin
       - e:pr{p=explosion;pts=16;r=10;a=1;delay=44} @origin
     ];
-    v=40;sfo=0;syo=0;i=1;hp=false;d=200;g=1;tyo=-1;vr=2} @TL 
+    v=40;sfo=0;syo=0;i=1;hp=false;d=200;g=1;tyo=-1;vr=2} @TL
   - delay 100
-  - skill{s=Azuriter_Warrior_Zombie_Skills} @self
+  - skill{s=Azuriter_Mob_WarriorZombie_Combat} @self

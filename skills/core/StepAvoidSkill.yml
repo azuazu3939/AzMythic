@@ -1,21 +1,21 @@
-Azuriter_StepAvoid:
+Azuriter_Core_StepAvoid_Router:
   Cooldown: 0.5
   Skills:
   - setVar{k=skill.cause;a="<skill.var.damage-cause>";t=STRING} @self
   - return ?!varequals{k=skill.cause;v="ENTITY_ATTACK"} ?!varequals{k=skill.cause;v="CUSTOM"} ?!varequals{k=skill.cause;v="SKILL"}
   - sound{s=entity.arrow.hit_player;v=0.5} @self
-  - skill{s=Azuriter_StepAvoid_StepSword} @self
-  - skill{s=Azuriter_StepAvoid_HighStepSword} @self
-  - skill{s=Azuriter_StepAvoid_風上の道} @self
-  - skill{s=Azuriter_StepAvoid_風上の歩み} @self
-  - skill{s=Azuriter_StepAvoid_StepRiseSword} @self
-  - skill{s=Azuriter_StepAvoid_StepDashSword} @self
-  - skill{s=Azuriter_StepAvoid_StepHealSword} @self
-  - skill{s=Azuriter_StepAvoid_風上の軌跡} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindPath} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindStride} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepRiseSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepDashSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepHealSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindTrace} @self
   - delay 18
-  - skill{s=Azuriter_StepAvoid_Aura_Fix} @self
+  - skill{s=Azuriter_Core_StepAvoid_AuraFix} @self
 
-Azuriter_StepAvoid_Fix:
+Azuriter_Core_StepAvoid_LockFix:
   Cooldown: 0.5
   Conditions:
   - hasAura{n=STEP_AVOID} false
@@ -23,7 +23,7 @@ Azuriter_StepAvoid_Fix:
   Skills:
   - removetag{t=STEP_NOW} @self
 
-Azuriter_StepAvoid_Aura_Fix:
+Azuriter_Core_StepAvoid_AuraFix:
   Cooldown: 0.5
   Conditions:
   - hasAura{n=STEP_AVOID} true
@@ -31,7 +31,7 @@ Azuriter_StepAvoid_Aura_Fix:
   Skills:
   - removeaura{n=STEP_AVOID} @self
 
-Azuriter_StepAvoid_Fall_Fix:
+Azuriter_Core_StepAvoid_FallFix:
   Cooldown: 0.5
   Conditions:
   - onGround true
@@ -39,37 +39,37 @@ Azuriter_StepAvoid_Fall_Fix:
   Skills:
   - removeaura{n=FALL_CANCEL} @self
 
-Azuriter_StepAvoid_StepSword:
+Azuriter_Core_StepAvoid_StepSword:
   Conditions:
   - wearing{s=HAND;i=Azuriter_ステップソード}
   Skills:
-  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=90;vo=1;so=-2;syo=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=270;vo=1;so=2;syo=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=90;vo=1.25;so=-2;syo=2.5;delay=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process;ho=270;vo=1.25;so=2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepSword_Slash;ho=90;vo=1;so=-2;syo=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepSword_Slash;ho=270;vo=1;so=2;syo=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepSword_Slash;ho=90;vo=1.25;so=-2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepSword_Slash;ho=270;vo=1.25;so=2;syo=2.5;delay=2} @self
   - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
 
-Azuriter_StepAvoid_HighStepSword:
+Azuriter_Core_StepAvoid_HighStepSword:
   Conditions:
   - wearing{s=HAND;i=Azuriter_ハイステップソード}
   Skills:
-  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=90;vo=1;so=-2;syo=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=270;vo=1;so=2;syo=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=90;vo=1.25;so=-2;syo=2.5;delay=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=270;vo=1.25;so=2;syo=2.5;delay=2} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=90;vo=1.25;so=-2.5;syo=3;delay=4} @self
-  - skill{s=Azuriter_StepAvoid_StepSword_Process2;ho=270;vo=1.25;so=2.5;syo=3;delay=4} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword_Slash;ho=90;vo=1;so=-2;syo=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword_Slash;ho=270;vo=1;so=2;syo=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword_Slash;ho=90;vo=1.25;so=-2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword_Slash;ho=270;vo=1.25;so=2;syo=2.5;delay=2} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword_Slash;ho=90;vo=1.25;so=-2.5;syo=3;delay=4} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword_Slash;ho=270;vo=1.25;so=2.5;syo=3;delay=4} @self
   - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
 
-Azuriter_StepAvoid_StepSword_Process:
+Azuriter_Core_StepAvoid_StepSword_Slash:
   Skills:
   - delay 15
   - missile{
@@ -95,7 +95,7 @@ Azuriter_StepAvoid_StepSword_Process:
     v=32;i=1;hp=false;hnp=true;mr=32;se=true;d=200;
     in=10;ho=<skill.ho>;vo=<skill.vo>;so=<skill.so>;syo=<skill.syo>} @trigger
 
-Azuriter_StepAvoid_StepSword_Process2:
+Azuriter_Core_StepAvoid_HighStepSword_Slash:
   Skills:
   - delay 15
   - missile{
@@ -120,7 +120,7 @@ Azuriter_StepAvoid_StepSword_Process2:
     v=32;i=1;hp=false;hnp=true;mr=32;se=true;d=200;
     in=10;ho=<skill.ho>;vo=<skill.vo>;so=<skill.so>;syo=<skill.syo>} @trigger
 
-Azuriter_StepAvoid_風上の刻み:
+Azuriter_Core_StepAvoid_WindCombo:
   Skills:
   - mi{v=4;vo=3;vr=1.5;hr=1.5;i=1;in=18;hp=false;hnp=true;mr=24;d=100;syo=4.5;sfo=0;
     b=DISPLAY;mat=WOODEN_SWORD;scale=1.25,1.25,1.25;yaw=3.14;pitch=1.57;roll=0.785;
@@ -141,7 +141,7 @@ Azuriter_StepAvoid_風上の刻み:
       - isLiving true
     ]} @EIR{r=24;limit=5;sort=RANDOM}
 
-Azuriter_StepAvoid_風上の道:
+Azuriter_Core_StepAvoid_WindPath:
   Conditions:
   - wearing{s=HAND;i=Azuriter_風上の道}
   Skills:
@@ -152,9 +152,9 @@ Azuriter_StepAvoid_風上の道:
   - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
   - delay 15
-  - skill{s=Azuriter_StepAvoid_風上の刻み} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo} @self
 
-Azuriter_StepAvoid_風上の歩み:
+Azuriter_Core_StepAvoid_WindStride:
   Conditions:
   - wearing{s=HAND;i=Azuriter_風上の歩み}
   Skills:
@@ -165,9 +165,9 @@ Azuriter_StepAvoid_風上の歩み:
   - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
   - delay 15
-  - skill{s=Azuriter_StepAvoid_風上の刻み} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo} @self
 
-Azuriter_StepAvoid_風上の軌跡:
+Azuriter_Core_StepAvoid_WindTrace:
   Conditions:
   - wearing{s=HAND;i=Azuriter_風上の軌跡}
   Skills:
@@ -178,14 +178,14 @@ Azuriter_StepAvoid_風上の軌跡:
   - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
   - delay 15
-  - skill{s=Azuriter_StepAvoid_風上の刻み} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo} @self
 
-Azuriter_StepAvoid_StepRiseSword:
+Azuriter_Core_StepAvoid_StepRiseSword:
   Conditions:
   - wearing{s=HAND;i=Azuriter_ステップライズソード}
   Skills:
   - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 225";t=FLOAT} @self
-  - skill{s=Generic_onGroundトリガースキル_MCLove32;s_name=Azuriter_StepAvoid_StepRiseSword_Success} @self
+  - skill{s=Azuriter_Core_Trigger_OnGround;s_name=Azuriter_Core_StepAvoid_StepRiseSword_Success} @self
   - modifyMana{a=50;m=give} @self ?wearing{s=HAND;i=DIAMOND_SWORD}
   - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
@@ -193,7 +193,7 @@ Azuriter_StepAvoid_StepRiseSword:
   - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
 
-Azuriter_StepAvoid_StepRiseSword_Success:
+Azuriter_Core_StepAvoid_StepRiseSword_Success:
   Skills:
   - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
   - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
@@ -216,7 +216,7 @@ Azuriter_StepAvoid_StepRiseSword_Success:
   - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
   - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
 
-Azuriter_StepAvoid_StepDashSword:
+Azuriter_Core_StepAvoid_StepDashSword:
   Conditions:
   - wearing{s=HAND;i=Azuriter_ステップダッシュソード}
   Skills:
@@ -244,7 +244,7 @@ Azuriter_StepAvoid_StepDashSword:
   - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
   - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
 
-Azuriter_StepAvoid_StepHealSword:
+Azuriter_Core_StepAvoid_StepHealSword:
   Conditions:
   - wearing{s=HAND;i=Azuriter_ステップヒールソード}
   Skills:

@@ -1,4 +1,4 @@
-Azuriter_トマホーク_Skills:
+Azuriter_Item_Melee_Tomahawk_Use:
   Cooldown: 20
   Conditions:
   - wearing{s=HAND;i=Azuriter_トマホーク}

@@ -12,7 +12,7 @@ Azuriter_パラライズワールド:
     Version: 1
   Group: 'Weapon'
   Skills:
-  - skill{s=Azuriter_Azuriter_パラライズワールド_Skills} @self ~onUse 
+  - skill{s=Azuriter_Azuriter_パラライズワールド_Skills} @self ~onUse
 
 Azuriter_トマホーク:
   Id: golden_axe
@@ -29,9 +29,9 @@ Azuriter_トマホーク:
     MainHand:
       Damage: 40
   Group: 'Weapon'
-  Skills: 
-  - skill{s=Azuriter_トマホーク_Skills} @self ~onUse
-  - skill{s=Azuriter_トマホーク_Skills} @self ~onInteract ?!crouching 
+  Skills:
+  - skill{s=Azuriter_Item_Melee_Tomahawk_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Melee_Tomahawk_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -53,8 +53,8 @@ Azuriter_ハルバード:
     MainHand:
       Damage: 40
   Group: 'Weapon'
-  Skills: 
-  - skill{s=Azuriter_ハルバード_Skills} @self ~onSwing 
+  Skills:
+  - skill{s=Azuriter_Item_Melee_Halberd_Use} @self ~onSwing
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -64,7 +64,7 @@ Azuriter_ハルバード:
 Azuriter_マナブレード_アルファ:
   Id: diamond_sword
   Display: "&9マナブレードα"
-  Lore: 
+  Lore:
   - "&fマナを消費し連撃を繰り出す。"
   - "&fShiftスキル使用後対象の"
   - "&fShiftなしスキルの火力が上昇する。"
@@ -77,15 +77,15 @@ Azuriter_マナブレード_アルファ:
   Group: 'Weapon'
   Attributes:
     MainHand:
-      Damage: 48 ADD 
+      Damage: 48 ADD
       Health: -0.25 MULTIPLY_BASE
   Skills:
-  - skill{s=Azuriter_マナブレード_アルファ_R1S_Skills} @self ~onUse
-  - skill{s=Azuriter_マナブレード_アルファ_R1S_Skills} @self ~onInteract ?!crouching 
-  - skill{s=Azuriter_マナブレード_アルファ_L1S_Skills} @self ~onSwing
-  - skill{s=Azuriter_マナブレード_アルファ_R1NoS_Skills} @self ~onUse
-  - skill{s=Azuriter_マナブレード_アルファ_R1NoS_Skills} @self ~onInteract ?!crouching  
-  - skill{s=Azuriter_マナブレード_アルファ_L1NoS_Skills} @self ~onSwing
+  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightSlash} @self ~onUse
+  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightSlash} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_LeftSlash} @self ~onSwing
+  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightBurst} @self ~onUse
+  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightBurst} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_LeftBurst} @self ~onSwing
 
 Azuriter_エンディアム:
   Id: mace
@@ -100,13 +100,13 @@ Azuriter_エンディアム:
     Version: 1
   Attributes:
     MainHand:
-      Damage: 32 ADD 
+      Damage: 32 ADD
       Gravity: -0.2 MULTIPLY_BASE
       AttackSpeed: 1 MULTIPLY_BASE
   Group: 'Weapon'
   Skills:
-  - skill{s=Azuriter_エンディアム_R1_Skills} @self ~onUse
-  - skill{s=Azuriter_エンディアム_L1_Skills} @self ~onSwing
+  - skill{s=Azuriter_Item_Melee_Endiam_R1} @self ~onUse
+  - skill{s=Azuriter_Item_Melee_Endiam_L1} @self ~onSwing
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1to5

@@ -1,4 +1,4 @@
-Azuriter_HealthColor:
+Azuriter_Core_HealthColor:
   Skills:
   - delay 10
   - glow{c=YELLOW;t=100;n=Health_Color} @self ?healthpercent{p=<70%}

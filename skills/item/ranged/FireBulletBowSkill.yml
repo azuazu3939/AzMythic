@@ -1,4 +1,4 @@
-Azuriter_ファイアバレットボウ_Skills:
+Azuriter_Item_Ranged_FireBulletBow_Use:
   Conditions:
   - wearing{s=HAND;i=Azuriter_ファイアバレットボウ}
   - hasMana{m=>20;
@@ -15,15 +15,15 @@ Azuriter_ファイアバレットボウ_Skills:
   - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> + 1";t=INTEGER} @self
   - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.shot_ct|0>;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_ファイアバレットボウ_Skills_Shot;ho=0} @self
-  - skill{s=Azuriter_ファイアバレットボウ_Skills_Shot;ho=45} @self
-  - skill{s=Azuriter_ファイアバレットボウ_Skills_Shot;ho=-45} @self
+  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Shot;ho=0} @self
+  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Shot;ho=45} @self
+  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Shot;ho=-45} @self
   - delay 250
   - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> - 1";t=INTEGER} @self
   - setVar{k=caster.shot_ct;a="0";t=INTEGER} @self ?varrange{k=caster.shot_ct;r=<0}
 
 
-Azuriter_ファイアバレットボウ_Skills_Shot:
+Azuriter_Item_Ranged_FireBulletBow_Shot:
   Skills:
   - missile{
     os=[
@@ -41,15 +41,15 @@ Azuriter_ファイアバレットボウ_Skills_Shot:
       - damage{a=<skill.var.damage>;pi=true;ii=true;e=RED;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
       - setVar{k=caster.bullet_bow_fire;a="<caster.var.bullet_bow_fire|0> + 1";t=INTEGER} @self
-      - skill{s=Azuriter_ファイアバレットボウ_Skills_Shot_Get} @self
-      - skill{s=Azuriter_ファイアバレットボウ_Skills_Shot_Run}
+      - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotCharge} @self
+      - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotExplode}
     ];
     c=[
       - isliving true
     ];
     v=18;in=16;vr=2.5;hr=2.5;hp=false;hnp=true;i=1;b=ARROW;se=false;vo=0.15;mr=36;ho=<skill.ho>;sfo=3} @forward{f=30;lockpitch=true}
 
-Azuriter_ファイアバレットボウ_Skills_Shot_Get:
+Azuriter_Item_Ranged_FireBulletBow_ShotCharge:
   Conditions:
   - varrange{k=caster.bullet_bow_fire;r=>49} true
   Skills:
@@ -57,7 +57,7 @@ Azuriter_ファイアバレットボウ_Skills_Shot_Get:
   - setVar{k=caster.bullet_bow_get;a="<caster.var.bullet_bow_get|0> + <random.3to5>";t=INTEGER} @self
   - setVar{k=caster.bullet_bow_get;a="10";t=INTEGER} @self ?varrange{k=caster.bullet_bow_get;r=>10}
 
-Azuriter_ファイアバレットボウ_Skills_Shot_Run:
+Azuriter_Item_Ranged_FireBulletBow_ShotExplode:
   Cooldown: 1
   Conditions:
   - varrange{k=caster.bullet_bow_get;r=>0}

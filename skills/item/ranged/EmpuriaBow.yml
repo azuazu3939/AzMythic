@@ -1,4 +1,4 @@
-Azuriter_エンピュリアボウ_Skills:
+Azuriter_Item_Ranged_EmpuriaBow_Use:
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンピュリアボウ}
   - hasMana{m=>20;
@@ -15,17 +15,17 @@ Azuriter_エンピュリアボウ_Skills:
   - skill{
     s=[
       - setVar{k=caster.shot_get;a="0";t=INTEGER} @self
-      - skill{s=Azuriter_エンピュリアボウ_バースト_Get} @self
+      - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstAura} @self
       - sound{s=entity.player.levelup;p=0;audience=caster} @self
 
     ]} @self ?varrange{k=caster.shot_get;r=>199}
   - delay 2
-  - skill{s=Azuriter_エンピュリアボウ_Skills_Shot;so=0} @self
-  - skill{s=Azuriter_エンピュリアボウ_Skills_Shot;so=3} @self
-  - skill{s=Azuriter_エンピュリアボウ_Skills_Shot;so=-3} @self
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=0} @self
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=3} @self
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=-3} @self
 
 
-Azuriter_エンピュリアボウ_Skills_Shot:
+Azuriter_Item_Ranged_EmpuriaBow_Shot:
   Skills:
   - projectile{
     os=[
@@ -42,14 +42,14 @@ Azuriter_エンピュリアボウ_Skills_Shot:
       - setVar{k=caster.shot_get;a="<caster.var.shot_get|0> + 12";t=INTEGER} @self 0.15
       - damage{a="<caster.damage>";pi=true;ii=true;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
-      - skill{s=Azuriter_エンピュリアボウ_Skills_Shot_Sudo}
+      - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstRelay}
     ];
     c=[
       - isliving true
     ];
     v=25;vr=2.25;hr=2.25;hp=false;hnp=true;i=1;mr=36;b=ARROW;se=false;sso=<skill.so>;sfo=2.5;pitch=0;tyo=8;g=0.8} @forward{f=30;lockpitch=true}
 
-Azuriter_エンピュリアボウ_Skills_Shot_Sudo:
+Azuriter_Item_Ranged_EmpuriaBow_BurstRelay:
   Cooldown: 0.2
   Conditions:
   - hasAura{n=エンピュリアボウ} true
@@ -62,20 +62,20 @@ Azuriter_エンピュリアボウ_Skills_Shot_Sudo:
         s=[
           - projectile{v=0.01;vr=2;hr=2;hp=false;hnp=true;hitself=true;i=1;mr=20;syo=15;sso="<random.-10to10>";sfo="<random.-10to10>";b=ARROW;g=12;
             oh=[
-              - sudo{s=Azuriter_エンピュリアボウ_Skills_Shot_Sudo_Return;cat=true} @trigger
+              - sudo{s=Azuriter_Item_Ranged_EmpuriaBow_BurstHit;cat=true} @trigger
             ]} @self
         ];repeat=25;repeati=0} @self
     ];cat=true}
   - delay 4
-  - skill{s=Azuriter_エンピュリアボウ_Skills_Shot_Sudo}
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstRelay}
 
-Azuriter_エンピュリアボウ_Skills_Shot_Sudo_Return:
+Azuriter_Item_Ranged_EmpuriaBow_BurstHit:
   Skills:
   - modifyMana{a=10;m=give} @self
   - damage{a="<caster.damage> + 100";pi=true;ii=true;e=BLUE;dc=PROJECTILE} @trigger
 
 
-Azuriter_エンピュリアボウ_バースト_Skills:
+Azuriter_Item_Ranged_EmpuriaBow_BurstReady:
   Cooldown: 1
   Conditions:
   - hasAura{n=エンピュリアボウ} true
@@ -84,7 +84,7 @@ Azuriter_エンピュリアボウ_バースト_Skills:
   - message{m="エンピュリアボウバースト実行可能"} @self
   - addtag{t=エンピュリアボウバースト実行中} @self
 
-Azuriter_エンピュリアボウ_バースト_Get:
+Azuriter_Item_Ranged_EmpuriaBow_BurstAura:
   Skills:
   - aura{n=エンピュリアボウ;ms=5;rd=true;t=1200;
     oe=[

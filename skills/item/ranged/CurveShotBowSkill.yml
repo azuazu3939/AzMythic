@@ -1,4 +1,4 @@
-Azuriter_カーブショットボウ_Skills:
+Azuriter_Item_Ranged_CurveShotBow_Use:
   Conditions:
   - wearing{s=HAND;i=Azuriter_カーブショットボウ}
   - matCooldown{m=BOW} false
@@ -10,16 +10,16 @@ Azuriter_カーブショットボウ_Skills:
   - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> + 1";t=INTEGER} @self
   - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.shot_ct|0>;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_カーブショットボウ_Skills_Shot;repeat=3;repeati=0} @self
+  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_カーブショットボウ_Skills_Shot;repeat=3;repeati=0} @self
+  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_カーブショットボウ_Skills_Shot;repeat=3;repeati=0} @self
+  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 250
   - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> - 1";t=INTEGER} @self
   - setVar{k=caster.shot_ct;a="0";t=INTEGER} @self ?varrange{k=caster.shot_ct;r=<0}
 
-Azuriter_カーブショットボウ_Skills_Shot:
+Azuriter_Item_Ranged_CurveShotBow_Shot:
   Skills:
   - missile{
     os=[
@@ -31,7 +31,7 @@ Azuriter_カーブショットボウ_Skills_Shot:
       - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.025} @self
     ];
     oh=[
-      - aura{n="Azuriter_カーブショットボウ_Skills_Shot<caster.var.shot_ct|0>";t=20;i=10}
+      - aura{n="Azuriter_Item_Ranged_CurveShotBow_Shot<caster.var.shot_ct|0>";t=20;i=10}
       - damage{a=<skill.var.damage>;pi=true;ii=true;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
       - sound{s=entity.arrow.hit;audience=caster}
@@ -40,7 +40,7 @@ Azuriter_カーブショットボウ_Skills_Shot:
     ];
     c=[
       - isliving true
-      - hasAura{n="Azuriter_カーブショットボウ_Skills_Shot<caster.var.shot_ct|0>"} false
+      - hasAura{n="Azuriter_Item_Ranged_CurveShotBow_Shot<caster.var.shot_ct|0>"} false
     ];
     v=16;in=16;vr=3;hr=2.5;hp=false;hnp=true;i=1;sdir=@forward{fo=0;rot=<random.-45to45>;lockpitch=true};vo=0.3;mr=36;
     b=ARROW} @forward{f=30;lockpitch=true}

@@ -1,4 +1,4 @@
-Azuriter_P_Slash_Skill_Process:
+Azuriter_Core_Player_Slash_Process:
   Skills:
   - modifyMana{a=10;m=give} @self
   - slash{

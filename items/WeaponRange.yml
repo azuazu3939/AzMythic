@@ -9,7 +9,7 @@ Azuriter_カーブショットボウ:
     Version: 3
   Attributes:
     MainHand:
-      Damage: 28 ADD 
+      Damage: 28 ADD
       Armor: -0.25 MULTIPLY_BASE
       ArmorToughness: -0.25 MULTIPLY_BASE
       Health: -0.2 MULTIPLY_BASE
@@ -19,8 +19,8 @@ Azuriter_カーブショットボウ:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_カーブショットボウ_Skills} @self ~onUse
-  - skill{s=Azuriter_カーブショットボウ_Skills} @self ~onInteract ?!crouching  
+  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Use} @self ~onInteract ?!crouching
   - cancelEvent{sync=true} @self ~onUse
   AugmentationSlots:
   - Type: Gem_1
@@ -40,7 +40,7 @@ Azuriter_ファイアバレットボウ:
     Version: 3
   Attributes:
     MainHand:
-      Damage: 36 ADD 
+      Damage: 36 ADD
       MovementSpeed: 0.25 MULTIPLY_BASE
       Health: -0.2 MULTIPLY_BASE
       Armor: -0.25 MULTIPLY_BASE
@@ -50,8 +50,8 @@ Azuriter_ファイアバレットボウ:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_ファイアバレットボウ_Skills} @self ~onUse
-  - skill{s=Azuriter_ファイアバレットボウ_Skills} @self ~onInteract ?!crouching 
+  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Use} @self ~onInteract ?!crouching
   - cancelEvent{sync=true} @self ~onUse
   AugmentationSlots:
   - Type: Gem_1
@@ -70,16 +70,16 @@ Azuriter_エンピュリアボウ:
     Version: 1
   Attributes:
     MainHand:
-      Damage: 32 ADD 
+      Damage: 32 ADD
       MovementSpeed: 0.35 MULTIPLY_BASE
       AttackSpeed: 0.25 MULTIPLY_BASE
   Group: 'Range-Weapon'
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_エンピュリアボウ_Skills} @self ~onUse
-  - skill{s=Azuriter_エンピュリアボウ_Skills} @self ~onInteract ?!crouching  
-  - skill{s=Azuriter_エンピュリアボウ_バースト_Skills} @self ~onSwing 
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Use} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstReady} @self ~onSwing
   - cancelEvent{sync=true} @self ~onUse
   AugmentationSlots:
   - Type: Gem_1

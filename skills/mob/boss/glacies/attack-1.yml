@@ -1,0 +1,84 @@
+Azuriter_Mob_Boss_Glacies_Attack1:
+  Cooldown: 8
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - look{f=true} @T
+  - potion{t=SLOWNESS;l=6;d=20;p=false} @self
+  - setVar{var=skill.dmg;val="(<caster.damage> + 1) / 3 * 2";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - setVar{k=caster.Azuriter_Mob_Var_GlaciesAttack1YawOffset;a="-12";t=INTEGER} @self
+  - sound{s=block.glass.break;p=0.5;v=1.25} @self
+  - meta{s=Azuriter_Mob_Boss_Glacies_Attack1_Run;repeat=4;repeati=6} @self
+  - delay 30
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+
+Azuriter_Mob_Boss_Glacies_Attack1_Run:
+  Skills:
+  - skill{s=Azuriter_Mob_Boss_Glacies_Attack1_Process1;f=true} @TL
+  - skill{s=Azuriter_Mob_Boss_Glacies_Attack1_Process2;f=true} @TL
+  - skill{s=Azuriter_Mob_Boss_Glacies_Attack1_Process3;f=true} @TL
+  - setVar{k=caster.Azuriter_Mob_Var_GlaciesAttack1YawOffset;a="<caster.var.Azuriter_Mob_Var_GlaciesAttack1YawOffset> + 8";t=INTEGER} @self
+
+Azuriter_Mob_Boss_Glacies_Attack1_Process1:
+  Skills:
+  - projectile{
+    ot=[
+      - e:p{p=end_rod;a=2;ys=0.1;hs=0.1} @origin
+      - e:p{p=cloud;a=1;ys=0.25;hs=0.25} @origin
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.05} @self
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg>";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack}
+      - potion{t=SLOW;l=1;d=60;p=false}
+    ];
+    oe=[
+      - e:p{p=explosion;a=1;size=0.5} @origin
+      - sound{s=block.glass.break;p=1.5;v=0.5} @origin
+    ];
+    b=DISPLAY;mat=PACKED_ICE;scale=1.5,1.5,1.5;rs=0.1;ys=0.1;ps=0.1;
+    v=8;i=1;d=120;vr=2;hr=2;mr=48;hs=true;hnp=true;se=false;
+    ho=<caster.var.Azuriter_Mob_Var_GlaciesAttack1YawOffset>} @TL
+
+Azuriter_Mob_Boss_Glacies_Attack1_Process2:
+  Skills:
+  - projectile{
+    ot=[
+      - e:p{p=end_rod;a=2;ys=0.1;hs=0.1} @origin
+      - e:p{p=cloud;a=1;ys=0.25;hs=0.25} @origin
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.05} @self
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg>";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack}
+      - potion{t=SLOW;l=1;d=60;p=false}
+    ];
+    oe=[
+      - e:p{p=explosion;a=1;size=0.5} @origin
+      - sound{s=block.glass.break;p=1.5;v=0.5} @origin
+    ];
+    b=DISPLAY;mat=PACKED_ICE;scale=1.5,1.5,1.5;rs=0.1;ys=0.1;ps=0.1;
+    v=8;i=1;d=120;vr=2;hr=2;mr=48;hs=true;hnp=true;se=false;
+    ho="12 + <caster.var.Azuriter_Mob_Var_GlaciesAttack1YawOffset>"} @TL
+
+Azuriter_Mob_Boss_Glacies_Attack1_Process3:
+  Skills:
+  - projectile{
+    ot=[
+      - e:p{p=end_rod;a=2;ys=0.1;hs=0.1} @origin
+      - e:p{p=cloud;a=1;ys=0.25;hs=0.25} @origin
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.05} @self
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg>";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack}
+      - potion{t=SLOW;l=1;d=60;p=false}
+    ];
+    oe=[
+      - e:p{p=explosion;a=1;size=0.5} @origin
+      - sound{s=block.glass.break;p=1.5;v=0.5} @origin
+    ];
+    b=DISPLAY;mat=PACKED_ICE;scale=1.5,1.5,1.5;rs=0.1;ys=0.1;ps=0.1;
+    v=8;i=1;d=120;vr=2;hr=2;mr=48;hs=true;hnp=true;se=false;
+    ho="-12 + <caster.var.Azuriter_Mob_Var_GlaciesAttack1YawOffset>"} @TL

@@ -1,0 +1,28 @@
+Azuriter_Mob_Boss_Glacies_Attack5:
+  Cooldown: 16
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  - targetWithin{d=18} true
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - look{f=true} @T
+  - sound{s=entity.ender_dragon.flap;v=1.25;p=1.8} @self
+  - delay 10
+  - jump{v=1.05} @self
+  - delay 2
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Glacies_Attack5_OnGround;s_repeat_i=2;s_repeat=18} @self
+  - delay 70
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+
+Azuriter_Mob_Boss_Glacies_Attack5_OnGround:
+  Skills:
+  - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - damage{a="<skill.var.dmg> * 1.1";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4";c=[ - hasAura{n=Azuriter_Mob_Aura_GlaciesAttack5GroundHit} false - surface{r=<5} true ]}
+  - aura{n=Azuriter_Mob_Aura_GlaciesAttack5GroundHit;t=40} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4"}
+  - potion{t=SLOW;l=1;d=80;p=false} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4";c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+  - e:p{p=cloud;a=1;size=0.75} @ring{r="<skill.var.itr> + 2";p=28}
+  - e:p{p=end_rod;a=1;ys=0.15;hs=0.15} @ring{r="<skill.var.itr> + 2";p=28}
+  - sound{s=block.glass.break;p=1.6;v=0.35} @self 0.25

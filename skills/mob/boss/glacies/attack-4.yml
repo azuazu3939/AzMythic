@@ -1,0 +1,32 @@
+Azuriter_Mob_Boss_Glacies_Attack4:
+  Cooldown: 18
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - sound{s=entity.evoker.prepare_summon;v=1.5;p=1.5} @self
+  - delay 30
+  - sudoskill{s=Azuriter_Mob_Boss_Glacies_Attack4_CastPlayer} @TTP{limit=3;sort=NEAREST;ignore=creative,spectator}
+  - delay 70
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+
+Azuriter_Mob_Boss_Glacies_Attack4_CastPlayer:
+  Skills:
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - e:pr{p=end_rod;a=2;ys=0.05;hs=0.05;pts=36;d=true;dir=0,1,0;s=1.2;r=4} @TL
+  - delay 18
+  - projectile{
+    ot=[
+      - e:p{p=end_rod;a=2;ys=0.05;hs=0.05} @origin
+    ];
+    oe=[
+      - addmask{r=5;h=18;material=PACKED_ICE;d=20} @origin
+      - e:pr{r=4;pts=28;p=cloud;a=1;s=0.7;d=true;dir=0,1,0} @origin
+      - sound{s=block.glass.break;p=0.6;v=1.5} @origin
+      - damage{a="<skill.var.dmg> * 1.3";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack} @PlayersNearOrigin{r=4}
+      - potion{t=SLOW;l=3;d=120;p=false} @PlayersNearOrigin{r=4}
+    ];
+    v=2;i=1;mr=32;vr=3;hr=3;se=false;hnp=true;syo=1} @TL

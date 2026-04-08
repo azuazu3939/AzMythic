@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "encounter": {
+    "encounter_id": "boss-id-2026-04-09-run-01",
+    "boss_id": "Azuriter_Mob_Boss_Target",
+    "boss_name": "対象ボス名",
+    "server_id": "azup1",
+    "scenario": "近接ソロ初見検証",
+    "tester": "nnoka",
+    "played_at": "2026-04-09T02:00:00+09:00",
+    "notes": ""
+  },
+  "loadout": {
+    "weapon_id": "Azuriter_武器名",
+    "armor_set": "Azuriter_防具セット名",
+    "role": "melee",
+    "consumables": [],
+    "notes": ""
+  },
+  "server_metrics": {
+    "result": "wipe",
+    "combat_time_sec": null,
+    "boss_hp_end_ratio": null,
+    "player_deaths": null,
+    "player_damage_taken": null,
+    "player_damage_dealt": null,
+    "peak_dps_window": "",
+    "phase_reached": "",
+    "phase_transitions": [],
+    "skill_events": [],
+    "cc_events": [],
+    "death_causes": [],
+    "notes": ""
+  },
+  "player_observation": {
+    "telegraph": {
+      "score": 0,
+      "reason": ""
+    },
+    "fairness": {
+      "score": 0,
+      "reason": ""
+    },
+    "pressure": {
+      "score": 0,
+      "reason": ""
+    },
+    "readability": {
+      "score": 0,
+      "reason": ""
+    },
+    "role_balance": {
+      "score": 0,
+      "reason": ""
+    },
+    "highlights": [],
+    "pain_points": [],
+    "notes": ""
+  },
+  "artifacts": {
+    "latest_log_path": "C:/Users/nnoka/AppData/Roaming/PrismLauncher/instances/1.21.11/minecraft/logs/latest.log",
+    "video_path": "",
+    "replay_path": "",
+    "screenshots": [],
+    "notes": ""
+  },
+  "score": {
+    "telegraph_score": 0,
+    "fairness_score": 0,
+    "pressure_score": 0,
+    "readability_score": 0,
+    "role_balance_score": 0,
+    "overall_score": 0,
+    "summary": ""
+  }
+}

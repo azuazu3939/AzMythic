@@ -1,0 +1,441 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://azurite.local/telemetry/schema/encounter-report.schema.json",
+  "title": "AzMythic Encounter Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "encounter",
+    "loadout",
+    "server_metrics",
+    "player_observation",
+    "artifacts",
+    "score"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "encounter": {
+      "$ref": "#/$defs/encounter"
+    },
+    "loadout": {
+      "$ref": "#/$defs/loadout"
+    },
+    "server_metrics": {
+      "$ref": "#/$defs/serverMetrics"
+    },
+    "player_observation": {
+      "$ref": "#/$defs/playerObservation"
+    },
+    "artifacts": {
+      "$ref": "#/$defs/artifacts"
+    },
+    "score": {
+      "$ref": "#/$defs/score"
+    }
+  },
+  "$defs": {
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableInteger": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "encounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "encounter_id",
+        "boss_id",
+        "boss_name",
+        "server_id",
+        "scenario",
+        "tester",
+        "played_at"
+      ],
+      "properties": {
+        "encounter_id": {
+          "type": "string"
+        },
+        "boss_id": {
+          "type": "string"
+        },
+        "boss_name": {
+          "type": "string"
+        },
+        "server_id": {
+          "type": "string"
+        },
+        "scenario": {
+          "type": "string"
+        },
+        "tester": {
+          "type": "string"
+        },
+        "played_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "loadout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weapon_id",
+        "armor_set",
+        "role"
+      ],
+      "properties": {
+        "weapon_id": {
+          "type": "string"
+        },
+        "armor_set": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "melee",
+            "ranged",
+            "tank",
+            "hybrid"
+          ]
+        },
+        "consumables": {
+          "$ref": "#/$defs/stringList"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "phaseTransition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phase",
+        "reached_at_sec"
+      ],
+      "properties": {
+        "phase": {
+          "type": "string"
+        },
+        "reached_at_sec": {
+          "type": "number",
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "skillEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skill_id",
+        "casts",
+        "hits"
+      ],
+      "properties": {
+        "skill_id": {
+          "type": "string"
+        },
+        "casts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_peak_damage": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "estimated_telegraph_ms": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "avoidable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "ccEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cc_type",
+        "count"
+      ],
+      "properties": {
+        "cc_type": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_duration_ms": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "deathCause": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cause",
+        "count"
+      ],
+      "properties": {
+        "cause": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "serverMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result",
+        "combat_time_sec",
+        "boss_hp_end_ratio",
+        "player_deaths",
+        "player_damage_taken",
+        "player_damage_dealt",
+        "peak_dps_window",
+        "phase_reached",
+        "phase_transitions",
+        "skill_events",
+        "cc_events",
+        "death_causes"
+      ],
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": [
+            "victory",
+            "wipe",
+            "retreat",
+            "abort"
+          ]
+        },
+        "combat_time_sec": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "boss_hp_end_ratio": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "player_deaths": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "player_damage_taken": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "player_damage_dealt": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "peak_dps_window": {
+          "type": "string"
+        },
+        "phase_reached": {
+          "type": "string"
+        },
+        "phase_transitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/phaseTransition"
+          }
+        },
+        "skill_events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/skillEvent"
+          }
+        },
+        "cc_events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ccEvent"
+          }
+        },
+        "death_causes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/deathCause"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "scoreBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "reason"
+      ],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "playerObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "telegraph",
+        "fairness",
+        "pressure",
+        "readability",
+        "role_balance",
+        "highlights",
+        "pain_points"
+      ],
+      "properties": {
+        "telegraph": {
+          "$ref": "#/$defs/scoreBlock"
+        },
+        "fairness": {
+          "$ref": "#/$defs/scoreBlock"
+        },
+        "pressure": {
+          "$ref": "#/$defs/scoreBlock"
+        },
+        "readability": {
+          "$ref": "#/$defs/scoreBlock"
+        },
+        "role_balance": {
+          "$ref": "#/$defs/scoreBlock"
+        },
+        "highlights": {
+          "$ref": "#/$defs/stringList"
+        },
+        "pain_points": {
+          "$ref": "#/$defs/stringList"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "latest_log_path",
+        "video_path",
+        "replay_path",
+        "screenshots"
+      ],
+      "properties": {
+        "latest_log_path": {
+          "type": "string"
+        },
+        "video_path": {
+          "type": "string"
+        },
+        "replay_path": {
+          "type": "string"
+        },
+        "screenshots": {
+          "$ref": "#/$defs/stringList"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "telegraph_score",
+        "fairness_score",
+        "pressure_score",
+        "readability_score",
+        "role_balance_score",
+        "overall_score",
+        "summary"
+      ],
+      "properties": {
+        "telegraph_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fairness_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "pressure_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "readability_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "role_balance_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "overall_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "encounter": {
+    "encounter_id": "wedler-2026-04-09-melee-solo-01",
+    "boss_id": "Azuriter_Boss_Wedler",
+    "boss_name": "風牙狼ウィデラー",
+    "server_id": "azup2",
+    "scenario": "近接ソロの基準戦",
+    "tester": "nnoka",
+    "played_at": "2026-04-09T01:55:21+09:00",
+    "notes": "初見ではなく、パターン理解後の通常試行。"
+  },
+  "loadout": {
+    "weapon_id": "Azuriter_エンディアム",
+    "armor_set": "シリーズエンド1",
+    "role": "melee",
+    "consumables": [
+      "回復料理"
+    ],
+    "notes": "ジャンプ回避と張り付き前提。"
+  },
+  "server_metrics": {
+    "result": "victory",
+    "combat_time_sec": 184.0,
+    "boss_hp_end_ratio": 0.0,
+    "player_deaths": 0,
+    "player_damage_taken": 1280.0,
+    "player_damage_dealt": 19450.0,
+    "peak_dps_window": "phase2 開始 20 秒間で約 210 DPS",
+    "phase_reached": "phase3",
+    "phase_transitions": [
+      {
+        "phase": "phase2",
+        "reached_at_sec": 61.0,
+        "reason": "HP 70% 到達"
+      },
+      {
+        "phase": "phase3",
+        "reached_at_sec": 133.0,
+        "reason": "HP 35% 到達"
+      }
+    ],
+    "skill_events": [
+      {
+        "skill_id": "Azuriter_Mob_Boss_Wedler_Attack4",
+        "casts": 4,
+        "hits": 2,
+        "observed_peak_damage": 190.0,
+        "estimated_telegraph_ms": 950,
+        "avoidable": true,
+        "notes": "近接でも横移動で回避可能。初動が少し見えにくい。"
+      },
+      {
+        "skill_id": "Azuriter_Mob_Boss_Wedler_Attack6",
+        "casts": 3,
+        "hits": 3,
+        "observed_peak_damage": 240.0,
+        "estimated_telegraph_ms": 650,
+        "avoidable": false,
+        "notes": "着弾位置が重なった時だけ回避不能感があった。"
+      }
+    ],
+    "cc_events": [
+      {
+        "cc_type": "knockup",
+        "count": 2,
+        "max_duration_ms": 900,
+        "notes": "復帰前に追撃は入らなかった。"
+      }
+    ],
+    "death_causes": [],
+    "notes": "被弾理由はおおむね明確。"
+  },
+  "player_observation": {
+    "telegraph": {
+      "score": 78,
+      "reason": "Attack4 は見えるが、近距離では初動の視認性がやや弱い。"
+    },
+    "fairness": {
+      "score": 72,
+      "reason": "Attack6 の着弾重なり時だけ理不尽寄り。"
+    },
+    "pressure": {
+      "score": 84,
+      "reason": "回避要求は十分あり、立て直し猶予も残る。"
+    },
+    "readability": {
+      "score": 76,
+      "reason": "phase3 は粒子密度が上がり少し読みにくい。"
+    },
+    "role_balance": {
+      "score": 74,
+      "reason": "近接でも触れるが、距離を離した方が安定しやすい。"
+    },
+    "highlights": [
+      "ループ圧と回避テンポの相性が良い",
+      "フェーズ移行は把握しやすい"
+    ],
+    "pain_points": [
+      "Attack6 の着弾重なりが近接でやや不公平",
+      "phase3 のエフェクト密度が高い"
+    ],
+    "notes": "近接戦としてはかなり良いが、Attack6 の重なり方だけ再確認したい。"
+  },
+  "artifacts": {
+    "latest_log_path": "C:/Users/nnoka/AppData/Roaming/PrismLauncher/instances/1.21.11/minecraft/logs/latest.log",
+    "video_path": "D:/capture/wedler-melee-solo-01.mp4",
+    "replay_path": "",
+    "screenshots": [
+      "D:/capture/wedler-phase3-01.png"
+    ],
+    "notes": "動画あり。"
+  },
+  "score": {
+    "telegraph_score": 78,
+    "fairness_score": 72,
+    "pressure_score": 84,
+    "readability_score": 76,
+    "role_balance_score": 74,
+    "overall_score": 77,
+    "summary": "良い戦闘だが、Attack6 の重なりと phase3 の視認性に再調整余地あり。"
+  }
+}

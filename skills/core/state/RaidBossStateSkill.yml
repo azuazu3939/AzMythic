@@ -1,0 +1,21 @@
+Azuriter_Core_RaidBoss_Control:
+  Cooldown: 1
+  Skills:
+  - setVar{k=skill.repeat;a="19";t=INTEGER} @self
+  - skill{s=Azuriter_Core_RaidBoss_Control_Repeat;repeat=<skill.var.repeat>;repeati=1} @self
+
+Azuriter_Core_RaidBoss_Control_Repeat:
+  Skills:
+  - setVar{k=skill.<skill.var.itr>;a="<caster.var.Azuriter_Core_Var_RaidBossSkill<skill.var.itr>>";t=STRING} @self
+  - skill{s=Azuriter_Core_RaidBoss_Control_Message;count=<skill.var.itr>} @trigger ?!varequals{k=skill.<skill.var.itr>;v="[Undefined]"} ?varset{k=caster.Azuriter_Core_Var_RaidBossSkill<skill.var.itr>}
+
+Azuriter_Core_RaidBoss_Control_Message:
+  Skills:
+  - message{m=""}
+  - setVar{k=skill.temp;a="<skill.var.<skill.count>>";t=STRING} @self
+  - setVar{k=skill.msg;a="raid_boss_skill<skill.count>";t=STRING} @self
+  - jsonmessage{m="[{'text':'&6<skill.count>. &fスキル &a<skill.var.temp> &fを実行する。','clickEvent':{'action':'run_command','value':'/mm signal <caster.uuid> <skill.var.msg>'}}]"}
+
+Azuriter_Core_RaidBoss_IdleHeal:
+  Skills:
+  - heal{a=<caster.mhp>} @self ?!incombat

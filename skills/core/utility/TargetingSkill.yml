@@ -1,0 +1,5 @@
+Azuriter_Core_Target_RandomPlayer:
+  Conditions:
+  - incombat true
+  Skills:
+  - setTarget @TTP{sort=RANDOM;limit=1} ?targets{a=>0}

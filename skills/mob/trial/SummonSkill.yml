@@ -1,0 +1,138 @@
+Azuriter_Neutral_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_1} @self
+
+Azuriter_Big_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_2} @self
+
+Azuriter_Elite_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_3} @self
+
+Azuriter_Armor_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_4} @self
+
+Azuriter_ArmorFull_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_Elder_Zombie} @self
+
+Azuriter_Summon_Elder_Zombie:
+  Skills:
+  - sound{s=entity.generic.explode;sc=PLAYERS} @self
+  - summon{t=Azuriter_Elder_Zombie;a=1;r=0;s=true;delay=30} @self
+
+Azuriter_Elder_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - setVar{k=skill.chance;a="<random.1to100>";t=INTEGER} @self
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_1} ?varrange{k=skill.chance;r=1to20}
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_2} ?varrange{k=skill.chance;r=21to40}
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_3} ?varrange{k=skill.chance;r=41to60}
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_4} ?varrange{k=skill.chance;r=61to80}
+  - delay 1
+  - skill{s=Azuriter_Summon_トライアル_1} @self ?varrange{k=skill.chance;r=1to20}
+  - skill{s=Azuriter_Summon_トライアル_2} @self ?varrange{k=skill.chance;r=21to40}
+  - skill{s=Azuriter_Summon_トライアル_3} @self ?varrange{k=skill.chance;r=41to60}
+  - skill{s=Azuriter_Summon_トライアル_4} @self ?varrange{k=skill.chance;r=61to80}
+  - skill{s=Azuriter_Summon_トライアル_5} @self ?varrange{k=skill.chance;r=81to100}
+
+Azuriter_Elder_Zombie_Summon_Check_1:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial1Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.21to100>";t=INTEGER} @self
+
+Azuriter_Elder_Zombie_Summon_Check_2:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial2Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.41to100>";t=INTEGER} @self
+
+Azuriter_Elder_Zombie_Summon_Check_3:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial3Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.61to100>";t=INTEGER} @self
+
+Azuriter_Elder_Zombie_Summon_Check_4:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial4Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.81to100>";t=INTEGER} @self
+
+Azuriter_Summon_トライアル_1:
+  Cooldown: 1
+  Conditions:
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+  Skills:
+  - sound{s=block.note_block.pling;sc=PLAYERS} @self
+  - setVar{k=skill.chance;a="<random.1to10>";t=INTEGER} @self
+  - summon{t=Azuriter_トライアル_1_1;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=1to9}
+  - summon{t=Azuriter_トライアル_1_2;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=10}
+
+
+Azuriter_Summon_トライアル_2:
+  Cooldown: 1
+  Conditions:
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+  Skills:
+  - sound{s=entity.blaze.death;sc=PLAYERS} @self
+  - setVar{k=skill.chance;a="<random.1to10>";t=INTEGER} @self
+  - summon{t=Azuriter_トライアル_2_1;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=1to9}
+  - summon{t=Azuriter_トライアル_2_2;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=10}
+
+Azuriter_Summon_トライアル_3:
+  Cooldown: 1
+  Conditions:
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+  Skills:
+  - sound{s=block.anvil.land;sc=PLAYERS} @self
+  - summon{t=Azuriter_トライアル_3_1;a=1;r=0;s=true} @self
+
+Azuriter_Summon_トライアル_4:
+  Cooldown: 1
+  Conditions:
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+  Skills:
+  - sound{s=entity.firework_rocket.twinkle;sc=PLAYERS} @self
+  - summon{t=Azuriter_トライアル_4_1;a=1;r=0;s=true} @self
+
+Azuriter_Summon_トライアル_5:
+  Cooldown: 1
+  Conditions:
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+  Skills:
+  - sound{s=entity.wither.spawn;v=3;sc=PLAYERS} @self
+  - summon{t=Azuriter_トライアル_5_1;a=1;r=0;s=true} @self

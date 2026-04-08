@@ -1,0 +1,40 @@
+Azuriter_Core_Trial_Options:
+  Cooldown: 0.5
+  Skills:
+  - sudoskill{s=Azuriter_Core_Trial_ChildHeal} @children ?children{a=>0}
+  - sudoskill{s=Azuriter_Core_Trial_ChildRangeReset} @children ?children{a=>0}
+  - skill{s=Azuriter_Core_Trial_DistanceCheck} @self ?children{a=>0}
+  - skill{s=Azuriter_Core_Trial_DistanceReset} @self ?children{a=>0}
+
+Azuriter_Core_Trial_ChildHeal:
+  Skills:
+  - heal{a="<caster.mhp> * 0.0005"} @self
+
+Azuriter_Core_Trial_ChildRangeReset:
+  Conditions:
+  - distanceFromTL{d=>32}
+  Skills:
+  - heal{a="<caster.mhp> * 0.1"} @self
+  - teleportto{c=@trackedLocation} @self
+
+Azuriter_Core_Trial_DistanceCheck:
+  Conditions:
+  - playerNotWithin{d=32} orelsecast Azuriter_Core_Trial_DistanceCheck_Clear
+  Skills:
+  - aura{n=Azuriter_Core_Aura_TrialDistanceCheck;ms=11;rd=true;150;i=20} @self
+
+Azuriter_Core_Trial_DistanceCheck_Clear:
+  Skills:
+  - removeaura{n=Azuriter_Core_Aura_TrialDistanceCheck} @self
+
+Azuriter_Core_Trial_DistanceReset:
+  Conditions:
+  - hasAuraStacks{n=Azuriter_Core_Aura_TrialDistanceCheck;s=11}
+  Skills:
+  - sudoskill{s=Azuriter_Core_Trial_ResetChild} @children
+
+Azuriter_Core_Trial_ResetChild:
+  Skills:
+  - heal{a="<caster.mhp> * 1"} @self
+  - removetag{t=Azuriter_Core_Tag_TrialAction} @self
+  - potionclear @self

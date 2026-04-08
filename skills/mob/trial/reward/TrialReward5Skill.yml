@@ -1,0 +1,24 @@
+Azuriter_トライアル_5_Drop1:
+  Cooldown: 5
+  TargetConditions:
+  - world{w=<caster.l.w>} true
+  Skills:
+  - message{m="&a「マスターゾンビ討伐戦」をクリアした!!"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - currencygive{amount=1000} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_お肉 <random.1to2> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_ウルフード 1 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_トライアラン勲章 <random.8to12> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 8 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.15"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_不滅の心臓 1 0.01"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_高揚の灯 1 0.05"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_城壁の守護石 1 0.05"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_光明の灯 1 0.05"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_堅牢の守護石 1 0.05"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_安寧の球界 1 0.05"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - classexp{a=250} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - message{m="「トライアル： マスターゾンビを1体倒す」をクリアした!!"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - auraRemove{n=Azuriter_Mob_Aura_Trial1Finish} @PIR{r=48}
+  - auraRemove{n=Azuriter_Mob_Aura_Trial2Finish} @PIR{r=48}
+  - auraRemove{n=Azuriter_Mob_Aura_Trial3Finish} @PIR{r=48}
+  - auraRemove{n=Azuriter_Mob_Aura_Trial4Finish} @PIR{r=48}

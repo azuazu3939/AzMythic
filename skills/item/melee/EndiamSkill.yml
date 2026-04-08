@@ -1,0 +1,107 @@
+Azuriter_エンディアム_R1_Skills:
+  Cooldown: 0.3
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_エンディアム}
+  - hasMana{m=>80;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self
+    ]}
+  - surface{r=<12} true
+  - materialIsOnCooldown{m=MACE} false
+  Skills:
+  - modifyMana{a=80;m=consume} @self
+  - setVar{k=caster.Endiam;a="0";t=INTEGER} @self ?varisset{k=caster.Endiam} ?varrange{k=caster.Endiam;r=<0}
+  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> + 1";t=INTEGER} @self
+  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> - 1";t=INTEGER;delay=60} @self
+  - setVar{k=skill.chance;a="<random.1to2>";t=INTEGER} @self
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=135;damage=120;effect=Azuriter_エンディアム_L1_Skill_Effect} ?varrange{k=skill.chance;r="1"}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=45;damage=120;effect=Azuriter_エンディアム_L1_Skill_Effect} ?varrange{k=skill.chance;r="2"}
+  - lunge{yv=0.75;delay=2} @self
+  - delay 10
+  - skill{s=Azuriter_エンディアム_Finish} @self
+
+Azuriter_エンディアム_L1_Skills:
+  Cooldown: 0.2
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_エンディアム}
+  - hasMana{m=>40;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self
+    ]}
+  - materialIsOnCooldown{m=MACE} false
+  Skills:
+  - modifyMana{a=40;m=sonsume} @self
+  - setVar{k=caster.Endiam;a="0";t=INTEGER} @self ?varisset{k=caster.Endiam} ?varrange{k=caster.Endiam;r=<0}
+  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> + 1";t=INTEGER} @self
+  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> - 1";t=INTEGER;delay=60} @self
+  - mi{
+    ot=[
+      - modifyprojectile{t=INERTIA;a=MULTIPLY;v=0.925} @self
+      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#d51515} @origin
+      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#ff7038} @origin
+      - e:p{p=explosion;a=1;delay=4;audience=caster} @origin
+      - e:p{p=fireworks_spark;a=3;delay=5;hs=1.25;ys=0.25;audience=caster} @origin
+      - leap{v=200} @origin ?surface{r=<6}
+      - lunge{v=0.5;yv=-0.05} @self ?!surface{r=<6}
+      - endprojectile @self ?!surface{r=<6}
+    ];
+    oe=[
+      - skill{s=Azuriter_P_Slash_Skill_Process;roll=135;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect;jump=true}
+      - skill{s=Azuriter_P_Slash_Skill_Process;roll=45;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect;jump=true;delay=4}
+    ];
+    oh=[
+      - sound{s=entity.zombie.attack_iron_door;p=0;audience=caster} @origin
+      - damage{a="<caster.damage> + 80";pi=true;ii=true}
+      - delay 2
+      - projectilevelocity{m=MULTIPLY;r=true;x=-180;z=-180} ?!crouching
+      - endprojectile{delay=8} @self
+    ];
+    c=[
+      - inSight true
+    ];
+    os=[
+      - sound{s=block.vault.close_shutter;p=0;audience=caster} @self
+      - sound{s=block.vault.close_shutter;p=1;audience=caster;delay=4} @self
+      - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+      - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+      - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.55;delay=1} @self
+    ];
+    v=32;i=1;hp=false;hnp=true;vr=1.5;r=2;vo=0.1;in=8;d=20;se=false} @TL{d=32;cpitch=0}
+  - delay 10
+  - skill{s=Azuriter_エンディアム_Finish} @self
+
+Azuriter_エンディアム_L1_Skill_Effect:
+  Skills:
+  - e:p{p=fireworks_spark;size=2;a=2;ys=0.075;hs=0.075;s=0.05;audience=caster} @origin
+  - e:p{p=sweep_attack;size=2;a=3;ys=0.25;hs=0.25;s=0.05;audience=caster;delay=4} @origin
+
+Azuriter_エンディアム_Finish:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_エンディアム}
+  - varrange{k=caster.Endiam;r=>9}
+  - materialIsOnCooldown{m=MACE} false
+  Skills:
+  - setVar{k=caster.Endiam;a="0";t=INTEGER} @self
+  - setMaterialCooldown{m=MACE;d=100} @self
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=0;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=45;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=90;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=135;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=180;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=225;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=270;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+  - skill{s=Azuriter_P_Slash_Skill_Process;roll=315;damage=50;effect=Azuriter_エンディアム_L1_Skill_Effect}
+
+  - sound{s=block.vault.close_shutter;p=0;audience=caster} @self
+  - sound{s=block.vault.close_shutter;p=1;audience=caster;delay=4} @self
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.55;delay=1} @self
+  - sound{s=entity.generic.explode;sc=PLAYERS;audience=caster;p=1.25} @self
+
+  - sound{s=block.vault.close_shutter;p=0;audience=caster} @self
+  - sound{s=block.vault.close_shutter;p=1;audience=caster;delay=4} @self
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.55;delay=1} @self

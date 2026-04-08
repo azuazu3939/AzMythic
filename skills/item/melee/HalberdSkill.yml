@@ -1,0 +1,24 @@
+Azuriter_ハルバード_Skills:
+  Cooldown: 20
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ハルバード}
+  Skills:
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+  - sound{s=block.anvil.land;p=2;sc=PLAYERS;audience=caster} @self
+  - setMaterialCooldown{m=IRON_AXE;d=400} @self
+  - slash{y=1.8;w=16;h=4;mpd=true;a=45;r=4;roll=-30to30;fo=1;d=2;p=16;
+      op=[
+        - e:p{p=reddust;audience=caster;a=1;c=#ff2b2b;size=2}
+        - e:p{p=reddust;audience=caster;a=1;c=#fffc34;size=2}
+        - e:p{p=crit;audience=caster;a=3;ys=0.25;hs=0.25;delay=3}
+        - e:p{p=explosion;audience=caster;a=1;delay=6;size=0.7}
+      ];
+      oh=[
+        - sound{s=entity.item.break;sc=PLAYERS;audience=caster;p=0.5;v=0.5} @self
+        - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1;v=0.5} @self
+        - damage{a="<caster.damage> + 125";pi=true;ii=true}
+      ];
+      c=[
+        - isliving true
+      ]} @self

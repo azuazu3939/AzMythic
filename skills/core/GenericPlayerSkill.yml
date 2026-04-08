@@ -1,0 +1,15 @@
+Azuriter_P_Slash_Skill_Process:
+  Skills:
+  - modifyMana{a=10;m=give} @self
+  - slash{
+    d=6;w=8;h=6;r=4;roll="<skill.roll>";p=16;y=1.6;
+    op=[
+      - vskill{s=<skill.effect>} @self
+    ];
+    oh=[
+      - lunge{v=0;yv=0.25;delay=1} @self ?!variableEquals{k=skill.jump;v="[Undefined]"} ?!crouching
+      - damage{a="<skill.damage> + <caster.damage>";pi=true;ii=true}
+    ];
+    c=[
+      - isliving true
+    ]} @self

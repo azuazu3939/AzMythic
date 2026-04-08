@@ -1,8 +1,0 @@
-Hub:
-  Command:
-    Id: hub
-    Completions:
-      target:
-      - players
-  Skills:
-  - cmd{c="huskhomes:warp hub <caster.name>"} @self

@@ -1,0 +1,9 @@
+Azuriter_ディフェンス_Skills:
+  Cooldown: 1
+  Skills:
+  - heal{a=1} @self
+
+Azuriter_ディフェンス_Full:
+  Cooldown: 1
+  Skills:
+  - heal{a=4} @self

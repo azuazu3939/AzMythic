@@ -1,0 +1,19 @@
+Azuriter_ガーディア_Full:
+  Cooldown: 5
+  Skills:
+  - potion{t=REGENERATION;l=1;d=600;p=false} @self
+  - heal{a=6} @self
+  - potion{t=RESISTANCE;l=0;d=600;p=false} @self
+  - potion{t=RESISTANCE;l=0;d=600;p=false} @PIR{r=32}
+
+Azuriter_ガーディア_Full_Combat:
+  Cooldown: 0.5
+  TriggerConditions:
+  - isplayer false
+  Skills:
+  - setVar{k=skill.cause;a="<skill.var.damage-cause>";t=STRING} @self
+  - return ?!varequals{k=skill.cause;v="ENTITY_ATTACK"} ?!varequals{k=skill.cause;v="CUSTOM"} ?!varequals{k=skill.cause;v="SKILL"}
+  - sudoskill{
+    s=[
+      - threat{m=add;a="<caster.damage> * 100"} @trigger
+    ];cat=true} @trigger

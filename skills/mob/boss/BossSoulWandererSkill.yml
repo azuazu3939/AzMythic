@@ -4,7 +4,7 @@ Azuriter_Soul_Wanderer_Skills:
   - incombat true
   Skills:
   - randomskill{skills=Azuriter_Soul_Wanderer_Skill_1 2,Azuriter_Soul_Wanderer_Skill_2 3;fbs=Azuriter_Soul_Wanderer_Skill_1} @self
-  
+
   - skill{s=Azuriter_Soul_Wanderer_Skill_2} @self
   - delay <random.120to200>
   - skill{s=Azuriter_Soul_Wanderer_Skills} @self
@@ -13,16 +13,16 @@ Azuriter_Soul_Wanderer_Skill_1:
   Cooldown: 5
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
-  - signal{s=soul_fire_spawn} @parent 
+  - signal{s=soul_fire_spawn} @parent
   - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=2;sc=PLAYERS} @self
 
 Azuriter_Soul_Wanderer_Skill_2:
   Cooldown: 15
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - skill{s=Azuriter_Soul_Wanderer_Skill_2_Random;repeat=<random.2to5>;repeati=60} @self
 
@@ -40,13 +40,13 @@ Azuriter_Soul_Wanderer_Skill_2_Repeat:
     b=MOB;mm=Azuriter_Soul_Wanderer_Soul2;
     sb=true;d=400;hp=false;se=false;stpcond=[ - incombat false ];
     ohb=[
-      - sound{s=entity.blaze.ambient;v=2;sc=PLAYERS} @origin 
+      - sound{s=entity.blaze.ambient;v=2;sc=PLAYERS} @origin
       - addMask{b=RED_TERRACOTTA;r=6;d=20;h=13} @origin
       - delay 20
-      - e:pr{p=flame;a=1;ys=0.05;hs=0.05;pts=40;r=6;audience=@PNO{r=32};vd=32;y=<random.float.1to1.5>} @origin 
+      - e:pr{p=flame;a=1;ys=0.05;hs=0.05;pts=40;r=6;audience=@PNO{r=32};vd=32;y=<random.float.1to1.5>} @origin
       - damage{a="<caster.damage> * 1.5";pi=true;ii=true} @PNO{r=6}
-      - ignite{d=200} @PNO{r=6;c=[ - hasAura{n=STEP_AVOID} false ]}
-      - sound{s=entity.blaze.burn;v=2;sc=PLAYERS} @origin 
+      - ignite{d=200} @PNO{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - sound{s=entity.blaze.burn;v=2;sc=PLAYERS} @origin
 
     ]} @selfLocation{so=<skill.var.sso<skill.var.itr>>;fo=<skill.var.sfo<skill.var.itr>>}
 
@@ -54,7 +54,7 @@ Azuriter_Soul_Wanderer_Signal:
   Cooldown: 10
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - skill{s=Azuriter_Soul_Wanderer_Signal_Run} @self
   - delay 60
@@ -67,20 +67,20 @@ Azuriter_Soul_Wanderer_Signal_Run:
   - teleportto{l=@MIR{r=36;t=Azuriter_Soul_Wanderer_Soul1;sort=RANDOM;limit=1}} @self
   - potion{t=SLOW;l=50;d=60;p=false} @self
   - delay 1
-  - look{f=true} @parentlocation 
+  - look{f=true} @parentlocation
   - delay 1
   - addmask{shape=cone;r=48;angle=60;h=25;material=RED_TERRACOTTA;d=20} @selfLocation{cpitch=0}
   - setvar{k=skill.loc;val="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>,<caster.l.yaw>";t=STRING} @self
   - delay 20
   - damage{a="<caster.damage> * 2";pi=true;ii=true;e=RED;dc=FIRE} @ACone{a=60;r=48;h=25;loc=<skill.var.loc>}
-  - ignite{d=200} @ACone{a=45;r=32;h=25;loc=<skill.var.loc>;yaw=<skill.var.yaw>;c=[ - hasAura{n=STEP_AVOID} false ]}
+  - ignite{d=200} @ACone{a=45;r=32;h=25;loc=<skill.var.loc>;yaw=<skill.var.yaw>;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
   - delay  20
   - sound{s=entity.blaze.burn;v=2;sc=PLAYERS} @self
 
 Azuriter_Soul_Wanderer_HighDrop:
   Skills:
   - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.025"} @self
-  
+
   - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.001"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.001"} @self
   - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.001"} @self

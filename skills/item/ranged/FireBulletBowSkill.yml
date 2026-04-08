@@ -7,27 +7,27 @@ Azuriter_Item_Ranged_FireBulletBow_Use:
     ]}
   - matCooldown{m=BOW} false
   Skills:
-  - setVar{k=caster.shot_ct;a="max(60 - <az.attack_speed.double> * 8, 8)";t=INTEGER} @self
-  - setMaterialCooldown{m=BOW;d="<caster.var.shot_ct|60>"} @self
+  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="max(60 - <az.attack_speed.double> * 8, 8)";t=INTEGER} @self
+  - setMaterialCooldown{m=BOW;d="<caster.var.Azuriter_Item_Var_RangedShotCounter|60>"} @self
 
   - modifyMana{a=20;m=consume} @self
   - setVar{k=skill.damage;a="<caster.damage> * 0.85";t=FLOAT} @self
-  - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> + 1";t=INTEGER} @self
-  - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.shot_ct|0>;repeati=0} @self
+  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="<caster.var.Azuriter_Item_Var_RangedShotCounter|0> + 1";t=INTEGER} @self
+  - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.Azuriter_Item_Var_RangedShotCounter|0>;repeati=0} @self
   - delay 2
   - skill{s=Azuriter_Item_Ranged_FireBulletBow_Shot;ho=0} @self
   - skill{s=Azuriter_Item_Ranged_FireBulletBow_Shot;ho=45} @self
   - skill{s=Azuriter_Item_Ranged_FireBulletBow_Shot;ho=-45} @self
   - delay 250
-  - setVar{k=caster.shot_ct;a="<caster.var.shot_ct|0> - 1";t=INTEGER} @self
-  - setVar{k=caster.shot_ct;a="0";t=INTEGER} @self ?varrange{k=caster.shot_ct;r=<0}
+  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="<caster.var.Azuriter_Item_Var_RangedShotCounter|0> - 1";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="0";t=INTEGER} @self ?varrange{k=caster.Azuriter_Item_Var_RangedShotCounter;r=<0}
 
 
 Azuriter_Item_Ranged_FireBulletBow_Shot:
   Skills:
   - missile{
     os=[
-      - setVar{k=caster.bullet_bow_get;a="0";t=INTEGER} @self ?!varisset{k=caster.bullet_bow_get}
+      - setVar{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;a="0";t=INTEGER} @self ?!varisset{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock}
       - sound{s=entity.zombie.infect;v=0.35;p=1;audience=caster;sc=AMBIENT} @self
       - sound{s=entity.breeze.jump;v=0.35;p=2;audience=caster;sc=AMBIENT} @self
     ];
@@ -40,7 +40,7 @@ Azuriter_Item_Ranged_FireBulletBow_Shot:
       - modifyMana{a=5;m=give} @self
       - damage{a=<skill.var.damage>;pi=true;ii=true;e=RED;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
-      - setVar{k=caster.bullet_bow_fire;a="<caster.var.bullet_bow_fire|0> + 1";t=INTEGER} @self
+      - setVar{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;a="<caster.var.Azuriter_Item_Var_FireBulletBowHitCount|0> + 1";t=INTEGER} @self
       - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotCharge} @self
       - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotExplode}
     ];
@@ -51,18 +51,18 @@ Azuriter_Item_Ranged_FireBulletBow_Shot:
 
 Azuriter_Item_Ranged_FireBulletBow_ShotCharge:
   Conditions:
-  - varrange{k=caster.bullet_bow_fire;r=>49} true
+  - varrange{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;r=>49} true
   Skills:
-  - setVar{k=caster.bullet_bow_fire;a="0";t=INTEGER} @self
-  - setVar{k=caster.bullet_bow_get;a="<caster.var.bullet_bow_get|0> + <random.3to5>";t=INTEGER} @self
-  - setVar{k=caster.bullet_bow_get;a="10";t=INTEGER} @self ?varrange{k=caster.bullet_bow_get;r=>10}
+  - setVar{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;a="0";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;a="<caster.var.Azuriter_Item_Var_FireBulletBowBurstStock|0> + <random.3to5>";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;a="10";t=INTEGER} @self ?varrange{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;r=>10}
 
 Azuriter_Item_Ranged_FireBulletBow_ShotExplode:
   Cooldown: 1
   Conditions:
-  - varrange{k=caster.bullet_bow_get;r=>0}
+  - varrange{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;r=>0}
   Skills:
-  - setVar{k=caster.bullet_bow_get;a="<caster.var.bullet_bow_get> - 1";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;a="<caster.var.Azuriter_Item_Var_FireBulletBowBurstStock> - 1";t=INTEGER} @self
   - sound{s=entity.allay.item_given;audience=caster;p=2;sc=AMBIENT;audience=caster} @self
   - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.75;sc=AMBIENT;audience=caster} @self
   - delay 5

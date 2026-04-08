@@ -7,14 +7,14 @@ Azuriter_ステップソード_R1_Skills:
       - message{m="&cマナが足りません。"} @self
     ]}
   - matCooldown{m=STONE_SWORD} false
-  - hasTag{t=STEP_NOW} castinstead Azuriter_Core_StepAvoid_LockFix
-  - hasAura{n=FALL_CANCEL} castinstead Azuriter_Core_StepAvoid_FallFix
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} castinstead Azuriter_Core_StepAvoid_LockFix
+  - hasAura{n=Azuriter_Core_Aura_StepAvoidFallCancel} castinstead Azuriter_Core_StepAvoid_FallFix
   Skills:
   - modifyMana{a=80;m=consume} @self
   - setMaterialCooldown{m=STONE_SWORD;d=40} @self
   - setVar{k=skill.count;a="0";t=INTEGER} @self
-  - addtag{t=STEP_NOW} @self
-  - ondamaged{t=12;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
+  - addtag{t=Azuriter_Core_Tag_StepAvoidLock} @self
+  - ondamaged{t=12;n=Azuriter_Core_Aura_StepAvoid;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
     oh=[
       - skill{s=Azuriter_Core_StepAvoid_Router} @self
     ];
@@ -22,19 +22,19 @@ Azuriter_ステップソード_R1_Skills:
       - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
     ]} @self
 
-  - removetag{t=STEP_NOW;delay=12} @self
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=12} @self
   - projectile{
     ot=[
       - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
       - lunge{v=1;vy="(-0.15 * <skill.var.count>) + 0.75"} @self
-      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0.01";rd=true} @self
+      - ondamaged{n=Azuriter_Core_Aura_StepAvoidFallCancel;t=2;damagemod="FALL 0.01";rd=true} @self
     ];
     os=[
       - lunge{v=2.5;vy=0.25} @self
       - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster;p=2} @self
     ];
     oe=[
-      - removeaura{n=FALL_CANCEL;delay=2} @self
+      - removeaura{n=Azuriter_Core_Aura_StepAvoidFallCancel;delay=2} @self
     ];
     i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=20} @forward{lockpitch=true} ?!crouching
   #projectileで行ったが廃止
@@ -48,14 +48,14 @@ Azuriter_ハイステップソード_R1_Skills:
       - message{m="&cマナが足りません。"} @self
     ]}
   - matCooldown{m=IRON_SWORD} false
-  - hasTag{t=STEP_NOW} castinstead Azuriter_Core_StepAvoid_LockFix
-  - hasAura{n=FALL_CANCEL} castinstead Azuriter_Core_StepAvoid_FallFix
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} castinstead Azuriter_Core_StepAvoid_LockFix
+  - hasAura{n=Azuriter_Core_Aura_StepAvoidFallCancel} castinstead Azuriter_Core_StepAvoid_FallFix
   Skills:
   - modifyMana{a=60;m=consume} @self
   - setMaterialCooldown{m=IRON_SWORD;d=40} @self
   - setVar{k=skill.count;a="0";t=INTEGER} @self
-  - addtag{t=STEP_NOW} @self
-  - ondamaged{t=12;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
+  - addtag{t=Azuriter_Core_Tag_StepAvoidLock} @self
+  - ondamaged{t=12;n=Azuriter_Core_Aura_StepAvoid;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
     oh=[
       - skill{s=Azuriter_Core_StepAvoid_Router} @self
     ];
@@ -63,19 +63,19 @@ Azuriter_ハイステップソード_R1_Skills:
       - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
     ]} @self
 
-  - removetag{t=STEP_NOW;delay=12} @self
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=12} @self
   - projectile{
     ot=[
       - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
       - lunge{v=1;vy="(-0.15 * <skill.var.count>) + 0.75"} @self
-      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0.01";rd=true} @self
+      - ondamaged{n=Azuriter_Core_Aura_StepAvoidFallCancel;t=2;damagemod="FALL 0.01";rd=true} @self
     ];
     os=[
       - lunge{v=2.5;vy=0.25} @self
       - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster;p=2} @self
     ];
     oe=[
-      - removeaura{n=FALL_CANCEL;delay=2} @self
+      - removeaura{n=Azuriter_Core_Aura_StepAvoidFallCancel;delay=2} @self
     ];
     i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=20} @forward{lockpitch=true} ?!crouching
   #projectileで行ったが廃止
@@ -89,13 +89,13 @@ Azuriter_ステップダッシュソード_R1_Skills:
       - message{m="&cマナが足りません。"} @self
     ]}
   - matCooldown{m=STONE_SWORD} false
-  - hasTag{t=STEP_NOW} castinstead Azuriter_Core_StepAvoid_LockFix
-  - hasAura{n=FALL_CANCEL} castinstead Azuriter_Core_StepAvoid_FallFix
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} castinstead Azuriter_Core_StepAvoid_LockFix
+  - hasAura{n=Azuriter_Core_Aura_StepAvoidFallCancel} castinstead Azuriter_Core_StepAvoid_FallFix
   Skills:
   - modifyMana{a=150;m=consume} @self
   - setMaterialCooldown{m=STONE_SWORD;d=240} @self
-  - addtag{t=STEP_NOW} @self
-  - ondamaged{t=12;n=STEP_AVOID;rd=true;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
+  - addtag{t=Azuriter_Core_Tag_StepAvoidLock} @self
+  - ondamaged{t=12;n=Azuriter_Core_Aura_StepAvoid;rd=true;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
     oh=[
       - skill{s=Azuriter_Core_StepAvoid_Router} @self
     ]
@@ -103,7 +103,7 @@ Azuriter_ステップダッシュソード_R1_Skills:
       - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
     ]} @self
 
-  - removetag{t=STEP_NOW;delay=12} @self
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=12} @self
   - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster} @self
   - setVar{k=skill.count;a="0";t=INTEGER} @self
 
@@ -111,14 +111,14 @@ Azuriter_ステップダッシュソード_R1_Skills:
     ot=[
       - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
       - lunge{v=0.5;vy="(-0.05 * <skill.var.count>) + 0.25"} @self
-      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0.01";rd=true} @self
+      - ondamaged{n=Azuriter_Core_Aura_StepAvoidFallCancel;t=2;damagemod="FALL 0.01";rd=true} @self
     ];
     os=[
       - lunge{v=4;vy=0.05} @self
       - sound{s=entity.blaze.shoot;sc=PLAYERS;audience=caster;p=1.5} @self
     ];
     oe=[
-      - removeaura{n=FALL_CANCEL;delay=2} @self
+      - removeaura{n=Azuriter_Core_Aura_StepAvoidFallCancel;delay=2} @self
     ];
     i=2;hp=false;hnp=false;sb=false;se=false;tyo=1.5;g=1;mr=8;vr=1;hr=1;v=1;d=20} @forward{lockpitch=true} ?!crouching
 
@@ -131,15 +131,15 @@ Azuriter_ステップライズソード_R1_Skills:
       - message{m="&cマナが足りません。"} @self
     ]}
   - matCooldown{m=STONE_SWORD} false
-  - hasTag{t=STEP_NOW} castinstead Azuriter_Core_StepAvoid_LockFix
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} castinstead Azuriter_Core_StepAvoid_LockFix
   Skills:
   - modifyMana{a=150;m=consume} @self
   - setMaterialCooldown{m=STONE_SWORD;d=240} @self
   - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
   - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
   - lunge{v=0.5;vy=0.5} @self
-  - addtag{t=STEP_NOW} @self
-  - ondamaged{t=12;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
+  - addtag{t=Azuriter_Core_Tag_StepAvoidLock} @self
+  - ondamaged{t=12;n=Azuriter_Core_Aura_StepAvoid;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
     oh=[
       - skill{s=Azuriter_Core_StepAvoid_Router;delay=4} @self
     ];
@@ -147,7 +147,7 @@ Azuriter_ステップライズソード_R1_Skills:
       - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
     ]} @self
 
-  - removetag{t=STEP_NOW;delay=12} @self
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=12} @self
   - delay 4
   - lunge{v=2;vy=1} @self
   - sound{s=entity.wither.shoot;p=2;v=0.2;audience=caster;sc=PLAYERS} @self
@@ -169,34 +169,34 @@ Azuriter_ステップヒールソード_R1_Skills:
       - message{m="&cマナが足りません。"} @self
     ]}
   - matCooldown{m=STONE_SWORD} false
-  - hasTag{t=STEP_NOW} castinstead Azuriter_Core_StepAvoid_LockFix
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} castinstead Azuriter_Core_StepAvoid_LockFix
   Skills:
   - modifyMana{a=75;m=consume} @self
   - setMaterialCooldown{m=STONE_SWORD;d=100} @self
   - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
   - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
   - lunge{v=4.5;vy=0.25} @self
-  - addtag{t=STEP_NOW} @self
+  - addtag{t=Azuriter_Core_Tag_StepAvoidLock} @self
   - setVar{k=skill.count;a="0";t=INTEGER} @self
-  - ondamaged{t=12;n=STEP_AVOID;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
+  - ondamaged{t=12;n=Azuriter_Core_Aura_StepAvoid;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
     oh=[
       - skill{s=Azuriter_Core_StepAvoid_Router;delay=4} @self
     ];
     os=[
       - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
     ]} @self
-  - removetag{t=STEP_NOW;delay=12} @self
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=12} @self
   - projectile{
     ot=[
       - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
       - lunge{v=1;vy="(-0.15 * <skill.var.count>) + 0.75"} @self
-      - ondamaged{n=FALL_CANCEL;t=2;damagemod="FALL 0.01";rd=true} @self
+      - ondamaged{n=Azuriter_Core_Aura_StepAvoidFallCancel;t=2;damagemod="FALL 0.01";rd=true} @self
     ];
     os=[
       - lunge{v=2.75;vy=0.275} @self
       - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster;p=2} @self
     ];
     oe=[
-      - removeaura{n=FALL_CANCEL;delay=2} @self
+      - removeaura{n=Azuriter_Core_Aura_StepAvoidFallCancel;delay=2} @self
     ];
     i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=20} @forward{lockpitch=true} ?!crouching

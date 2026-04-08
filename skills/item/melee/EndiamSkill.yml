@@ -10,9 +10,9 @@ Azuriter_Item_Melee_Endiam_R1:
   - materialIsOnCooldown{m=MACE} false
   Skills:
   - modifyMana{a=80;m=consume} @self
-  - setVar{k=caster.Endiam;a="0";t=INTEGER} @self ?varisset{k=caster.Endiam} ?varrange{k=caster.Endiam;r=<0}
-  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> + 1";t=INTEGER} @self
-  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> - 1";t=INTEGER;delay=60} @self
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="0";t=INTEGER} @self ?varisset{k=caster.Azuriter_Item_Var_EndiamCharge} ?varrange{k=caster.Azuriter_Item_Var_EndiamCharge;r=<0}
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="<caster.var.Azuriter_Item_Var_EndiamCharge|0> + 1";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="<caster.var.Azuriter_Item_Var_EndiamCharge|0> - 1";t=INTEGER;delay=60} @self
   - setVar{k=skill.chance;a="<random.1to2>";t=INTEGER} @self
   - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=120;effect=Azuriter_Item_Melee_Endiam_L1_Effect} ?varrange{k=skill.chance;r="1"}
   - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=120;effect=Azuriter_Item_Melee_Endiam_L1_Effect} ?varrange{k=skill.chance;r="2"}
@@ -31,9 +31,9 @@ Azuriter_Item_Melee_Endiam_L1:
   - materialIsOnCooldown{m=MACE} false
   Skills:
   - modifyMana{a=40;m=sonsume} @self
-  - setVar{k=caster.Endiam;a="0";t=INTEGER} @self ?varisset{k=caster.Endiam} ?varrange{k=caster.Endiam;r=<0}
-  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> + 1";t=INTEGER} @self
-  - setVar{k=caster.Endiam;a="<caster.var.Endiam|0> - 1";t=INTEGER;delay=60} @self
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="0";t=INTEGER} @self ?varisset{k=caster.Azuriter_Item_Var_EndiamCharge} ?varrange{k=caster.Azuriter_Item_Var_EndiamCharge;r=<0}
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="<caster.var.Azuriter_Item_Var_EndiamCharge|0> + 1";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="<caster.var.Azuriter_Item_Var_EndiamCharge|0> - 1";t=INTEGER;delay=60} @self
   - mi{
     ot=[
       - modifyprojectile{t=INERTIA;a=MULTIPLY;v=0.925} @self
@@ -79,10 +79,10 @@ Azuriter_Item_Melee_Endiam_Finish:
   Cooldown: 10
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンディアム}
-  - varrange{k=caster.Endiam;r=>9}
+  - varrange{k=caster.Azuriter_Item_Var_EndiamCharge;r=>9}
   - materialIsOnCooldown{m=MACE} false
   Skills:
-  - setVar{k=caster.Endiam;a="0";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="0";t=INTEGER} @self
   - setMaterialCooldown{m=MACE;d=100} @self
   - skill{s=Azuriter_Core_Player_Slash_Process;roll=0;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
   - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}

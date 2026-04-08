@@ -18,26 +18,26 @@ Azuriter_Core_StepAvoid_Router:
 Azuriter_Core_StepAvoid_LockFix:
   Cooldown: 0.5
   Conditions:
-  - hasAura{n=STEP_AVOID} false
-  - hasTag{t=STEP_NOW} true
+  - hasAura{n=Azuriter_Core_Aura_StepAvoid} false
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} true
   Skills:
-  - removetag{t=STEP_NOW} @self
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock} @self
 
 Azuriter_Core_StepAvoid_AuraFix:
   Cooldown: 0.5
   Conditions:
-  - hasAura{n=STEP_AVOID} true
-  - hasTag{t=STEP_NOW} false
+  - hasAura{n=Azuriter_Core_Aura_StepAvoid} true
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} false
   Skills:
-  - removeaura{n=STEP_AVOID} @self
+  - removeaura{n=Azuriter_Core_Aura_StepAvoid} @self
 
 Azuriter_Core_StepAvoid_FallFix:
   Cooldown: 0.5
   Conditions:
   - onGround true
-  - hasAura{n=FALL_CANCEL} true
+  - hasAura{n=Azuriter_Core_Aura_StepAvoidFallCancel} true
   Skills:
-  - removeaura{n=FALL_CANCEL} @self
+  - removeaura{n=Azuriter_Core_Aura_StepAvoidFallCancel} @self
 
 Azuriter_Core_StepAvoid_StepSword:
   Conditions:

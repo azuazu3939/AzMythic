@@ -3,7 +3,7 @@ Azuriter_Brute_Wanderer_Skills:
   Conditions:
   - incombat true
   Skills:
-  - skill{s=Azuriter_Brute_Wanderer_Skill_1;repeat=3;repeati=80} @self 
+  - skill{s=Azuriter_Brute_Wanderer_Skill_1;repeat=3;repeati=80} @self
   - delay <random.60to80>
   - randomskill{s=Azuriter_Brute_Wanderer_Skill_2,Azuriter_Brute_Wanderer_Skill_3;fbs=Azuriter_Brute_Wanderer_Skill_3} @self
   - delay <random.60to80>
@@ -19,10 +19,10 @@ Azuriter_Brute_Wanderer_Skill_1_1:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - setvarloc{k=skill.pos;a=@selfLocation} @self
-  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
   - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
   - delay 20
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
@@ -44,10 +44,10 @@ Azuriter_Brute_Wanderer_Skill_1_2:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - setvarloc{k=skill.pos;a=@selfLocation} @self
-  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
   - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
   - delay 20
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
@@ -69,11 +69,11 @@ Azuriter_Brute_Wanderer_Skill_1_3:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   - (varrange{k=skill.times;r=3} true && healthpercent{p=<0.7} false) false
   Skills:
   - setvarloc{k=skill.pos;a=@selfLocation} @self
-  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
   - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
   - delay 20
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
@@ -95,11 +95,11 @@ Azuriter_Brute_Wanderer_Skill_1_4:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   - (varrange{k=skill.times;r=4} true && healthpercent{p=<0.4} false) false
   Skills:
   - setvarloc{k=skill.pos;a=@selfLocation} @self
-  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self 
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
   - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
   - delay 20
   - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
@@ -127,9 +127,9 @@ Azuriter_Brute_Wanderer_Skill_2:
     ot=[
       - endprojectile ?distanceFromTL{d=>32}
       - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
-      - teleport @origin 
+      - teleport @origin
       - delay 4
-      - e:p{p=explosion;a=1;cd=0.25} @origin 
+      - e:p{p=explosion;a=1;cd=0.25} @origin
     ];
     oh=[
       - damage{a="<caster.damage> * 1";pi=true;ii=true}
@@ -137,8 +137,8 @@ Azuriter_Brute_Wanderer_Skill_2:
       - endprojectile{delay=8} @self
     ];
     oe=[
-      - e:p{p=explosion_huge;a=1} @origin 
-      - sound{s=entity.generic.explode;v=2;p=0;sc=PLAYERS} @origin 
+      - e:p{p=explosion_huge;a=1} @origin
+      - sound{s=entity.generic.explode;v=2;p=0;sc=PLAYERS} @origin
       - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
       - addmask{r=10;h=25;material=RED_TERRACOTTA;d=20} @origin
       - delay 20
@@ -157,7 +157,7 @@ Azuriter_Brute_Wanderer_Skill_3_Run:
     b=DISPLAY;mat=GOLDEN_AXE;scale=1.5,1.5,1.5;yaw=3.14;pitch=1.57;roll=0.785;rs=1;
     ot=[
       - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.025} @self
-      - e:p{p=explosion;a=1;cd=0.5} @origin 
+      - e:p{p=explosion;a=1;cd=0.5} @origin
     ];
     oh=[
       - damage{a="<caster.damage> * 1";pi=true;ii=true}
@@ -166,9 +166,9 @@ Azuriter_Brute_Wanderer_Skill_3_Run:
       - endprojectile{delay=8} @self
     ];
     oe=[
-      - sound{s=block.anvil.land;v=2;sc=PLAYERS} @origin 
-      - addmask{r=16;h=25;material=RED_TERRACOTTA;d=20} @origin 
+      - sound{s=block.anvil.land;v=2;sc=PLAYERS} @origin
+      - addmask{r=16;h=25;material=RED_TERRACOTTA;d=20} @origin
       - delay 20
       - damage{a="<caster.damage> * 0.8";pi=true;ii=true} @PNO{r=16}
-      - sound{s=entity.generic.explode;p=0;v=1.5;sc=PLAYERS} @origin 
+      - sound{s=entity.generic.explode;p=0;v=1.5;sc=PLAYERS} @origin
     ]} @TL

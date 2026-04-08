@@ -20,11 +20,11 @@ Azuriter_操作Boss:
     MainHand:
       Damage: 10000 ADD
   Skills:
-  - signal{s=Azuriter_Boss_Stick} @trigger ~onInteract ?~hasTag{t=BOSS}
-  - onDamaged{n=Azuriter_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onSwing 
-  - onDamaged{n=Azuriter_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onDamaged 
-  - onDamaged{n=Azuriter_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onUse 
-  - auraRemove{n=Azuriter_NoCombat} @self ~onSwapitems 
+  - signal{s=Azuriter_Boss_Stick} @trigger ~onInteract ?~hasTag{t=Azuriter_Core_Tag_Boss}
+  - onDamaged{n=Azuriter_Core_Aura_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onSwing
+  - onDamaged{n=Azuriter_Core_Aura_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onDamaged
+  - onDamaged{n=Azuriter_Core_Aura_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onUse
+  - auraRemove{n=Azuriter_Core_Aura_NoCombat} @self ~onSwapitems
 
 Azuriter_Admin_Sword_2:
   Id: diamond_sword

@@ -5,27 +5,27 @@ Azuriter_Admin_Mob_DamageTest:
   Faction: Admin
   Options:
     Silent: true
-    PreventVanillaDamage: true 
+    PreventVanillaDamage: true
     NoAI: true
     Interactable: true
   Skills:
-  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @trigger ~onDamaged ?!hasTag{t=ALL}
-  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @PIR{r=16} ~onDamaged ?hasTag{t=ALL}
+  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @trigger ~onDamaged ?!hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
+  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @PIR{r=16} ~onDamaged ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
   - heal{a="<caster.mhp>"} @self ~onTimer:200
   - skill{
     s=[
-      - addtag{t=LOG} @self ?hasTag{t=ALL}
-      - removetag{t=LOG;delay=20} @self ?hasTag{t=ALL}
+      - addtag{t=Azuriter_Admin_Tag_DamageToggleCooldown} @self ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
+      - removetag{t=Azuriter_Admin_Tag_DamageToggleCooldown;delay=20} @self ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
 
-      - message{m="ダメージ表示を個別に変更しました。"} ?hasTag{t=ALL}
-      - removetag{t=ALL} @self ?hasTag{t=ALL}
+      - message{m="ダメージ表示を個別に変更しました。"} ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
+      - removetag{t=Azuriter_Admin_Tag_BroadcastDamage} @self ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
 
-      - return ?hasTag{t=LOG}
+      - return ?hasTag{t=Azuriter_Admin_Tag_DamageToggleCooldown}
 
-      - message{m="ダメージ表示を周囲に変更しました。"} ?!hasTag{t=ALL}
-      - addtag{t=ALL} @self ?!hasTag{t=ALL}
-  
-    ];cd=1.2} @trigger ~onInteract 
+      - message{m="ダメージ表示を周囲に変更しました。"} ?!hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
+      - addtag{t=Azuriter_Admin_Tag_BroadcastDamage} @self ?!hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
+
+    ];cd=1.2} @trigger ~onInteract
 
 Azuriter_ShopKeepers:
   Type: VILLAGER
@@ -38,7 +38,7 @@ Azuriter_ShopKeepers:
     PreventRandomEquipment: false
     PreventMobKillDrops: false
     PreventOtherDrops: false
-    PreventVanillaDamage: true 
+    PreventVanillaDamage: true
     MaxCombatDistance: 0
     UseThreatTable: true
     MovementSpeed: 0.0001
@@ -57,7 +57,7 @@ Azuriter_ShopKeepers_2:
     PreventRandomEquipment: false
     PreventMobKillDrops: false
     PreventOtherDrops: false
-    PreventVanillaDamage: true 
+    PreventVanillaDamage: true
     MaxCombatDistance: 0
     UseThreatTable: true
     MovementSpeed: 0.0001

@@ -14,18 +14,18 @@ Azuriter_Item_Melee_ManaBladeAlpha_RightSlash:
   - modifyMana{a=35;m=consume} @self
   - setMaterialCooldown{m=DIAMOND_SWORD;d=5} @self
   - sound{s=block.beacon.power_select;p=2;audience=caster;sc=BLOCKS} @self
-  - setVar{k=caster.ManaBlace_A_Right;a="<caster.var.ManaBlace_A_Right|0> + 1";t=INTEGER} @self
-  - sound{s=block.anvil.place;p=0;v=0.5;audience=caster;sc=BLOCKS} @self ?varrange{k=caster.ManaBlace_A_Right;r=10}
+  - setVar{k=caster.Azuriter_Item_Var_ManaBladeAlpha_RightCharge;a="<caster.var.Azuriter_Item_Var_ManaBladeAlpha_RightCharge|0> + 1";t=INTEGER} @self
+  - sound{s=block.anvil.place;p=0;v=0.5;audience=caster;sc=BLOCKS} @self ?varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_RightCharge;r=10}
   - slash{
     d=4;w=4;h=6;r=2;roll=<random.-60to60>;p=18;y=1.6;r=4;
     op=[
-      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#1ac466} @origin ?!hasAura{n=Azuriter_マナブレード_アルファ_R1NoS}
+      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#1ac466} @origin ?!hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_RightBurst}
       - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#16ea0f} @origin
       - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#80d214} @origin
-      - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#d0ea0d} @origin ?hasAura{n=Azuriter_マナブレード_アルファ_R1NoS}
+      - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#d0ea0d} @origin ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_RightBurst}
     ];
     oh=[
-      - setVar{k=skill.dmg;a="75";t=INTEGER} @self ?hasAura{n=Azuriter_マナブレード_アルファ_R1NoS}
+      - setVar{k=skill.dmg;a="75";t=INTEGER} @self ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_RightBurst}
       - damage{a="<caster.damage> + <skill.var.dmg|0>";pi=true;ii=true;e=GREEN}
       - sound{s=entity.zombie_villager.cure;p=1.25;v=0.05;audience=caster;sc=AMBIENT}
       - velocity{x=0;y=0;z=0;m=SET}
@@ -49,18 +49,18 @@ Azuriter_Item_Melee_ManaBladeAlpha_LeftSlash:
   - modifyMana{a=35;m=consume} @self
   - setMaterialCooldown{m=DIAMOND_SWORD;d=5} @self
   - sound{s=block.beacon.power_select;p=2;audience=caster;sc=BLOCKS} @self
-  - setVar{k=caster.ManaBlace_A_Left;a="<caster.var.ManaBlace_A_Left|0> + 1";t=INTEGER} @self
-  - sound{s=block.anvil.place;p=2;v=0.5;audience=caster;sc=BLOCKS} @self ?varrange{k=caster.ManaBlace_A_Left;r=10}
+  - setVar{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;a="<caster.var.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge|0> + 1";t=INTEGER} @self
+  - sound{s=block.anvil.place;p=2;v=0.5;audience=caster;sc=BLOCKS} @self ?varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;r=10}
   - slash{
     d=4;w=4;h=6;r=2;roll="<random.-60to69> + 180";p=18;y=1.6;r=4;
     op=[
-      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#1ac466} @origin ?!hasAura{n=Azuriter_マナブレード_アルファ_L1NoS}
+      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#1ac466} @origin ?!hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst}
       - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#16ea0f} @origin
       - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#80d214} @origin
-      - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#d0ea0d} @origin ?hasAura{n=Azuriter_マナブレード_アルファ_L1NoS}
+      - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#d0ea0d} @origin ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst}
     ];
     oh=[
-      - setVar{k=skill.dmg;a="75";t=INTEGER} @self ?hasAura{n=Azuriter_マナブレード_アルファ_L1NoS}
+      - setVar{k=skill.dmg;a="75";t=INTEGER} @self ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst}
       - damage{a="<caster.damage> + <skill.var.dmg|0>";pi=true;ii=true;e=GREEN}
       - sound{s=entity.zombie_villager.cure;p=1.25;v=0.05;audience=caster;sc=AMBIENT}
       - velocity{x=0;y=0;z=0;m=SET}
@@ -80,13 +80,13 @@ Azuriter_Item_Melee_ManaBladeAlpha_RightBurst:
     ]}
   - matCooldown{m=DIAMOND_SWORD} false
   - crouching true
-  - varrange{k=caster.ManaBlace_A_Right;r=>0} true
+  - varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_RightCharge;r=>0} true
   Skills:
-  - modifyMana{a=200;m=consume} @self ?!varrange{k=caster.ManaBlace_A_Right;r=>9}
-  - modifyMana{a=100;m=consume} @self ?varrange{k=caster.ManaBlace_A_Right;r=>9}
+  - modifyMana{a=200;m=consume} @self ?!varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_RightCharge;r=>9}
+  - modifyMana{a=100;m=consume} @self ?varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_RightCharge;r=>9}
   - sound{s=block.beacon.power_select;p=2;audience=caster;sc=BLOCKS} @self
-  - setVar{k=caster.ManaBlace_A_Right;a="0";t=INTEGER} @self
-  - aura{n=Azuriter_マナブレード_アルファ_R1NoS;t=200;rd=true;i=10;oe=[ - sound{s=block.enchantment_table.use;p=0;v=0.5;sc=AMBIENT;audience=caster} @self ]} @self
+  - setVar{k=caster.Azuriter_Item_Var_ManaBladeAlpha_RightCharge;a="0";t=INTEGER} @self
+  - aura{n=Azuriter_Item_Aura_ManaBladeAlpha_RightBurst;t=200;rd=true;i=10;oe=[ - sound{s=block.enchantment_table.use;p=0;v=0.5;sc=AMBIENT;audience=caster} @self ]} @self
   - projectile{
     ot=[
       - slash{
@@ -117,13 +117,13 @@ Azuriter_Item_Melee_ManaBladeAlpha_LeftBurst:
     ]}
   - matCooldown{m=DIAMOND_SWORD} false
   - crouching true
-  - varrange{k=caster.ManaBlace_A_Left;r=>0} true
+  - varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;r=>0} true
   Skills:
-  - modifyMana{a=200;m=consume} @self ?!varrange{k=caster.ManaBlace_A_Left;r=>9}
-  - modifyMana{a=100;m=consume} @self ?varrange{k=caster.ManaBlace_A_Left;r=>9}
+  - modifyMana{a=200;m=consume} @self ?!varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;r=>9}
+  - modifyMana{a=100;m=consume} @self ?varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;r=>9}
   - sound{s=block.beacon.power_select;p=2;audience=caster;sc=BLOCKS} @self
-  - setVar{k=caster.ManaBlace_A_Left;a="0";t=INTEGER} @self
-  - aura{n=Azuriter_マナブレード_アルファ_L1NoS;t=200;rd=true;i=10;oe=[ - sound{s=block.enchantment_table.use;p=2;v=0.5;sc=AMBIENT;audience=caster} @self ]} @self
+  - setVar{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;a="0";t=INTEGER} @self
+  - aura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst;t=200;rd=true;i=10;oe=[ - sound{s=block.enchantment_table.use;p=2;v=0.5;sc=AMBIENT;audience=caster} @self ]} @self
   - projectile{
     ot=[
       - slash{

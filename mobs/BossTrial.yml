@@ -16,7 +16,7 @@ Azuriter_Boss_マスターゾンビ:
   - money 50to150 1
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
   Options:
     MaxCombatDistance: 32
     FollowRange: 4
@@ -31,11 +31,11 @@ Azuriter_Boss_マスターゾンビ:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
 
-  - setVar{k=caster.1;a="Azuriter_Master_Zombie_Skill_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.2;a="Azuriter_Master_Zombie_Skill_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.3;a="Azuriter_Master_Zombie_Skill_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.1;a="Azuriter_Master_Zombie_Skill_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.2;a="Azuriter_Master_Zombie_Skill_5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Master_Zombie_Skill_1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Master_Zombie_Skill_2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Master_Zombie_Skill_3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Master_Zombie_Skill_4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Master_Zombie_Skill_5";t=STRING} @self ~onSpawn
   - skill{s=Azuriter_Master_Zombie_Skill_1} @self ~onSignal:raid_boss_skill1
   - skill{s=Azuriter_Master_Zombie_Skill_2} @self ~onSignal:raid_boss_skill2
   - skill{s=Azuriter_Master_Zombie_Skill_3} @self ~onSignal:raid_boss_skill3
@@ -66,7 +66,7 @@ Azuriter_Boss_マスターゾンビ:
   - attribute{attr=ARMOR;a=140} @self ~onDamaged ?day
   - potion{t=SPEED;d=200;l=0} @self ~onDamaged ?!day
 
-  - aura{n=トライアル5;rd=true;t=600} @trigger ~onDamaged ?~isplayer
+  - aura{n=Azuriter_Mob_Aura_Trial5Clear;rd=true;t=600} @trigger ~onDamaged ?~isplayer
 
   - cmd{c="mlgo <target.name> Azuriter_ウィクサーH 1 0.0125"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ウィクサーC 1 0.0125"} @ThreatTablePlayers ~onDeath
@@ -119,7 +119,7 @@ Azuriter_Boss_ソール_ワンダラー:
   - money 30to60 1
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
   Options:
     MaxCombatDistance: 32
     FollowRange: 4
@@ -142,7 +142,7 @@ Azuriter_Boss_ソール_ワンダラー:
 
   - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
 
-  - aura{n=トライアル1_2;rd=true;t=600} @trigger ~onDamaged ?~isplayer
+  - aura{n=Azuriter_Mob_Aura_Trial1BossClear;rd=true;t=600} @trigger ~onDamaged ?~isplayer
 
   - attribute{attr=ARMOR;a=50} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=30} @self ~onSpawn ?day
@@ -173,7 +173,7 @@ Azuriter_Boss_ブルート_ワンダラー:
   - money 35to70 1
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
   Options:
     MaxCombatDistance: 32
     FollowRange: 4
@@ -195,7 +195,7 @@ Azuriter_Boss_ブルート_ワンダラー:
 
   - attribute{attr=ARMOR_TOUGHNESS;a=80} @self ~onSpawn
 
-  - aura{n=トライアル2_2;rd=true;t=600} @trigger ~onDamaged ?~isplayer
+  - aura{n=Azuriter_Mob_Aura_Trial2BossClear;rd=true;t=600} @trigger ~onDamaged ?~isplayer
 
   - attribute{attr=ARMOR;a=50} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=30} @self ~onSpawn ?day

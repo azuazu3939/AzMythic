@@ -7,18 +7,18 @@ Azuriter_Item_Ranged_EmpuriaBow_Use:
     ]}
   - matCooldown{m=BOW} false
   Skills:
-  - setVar{k=caster.shot_ct;a="max(60 - <az.attack_speed.double> * 8, 8)";t=INTEGER} @self
-  - setMaterialCooldown{m=BOW;d="<caster.var.shot_ct|60>"} @self
+  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="max(60 - <az.attack_speed.double> * 8, 8)";t=INTEGER} @self
+  - setMaterialCooldown{m=BOW;d="<caster.var.Azuriter_Item_Var_RangedShotCounter|60>"} @self
 
   - modifyMana{a=20;m=consume} @self
-  - setVar{k=caster.shot_get;a="<caster.var.shot_get|0>";t=INTEGER} @self
+  - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0>";t=INTEGER} @self
   - skill{
     s=[
-      - setVar{k=caster.shot_get;a="0";t=INTEGER} @self
+      - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="0";t=INTEGER} @self
       - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstAura} @self
       - sound{s=entity.player.levelup;p=0;audience=caster} @self
 
-    ]} @self ?varrange{k=caster.shot_get;r=>199}
+    ]} @self ?varrange{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;r=>199}
   - delay 2
   - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=0} @self
   - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=3} @self
@@ -31,15 +31,15 @@ Azuriter_Item_Ranged_EmpuriaBow_Shot:
     os=[
       - sound{s=entity.zombie.infect;v=0.35;p=1;audience=caster;sc=AMBIENT} @self
       - sound{s=entity.breeze.jump;v=0.35;p=2;audience=caster;sc=AMBIENT} @self
-      - setVar{k=caster.shot_get;a="<caster.var.shot_get|0> + 1";t=INTEGER} @self
+      - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0> + 1";t=INTEGER} @self
     ];
     ot=[
       - e:p{p=end_rod;a=1;audience=caster} @origin 0.25
       - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.05} @self
     ];
     oh=[
-      - setVar{k=caster.shot_get;a="<caster.var.shot_get|0> + 8";t=INTEGER} @self
-      - setVar{k=caster.shot_get;a="<caster.var.shot_get|0> + 12";t=INTEGER} @self 0.15
+      - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0> + 8";t=INTEGER} @self
+      - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0> + 12";t=INTEGER} @self 0.15
       - damage{a="<caster.damage>";pi=true;ii=true;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
       - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstRelay}
@@ -52,10 +52,10 @@ Azuriter_Item_Ranged_EmpuriaBow_Shot:
 Azuriter_Item_Ranged_EmpuriaBow_BurstRelay:
   Cooldown: 0.2
   Conditions:
-  - hasAura{n=エンピュリアボウ} true
-  - hasTag{t=エンピュリアボウバースト実行中} true
+  - hasAura{n=Azuriter_Item_Aura_EmpuriaBowBurst} true
+  - hasTag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} true
   Skills:
-  - auraRemove{n=エンピュリアボウ;s=1} @self
+  - auraRemove{n=Azuriter_Item_Aura_EmpuriaBowBurst;s=1} @self
   - sudo{
     s=[
       - skill{
@@ -78,17 +78,17 @@ Azuriter_Item_Ranged_EmpuriaBow_BurstHit:
 Azuriter_Item_Ranged_EmpuriaBow_BurstReady:
   Cooldown: 1
   Conditions:
-  - hasAura{n=エンピュリアボウ} true
-  - hasTag{t=エンピュリアボウバースト実行中} false
+  - hasAura{n=Azuriter_Item_Aura_EmpuriaBowBurst} true
+  - hasTag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} false
   Skills:
   - message{m="エンピュリアボウバースト実行可能"} @self
-  - addtag{t=エンピュリアボウバースト実行中} @self
+  - addtag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} @self
 
 Azuriter_Item_Ranged_EmpuriaBow_BurstAura:
   Skills:
-  - aura{n=エンピュリアボウ;ms=5;rd=true;t=1200;
+  - aura{n=Azuriter_Item_Aura_EmpuriaBowBurst;ms=5;rd=true;t=1200;
     oe=[
-      - removeTag{t=エンピュリアボウバースト実行中} @self
+      - removeTag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} @self
       - message{m="エンピュリアボウバースト終了"} @self
       - setMaterialCooldown{m=BOW;cd=3} @self
     ]} @self

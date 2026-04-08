@@ -2,7 +2,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK:
   Conditions:
   - incombat true
   TargetConditions:
-  - hasAura{n=Azuriter_NoCombat} false
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
   - isplayer true
   Skills:
   - randomskill{s=
@@ -22,12 +22,12 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1:
   Cooldown: 3
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   - targetWithin{d=16}
   - targetinlineofsight
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - look{f=true;repeat=79;repeati=1} @T
   - stun{t=180;f=true} @self
   - sound{s=entity.wolf.growl;p=0;v=1.5} @self
@@ -40,7 +40,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1:
   - sound{s=entity.wolf.howl;delay=10;v=1.5} @self
   - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process{repeat=44;repeati=1} @self
   - delay 150
-  - removeTag{t=ATTACK} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Effect:
   Skills:
@@ -302,20 +302,20 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot:
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_Process_Shoot_Damage:
   TargetConditions:
-  - hasAura{n=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_HIT} false
+  - hasAura{n=Azuriter_Mob_Aura_WedlerAttack1Hit} false
   Skills:
-  - aura{n=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1_HIT;i=20;t=100}
-  - damage{a="<skill.var.dmg> * 2.15";pi=true;ii=true;e=GREEN;tag=ATTACK}
+  - aura{n=Azuriter_Mob_Aura_WedlerAttack1Hit;i=20;t=100}
+  - damage{a="<skill.var.dmg> * 2.15";pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
   Cooldown: 5
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   - targetWithin{d=10}
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - look{f=true} @T
   - delay 1
   - potion{t=SLOWNESS;l=7;d=20;p=false} @self
@@ -329,7 +329,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
   - delay 10
   - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process @self
   - delay 100
-  - removeTag{t=ATTACK} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
   Skills:
@@ -345,7 +345,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
       - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick @self
     ];
     oh=[
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=ATTACK}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
     ];
     oe=[
       - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
@@ -357,8 +357,8 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
 
       - e:p{p=explosion_huge;a=1;vs=1;hs=1;repeat=3;repeati=5} @origin
       - sound{s=block.end_portal.spawn;p=2;v=1} @origin
-      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=GREEN;tag=ATTACK} @PNO{r=6}
-      - potion{t=SLOW;l=2;d=100;p=false} @ENO{r=6;c=[ - samefaction false - hasAura{n=STEP_AVOID} false ]}
+      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=6}
+      - potion{t=SLOW;l=2;d=100;p=false} @ENO{r=6;c=[ - samefaction false - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
     ];
     v=2;i=1;vr=3;hr=3;se=false;syo=2;sfo=3;c=[ - samefaction false ]} @forward{f=10;y=-5}
 
@@ -372,11 +372,11 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3:
   Cooldown: 2
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   - targetnotwithin{d=16}
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - look{f=true} @T
   - delay 1
   - potion{t=SLOWNESS;l=7;d=20;p=false} @self
@@ -394,16 +394,16 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3:
       - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK
     ];
     v=8;syo=0;sfo=0;i=1;md=180;hs=true;hfs=0;mdh=10;mch=10;hr=3;mr=10;hnp=true;c=[ - samefaction false ]} @T
-  - removeTag{t=ATTACK} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - look{f=true} @T
   - delay 1
   - potion{t=SLOWNESS;l=7;d=20;p=false} @self
@@ -421,17 +421,17 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
       - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK
     ];
     v=10;syo=0;sfo=0;i=1;md=120;hs=true;hfs=0;mdh=10;mch=10;hr=3;mr=10;hnp=true;c=[ - samefaction false ]} @T
-  - removeTag{t=ATTACK} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   - targetWithin{d=6} true
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - look{f=true} @T
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
   - skill:Azuriter_Core_Enemy_DamageBuff @self
@@ -445,27 +445,27 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5:
     ];
     oe=[
       - sound{s=item.totem.use;p=2} @origin
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=ATTACK} @PNO{r=5}
-      - throw{v=15;vy=8} @PNO{r=5;c=[ - hasAura{n=STEP_AVOID} false ]}
-      - potion{t=MINING_FATIGUE;l=2;d=200;p=false} @PNO{r=5;c=[ - hasAura{n=STEP_AVOID} false ]}
-      - potion{t=SLOW;l=1;d=200;p=false} @PNO{r=5;c=[ - hasAura{n=STEP_AVOID} false ]} 0.5
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=5}
+      - throw{v=15;vy=8} @PNO{r=5;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - potion{t=MINING_FATIGUE;l=2;d=200;p=false} @PNO{r=5;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - potion{t=SLOW;l=1;d=200;p=false} @PNO{r=5;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]} 0.5
       - e:pr{r=4;pts=32;p=cloud;a=1;s=0.7;d=true;dir=0,1,0} @origin
       - e:pr{r=8;pts=32;p=cloud;a=1;s=0.7;d=true;dir=0,1,0} @origin
       - e:pr{r=10;pts=32;p=cloud;a=1;s=0.7;d=true;dir=0,1,0} @origin
     ];
     se=false;hr=3;vr=3;g=1;v=8;tyo=25;sfo=0;syo=0;i=1;md=100;hnp=true;c=[ - samefaction false ]} @T
   - delay 40
-  - removeTag{t=ATTACK} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   - targetWithin{d=16} true
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - delay 20
   - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
   - delay 24
@@ -474,7 +474,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6:
   - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
   - delay 16
   - clearpotion{t=INVISIBILITY} @self
-  - removeTag{t=ATTACK} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
   Skills:
@@ -495,7 +495,7 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
       - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick @self
     ];
     oh=[
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=ATTACK}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
     ];
     oe=[
       - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
@@ -507,8 +507,8 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
 
       - e:p{p=explosion_huge;a=1;vs=1;hs=1} @origin
       - sound{s=block.end_portal.spawn;p=2;v=1} @origin
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=ATTACK} @PNO{r=4}
-      - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=STEP_AVOID} false ]}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
+      - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
     ];
     v=2;i=1;vr=2;hr=3;syo=3;sfo=3;hnp=true;c=[ - samefaction false ];
     in=25;sdir=@forward{f=5;y=5}} @T
@@ -520,18 +520,18 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7:
   Cooldown: 1
   Conditions:
   - incombat true
-  - hasTag{t=DOWN} false
-  - hasTag{t=ATTACK} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   - targetWithin{d=16} true
   Skills:
-  - addtag{t=ATTACK} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - stun{t=60} @self
   - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
   - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=3} @self
   - setVar{k=skill.tick;a="200";t=INTEGER} @self
   - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7_Run{repeat=9;repeati=10}
   - delay 60
-  - removetag{t=ATTACK} @self
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 
 OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7_Run:
   Skills:
@@ -546,15 +546,15 @@ OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7_Run:
       - e:ps{p=cloud;a=10;s=0.2;r=0.5;cd=0.2} @origin
     ];
     oh=[
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=ATTACK}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
     ];
     oe=[
       - e:pr{r=4;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
       - e:pr{r=8;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
       - e:pr{r=10;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
       - e:p{p=explosion_huge;a=1;vs=1;hs=1} @origin
-      - damage{a=<skill.var.dmg>;pi=true;ii=true;e=GREEN;tag=ATTACK} @PNO{r=4}
-      - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=STEP_AVOID} false ]}
+      - damage{a=<skill.var.dmg>;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
+      - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
     ];
     v=0;i=1;vr=3;hr=3;md=200;syo=<random.2to8>;sfo=-3;sso=<random.-12to12>;hnp=true;c=[ - samefaction false ];
     sdir=@TL;in=25} @T

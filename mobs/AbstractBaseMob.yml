@@ -83,16 +83,16 @@ Azuriter_Enemy_RaidBoss_Base:
     Interactable: false
   Skills:
   - ranking @self ~onSpawn
-  - addtag{t=BOSS} @self ~onSpawn
+  - addtag{t=Azuriter_Core_Tag_Boss} @self ~onSpawn
   - attribute{attr=WAYPOINT_TRANSMIT_RANGE;a=4096} @self ~onSpawn
 
-  - removetag{t=START} @self ~onDropcombat
-  - removetag{t=ATTACK} @self ~onDropcombat
-  - removetag{t=DOWN} @self ~onDropcombat
+  - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self ~onDropcombat
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ~onDropcombat
+  - removetag{t=Azuriter_Core_Tag_EnemyDown} @self ~onDropcombat
   - skill{s=Azuriter_Core_RaidBoss_IdleHeal} @self ~onDropcombat
 
-  - addtag{t=MIDDLE_HEALTH} @self ~onDamaged =70%
-  - addtag{t=LOW_HEALTH} @self ~onDamaged =40%
+  - addtag{t=Azuriter_Core_Tag_MidHealth} @self ~onDamaged =70%
+  - addtag{t=Azuriter_Core_Tag_LowHealth} @self ~onDamaged =40%
   - skill{s=Azuriter_Core_RaidBoss_Control} @trigger ~onSignal:Azuriter_Boss_Stick ?~isplayer
 
   - sound{s=ui.toast.challenge_complete;p=2;sc=PLAYERS;v=3} @self ~onDeath
@@ -105,18 +105,18 @@ Azuriter_Enemy_RaidBoss_Base_Attack:
     Interactable: false
   Skills:
   - ranking @self ~onSpawn
-  - addtag{t=BOSS} @self ~onSpawn
+  - addtag{t=Azuriter_Core_Tag_Boss} @self ~onSpawn
   - attribute{attr=WAYPOINT_TRANSMIT_RANGE;a=4096} @self ~onSpawn
 
-  - removetag{t=START} @self ~onDropcombat
-  - removetag{t=ATTACK} @self ~onDropcombat
-  - removetag{t=DOWN} @self ~onDropcombat
+  - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self ~onDropcombat
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ~onDropcombat
+  - removetag{t=Azuriter_Core_Tag_EnemyDown} @self ~onDropcombat
   - skill{s=Azuriter_Core_RaidBoss_IdleHeal} @self ~onDropcombat
 
-  - addtag{t=MIDDLE_HEALTH} @self ~onDamaged =70%
-  - addtag{t=LOW_HEALTH} @self ~onDamaged =40%
-  - removetag{t=MIDDLE_HEALTH} @self ~onDamaged >70%
-  - removetag{t=LOW_HEALTH} @self ~onDamaged >40%
+  - addtag{t=Azuriter_Core_Tag_MidHealth} @self ~onDamaged =70%
+  - addtag{t=Azuriter_Core_Tag_LowHealth} @self ~onDamaged =40%
+  - removetag{t=Azuriter_Core_Tag_MidHealth} @self ~onDamaged >70%
+  - removetag{t=Azuriter_Core_Tag_LowHealth} @self ~onDamaged >40%
   - skill{s=Azuriter_Core_RaidBoss_Control} @trigger ~onSignal:Azuriter_Boss_Stick ?~isplayer
 
   - sound{s=ui.toast.challenge_complete;p=2;sc=PLAYERS;v=3} @self ~onDeath
@@ -136,7 +136,7 @@ Azuriter_Enemy_Trial_Base:
   - teleport @selfLocation{y=3} ~onSpawn
   - suicide{delay=6000} @self ~onSpawn
   - e:p{p=end_rod;a=1;y=5;size=2.5;audience=@PlayersNearOrigin{r=48};vd=48} @RAO{r=32;p=256} ~onTimer:20
-  - setVar{k=caster.count;a="0";t=INTEGER} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Mob_Var_TrialCount;a="0";t=INTEGER} @self ~onSpawn
   - barRemove{name="<caster.uuid>"} @self ~onDespawn
   - barRemove{name="<caster.uuid>"} @self ~onDeath
   - remove @children ~onDeath

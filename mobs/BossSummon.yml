@@ -21,7 +21,7 @@ Azuriter_Boss_Feldos:
   - FALL 0
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
   AIGoalSelectors:
   - clear
   - randomstroll
@@ -44,11 +44,11 @@ Azuriter_Boss_Feldos:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=140} @self ~onSpawn
-  - setVar{k=caster.1;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.2;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.3;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.4;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.5;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=125;shield_break=1500;heal_percent=0.01} @self ~onEntercombat
@@ -119,7 +119,7 @@ Azuriter_Boss_Wedler:
   - FALL 0
   AITargetSelectors:
   - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
   AIGoalSelectors:
   - clear
   - randomstroll
@@ -141,13 +141,13 @@ Azuriter_Boss_Wedler:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=150} @self ~onSpawn
-  - setVar{k=caster.1;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.2;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.3;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.4;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.5;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
-  - setVar{k=caster.6;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6";t=STRING} @self ~onSpawn
-  - setVar{k=caster.7;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill6;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill7;a="OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_7";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=115;shield_break=1600;heal_percent=0.01} @self ~onEntercombat
@@ -243,7 +243,7 @@ Azuriter_Boss_Basamos:
   AITargetSelectors:
   - clear
   - attacker
-  #- nearestIf{c=[ - hasAura{n=Azuriter_NoCombat} false - samefaction false ]}
+  #- nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
   AIGoalSelectors:
   - clear
   - meleeAttack{}
@@ -263,11 +263,11 @@ Azuriter_Boss_Basamos:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=130} @self ~onSpawn
-  - setVar{k=caster.1;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.2;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.3;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.4;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.5;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_1";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_5";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill{s=Azuriter_Core_Enemy_EnterCombat;down_tick=90;shield_break=1000;heal_percent=0.01} @self ~onEntercombat

@@ -1,4 +1,5 @@
-Azuriter_Item_Ranged_EmpuriaBow_Shot:
+# エンピュリアボウの弾体処理。
+Azuriter_Item_Weapon_Ranged_EmpuriaBow_Shot:
   Skills:
   - projectile{
     os=[
@@ -15,7 +16,7 @@ Azuriter_Item_Ranged_EmpuriaBow_Shot:
       - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0> + 12";t=INTEGER} @self 0.15
       - damage{a="<caster.damage>";pi=true;ii=true;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
-      - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstRelay}
+      - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_BurstRelay}
     ];
     c=[
       - isliving true

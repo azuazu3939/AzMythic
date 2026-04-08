@@ -19,8 +19,8 @@ Azuriter_カーブショットボウ:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Use} @self ~onUse
-  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Use} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Ranged_CurveShotBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Ranged_CurveShotBow_Use} @self ~onInteract ?!crouching
   - cancelEvent{sync=true} @self ~onUse
   AugmentationSlots:
   - Type: Gem_1
@@ -50,8 +50,8 @@ Azuriter_ファイアバレットボウ:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Use} @self ~onUse
-  - skill{s=Azuriter_Item_Ranged_FireBulletBow_Use} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_Use} @self ~onInteract ?!crouching
   - cancelEvent{sync=true} @self ~onUse
   AugmentationSlots:
   - Type: Gem_1
@@ -77,9 +77,9 @@ Azuriter_エンピュリアボウ:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Use} @self ~onUse
-  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Use} @self ~onInteract ?!crouching
-  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstReady} @self ~onSwing
+  - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_Use} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_BurstReady} @self ~onSwing
   - cancelEvent{sync=true} @self ~onUse
   AugmentationSlots:
   - Type: Gem_1

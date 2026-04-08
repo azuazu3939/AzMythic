@@ -30,8 +30,8 @@ Azuriter_トマホーク:
       Damage: 40
   Group: 'Weapon'
   Skills:
-  - skill{s=Azuriter_Item_Melee_Tomahawk_Use} @self ~onUse
-  - skill{s=Azuriter_Item_Melee_Tomahawk_Use} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Melee_Tomahawk_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Melee_Tomahawk_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -54,7 +54,7 @@ Azuriter_ハルバード:
       Damage: 40
   Group: 'Weapon'
   Skills:
-  - skill{s=Azuriter_Item_Melee_Halberd_Use} @self ~onSwing
+  - skill{s=Azuriter_Item_Weapon_Melee_Halberd_Use} @self ~onSwing
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1
@@ -80,12 +80,12 @@ Azuriter_マナブレード_アルファ:
       Damage: 48 ADD
       Health: -0.25 MULTIPLY_BASE
   Skills:
-  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightSlash} @self ~onUse
-  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightSlash} @self ~onInteract ?!crouching
-  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_LeftSlash} @self ~onSwing
-  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightBurst} @self ~onUse
-  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_RightBurst} @self ~onInteract ?!crouching
-  - skill{s=Azuriter_Item_Melee_ManaBladeAlpha_LeftBurst} @self ~onSwing
+  - skill{s=Azuriter_Item_Weapon_Melee_ManaBladeAlpha_RightSlash} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Melee_ManaBladeAlpha_RightSlash} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Melee_ManaBladeAlpha_LeftSlash} @self ~onSwing
+  - skill{s=Azuriter_Item_Weapon_Melee_ManaBladeAlpha_RightBurst} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Melee_ManaBladeAlpha_RightBurst} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Melee_ManaBladeAlpha_LeftBurst} @self ~onSwing
 
 Azuriter_エンディアム:
   Id: mace
@@ -105,8 +105,8 @@ Azuriter_エンディアム:
       AttackSpeed: 1 MULTIPLY_BASE
   Group: 'Weapon'
   Skills:
-  - skill{s=Azuriter_Item_Melee_Endiam_R1} @self ~onUse
-  - skill{s=Azuriter_Item_Melee_Endiam_L1} @self ~onSwing
+  - skill{s=Azuriter_Item_Weapon_Melee_Endiam_R1} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Melee_Endiam_L1} @self ~onSwing
   AugmentationSlots:
   - Type: Gem_1
     Amount: 1to5

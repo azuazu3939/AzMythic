@@ -1,4 +1,4 @@
-Azuriter_Item_Melee_Endiam_L1_Effect:
+Azuriter_Item_Weapon_Melee_Endiam_L1_Effect:
   Skills:
   - e:p{p=fireworks_spark;size=2;a=2;ys=0.075;hs=0.075;s=0.05;audience=caster} @origin
   - e:p{p=sweep_attack;size=2;a=3;ys=0.25;hs=0.25;s=0.05;audience=caster;delay=4} @origin

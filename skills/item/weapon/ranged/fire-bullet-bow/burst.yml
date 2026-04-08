@@ -1,4 +1,4 @@
-Azuriter_Item_Ranged_FireBulletBow_ShotExplode:
+Azuriter_Item_Weapon_Ranged_FireBulletBow_ShotExplode:
   Cooldown: 1
   Conditions:
   - varrange{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;r=>0}

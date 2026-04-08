@@ -1,25 +1,26 @@
-Azuriter_Item_Ranged_CurveShotBow_Use:
+# カーブショットボウの発動入口。
+Azuriter_Item_Weapon_Ranged_CurveShotBow_Use:
   Conditions:
   - wearing{s=HAND;i=Azuriter_カーブショットボウ}
   - matCooldown{m=BOW} false
   Skills:
   - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="max(60 - <az.attack_speed.double> * 10, 8)";t=INTEGER} @self
   - setMaterialCooldown{m=BOW;d="<caster.var.Azuriter_Item_Var_RangedShotCounter|60>"} @self
-
   - setVar{k=skill.damage;a="<caster.damage> * 0.75";t=FLOAT} @self
   - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="<caster.var.Azuriter_Item_Var_RangedShotCounter|0> + 1";t=INTEGER} @self
   - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.Azuriter_Item_Var_RangedShotCounter|0>;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 2
-  - skill{s=Azuriter_Item_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 250
   - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="<caster.var.Azuriter_Item_Var_RangedShotCounter|0> - 1";t=INTEGER} @self
   - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="0";t=INTEGER} @self ?varrange{k=caster.Azuriter_Item_Var_RangedShotCounter;r=<0}
 
-Azuriter_Item_Ranged_CurveShotBow_Shot:
+# カーブショットボウの弾体処理。
+Azuriter_Item_Weapon_Ranged_CurveShotBow_Shot:
   Skills:
   - missile{
     os=[

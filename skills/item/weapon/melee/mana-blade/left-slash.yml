@@ -1,5 +1,5 @@
 # マナブレードαの左始動通常派生。
-Azuriter_Item_Melee_ManaBladeAlpha_LeftSlash:
+Azuriter_Item_Weapon_Melee_ManaBladeAlpha_LeftSlash:
   Cooldown: 0.25
   Conditions:
   - wearing{s=HAND;i=Azuriter_マナブレード_アルファ}

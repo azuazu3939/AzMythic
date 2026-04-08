@@ -1,4 +1,5 @@
-Azuriter_Item_Ranged_EmpuriaBow_Use:
+# エンピュリアボウの発動入口。
+Azuriter_Item_Weapon_Ranged_EmpuriaBow_Use:
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンピュリアボウ}
   - hasMana{m=>20;
@@ -9,17 +10,15 @@ Azuriter_Item_Ranged_EmpuriaBow_Use:
   Skills:
   - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="max(60 - <az.attack_speed.double> * 8, 8)";t=INTEGER} @self
   - setMaterialCooldown{m=BOW;d="<caster.var.Azuriter_Item_Var_RangedShotCounter|60>"} @self
-
   - modifyMana{a=20;m=consume} @self
   - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0>";t=INTEGER} @self
   - skill{
     s=[
       - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="0";t=INTEGER} @self
-      - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstAura} @self
+      - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_BurstAura} @self
       - sound{s=entity.player.levelup;p=0;audience=caster} @self
-
     ]} @self ?varrange{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;r=>199}
   - delay 2
-  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=0} @self
-  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=3} @self
-  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_Shot;so=-3} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_Shot;so=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_Shot;so=3} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_EmpuriaBow_Shot;so=-3} @self

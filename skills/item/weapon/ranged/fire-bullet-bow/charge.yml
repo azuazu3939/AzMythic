@@ -1,4 +1,4 @@
-Azuriter_Item_Ranged_FireBulletBow_ShotCharge:
+Azuriter_Item_Weapon_Ranged_FireBulletBow_ShotCharge:
   Conditions:
   - varrange{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;r=>49} true
   Skills:

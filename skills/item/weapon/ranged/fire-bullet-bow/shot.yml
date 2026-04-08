@@ -1,4 +1,5 @@
-Azuriter_Item_Ranged_FireBulletBow_Shot:
+# ファイアバレットボウの弾体処理。
+Azuriter_Item_Weapon_Ranged_FireBulletBow_Shot:
   Skills:
   - missile{
     os=[
@@ -16,8 +17,8 @@ Azuriter_Item_Ranged_FireBulletBow_Shot:
       - damage{a=<skill.var.damage>;pi=true;ii=true;e=RED;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
       - setVar{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;a="<caster.var.Azuriter_Item_Var_FireBulletBowHitCount|0> + 1";t=INTEGER} @self
-      - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotCharge} @self
-      - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotExplode}
+      - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_ShotCharge} @self
+      - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_ShotExplode}
     ];
     c=[
       - isliving true

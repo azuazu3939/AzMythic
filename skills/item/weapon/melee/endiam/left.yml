@@ -1,4 +1,5 @@
-Azuriter_Item_Melee_Endiam_L1:
+# エンディアムの左始動通常派生。
+Azuriter_Item_Weapon_Melee_Endiam_L1:
   Cooldown: 0.2
   Conditions:
   - wearing{s=HAND;i=Azuriter_エンディアム}
@@ -8,7 +9,7 @@ Azuriter_Item_Melee_Endiam_L1:
     ]}
   - materialIsOnCooldown{m=MACE} false
   Skills:
-  - modifyMana{a=40;m=sonsume} @self
+  - modifyMana{a=40;m=consume} @self
   - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="0";t=INTEGER} @self ?varisset{k=caster.Azuriter_Item_Var_EndiamCharge} ?varrange{k=caster.Azuriter_Item_Var_EndiamCharge;r=<0}
   - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="<caster.var.Azuriter_Item_Var_EndiamCharge|0> + 1";t=INTEGER} @self
   - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="<caster.var.Azuriter_Item_Var_EndiamCharge|0> - 1";t=INTEGER;delay=60} @self
@@ -24,8 +25,8 @@ Azuriter_Item_Melee_Endiam_L1:
       - endprojectile @self ?!surface{r=<6}
     ];
     oe=[
-      - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect;jump=true}
-      - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect;jump=true;delay=4}
+      - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=50;effect=Azuriter_Item_Weapon_Melee_Endiam_L1_Effect;jump=true}
+      - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=50;effect=Azuriter_Item_Weapon_Melee_Endiam_L1_Effect;jump=true;delay=4}
     ];
     oh=[
       - sound{s=entity.zombie.attack_iron_door;p=0;audience=caster} @origin
@@ -46,4 +47,4 @@ Azuriter_Item_Melee_Endiam_L1:
     ];
     v=32;i=1;hp=false;hnp=true;vr=1.5;r=2;vo=0.1;in=8;d=20;se=false} @TL{d=32;cpitch=0}
   - delay 10
-  - skill{s=Azuriter_Item_Melee_Endiam_Finish} @self
+  - skill{s=Azuriter_Item_Weapon_Melee_Endiam_Finish} @self

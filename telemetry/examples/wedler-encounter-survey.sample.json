@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "generated_by": "Azuriter encounter survey",
+  "encounter": {
+    "encounter_id": "wedler-2026-04-09-survey-01",
+    "boss_id": "Azuriter_Boss_Wedler",
+    "boss_name": "風牙狼ウィデラー",
+    "server_id": "azup2",
+    "tester": "nnoka",
+    "played_at": "2026-04-09T01:55:21+09:00",
+    "scenario": "近接ソロ検証",
+    "notes": "Attack6 の圧と Attack4 の見え方を重点確認。"
+  },
+  "loadout": {
+    "weapon_id": "Azuriter_エンディアム",
+    "armor_set": "シリーズエンド1",
+    "role": "melee",
+    "notes": "回避と張り付き重視。"
+  },
+  "combat_summary": {
+    "result": "victory",
+    "phase_reached": "phase3",
+    "combat_time_sec": 184.0,
+    "notes": ""
+  },
+  "focus": {
+    "presets": [
+      "telegraph",
+      "fairness",
+      "readability"
+    ],
+    "skills": [
+      "Azuriter_Mob_Boss_Wedler_Attack4",
+      "Azuriter_Mob_Boss_Wedler_Attack6"
+    ],
+    "notes": ""
+  },
+  "player_observation": {
+    "telegraph": {
+      "score": 78,
+      "reason": "Attack4 の初動は見えるが、近接距離では少し短い。"
+    },
+    "fairness": {
+      "score": 72,
+      "reason": "Attack6 の着弾重なり時だけ回避不能感がある。"
+    },
+    "pressure": {
+      "score": null,
+      "reason": ""
+    },
+    "readability": {
+      "score": 76,
+      "reason": "phase3 は粒子密度が上がりやや読みづらい。"
+    },
+    "role_balance": {
+      "score": null,
+      "reason": ""
+    },
+    "highlights": [
+      "張り付きながら回避できる瞬間がある",
+      "フェーズ移行は分かりやすい"
+    ],
+    "pain_points": [
+      "Attack6 の重なりが近接でやや理不尽",
+      "phase3 の粒子量が多い"
+    ],
+    "notes": ""
+  },
+  "skill_focus": [
+    {
+      "skill_id": "Azuriter_Mob_Boss_Wedler_Attack4",
+      "lens": "telegraph",
+      "issue": "近接距離では初動視認がやや弱い。",
+      "desired_adjustment": "着弾前の音か溜め演出を少し増やしたい。"
+    },
+    {
+      "skill_id": "Azuriter_Mob_Boss_Wedler_Attack6",
+      "lens": "fairness",
+      "issue": "着弾位置が重なると横回避でも避けきれない。",
+      "desired_adjustment": "半径縮小か着弾間隔の拡張を試したい。"
+    }
+  ],
+  "score": {
+    "overall_score": 77,
+    "summary": "良い戦闘だが、Attack6 の公平性と phase3 の視認性に改善余地がある。"
+  },
+  "artifacts": {
+    "survey_output_path": "plugins/Azurite/telemetry/encounter-surveys/Azuriter_Boss_Wedler/wedler-2026-04-09-survey-01.json",
+    "notes": "プラグインアンケートで出力した想定。"
+  }
+}

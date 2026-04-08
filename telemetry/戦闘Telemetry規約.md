@@ -10,6 +10,7 @@
 
 - 1 戦闘につき 1 JSON を作る。
 - JSON は `telemetry/schema/encounter-report.schema.json` に従う。
+- プラグインの聞き取り結果だけを切り出す場合は `telemetry/schema/encounter-survey.schema.json` に従う。
 - 実測値と主観評価は混ぜず、`server_metrics` と `player_observation` を分ける。
 - 動画、ログ、スクリーンショットは JSON に埋め込まず、`artifacts` にパスだけを書く。
 - 取れない値は `null` または空配列でよい。推測値を実測値として書かない。
@@ -18,8 +19,12 @@
 
 - `telemetry/schema/encounter-report.schema.json`
   正式な JSON Schema
+- `telemetry/schema/encounter-survey.schema.json`
+  プラグインのアンケート出力用 Schema
 - `telemetry/templates/encounter-report.template.json`
   新規検証のひな形
+- `telemetry/templates/encounter-survey.template.json`
+  アンケート出力のひな形
 - `telemetry/examples/*.json`
   記入例
 - `telemetry/runs/*.json`
@@ -168,8 +173,17 @@
 
 1. 戦闘前に `telemetry/templates/encounter-report.template.json` を複製する。
 2. 戦闘後すぐに `encounter`, `loadout`, `server_metrics` を埋める。
-3. 記憶が新しいうちに `player_observation` と `score` を埋める。
-4. その JSON を `Codex` に渡して再調整案を作る。
+3. 必要に応じてプラグインの `/encountersurvey start <bossId> [focus...]` で聞き取り JSON を出す。
+4. 記憶が新しいうちに `player_observation` と `score` を埋める。
+5. その JSON を `Codex` に渡して再調整案を作る。
+
+## アンケート出力の位置付け
+
+`encounter-survey` は、完全な戦闘記録ではなく「主観評価を取りこぼさず残す補助記録」である。
+
+- 実測値が揃っているなら `encounter-report` を正本にする
+- プラグインアンケートは `player_observation` と `focus` を強化する補助情報として使う
+- 後で統合する時は、`boss_id`, `played_at`, `tester` をキーに寄せる
 
 ## Codex に渡す時の最小セット
 

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "generated_by": "Azuriter encounter survey",
+  "encounter": {
+    "encounter_id": "boss-id-2026-04-09-survey-01",
+    "boss_id": "Azuriter_Boss_Target",
+    "boss_name": "対象ボス名",
+    "server_id": "azup1",
+    "tester": "nnoka",
+    "played_at": "2026-04-09T02:30:00+09:00",
+    "scenario": "近接ソロ検証",
+    "notes": ""
+  },
+  "loadout": {
+    "weapon_id": "Azuriter_武器名",
+    "armor_set": "防具セット名",
+    "role": "melee",
+    "notes": ""
+  },
+  "combat_summary": {
+    "result": "victory",
+    "phase_reached": "phase3",
+    "combat_time_sec": null,
+    "notes": ""
+  },
+  "focus": {
+    "presets": [
+      "telegraph",
+      "fairness"
+    ],
+    "skills": [
+      "Azuriter_Mob_Boss_Target_Attack4"
+    ],
+    "notes": ""
+  },
+  "player_observation": {
+    "telegraph": {
+      "score": null,
+      "reason": ""
+    },
+    "fairness": {
+      "score": null,
+      "reason": ""
+    },
+    "pressure": {
+      "score": null,
+      "reason": ""
+    },
+    "readability": {
+      "score": null,
+      "reason": ""
+    },
+    "role_balance": {
+      "score": null,
+      "reason": ""
+    },
+    "highlights": [],
+    "pain_points": [],
+    "notes": ""
+  },
+  "skill_focus": [
+    {
+      "skill_id": "Azuriter_Mob_Boss_Target_Attack4",
+      "lens": "fairness",
+      "issue": "",
+      "desired_adjustment": ""
+    }
+  ],
+  "score": {
+    "overall_score": null,
+    "summary": ""
+  },
+  "artifacts": {
+    "survey_output_path": "",
+    "notes": ""
+  }
+}

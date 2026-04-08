@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://azurite.local/telemetry/schema/encounter-survey.schema.json",
+  "title": "AzMythic Encounter Survey",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_by",
+    "encounter",
+    "loadout",
+    "combat_summary",
+    "focus",
+    "player_observation",
+    "skill_focus",
+    "score",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "generated_by": {
+      "type": "string"
+    },
+    "encounter": {
+      "$ref": "#/$defs/encounter"
+    },
+    "loadout": {
+      "$ref": "#/$defs/loadout"
+    },
+    "combat_summary": {
+      "$ref": "#/$defs/combatSummary"
+    },
+    "focus": {
+      "$ref": "#/$defs/focus"
+    },
+    "player_observation": {
+      "$ref": "#/$defs/playerObservation"
+    },
+    "skill_focus": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/skillFocus"
+      }
+    },
+    "score": {
+      "$ref": "#/$defs/score"
+    },
+    "artifacts": {
+      "$ref": "#/$defs/artifacts"
+    }
+  },
+  "$defs": {
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "nullableInteger": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "encounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "encounter_id",
+        "boss_id",
+        "boss_name",
+        "server_id",
+        "tester",
+        "played_at",
+        "scenario"
+      ],
+      "properties": {
+        "encounter_id": { "type": "string" },
+        "boss_id": { "type": "string" },
+        "boss_name": { "type": "string" },
+        "server_id": { "type": "string" },
+        "tester": { "type": "string" },
+        "played_at": { "type": "string", "format": "date-time" },
+        "scenario": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "loadout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weapon_id",
+        "armor_set",
+        "role"
+      ],
+      "properties": {
+        "weapon_id": { "type": "string" },
+        "armor_set": { "type": "string" },
+        "role": {
+          "type": "string",
+          "enum": ["melee", "ranged", "tank", "hybrid", "unknown"]
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "combatSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "result",
+        "phase_reached",
+        "combat_time_sec"
+      ],
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": ["victory", "wipe", "retreat", "abort", "unknown"]
+        },
+        "phase_reached": { "type": "string" },
+        "combat_time_sec": { "$ref": "#/$defs/nullableNumber" },
+        "notes": { "type": "string" }
+      }
+    },
+    "focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "presets",
+        "skills"
+      ],
+      "properties": {
+        "presets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["telegraph", "fairness", "pressure", "readability", "role_balance"]
+          }
+        },
+        "skills": {
+          "$ref": "#/$defs/stringList"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "scoreBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "reason"
+      ],
+      "properties": {
+        "score": { "$ref": "#/$defs/nullableInteger" },
+        "reason": { "type": "string" }
+      }
+    },
+    "playerObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "telegraph",
+        "fairness",
+        "pressure",
+        "readability",
+        "role_balance",
+        "highlights",
+        "pain_points",
+        "notes"
+      ],
+      "properties": {
+        "telegraph": { "$ref": "#/$defs/scoreBlock" },
+        "fairness": { "$ref": "#/$defs/scoreBlock" },
+        "pressure": { "$ref": "#/$defs/scoreBlock" },
+        "readability": { "$ref": "#/$defs/scoreBlock" },
+        "role_balance": { "$ref": "#/$defs/scoreBlock" },
+        "highlights": { "$ref": "#/$defs/stringList" },
+        "pain_points": { "$ref": "#/$defs/stringList" },
+        "notes": { "type": "string" }
+      }
+    },
+    "skillFocus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "skill_id",
+        "lens",
+        "issue",
+        "desired_adjustment"
+      ],
+      "properties": {
+        "skill_id": { "type": "string" },
+        "lens": {
+          "type": "string",
+          "enum": ["telegraph", "fairness", "pressure", "readability", "role_balance", "other"]
+        },
+        "issue": { "type": "string" },
+        "desired_adjustment": { "type": "string" }
+      }
+    },
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overall_score",
+        "summary"
+      ],
+      "properties": {
+        "overall_score": { "$ref": "#/$defs/nullableInteger" },
+        "summary": { "type": "string" }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "survey_output_path",
+        "notes"
+      ],
+      "properties": {
+        "survey_output_path": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

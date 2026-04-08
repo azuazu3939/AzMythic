@@ -1,0 +1,127 @@
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4:
+  Cooldown: 25
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - setVar{var=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;val="0";t=INTEGER} @self
+  - projectile{
+    ot=[
+      - endprojectile @self ?hasTag{t=Azuriter_Core_Tag_EnemyDown}
+      - setProjectileDirection{m=0.1} @TL
+      - teleport @origin
+      - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
+      - look{f=true} @projectileforward
+    ];
+    oh=[
+      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - damage{a="<skill.var.dmg> * 2.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - delay 5
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - delay 2
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - throw{v=10;vy=20} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    os=[
+      - sound{s=entity.hoglin.death;p=0;sc=PLAYERS;repeat=19;repeati=2;v=2} @self
+      - delay 30
+      - sound{s=entity.hoglin.death;p=0.8;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
+      - e:p{p=villager_angry;a=20;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
+      - delay 10
+      - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
+      - delay 20
+      - modifyprojectile{t=VELOCITY;a=SET;v=30} @self
+    ];
+    oe=[
+      - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
+      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend} @self ?varrange{k=skill.chance;r=1}
+      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend} @self ?!varrange{k=skill.chance;r=1}
+      - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ?varrange{k=skill.chance;r=1}
+    ];
+    v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
+    mr=24;vr=3;hr=3} @TL
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend:
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} true
+  - varrange{k=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;r=>4} castinstead OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend_ForceEnd
+  Skills:
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - setVar{var=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;val="<caster.var.Azuriter_Mob_Var_FeldosAttack4ExtendCount|0> + 1";t=INTEGER} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=4;repeati=2;v=2} @self
+  - delay 30
+  - projectile{
+    ot=[
+      - endprojectile @self ?hasTag{t=Azuriter_Core_Tag_EnemyDown}
+      - setProjectileDirection{m=0.1} @TL
+      - teleport @origin
+      - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
+      - look{f=true} @projectileforward
+      - meta{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave;ho=90;delay=25} @self 0.75
+      - meta{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave;ho=270;delay=25} @self 0.75
+    ];
+    oh=[
+      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - damage{a="<skill.var.dmg> * 1.5";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - delay 5
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - delay 2
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - throw{v=10;vy=20} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    os=[
+      - e:p{p=villager_angry;a=20;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
+      - delay 30
+      - modifyprojectile{t=VELOCITY;a=SET;v=20} @self
+    ];
+    oe=[
+      - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
+      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend} @self ?!varrange{k=skill.chance;r=1}
+      - skill{s=OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend} @self ?varrange{k=skill.chance;r=1}
+      - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ?varrange{k=skill.chance;r=1}
+    ];
+    v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
+    mr=24;vr=3;hr=3} @TL
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_NoExtend:
+  Skills:
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-30} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=60} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-60} @self
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Wave:
+  Skills:
+  - setVar{k=skill.wave;a="0";t=INTEGER} @self
+  - projectile{
+    ot=[
+      - setVar{k=skill.wave;a="<skill.var.wave> + 1";t=INTEGER} @self
+      - e:p{p=explosion;a=1;size=0.5} @origin ?varrange{k=skill.wave;r=<9}
+      - e:p{p=explosion;a=1;size=1} @origin ?varrange{k=skill.wave;r=<17} ?!varrange{k=skill.wave;r=<9}
+      - e:p{p=explosion;a=1;size=1.5} @origin ?varrange{k=skill.wave;r=>16}
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg> * 0.8";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - aura{n=Azuriter_Mob_Aura_FeldosAttack4Wave;t=40;t=10}
+    ];
+    c=[
+      - hasAura{n=Azuriter_Mob_Aura_FeldosAttack4Wave} false
+    ];
+    v=12;i=2;vr=2;hr=2;ho=<skill.ho>;syo=0;sfo=1;se=false;sb=false;mr=20} @selfLocation{cpitch=0}
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_4_Extend_ForceEnd:
+  Skills:
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - potion{t=WEAKNESS;l=1;d=200;p=false} @self
+
+#Jump

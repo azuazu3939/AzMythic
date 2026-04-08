@@ -1,0 +1,34 @@
+Azuriter_Master_Zombie_Skill_3:
+  Cooldown: 10
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - skill{s=Azuriter_Master_Zombie_Skill_3_Random;repeat=<random.2to6>;repeati=60} @self
+
+Azuriter_Master_Zombie_Skill_3_Random:
+  Conditions:
+  - incombat true
+  Skills:
+  - skill{s=Azuriter_Master_Zombie_Skill_3_Repeat;repeat=5;repeati=0} @self
+
+Azuriter_Master_Zombie_Skill_3_Repeat:
+  Skills:
+  - setVar{k=skill.sfo<skill.var.itr>;a="<random.-32to32>";t=INTEGER} @self
+  - setVar{k=skill.sso<skill.var.itr>;a="<random.-32to32>";t=INTEGER} @self
+  - projectile{v=10;i=1;mr=48;syo=20;fo=true;origin=@selfLocation{so=<skill.var.sso<skill.var.itr>>;fo=<skill.var.sfo<skill.var.itr>>};
+    b=DISPLAY;mat=NETHERITE_SWORD;scale=1.5,1.5,1.5;yaw=0;pitch=0;pitch=3.14;vr=2;r=2;
+    sb=true;d=400;hp=false;se=false;stpcond=[ - incombat false ];
+    ohb=[
+      - modifyprojectile{t=VELOCITY;a=SET;v=0} @self
+      - addMask{b=RED_TERRACOTTA;r=8;d=20;h=19} @origin
+      - e:pr{p=flame;a=1;ys=0.05;hs=0.05;pts=60;r=8;audience=@PNO{r=32};vd=32;y=<random.float.1to1.5>} @origin
+      - damage{a="<caster.damage> * 1.5";pi=true;ii=true;delay=20} @PNO{r=8}
+      - sound{s=item.trident.return;sc=PLAYERS;p=1;v=1.25} @origin
+      - sound{s=item.trident.thunder;sc=PLAYERS;p=2;v=1.25} @origin
+      - sound{s=entity.zombie.attack_iron_door;p=2;v=1.5;delay=70} @origin
+    ];
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1.25} @origin
+    ]} @selfLocation{so=<skill.var.sso<skill.var.itr>>;fo=<skill.var.sfo<skill.var.itr>>}

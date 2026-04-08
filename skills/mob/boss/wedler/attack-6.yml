@@ -1,0 +1,58 @@
+OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  - targetWithin{d=16} true
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - delay 20
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - delay 24
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - delay 40
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere}
+  - delay 16
+  - clearpotion{t=INVISIBILITY} @self
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
+
+OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_6_Sphere:
+  Skills:
+  - clearpotion{t=INVISIBILITY} @self
+  - delay 4
+  - jump{v=0.8} @self
+  - delay 10
+  - look{f=true} @T
+  - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - setVar{var=skill.tick;val="0";t=INTEGER} @self
+  - missile{
+    ot=[
+      - e:ps{p=spark;a=30;r=1} @origin
+      - e:ps{p=sweep_attack;a=20;r=2} @origin
+      - e:ps{p=cloud;a=30;s=0.2;r=1;cd=0.2} @origin
+      - setVar{var=skill.tick;val="<skill.var.tick> + 1";t=INTEGER} @self
+      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick @self
+    ];
+    oh=[
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
+    ];
+    oe=[
+      - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
+      - e:pr{r=8;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
+      - e:pr{r=10;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
+      - e:pr{r=4;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
+      - e:pr{r=8;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
+      - e:pr{r=10;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
+
+      - e:p{p=explosion_huge;a=1;vs=1;hs=1} @origin
+      - sound{s=block.end_portal.spawn;p=2;v=1} @origin
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
+      - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    v=2;i=1;vr=2;hr=3;syo=3;sfo=3;hnp=true;c=[ - samefaction false ];
+    in=25;sdir=@forward{f=5;y=5}} @T
+  - delay 4
+  - potion{t=INVISIBILITY;l=0;d=200;p=false} @self
+  - leap{v=350} @forward{f=5;so=<random.-8to8>}

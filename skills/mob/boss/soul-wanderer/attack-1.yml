@@ -1,0 +1,8 @@
+Azuriter_Soul_Wanderer_Skill_1:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - signal{s=soul_fire_spawn} @parent
+  - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=2;sc=PLAYERS} @self

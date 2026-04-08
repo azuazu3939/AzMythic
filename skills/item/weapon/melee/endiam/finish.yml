@@ -1,0 +1,30 @@
+Azuriter_Item_Melee_Endiam_Finish:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_エンディアム}
+  - varrange{k=caster.Azuriter_Item_Var_EndiamCharge;r=>9}
+  - materialIsOnCooldown{m=MACE} false
+  Skills:
+  - setVar{k=caster.Azuriter_Item_Var_EndiamCharge;a="0";t=INTEGER} @self
+  - setMaterialCooldown{m=MACE;d=100} @self
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=0;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=45;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=90;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=135;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=180;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=225;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=270;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+  - skill{s=Azuriter_Core_Player_Slash_Process;roll=315;damage=50;effect=Azuriter_Item_Melee_Endiam_L1_Effect}
+
+  - sound{s=block.vault.close_shutter;p=0;audience=caster} @self
+  - sound{s=block.vault.close_shutter;p=1;audience=caster;delay=4} @self
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.55;delay=1} @self
+  - sound{s=entity.generic.explode;sc=PLAYERS;audience=caster;p=1.25} @self
+
+  - sound{s=block.vault.close_shutter;p=0;audience=caster} @self
+  - sound{s=block.vault.close_shutter;p=1;audience=caster;delay=4} @self
+  - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self
+  - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.55;delay=1} @self

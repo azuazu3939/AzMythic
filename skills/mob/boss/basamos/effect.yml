@@ -1,0 +1,10 @@
+Azuriter_バサモスサンド_幻想1_Effect:
+  Skills:
+  - missile{v=0.5;i=1;in=4;vr=10;sb=false;hp=false;hitself=true;hr=1.5;syo=2;sfo=0;origin=@trigger;fo=true;
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.2}
+    ];
+    oh=[
+      - damage{a=100;pi=true;ii=true}
+    ];
+    b=MOB;mm=Azuriter_バサモスサンド_幻2;bmd=true} @self

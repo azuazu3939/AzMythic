@@ -1,0 +1,16 @@
+Azuriter_Core_StepAvoid_Router:
+  Cooldown: 0.5
+  Skills:
+  - setVar{k=skill.cause;a="<skill.var.damage-cause>";t=STRING} @self
+  - return ?!varequals{k=skill.cause;v="ENTITY_ATTACK"} ?!varequals{k=skill.cause;v="CUSTOM"} ?!varequals{k=skill.cause;v="SKILL"}
+  - sound{s=entity.arrow.hit_player;v=0.5} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_HighStepSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindPath} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindStride} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepRiseSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepDashSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepHealSword} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindTrace} @self
+  - delay 18
+  - skill{s=Azuriter_Core_StepAvoid_AuraFix} @self

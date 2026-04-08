@@ -1,0 +1,70 @@
+Azuriter_Master_Zombie_Skill_2:
+  Cooldown: 30
+  Conditions:
+  - incombat true
+  - healthpercent{p=<50%} true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - stun{t=200} @self
+  - sound{s=entity.zombie_villager.cure;v=3;sc=PLAYERS} @self
+  - message{m="マスターゾンビが自己強化を図ろうとししている！相手を弱体化し妨害しよう！！"} @PIR{r=32}
+  - o{auraName=Azuriter_Mob_Aura_MasterZombieOrb1;r=3;hr=2.5;sp=0;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.25;hs=0.25;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Azuriter_Mob_Aura_MasterZombieOrb2;r=3;hr=2.5;sp=40;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Azuriter_Mob_Aura_MasterZombieOrb3;r=3;hr=2.5;sp=80;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Azuriter_Mob_Aura_MasterZombieOrb4;r=3;hr=2.5;sp=120;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Azuriter_Mob_Aura_MasterZombieOrb5;r=3;hr=2.5;sp=160;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+
+  - o{auraName=Azuriter_Mob_Aura_MasterZombieOrb6;r=3;hr=2.5;sp=200;p=240;i=1;hp=true;hnp=false;d=200;rd=true;
+    ot=[
+      - e:p{p=red_dust;c=#ffffff;a=1;ys=0.15;hs=0.15;size=5;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=RADIUS;a=ADD;v=0.1} @self
+      - endprojectile @self ?hasPotion{t=WEAKNESS}
+    ]} @self
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - return ?hasPotion{t=WEAKNESS}
+  - delay 40
+  - skill{s=Azuriter_Master_Zombie_Skill_2_Check} @self
+
+Azuriter_Master_Zombie_Skill_2_Check:
+  Conditions:
+  - hasPotion{t=WEAKNESS} false
+  Skills:
+  - sound{s=entity.zombie_villager.converted;v=3;sc=PLAYERS} @self
+  - potion{t=RESISTANCE;l=2;d=600;p=false} @self
+  - e:p{p=explosion_emitter;d=true;dir=0,1,0;s=0.5;a=25;vs=0.15;hs=2;a=5;vd=32;audience=@PNO{r=32}} @self

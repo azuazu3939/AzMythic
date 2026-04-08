@@ -1,0 +1,14 @@
+Azuriter_Core_StepAvoid_StepHealSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップヒールソード}
+  Skills:
+  - modifyMana{a=100;m=give} @self ?wearing{s=HAND;i=STONE_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;audience=caster;delay=2;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;audience=caster;delay=4;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;audience=caster;delay=6;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;audience=caster;delay=8;sc=PLAYERS}
+  - shield{a=5;ms=20;delay=10} @self ?wearing{s=HAND;i=STONE_SWORD}
+  - heal{a=8;delay=0} @self ?wearing{s=HAND;i=STONE_SWORD}
+  - heal{a=5;delay=0} @PIR{r=16} ?wearing{s=HAND;i=STONE_SWORD}
+  - feed{a=1;o=true} @self ?wearing{s=HAND;i=STONE_SWORD}

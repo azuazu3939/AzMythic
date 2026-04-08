@@ -1,0 +1,25 @@
+Azuriter_Item_Ranged_FireBulletBow_Shot:
+  Skills:
+  - missile{
+    os=[
+      - setVar{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;a="0";t=INTEGER} @self ?!varisset{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock}
+      - sound{s=entity.zombie.infect;v=0.35;p=1;audience=caster;sc=AMBIENT} @self
+      - sound{s=entity.breeze.jump;v=0.35;p=2;audience=caster;sc=AMBIENT} @self
+    ];
+    ot=[
+      - modifyprojectile{t=INERTIA;a=MULTIPLY;v=0.95} @self
+      - e:p{p=flame;a=1;audience=caster} @origin 0.35
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.05} @self
+    ];
+    oh=[
+      - modifyMana{a=5;m=give} @self
+      - damage{a=<skill.var.damage>;pi=true;ii=true;e=RED;dc=PROJECTILE}
+      - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
+      - setVar{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;a="<caster.var.Azuriter_Item_Var_FireBulletBowHitCount|0> + 1";t=INTEGER} @self
+      - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotCharge} @self
+      - skill{s=Azuriter_Item_Ranged_FireBulletBow_ShotExplode}
+    ];
+    c=[
+      - isliving true
+    ];
+    v=18;in=16;vr=2.5;hr=2.5;hp=false;hnp=true;i=1;b=ARROW;se=false;vo=0.15;mr=36;ho=<skill.ho>;sfo=3} @forward{f=30;lockpitch=true}

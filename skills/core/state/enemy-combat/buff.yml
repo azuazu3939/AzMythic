@@ -1,0 +1,14 @@
+Azuriter_Core_Enemy_DamageBuff:
+  Skills:
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_0} #<skill.var.point>の数の分だけ生成する
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_1}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_2}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_3}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_4}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_5}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_6}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.05";t=FLOAT} @self ?hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_7}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.2";t=FLOAT} @self ?hasTag{t=Azuriter_Core_Tag_MidHealth}
+  - setVar{var=skill.dmg;val="<skill.var.dmg> * 1.25";t=FLOAT} @self ?hasTag{t=Azuriter_Core_Tag_LowHealth}
+
+#

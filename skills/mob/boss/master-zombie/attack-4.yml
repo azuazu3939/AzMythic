@@ -1,0 +1,56 @@
+Azuriter_Master_Zombie_Skill_4:
+  Cooldown: 30
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - skill{s=Azuriter_Master_Zombie_Skill_4_Repeat;repeat=9;repeati=30} @self
+  - delay 600
+  - skill{s=Azuriter_Master_Zombie_Skill_4_Final} @self 0.5 ?healthpercent{p=<0.7}
+  - skill{s=Azuriter_Master_Zombie_Skill_4_Final} @self 0.5 ?healthpercent{p=<0.4}
+
+Azuriter_Master_Zombie_Skill_4_Repeat:
+  Skills:
+  - projectile{v=0.01;i=1;mr=48;sfo=-5;syo=12;
+    b=DISPLAY;mat=GOLDEN_SWORD;scale=2.5,2.5,2.5;yaw=3.14;pitch=1.57;roll=0.785;vr=2;r=2;
+    d=200;se=true;
+    os=[
+      - e:p{p=dragon_breath;a=5;ys=0.75;hs=0.25;delay=4;vd=32;audience=@PNO{r=32}} @origin
+      - modifyprojectile{t=VELOCITY;a=SET;v=2;delay=12} @self
+    ];
+    oe=[
+      - damage{a="<caster.damage> * 1.25";pi=true;ii=true} @PNO{r=4}
+      - sound{s=item.trident.return;sc=PLAYERS;p=1;v=0.5} @origin
+      - sound{s=entity.zombie.attack_iron_door;p=2;v=0.5} @origin
+      - skill{s=Azuriter_Master_Zombie_Skill_4_AreaDamage} @origin
+    ];
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1} @origin
+    ]} @TL
+
+Azuriter_Master_Zombie_Skill_4_AreaDamage:
+  Skills:
+  - totem{d=1200;i=20;hp=true;hnp=false;se=false;sb=false;fo=true;
+    b=DISPLAY;mat=GOLDEN_SWORD;scale=2.5,2.5,2.5;yaw=0;pitch=0;roll=0.785;byo=3;enchanted=true;
+    ot=[
+      - e:ps{p=angryvillager;a=10;r=8;delay=10;vd=32;audience=@PNO{r=32}} @origin
+      - damage{a="<caster.damage> * 1.75";pi=true;ii=true;delay=30} @PNO{r=8}
+      - potion{t=WEAKNESS;l=0;d=50;p=false;delay=30} @PNO{r=8;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - sound{s=item.shield.break;sc=PLAYERS;delay=30;v=0.8} @origin
+    ];
+    os=[
+      - addMask{b=RED_TERRACOTTA;r=8;d=1200;h=19} @origin
+    ]}
+
+Azuriter_Master_Zombie_Skill_4_Final:
+  Cooldown: 5
+  Skills:
+  - jump{v=-3} @self
+  - delay 10
+  - stun{t=160} @self #スタン維持
+  - addMask{b=RED_TERRACOTTA;r=24;d=100} @selfLocation
+  - e:pr{p=crit_magic;a=1;ys=0.05;hs=0.05;pts=256;r=24;audience=@PNO{r=48};vd=48;y=1;repeat=8;repeati=10} @selfLocation
+  - damage{a="<caster.damage> * 3";pi=true;ii=true;delay=120;repeat=24;repeati=1} @PIR{r=24} #大技なので@PIRからいじらない
+  - sound{s=entity.wither.death;sc=PLAYERS;v=1.5;p=1.414;delay=120} @self
+  - bloodyScreen{d=3;c=true;repeat=125;repeati=1} @PIR{r=24}

@@ -1,0 +1,17 @@
+Azuriter_Core_Enemy_Down:
+  Conditions:
+  - hasAura{n=Azuriter_Core_Aura_EnemyShieldNode_7} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_EnemyDown} @self
+  - sound{s=item.shield.break;v=3;p=0} @self
+  - potion{t=GLOWING;d=<skill.var.downTick>;l=0;or=true} @self
+  - ondamaged{n=Azuriter_Core_Aura_EnemyDownDamage;damagemod="ENTITY_ATTACK 1.5";t=<skill.var.downTick>;i=1} @self
+  - stun{t=<skill.var.downTick>;g=true} @self
+  - delay <skill.var.downTick>
+  - setVar{n=caster.Azuriter_Core_Var_DownCount;a="<caster.var.Azuriter_Core_Var_DownCount|0> + 1";t=INTEGER} @self
+  - removetag{t=Azuriter_Core_Tag_EnemyDown} @self
+  - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self
+  - sound{s=block.anvil.use;v=3;p=2} @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_NextCycle @self
+
+#

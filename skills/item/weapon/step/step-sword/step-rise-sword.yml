@@ -1,0 +1,37 @@
+Azuriter_ステップライズソード_R1_Skills:
+  Cooldown: 12
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップライズソード}
+  - hasMana{m=>150;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self
+    ]}
+  - matCooldown{m=STONE_SWORD} false
+  - hasTag{t=Azuriter_Core_Tag_StepAvoidLock} castinstead Azuriter_Core_StepAvoid_LockFix
+  Skills:
+  - modifyMana{a=150;m=consume} @self
+  - setMaterialCooldown{m=STONE_SWORD;d=240} @self
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
+  - lunge{v=0.5;vy=0.5} @self
+  - addtag{t=Azuriter_Core_Tag_StepAvoidLock} @self
+  - ondamaged{t=12;n=Azuriter_Core_Aura_StepAvoid;damagemod="ENTITY_ATTACK 0.2,CUSTOM 0.2";rd=true;
+    oh=[
+      - skill{s=Azuriter_Core_StepAvoid_Router;delay=4} @self
+    ];
+    os=[
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
+    ]} @self
+
+  - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=12} @self
+  - delay 4
+  - lunge{v=2;vy=1} @self
+  - sound{s=entity.wither.shoot;p=2;v=0.2;audience=caster;sc=PLAYERS} @self
+  - delay 4
+  - lunge{v=1.5;vy=0.5} @self
+  - delay 4
+  - lunge{v=1;vy=0.5} @self
+  - delay 4
+  - lunge{v=1;vy=-0.5} @self
+  - delay 4
+  - lunge{v=1;vy=-2} @self

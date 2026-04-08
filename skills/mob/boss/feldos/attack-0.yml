@@ -1,0 +1,6 @@
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_0:
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - ignite{d=60} @PIR{r=7}

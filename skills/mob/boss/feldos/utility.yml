@@ -1,0 +1,3 @@
+OpenField_Enemy_Boss_MCLove32_Remove:
+  Skills:
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self

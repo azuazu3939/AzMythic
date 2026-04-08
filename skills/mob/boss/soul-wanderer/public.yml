@@ -1,0 +1,10 @@
+Azuriter_Soul_Wanderer_Skills:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  Skills:
+  - randomskill{skills=Azuriter_Soul_Wanderer_Skill_1 2,Azuriter_Soul_Wanderer_Skill_2 3;fbs=Azuriter_Soul_Wanderer_Skill_1} @self
+
+  - skill{s=Azuriter_Soul_Wanderer_Skill_2} @self
+  - delay <random.120to200>
+  - skill{s=Azuriter_Soul_Wanderer_Skills} @self

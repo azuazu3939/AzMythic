@@ -1,0 +1,35 @@
+Azuriter_Core_StepAvoid_StepRiseSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップライズソード}
+  Skills:
+  - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 225";t=FLOAT} @self
+  - skill{s=Azuriter_Core_Trigger_OnGround;s_name=Azuriter_Core_StepAvoid_StepRiseSword_Success} @self
+  - modifyMana{a=50;m=give} @self ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+
+Azuriter_Core_StepAvoid_StepRiseSword_Success:
+  Skills:
+  - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - e:pr{pts=12;p=explosion;a=1;audience=caster;r=5} @self
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - delay 2
+  - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - e:pr{pts=12;p=explosion;a=1;audience=caster;r=7} @self
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - delay 2
+  - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
+  - e:pr{pts=12;p=explosion;a=1;audience=caster;r=9} @self
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}

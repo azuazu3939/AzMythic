@@ -1,0 +1,30 @@
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_2:
+  Cooldown: 12
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - e:pr{p=end_rod;a=3;ys=0.05;hs=0.1;pts=48;d=true;dir=0,1,0;s=1;r=12} @selfLocation{y=1}
+  - delay 25
+  - projectile{
+    ot=[
+      - e:p{p=flame;a=3;ys=1;hs=1;s=0.5} @origin
+      - e:p{p=explosion;size=2;a=1;delay=2} @origin
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - throw{v=25;yv=20}
+    ];
+    os=[
+      - sound{s=entity.blaze.shoot;v=2;p=0} @self
+    ];
+    oe=[
+      - e:p{p=explosion_huge;a=1} @origin
+      - sound{s=entity.generic.explode} @origin
+      - sound{s=entity.wither.ambient;p=0} @origin
+    ];
+    b=DISPLAY;mat=OBSIDIAN;scale=3,3,3;rs=0.25;ys=0.25;ps=0.25;sfo=2;se=false;vr=2.75;hr=2.75;hs=true;hfs=2.5;mch=0;mdh=20;v=12;i=1} @forward
+
+#メテオ

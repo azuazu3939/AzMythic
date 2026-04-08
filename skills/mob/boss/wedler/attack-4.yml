@@ -1,0 +1,26 @@
+OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_4:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - look{f=true} @T
+  - delay 1
+  - potion{t=SLOWNESS;l=7;d=20;p=false} @self
+  - potion{t=SLOW_FALLING;l=7;d=25;p=false} @self
+  - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - sound{s=entity.wolf.ambient;p=0.75;v=1.5;repeat=1;repeati=10} @self
+  - delay 20
+  - projectile{
+    ot=[
+      - teleport @origin
+      - look{f=true} @T
+    ];
+    oe=[
+      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK
+    ];
+    v=10;syo=0;sfo=0;i=1;md=120;hs=true;hfs=0;mdh=10;mch=10;hr=3;mr=10;hnp=true;c=[ - samefaction false ]} @T
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self

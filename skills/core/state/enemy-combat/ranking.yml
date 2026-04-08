@@ -1,0 +1,20 @@
+Azuriter_Core_Enemy_Ranking_ShowEntry:
+  Skills:
+  - delay 0
+  - setVar{k=skill.name;a=<skill.key>;t=STRING} @self
+  - setVar{k=skill.sortDMG;a=<caster.var.rankMap.<skill.key>>;t=DOUBLE} @self
+  - setVar{k=skill.size;a=<caster.var.rankMap.size>;t=INTEGER} @self
+  - setVar{k=skill.value;a="0";t=STRING} @self
+  - setVar{k=skill.sortRank;a=<caster.var.Azuriter_Core_Var_RankingSortList.sortnum.reverse.lastindexof.<skill.var.sortDMG>.add.1>;t=INTEGER} @self
+  - setVar{k=skill.player;a=<target.name>;t=STRING} @UniqueIdentifier{u=<skill.key>} ?!varrange{k=skill.sortRank;r=>10}
+  - message{m="&a&l<skill.var.sortRank>位 &6&l<skill.var.player> &f&lスコア &b<skill.var.sortDMG>"} @PIR{r=<skill.var.range>} ?varset{k=skill.player}
+  - setVar{k=skill.reward;a="10 - <skill.var.sortRank>";t=INTEGER} @self ?varset{k=skill.player}
+  - message{m="<skill.var.sortRank>"} @playerByName{n=<skill.var.player>} ?varset{k=skill.player}
+  - vskill{s=<skill.var.do>;repeat=<skill.var.reward>;repeati=1} @playerByName{n=<skill.var.player>} ?varset{k=skill.player}
+
+#
+
+Azuriter_Core_Enemy_Ranking_PushValue:
+  Skills:
+  - addVar{k=caster.Azuriter_Core_Var_RankingSortList;a=<skill.value>} @self ?varset{k=caster.Azuriter_Core_Var_RankingSortList}
+  - setVar{k=caster.Azuriter_Core_Var_RankingSortList;a=<skill.value>;t=LIST} @self ?!varset{k=caster.Azuriter_Core_Var_RankingSortList}

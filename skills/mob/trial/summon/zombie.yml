@@ -1,0 +1,24 @@
+Azuriter_Neutral_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_1} @self
+
+Azuriter_Big_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_2} @self
+
+Azuriter_Elite_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_3} @self
+
+Azuriter_Armor_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_トライアル_4} @self
+
+Azuriter_ArmorFull_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - skill{s=Azuriter_Summon_Elder_Zombie} @self

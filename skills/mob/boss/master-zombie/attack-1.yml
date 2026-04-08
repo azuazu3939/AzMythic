@@ -1,0 +1,36 @@
+Azuriter_Master_Zombie_Skill_1:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - setVar{k=skill.up;a="0.75";t=FLOAT} @self
+  - skill{s=Azuriter_Master_Zombie_Skill_1_Random;repeat=<random.1to3>;repeati=<random.15to30>} @self
+
+Azuriter_Master_Zombie_Skill_1_Random:
+  Conditions:
+  - incombat true
+  Skills:
+  - setVar{k=skill.up;a="<skill.var.up|0.75> + 0.25";t=FLOAT} @self
+  - skill{s=Azuriter_Master_Zombie_Skill_1_Repeat;repeat=15;repeati=0} @self
+
+Azuriter_Master_Zombie_Skill_1_Repeat:
+  Skills:
+  - setVar{k=skill.syo<skill.var.itr>;a="<random.0to12>";t=INTEGER} @self
+  - setVar{k=skill.sso<skill.var.itr>;a="<random.-16to16>";t=INTEGER} @self
+  - projectile{v=1;i=1;mr=28;sfo=-8;syo=2;tyo=2;fo=true;origin=@selfLocation{so=<skill.var.sso<skill.var.itr>>;y=<skill.var.syo<skill.var.itr>>;cpitch=0};
+    b=DISPLAY;mat=IRON_SWORD;scale=1.5,1.5,1.5;yaw=3.14;pitch=1.57;roll=0.785;vr=2;r=2;
+    d=400;se=false;
+    os=[
+      - e:p{p=end_rod;a=5;ys=0.75;hs=0.25;delay=4;vd=32;audience=@PNO{r=32}} @origin
+    ];
+    oh=[
+      - damage{a="<caster.damage> * <skill.var.up|0.5>";pi=true;ii=true}
+      - throw{v=4;v=0.25}
+      - sound{s=item.trident.return;sc=PLAYERS;p=1;v=0.5}
+      - sound{s=entity.zombie.attack_iron_door;p=2;v=0.5}
+    ];
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.1} @self
+      - sound{s=item.trident.hit_ground;sc=AMBIENT;p=2;v=1.25} @origin
+    ]} @selfLocation{so=<skill.var.sso<skill.var.itr>>;y=<skill.var.syo<skill.var.itr>>;cpitch=0}

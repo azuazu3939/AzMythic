@@ -1,0 +1,26 @@
+Azuriter_Brute_Wanderer_Skill_3:
+  Cooldown: 5
+  Skills:
+  - skill{s=Azuriter_Brute_Wanderer_Skill_3_Run;repeat=2;repeati=10} @self
+
+Azuriter_Brute_Wanderer_Skill_3_Run:
+  Skills:
+  - projectile{v=24;g="<random.1to2>";i=1;r=2;vr=2;vo=1.5;mr=48;d=120;
+    b=DISPLAY;mat=GOLDEN_AXE;scale=1.5,1.5,1.5;yaw=3.14;pitch=1.57;roll=0.785;rs=1;
+    ot=[
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.025} @self
+      - e:p{p=explosion;a=1;cd=0.5} @origin
+    ];
+    oh=[
+      - damage{a="<caster.damage> * 1";pi=true;ii=true}
+      - sound{s=entity.zombie.attack_iron_door;p=2;sc=PLAYERS}
+      - projectilevelocity{m=MULTIPLY;r=true;x=-180;z=-180} @self
+      - endprojectile{delay=8} @self
+    ];
+    oe=[
+      - sound{s=block.anvil.land;v=2;sc=PLAYERS} @origin
+      - addmask{r=16;h=25;material=RED_TERRACOTTA;d=20} @origin
+      - delay 20
+      - damage{a="<caster.damage> * 0.8";pi=true;ii=true} @PNO{r=16}
+      - sound{s=entity.generic.explode;p=0;v=1.5;sc=PLAYERS} @origin
+    ]} @TL

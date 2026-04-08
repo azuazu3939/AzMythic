@@ -1,0 +1,105 @@
+Azuriter_Brute_Wanderer_Skill_1:
+  Skills:
+  - vskill{s=Azuriter_Brute_Wanderer_Skill_1_<skill.var.itr>;f=true} @self
+
+Azuriter_Brute_Wanderer_Skill_1_1:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_1_2:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_1_3:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - (varrange{k=skill.times;r=3} true && healthpercent{p=<0.7} false) false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+
+Azuriter_Brute_Wanderer_Skill_1_4:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - (varrange{k=skill.times;r=4} true && healthpercent{p=<0.4} false) false
+  Skills:
+  - setvarloc{k=skill.pos;a=@selfLocation} @self
+  - setVar{k=skill.loc;a="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>";t=STRING} @self
+  - addmask{r=8;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARadius{r=8;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=6;r=15;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=15;t=6;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=5;r=21;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=21;t=5;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}
+  - addmask{shape=ring;t=4;r=25;h=25;material=RED_TERRACOTTA;d=20} @varLocation{k=skill.pos}
+  - delay 20
+  - damage{a="<caster.damage> * 0.75";pi=true;ii=true} @ARing{r=25;t=4;h=25;loc=<skill.var.loc>}
+  - sound{s=entity.zombie.break_wooden_door;sc=PLAYERS;p=2;v=2} @varLocation{k=skill.pos}

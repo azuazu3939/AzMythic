@@ -1,0 +1,14 @@
+Azuriter_Summon_トライアル_2:
+  Cooldown: 1
+  Conditions:
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} &&
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+  Skills:
+  - sound{s=entity.blaze.death;sc=PLAYERS} @self
+  - setVar{k=skill.chance;a="<random.1to10>";t=INTEGER} @self
+  - summon{t=Azuriter_トライアル_2_1;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=1to9}
+  - summon{t=Azuriter_トライアル_2_2;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=10}

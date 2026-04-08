@@ -1,0 +1,24 @@
+Azuriter_Boss_Basamos_HighDrop:
+  Skills:
+  - cmd{c="mlg <caster.name> Azuriter_幻想獣の皮 1 0.8"} @self
+  - cmd{c="mlg <caster.name> Azuriter_砂核 1 0.05"} @self
+  - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G1 1 0.15"} @self
+
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.005"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.005"} @self
+
+Azuriter_Boss_Basamos_SpawnDrop:
+  Skills:
+  - cmd{c="mlg <caster.name> Azuriter_幻想獣の皮 1 0.05"} @self

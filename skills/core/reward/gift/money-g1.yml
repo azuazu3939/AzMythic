@@ -1,0 +1,31 @@
+Azuriter_Core_Gift_Money_G1_Use:
+  Cooldown: 0.05
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_MoneyGift_G1}
+  Skills:
+  - takeitem{a=1;i=Azuriter_MoneyGift_G1} @self
+  - sound{s=block.note_block.pling;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.firework_rocket.blast;sc=PLAYERS;audience=caster} @self
+  - setVar{k=skill.gift;a="100 + <random.0to100>";t=INTEGER} @self
+  - currencygive{amount=<skill.var.gift|0>} @self
+  - message{m="&e<skill.var.gift|0>Mine &fを獲得しました。"}
+
+Azuriter_Core_Gift_Money_G1_BulkUse:
+  Cooldown: 4
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_MoneyGift_G1}
+  Skills:
+  - setVar{k=skill.repeatM;a="<item.amount>";t=INTEGER} @self
+  - takeitem{a=<skill.var.repeatM>;i=Azuriter_MoneyGift_G1} @self
+  - sound{s=block.note_block.pling;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.firework_rocket.blast;sc=PLAYERS;audience=caster} @self
+  - setVar{k=skill.gift_all;a="0";t=INTEGER} @self
+  - skill{s=Azuriter_Core_Gift_Money_G1_Loot;repeat="<skill.var.repeatM> - 1";repeati=1} @self
+  - delay 80
+  - message{m="&e<skill.var.gift_all|0>Mine &fを獲得しました。"}
+
+Azuriter_Core_Gift_Money_G1_Loot:
+  Skills:
+  - setVar{k=skill.gift;a="100 + <random.0to100>";t=INTEGER} @self
+  - currencygive{amount=<skill.var.gift|0>} @self
+  - setVar{k=skill.gift_all;a="<skill.var.gift_all|0> + <skill.var.gift|0>";t=INTEGER} @self

@@ -1,0 +1,42 @@
+Azuriter_Item_Ranged_EmpuriaBow_BurstRelay:
+  Cooldown: 0.2
+  Conditions:
+  - hasAura{n=Azuriter_Item_Aura_EmpuriaBowBurst} true
+  - hasTag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} true
+  Skills:
+  - auraRemove{n=Azuriter_Item_Aura_EmpuriaBowBurst;s=1} @self
+  - sudo{
+    s=[
+      - skill{
+        s=[
+          - projectile{v=0.01;vr=2;hr=2;hp=false;hnp=true;hitself=true;i=1;mr=20;syo=15;sso="<random.-10to10>";sfo="<random.-10to10>";b=ARROW;g=12;
+            oh=[
+              - sudo{s=Azuriter_Item_Ranged_EmpuriaBow_BurstHit;cat=true} @trigger
+            ]} @self
+        ];repeat=25;repeati=0} @self
+    ];cat=true}
+  - delay 4
+  - skill{s=Azuriter_Item_Ranged_EmpuriaBow_BurstRelay}
+
+Azuriter_Item_Ranged_EmpuriaBow_BurstHit:
+  Skills:
+  - modifyMana{a=10;m=give} @self
+  - damage{a="<caster.damage> + 100";pi=true;ii=true;e=BLUE;dc=PROJECTILE} @trigger
+
+Azuriter_Item_Ranged_EmpuriaBow_BurstReady:
+  Cooldown: 1
+  Conditions:
+  - hasAura{n=Azuriter_Item_Aura_EmpuriaBowBurst} true
+  - hasTag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} false
+  Skills:
+  - message{m="エンピュリアボウバースト実行可能"} @self
+  - addtag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} @self
+
+Azuriter_Item_Ranged_EmpuriaBow_BurstAura:
+  Skills:
+  - aura{n=Azuriter_Item_Aura_EmpuriaBowBurst;ms=5;rd=true;t=1200;
+    oe=[
+      - removeTag{t=Azuriter_Item_Tag_EmpuriaBowBurstRunning} @self
+      - message{m="エンピュリアボウバースト終了"} @self
+      - setMaterialCooldown{m=BOW;cd=3} @self
+    ]} @self

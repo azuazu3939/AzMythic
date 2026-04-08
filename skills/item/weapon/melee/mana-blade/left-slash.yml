@@ -1,0 +1,35 @@
+Azuriter_Item_Melee_ManaBladeAlpha_LeftSlash:
+  Cooldown: 0.25
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_マナブレード_アルファ}
+  - hasMana{m=>35;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self
+    ]}
+  - matCooldown{m=DIAMOND_SWORD} false
+  - crouching false
+  Skills:
+  - modifyMana{a=35;m=consume} @self
+  - setMaterialCooldown{m=DIAMOND_SWORD;d=5} @self
+  - sound{s=block.beacon.power_select;p=2;audience=caster;sc=BLOCKS} @self
+  - setVar{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;a="<caster.var.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge|0> + 1";t=INTEGER} @self
+  - sound{s=block.anvil.place;p=2;v=0.5;audience=caster;sc=BLOCKS} @self ?varrange{k=caster.Azuriter_Item_Var_ManaBladeAlpha_LeftCharge;r=10}
+  - slash{
+    d=4;w=4;h=6;r=2;roll="<random.-60to69> + 180";p=18;y=1.6;r=4;
+    op=[
+      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#1ac466} @origin ?!hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst}
+      - e:p{p=red_dust;size=2;a=1;ys=0.05;hs=0.05;s=0.05;audience=caster;c=#16ea0f} @origin
+      - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#80d214} @origin
+      - e:p{p=red_dust;size=2;a=2;ys=0.15;hs=0.15;s=0.05;audience=caster;c=#d0ea0d} @origin ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst}
+    ];
+    oh=[
+      - setVar{k=skill.dmg;a="75";t=INTEGER} @self ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_LeftBurst}
+      - damage{a="<caster.damage> + <skill.var.dmg|0>";pi=true;ii=true;e=GREEN}
+      - sound{s=entity.zombie_villager.cure;p=1.25;v=0.05;audience=caster;sc=AMBIENT}
+      - velocity{x=0;y=0;z=0;m=SET}
+    ];
+    c=[
+      - isliving true
+    ]} @self
+
+# 右始動の蓄積解放。

@@ -1,0 +1,60 @@
+OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  - targetWithin{d=10}
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - look{f=true} @T
+  - delay 1
+  - potion{t=SLOWNESS;l=7;d=20;p=false} @self
+  - potion{t=SLOW_FALLING;l=7;d=25;p=false} @self
+  - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - sound{s=entity.wolf.ambient;p=0.75;v=1.5} @self
+  - delay 10
+  - sound{s=block.trial_spawner.ominous_activate;p=2;v=2} @self
+  - leap{v=-1050} @forward{f=10;y=-5}
+  - delay 10
+  - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process @self
+  - delay 100
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self
+
+OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process:
+  Skills:
+  - setVar{var=skill.tick;val="0";t=INTEGER} @self
+  - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=3} @self
+  - projectile{
+    ot=[
+      - e:ps{p=spark;a=50;r=1} @origin
+      - e:ps{p=sweep_attack;a=20;r=2} @origin
+      - e:ps{p=cloud;a=50;s=0.2;r=1;cd=0.2} @origin
+
+      - setVar{var=skill.tick;val="<skill.var.tick> + 1";t=INTEGER} @self
+      - skill:OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick @self
+    ];
+    oh=[
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
+    ];
+    oe=[
+      - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
+      - e:pr{r=8;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
+      - e:pr{r=10;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
+      - e:pr{r=4;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
+      - e:pr{r=8;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
+      - e:pr{r=10;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
+
+      - e:p{p=explosion_huge;a=1;vs=1;hs=1;repeat=3;repeati=5} @origin
+      - sound{s=block.end_portal.spawn;p=2;v=1} @origin
+      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=6}
+      - potion{t=SLOW;l=2;d=100;p=false} @ENO{r=6;c=[ - samefaction false - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    v=2;i=1;vr=3;hr=3;se=false;syo=2;sfo=3;c=[ - samefaction false ]} @forward{f=10;y=-5}
+
+OpenField_Enemy_風牙狼ウィデラー_MCLove32_ATTACK_2_Process_Tick:
+  Conditions:
+  - (varrange{var=skill.tick;val=5} || varrange{var=skill.tick;val=10} || varrange{var=skill.tick;val=15} || varrange{var=skill.tick;val=20}) true
+  Skills:
+  - modifyprojectile{t=VELOCITY;v=2;a=MULTIPLY} @self

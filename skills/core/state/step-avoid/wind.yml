@@ -1,0 +1,59 @@
+Azuriter_Core_StepAvoid_WindCombo:
+  Skills:
+  - mi{v=4;vo=3;vr=1.5;hr=1.5;i=1;in=18;hp=false;hnp=true;mr=24;d=100;syo=4.5;sfo=0;
+    b=DISPLAY;mat=WOODEN_SWORD;scale=1.25,1.25,1.25;yaw=3.14;pitch=1.57;roll=0.785;
+    ot=[
+      - modifyprojectile{t=INERTIA;a=MULTIPLY;v=0.6} @self
+      - modifyprojectile{t=VELOCITY;a=MULTIPLY;v=1.2} @self
+    ];
+    os=[
+      - sound{s=block.trial_spawner.ominous_activate;p=2;v=0.25;sc=PLAYERS;audience=caster} @self
+    ];
+    oh=[
+      - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 32";t=FLOAT} @self
+      - setVar{k=skill.damage;a="<skill.var.damage|0> / 2";t=FLOAT} @self ?!wearing{s=HAND;i=WOODEN_SWORD}
+      - damage{a="<skill.var.damage>";pi=true;ii=true}
+      - sound{s=entity.zombie.attack_wooden_door;sc=PLAYERS;audience=caster}
+    ];
+    conditions=[
+      - isLiving true
+    ]} @EIR{r=24;limit=5;sort=RANDOM}
+
+Azuriter_Core_StepAvoid_WindPath:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_風上の道}
+  Skills:
+  - modifyMana{a=100;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+  - delay 15
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo} @self
+
+Azuriter_Core_StepAvoid_WindStride:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_風上の歩み}
+  Skills:
+  - modifyMana{a=60;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+  - delay 15
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo} @self
+
+Azuriter_Core_StepAvoid_WindTrace:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_風上の軌跡}
+  Skills:
+  - modifyMana{a=80;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD}
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;delay=4;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;delay=6;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;delay=8;audience=caster;sc=PLAYERS}
+  - delay 15
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo} @self

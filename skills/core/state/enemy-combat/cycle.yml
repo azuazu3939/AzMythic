@@ -1,0 +1,85 @@
+Azuriter_Core_Enemy_EnterCombat:
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyCycleStart} false
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} castinstead Azuriter_Core_Enemy_EnterCombat_NextCycle
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_EnemyCycleStart} @self
+  - setVar{n=skill.point;a="8";t=INTEGER} @self
+  - setVar{n=skill.multiple;a="10";t=INTEGER} @self
+  - setVar{n=skill.shield_point;a="<skill.var.point> * <skill.var.multiple>";t=INTEGER} @self
+  - setVar{n=skill.shield;a="0";t=INTEGER} @self
+  - setVar{n=caster.Azuriter_Core_Var_DownCount;a="<caster.var.Azuriter_Core_Var_DownCount|0>";t=INTEGER} @self
+  - setVar{n=skill.downTick;a="<skill.down_tick>";t=INTEGER} @self
+  - meta:Azuriter_Core_Enemy_EnterCombat_DamageCount @self
+  - delay 1
+  - skill:Azuriter_Core_Enemy_EnterCombat_DamageAura{break=<skill.shield_break>} @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_InitShields @self
+  - delay 1200
+  - heal{a="<caster.mhp> * <skill.heal_percent>"} @self
+  - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self
+  - skill:Azuriter_Core_Enemy_EnterCombat @self
+
+#
+
+Azuriter_Core_Enemy_EnterCombat_DamageCount:
+  Skills:
+  - setVar{k=caster.Azuriter_Core_Var_TargetCount;a="0";t=INTEGER} @self
+  - sudoskill{
+    s=[
+      - setVar{k=target.Azuriter_Core_Var_TargetCount;a="<target.var.Azuriter_Core_Var_TargetCount|0> + 1";t=INTEGER} @trigger
+    ];cat=true} @TTP
+
+#
+
+Azuriter_Core_Enemy_EnterCombat_DamageAura:
+  Skills:
+  - setVar{var=skill.dmg;val="0";t=FLOAT} @self
+  - setVar{var=skill.break;val="<caster.mhp> * (1 + <caster.var.Azuriter_Core_Var_TargetCount> * 0.1) * <skill.break> / 10000 / 7 * (1 + <caster.var.Azuriter_Core_Var_DownCount> * 0.5)";t=FLOAT} @self
+  - auraRemove{n=Azuriter_Core_Aura_EnemyDamageWindow} @self
+  - ondamaged{auraName=Azuriter_Core_Aura_EnemyDamageWindow;d=1200;
+      oh=[
+        - setVar{var=skill.dmg;val="<skill.var.dmg> + <skill.var.damage-amount>";t=FLOAT} @self
+        - setVar{var=skill.temp;val="<skill.var.break> - <skill.var.dmg>";t=FLOAT} @self
+        - skill:Azuriter_Core_Enemy_EnterCombat_DamageBreak @self
+      ]} @self
+
+#
+
+Azuriter_Core_Enemy_EnterCombat_DamageBreak:
+  Conditions:
+  - varrange{var=skill.temp;val=<0} true
+  Skills:
+  - setVar{var=skill.dmg;val="<skill.var.dmg> - <skill.var.break>";t=FLOAT} @self
+  - auraRemove{n=Azuriter_Core_Aura_EnemyShieldNode_<skill.var.shield>} @self
+  - auraRemove{n=Azuriter_Core_Aura_EnemyDamageWindow} ?varrange{k=skill.shield;r=7} #変更時追加入力必須
+  - setVar{n=skill.shield;a="<skill.var.shield> + 1";t=INTEGER} @self
+  - skill:Azuriter_Core_Enemy_Down @self
+
+#
+
+Azuriter_Core_Enemy_EnterCombat_InitShields:
+  Skills:
+  - setVar{n=skill.count;a="0";t=INTEGER} @self
+  - skill:Azuriter_Core_Enemy_EnterCombat_InitShieldNode{repeat=<skill.var.point>;repeati=0} @self
+
+#
+
+Azuriter_Core_Enemy_EnterCombat_InitShieldNode:
+  Skills:
+  - setVar{n=skill.count_point;a="<skill.var.count> * <skill.var.multiple>";t=INTEGER} @self
+  - auraRemove{n=Azuriter_Core_Aura_EnemyShieldNode_<skill.var.count>} @self
+  - o{
+      i=1;vr=0;hr=0;hp=false;hnp=false;mr=24;d=1200;r=3;oy=2;p=<skill.var.shield_point>;sp=<skill.var.count_point>;
+      b=ITEM;mat=DIAMOND;enchanted=true;rd=true;
+      auraName=Azuriter_Core_Aura_EnemyShieldNode_<skill.var.count>} @self
+  - setVar{n=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
+
+#
+
+Azuriter_Core_Enemy_EnterCombat_NextCycle:
+  Skills:
+  - delay 20
+  - skill:Azuriter_Core_Enemy_EnterCombat @self
+
+#@Param / FLOAT: <skill.var.dmg>

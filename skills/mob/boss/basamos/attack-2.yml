@@ -1,0 +1,86 @@
+OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_2:
+  Cooldown: 30
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - addtag{t=Azuriter_Mob_Tag_BasamosShow} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - o{
+    r=15;vr=8;hr=1.25;hp=true;d=600;oy=5;p=360;sp=0;hitself=true;c=1;
+    b=MOB;mm=Azuriter_バサモスサンド_幻想1;rd=true;
+    auraName=Azuriter_Mob_Aura_BasamosAttack2Ring1;
+    ot=[
+      - modifyprojectile{t=RADIUS;a=ADD;v=-0.025}
+      - addVar{k=skill.basamosAttack2_1;a=1} @self
+    ];
+    os=[
+      - setVar{k=skill.basamosAttack2_1;a="0";t=INTEGER} @self
+    ];
+    oh=[
+      - damage{a=<skill.var.dmg>;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=8}
+    ];
+    oe=[
+      - sound{s=block.end_gateway.spawn;sc=AMBIENT} @origin
+      - e:p{p=cloud;a=50;ys=1;hs=2;s=1;vd=48;audience=@PNO{r=48}} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;delay=2;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=12} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - delay 2
+      - e:p{p=cloud;a=80;ys=1.25;hs=4;s=1;vd=48;audience=@PNO{r=48}} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;delay=2;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=16} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - delay 2
+      - e:p{p=cloud;a=120;ys=1.5;hs=6;s=1;vd=48;audience=@PNO{r=48}} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;delay=2;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=20} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - delay 2
+      - e:p{p=cloud;a=180;ys=1.75;hs=8;s=1;vd=48;audience=@PNO{r=48}} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;delay=2;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=24} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - delay 2
+      - e:p{p=cloud;a=250;ys=2;hs=10;s=1;vd=48;audience=@PNO{r=48}} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;delay=2;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=28} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - delay 2
+      - e:p{p=cloud;a=350;ys=2.25;hs=12;s=1;vd=48;audience=@PNO{r=48}} ?varrange{k=skill.basamosAttack2_1;r=>400}
+      - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;delay=2;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=32} ?varrange{k=skill.basamosAttack2_1;r=>400}
+    ]} @self
+  - o{
+    r=15;vr=8;hr=1.25;hp=true;d=600;oy=5;p=360;sp=120;hitself=true;c=1;
+    b=MOB;mm=Azuriter_バサモスサンド_幻想1;rd=true;
+    auraName=Azuriter_Mob_Aura_BasamosAttack2Ring2;
+    ot=[
+      - modifyprojectile{t=RADIUS;a=ADD;v=-0.025}
+      - addVar{k=skill.basamosAttack2_2;a=1} @self
+    ];
+    os=[
+      - setVar{k=skill.basamosAttack2_2;a="0";t=INTEGER} @self
+    ];
+    oh=[
+      - damage{a=<skill.var.dmg>;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=8}
+    ];
+    oe=[
+      - sound{s=block.end_gateway.spawn;sc=AMBIENT} @origin
+      - heal{a="<caster.mhp> * 0.2"} @self ?varrange{k=skill.basamosAttack2_2;r=>400}
+      - e:p{p=heart;a=20;ys=2;hs=3;size=2;s=1} @self ?varrange{k=skill.basamosAttack2_2;r=>400;vd=48;audience=@PNO{r=48}}
+    ]} @self
+  - o{
+    r=15;vr=8;hr=1.25;hp=true;d=600;oy=5;p=360;sp=240;hitself=true;c=1;
+    b=MOB;mm=Azuriter_バサモスサンド_幻想1;rd=true;
+    auraName=Azuriter_Mob_Aura_BasamosAttack2Ring3;
+    ot=[
+      - modifyprojectile{t=RADIUS;a=ADD;v=-0.025}
+      - addVar{k=skill.basamosAttack2_3;a=1} @self
+    ];
+    os=[
+      - setVar{k=skill.basamosAttack2_3;a="0";t=INTEGER} @self
+    ];
+    oh=[
+      - damage{a=<skill.var.dmg>;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=8}
+    ];
+    oe=[
+      - sound{s=block.end_gateway.spawn;sc=AMBIENT} @origin
+      - potion{t=RESISTANCE;l=1;d=1200;p=false} @self ?varrange{k=skill.basamosAttack2_3;r=>400}
+      - potion{t=GLOWING;l=0;d=1200;p=false} @self ?varrange{k=skill.basamosAttack2_3;r=>400}
+      - e:p{p=crit_magic;a=15;size=2;ys=2;hs=4;repeat=29;repeati=40;vd=48;audience=@PNO{r=48}} @self ?varrange{k=skill.basamosAttack2_3;r=>400}
+    ]} @self
+  - delay 200
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self

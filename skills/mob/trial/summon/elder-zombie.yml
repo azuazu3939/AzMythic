@@ -1,0 +1,43 @@
+Azuriter_Summon_Elder_Zombie:
+  Skills:
+  - sound{s=entity.generic.explode;sc=PLAYERS} @self
+  - summon{t=Azuriter_Elder_Zombie;a=1;r=0;s=true;delay=30} @self
+
+Azuriter_Elder_Zombie_Summon:
+  Cooldown: 1
+  Skills:
+  - setVar{k=skill.chance;a="<random.1to100>";t=INTEGER} @self
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_1} ?varrange{k=skill.chance;r=1to20}
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_2} ?varrange{k=skill.chance;r=21to40}
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_3} ?varrange{k=skill.chance;r=41to60}
+  - skill{s=Azuriter_Elder_Zombie_Summon_Check_4} ?varrange{k=skill.chance;r=61to80}
+  - delay 1
+  - skill{s=Azuriter_Summon_トライアル_1} @self ?varrange{k=skill.chance;r=1to20}
+  - skill{s=Azuriter_Summon_トライアル_2} @self ?varrange{k=skill.chance;r=21to40}
+  - skill{s=Azuriter_Summon_トライアル_3} @self ?varrange{k=skill.chance;r=41to60}
+  - skill{s=Azuriter_Summon_トライアル_4} @self ?varrange{k=skill.chance;r=61to80}
+  - skill{s=Azuriter_Summon_トライアル_5} @self ?varrange{k=skill.chance;r=81to100}
+
+Azuriter_Elder_Zombie_Summon_Check_1:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial1Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.21to100>";t=INTEGER} @self
+
+Azuriter_Elder_Zombie_Summon_Check_2:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial2Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.41to100>";t=INTEGER} @self
+
+Azuriter_Elder_Zombie_Summon_Check_3:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial3Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.61to100>";t=INTEGER} @self
+
+Azuriter_Elder_Zombie_Summon_Check_4:
+  TargetConditions:
+  - hasAura{n=Azuriter_Mob_Aura_Trial4Finish}
+  Skills:
+  - setVar{k=skill.chance;a="<random.81to100>";t=INTEGER} @self

@@ -1,0 +1,51 @@
+Azuriter_Core_Gift_Armor_G2_Use:
+  Cooldown: 0.05
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ArmorGift_G2}
+  Skills:
+  - takeitem{a=1;i=Azuriter_ArmorGift_G2} @self
+  - sound{s=block.note_block.pling;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.firework_rocket.blast;sc=PLAYERS;audience=caster} @self
+  - skill{s=Azuriter_Core_Gift_Armor_G2_Loot} @self
+
+Azuriter_Core_Gift_Armor_G2_Loot:
+  Skills:
+  - setVar{k=skill.get_chance;a="<random.1to64>";t=INTEGER} @self
+  - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G2_Ticket <random.1to3> 1"} @self
+  - cmd{c="mlg <caster.name> Azuriter_ArmorGift_G2_Ticket <random.3to12> 1"} @self ?varrange{k=skill.get_chance;r=>60}
+
+  - cmd{c="mlg <caster.name> Azuriter_ウィクサーH 1 1"} @self ?varrange{k=skill.get_chance;r=1}
+  - cmd{c="mlg <caster.name> Azuriter_ウィクサーC 1 1"} @self ?varrange{k=skill.get_chance;r=2}
+  - cmd{c="mlg <caster.name> Azuriter_ウィクサーL 1 1"} @self ?varrange{k=skill.get_chance;r=3}
+  - cmd{c="mlg <caster.name> Azuriter_ウィクサーB 1 1"} @self ?varrange{k=skill.get_chance;r=4}
+
+  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速度ジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @self
+  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @self
+
+Azuriter_Core_Gift_Armor_G2_BulkUse:
+  Cooldown: 0.5
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ArmorGift_G2}
+  Skills:
+  - setVar{k=skill.repeatA;a="<item.amount>";t=INTEGER} @self
+  - takeitem{a=<skill.var.repeatA>;i=Azuriter_ArmorGift_G2} @self
+  - sound{s=block.note_block.pling;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.firework_rocket.blast;sc=PLAYERS;audience=caster} @self
+  - skill{s=Azuriter_Core_Gift_Armor_G2_Loot;repeat="<skill.var.repeatA> - 1";repeati=1} @self
+
+  - setVar{k=skill.msg;a="1500 * <skill.var.repeatA>";t=INTEGER} @self
+  - currencygive{amount="<skill.var.msg>"} @self
+  - delay 80
+  - am{m="&e<skill.var.msg>Mine &fを獲得しました。"}

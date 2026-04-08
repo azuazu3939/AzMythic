@@ -1,0 +1,8 @@
+Azuriter_Master_Zombie_Skills:
+  Cooldown: 1
+  Conditions:
+  - incombat true
+  Skills:
+  - randomskill{skills=Azuriter_Master_Zombie_Skill_1 5,Azuriter_Master_Zombie_Skill_2 3,Azuriter_Master_Zombie_Skill_3 6,Azuriter_Master_Zombie_Skill_4 2,Azuriter_Master_Zombie_Skill_5 4;fbs=Azuriter_Master_Zombie_Skill_1} @self
+  - delay 200
+  - skill{s=Azuriter_Master_Zombie_Skills} @self

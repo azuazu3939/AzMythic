@@ -1,0 +1,27 @@
+Azuriter_Core_StepAvoid_StepDashSword:
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_ステップダッシュソード}
+  Skills:
+  - modifyMana{a=50;m=give} @self ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 250";t=FLOAT} @self
+  - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
+  - sound{s=block.note_block.chime;p=1.26;audience=caster;delay=2;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.68;audience=caster;delay=4;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.9;p=1.26;audience=caster;delay=6;sc=PLAYERS}
+  - sound{s=block.note_block.chime;v=0.3;p=1.68;audience=caster;delay=8;sc=PLAYERS}
+  - delay 15
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=8;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=8;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=2;v=1.25;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
+  - delay 2
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=8;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=8;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self
+  - delay 2
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=8;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=8;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - sound{s=entity.ender_dragon.flap;p=2;sc=PLAYERS;audience=caster} @self
+  - sound{s=entity.player.attack.sweep;p=0;sc=PLAYERS;audience=caster} @self

@@ -1,0 +1,30 @@
+Azuriter_Item_Ranged_FireBulletBow_ShotExplode:
+  Cooldown: 1
+  Conditions:
+  - varrange{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;r=>0}
+  Skills:
+  - setVar{k=caster.Azuriter_Item_Var_FireBulletBowBurstStock;a="<caster.var.Azuriter_Item_Var_FireBulletBowBurstStock> - 1";t=INTEGER} @self
+  - sound{s=entity.allay.item_given;audience=caster;p=2;sc=AMBIENT;audience=caster} @self
+  - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.75;sc=AMBIENT;audience=caster} @self
+  - delay 5
+  - projectile{
+    ot=[
+      - e:p{p=explosion;a=1;audience=caster} @origin
+      - e:p{p=flame;a=4;ys=0.5;hs=0.5;s=0.75;audience=caster} @origin
+    ];
+    oh=[
+      - damage{a="<caster.damage> * 0.5";pi=true;ii=true;e=RED;dc=PROJECTILE}
+      - modifyMana{a=15;m=give} @self
+    ];
+    c=[
+      - isliving true
+    ];
+    os=[
+      - sound{s=item.trident.hit_ground;v=0.15;p=1;audience=caster;sc=AMBIENT} @origin
+      - sound{s=entity.puffer_fish.blow_out;v=0.15;p=0.5;audience=caster;sc=AMBIENT} @origin
+      - sound{s=entity.generic.extinguish_fire;v=0.01;p=2;audience=caster;sc=AMBIENT;delay=3} @origin
+      - sound{s=entity.generic.explode;v=0.075;p=2;audience=caster;sc=AMBIENT;delay=3} @origin
+      - sound{s=entity.zombie.infect;v=0.15;p=2;audience=caster;sc=AMBIENT;delay=3} @origin
+      - e:p{p=cloud;audience=caster;a=5;ys=1;hs=2;s=1.25} @origin
+    ];
+    v=16;i=8;vr=2;hr=3;se=false;hp=false;hnp=true;sfo=2;mr=12;origin=@targeted;fo=true;tyo=1} @ringAroundOrigin{r=16;p=16}

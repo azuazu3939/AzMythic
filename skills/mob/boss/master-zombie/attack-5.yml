@@ -1,0 +1,10 @@
+Azuriter_Master_Zombie_Skill_5:
+  Cooldown: 12
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  Skills:
+  - addmask{shape=cone;r=32;angle=45;material=RED_TERRACOTTA;duration=20;h=25} @selfLocation{cpitch=0}
+  - setvar{k=skill.loc;val="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>,<caster.l.yaw>";t=STRING} @self
+  - delay 20
+  - damage{a="<caster.damage> * 2";pi=true;ii=true} @ACone{a=45;r=32;h=25;loc=<skill.var.loc>}

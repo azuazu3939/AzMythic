@@ -1,0 +1,28 @@
+OpenField_Enemy_幻想獣バサモス_MCLove32_ATTACK_3:
+  Cooldown: 8
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - stun{t=120} @self
+  - addmask{shape=ring;thickness=10;h=5;r=40;material=RED_TERRACOTTA;d=20} @selfLocation{cpitch=0}
+  - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;delay=20} @PlayersInRing{max=40;min=30}
+  - sound{s=block.end_portal.spawn;p=2;delay=20;sc=AMBIENT} @self
+  - delay 20
+  - addmask{shape=ring;thickness=10;h=5;r=30;material=RED_TERRACOTTA;d=20} @selfLocation{cpitch=0}
+  - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;delay=20} @PlayersInRing{max=30;min=20}
+  - sound{s=block.end_portal.spawn;p=2;delay=20;sc=AMBIENT} @self
+  - delay 20
+  - addmask{shape=ring;thickness=10;h=5;r=20;material=RED_TERRACOTTA;d=20} @selfLocation{cpitch=0}
+  - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;delay=20} @PlayersInRing{max=20;min=10}
+  - sound{s=block.end_portal.spawn;p=2;delay=20;sc=AMBIENT} @self
+  - delay 20
+  - addmask{shape=ring;thickness=10;h=5;r=10;material=RED_TERRACOTTA;d=20} @selfLocation{cpitch=0}
+  - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;delay=20} @PlayersInRing{max=10;min=0}
+  - sound{s=block.end_portal.spawn;p=2;delay=20;sc=AMBIENT} @self
+  - delay 60
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self

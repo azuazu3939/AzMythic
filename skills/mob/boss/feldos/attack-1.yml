@@ -1,0 +1,57 @@
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process @self
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process:
+  Skills:
+  - addtag{t=Azuriter_Mob_Tag_FeldosAimToggle} @self
+  - sound{s=entity.zoglin.step;v=1.5;repeat=5;repeati=2} @self
+  - delay 20
+  - look{f=true} @T
+  - delay 5
+  - projectile{
+    ot=[
+      - teleport @origin
+      - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
+      - look{f=true} @projectileforward
+      - endprojectile @self ?hasTag{t=Azuriter_Core_Tag_EnemyDown}
+
+      - removetag{t=Azuriter_Mob_Tag_FeldosAimToggle} @self ?hasTag{t=Azuriter_Mob_Tag_FeldosAimToggle} 0.025
+      - addtag{t=Azuriter_Mob_Tag_FeldosAimToggle} @self ?!hasTag{t=Azuriter_Mob_Tag_FeldosAimToggle} 0.02
+      - setProjectileDirection{m=0.2} @TL ?!hasTag{t=Azuriter_Mob_Tag_FeldosAimToggle}
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+    ];
+    oe=[
+      - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+      - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish
+    ];
+    v=6;vr=3;hr=3;i=1;se=false;sfo=0;syo=0;mr=20;d=40;sb=false;hs=true;hfs=0;mdh=10;mch=10;c=[ - samefaction false ]} @forward{lockpitch=true;fo=5}
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish:
+  Skills:
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=0} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=30} @self
+  - skill:OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile{ho=-30} @self
+
+OpenField_Enemy_焔獣フェルドス_MCLove32_ATTACK_1_Process_Finish_Projectile:
+  Skills:
+  - projectile{
+    ot=[
+      - modifyprojectile{t=VELOCITY;v=1.025;a=MULTIPLY} @self
+      - sound{s=entity.zoglin.step;v=1.25;cd=0.05} @self
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg> * 0.75";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+    ];
+    v=10;i=1;g=0.5;sfo=2;syo=1;tyo=5;mr=12;c=[ - samefaction false ];vr=1.5;hr=1.5;
+    ho=<skill.ho>;b=DISPLAY;mat=MAGMA_BLOCK;ps=1;rs=1;ys=1;scale=1,1,1} @forward

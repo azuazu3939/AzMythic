@@ -1,0 +1,16 @@
+# アイスベイルアーチャーの氷弾。
+Azuriter_Mob_Common_IceveilArcher_Shot:
+  Cooldown: 4
+  Skills:
+  - setVar{k=skill.time;a="18";t=INTEGER} @self
+  - stun{f=false;t=80}
+  - projectile{
+    ot=[
+      - setVar{k=skill.time;a="<skill.var.time> - 1";t=INTEGER} @self
+      - delay <skill.var.time>
+      - addMask{b=PACKED_ICE;d=20;r=2.5} @origin
+      - sound{s=block.glass.break;sc=PLAYERS;p=1.6;v=0.35;delay=24} @origin
+      - damage{a="<caster.damage> + 6";pi=true;ii=true;delay=10} @PlayersNearOrigin{r=2.5}
+      - potion{t=SLOW;l=2;d=100;p=false;delay=10} @PlayersNearOrigin{r=2.5}
+    ];
+    v=28;i=1;hp=false;se=false;mr=24;d=30;tyo=1} @forward{lockpitch=true}

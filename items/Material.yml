@@ -406,3 +406,16 @@ Azuriter_Basamos_Summon_Paper:
   ItemUpdater:
     Version: 1
   Group: 'Material'
+
+Azuriter_Glacies_Summon_Paper:
+  Id: paper
+  Display: "&fグラキエスの召喚紙"
+  Lore:
+  - "&f紙には32と書かれている…"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'

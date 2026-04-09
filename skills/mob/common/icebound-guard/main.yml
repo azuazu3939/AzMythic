@@ -1,0 +1,26 @@
+# アイスバウンドガードの凍土叩きつけ。
+Azuriter_Mob_Common_IceboundGuard_Loop:
+  Cooldown: 6
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - potion{t=SLOWNESS;d=24;l=3;p=false} @self
+  - delay 20
+  - sound{s=entity.zombie.attack_iron_door;sc=NEUTRAL;p=0.8;v=1.5} @self
+  - projectile{
+    ot=[
+      - delay 18
+      - leap{v=250} @origin
+    ];
+    oe=[
+      - addMask{b=BLUE_ICE;r=8;d=20}
+      - e:pr{p=snowflake;pts=24;a=2;vs=0.05;hs=0.05;d=true;dir=0,1,0;s=1.1;audience=nearby;r=4;size=0.75;y=0.5} @origin
+      - damage{a="<caster.damage> * 1.35";pi=true;ii=true;delay=16} @PNO{r=8}
+      - potion{t=SLOW;l=2;d=120;p=false;delay=16} @PlayersNearOrigin{r=8}
+    ];
+    v=18;syo=2;tyo=2;g=1;i=1;se=false;sfo=0;mr=48;vr=2} @T
+  - delay <random.80to180>
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - skill{s=Azuriter_Mob_Common_IceboundGuard_Loop} @self

@@ -1,0 +1,25 @@
+# フロストファングの飛びかかり。
+Azuriter_Mob_Common_Frostfang_Loop:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - jump{v=0.9} @self
+  - delay 4
+  - projectile{
+    ot=[
+      - delay 4
+      - leap{v=220} @origin
+    ];
+    oe=[
+      - addMask{b=PACKED_ICE;r=5;d=20}
+      - sound{s=block.glass.break;sc=NEUTRAL;p=1.4;v=1.2} @origin
+      - damage{a="<caster.damage> + 4";pi=true;ii=true} @PlayersNearOrigin{r=5}
+      - potion{t=SLOW;l=1;d=80;p=false} @PlayersNearOrigin{r=5}
+    ];
+    v=32;sfo=0;syo=0;i=1;hp=false;d=120;g=1;tyo=-0.5;vr=2} @TL
+  - delay <random.60to140>
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - skill{s=Azuriter_Mob_Common_Frostfang_Loop} @self

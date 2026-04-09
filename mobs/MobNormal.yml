@@ -440,6 +440,66 @@ Azuriter_BigCamela:
 
   - classexp{a=<random.1to13>} @TTP ~onDeath
 
+Azuriter_Dusthowler_Camela:
+  Template: Azuriter_Enemy_Generic
+  Display: "&6砂吼え大角キャムラ"
+  Health: 240
+  Damage: 36
+  Drops:
+  - money 12to18 0.7
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: ENTITY
+      EntityType: CAMEL
+    Transform:
+      Translation: 0,0,0
+      Scale: 1.4,1.08,1.4
+    Living:
+      Baby: false
+      Silent: true
+      Glowing: false
+      Invulnerable: false
+      Gravity: true
+      Pose: STANDING
+      HealthDisplay: false
+    Combat:
+      HurtTint: true
+      KnockbackProfile: default
+      HeadTrack: true
+      HitboxScale: 1.4,1.4,1.4
+  AITargetSelectors:
+  - clear
+  - fleeConditional{distance=28;speed=1.18;safespeed=1;conditions=[ - mobsInRadius{r=28;a=>0;t=Azuriter_Boss_Basamos} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack
+  - nothing{c=[ - samefaction true ]}
+  Options:
+    MaxCombatDistance: 56
+    KnockbackResistance: 0.9
+    MovementSpeed: 0.235
+    AttackSpeed: 20
+    NoDamageTicks: 0
+    Scale: 1.35
+    Silent: true
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
+  - summon{t=Azuriter_Sandhorn_Camela;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.55"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.8"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.28"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.14"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ビッグなレザー 1 0.35"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=110} @self ~onSpawn
+  - attribute{attr=ARMOR;a=92} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=60} @self ~onSpawn ?day
+
+  - classexp{a=<random.9to14>} @TTP ~onDeath
+
 #### Rank2
 
 Azuriter_Armor_Zombie:

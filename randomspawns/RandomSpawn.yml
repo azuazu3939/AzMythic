@@ -162,6 +162,24 @@ Azuriter_Sandhorn_Camela_Spawn:
   - mobsInRadius{types=Azuriter_Sandhorn_Camela;amount=<6;radius=32} true
   - mobsInRadius{types=Azuriter_Boss_Basamos;amount=>0;radius=64} false
 
+Azuriter_Dusthowler_Camela_Spawn:
+  Type: Azuriter_Dusthowler_Camela
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 1
+  PositionType: LAND
+  Chance: 0.12
+  Priority: 240
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_BigCamela}
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Dusthowler_Camela;amount=<2;radius=48} true
+  - mobsInRadius{types=Azuriter_Boss_Basamos;amount=>0;radius=64} false
+
 Azuriter_Armor_Zombie_Spawn:
   Type: Azuriter_Armor_Zombie
   Worlds: Elaeste

@@ -43,6 +43,48 @@ ItemInfoLore_Endiam_1:
     - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
     - '{augments-each:Gem_1}<augment.display>'
 
+ItemInfoLore_RangeCurve_1:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>攻撃力 +28'
+    - '<white>防御力 -25%'
+    - '<white>防具強度 -25%'
+    - '<white>最大体力 -20%'
+    - '<white>移動速度 +40%'
+    - '<white>攻撃速度 +50%'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
+ItemInfoLore_RangeFire_1:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>攻撃力 +36'
+    - '<white>移動速度 +25%'
+    - '<white>最大体力 -20%'
+    - '<white>防御力 -25%'
+    - '<white>防具強度 -25%'
+    - '<white>攻撃速度 +50%'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
+ItemInfoLore_RangeEmpuria_1:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>攻撃力 +32'
+    - '<white>移動速度 +35%'
+    - '<white>攻撃速度 +25%'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
 ItemInfoLore_Normal_1:
   - Filler: '<rainbow>-----------------------'
   - Line:  

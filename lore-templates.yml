@@ -21,6 +21,28 @@ ItemInfoLore_Bow_1:
     - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
     - '{augments-each:Gem_1}<augment.display>'
 
+ItemInfoLore_Tomahawk_1:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>攻撃力 +40'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
+ItemInfoLore_Endiam_1:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>攻撃力 +32'
+    - '<white>重力 -20%'
+    - '<white>攻撃速度 +100%'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
 ItemInfoLore_Normal_1:
   - Filler: '<rainbow>-----------------------'
   - Line:  

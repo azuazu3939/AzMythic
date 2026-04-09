@@ -20,14 +20,14 @@ Azuriter_トマホーク:
   Options:
     Unbreakable: true
   ItemUpdater:
-    Version: 1
+    Version: 2
   Lore:
-    Template: ItemInfoLore_Bow_1
+    Template: ItemInfoLore_Tomahawk_1
   Hide:
   - ENCHANTS
   Attributes:
     MainHand:
-      Damage: 40
+      Damage: 40 ADD
   Group: 'Weapon'
   Skills:
   - skill{s=Azuriter_Item_Weapon_Melee_Tomahawk_Use} @self ~onUse
@@ -46,12 +46,12 @@ Azuriter_ハルバード:
   Hide:
   - ENCHANTS
   ItemUpdater:
-    Version: 2
+    Version: 3
   Lore:
-    Template: ItemInfoLore_Bow_1
+    Template: ItemInfoLore_Tomahawk_1
   Attributes:
     MainHand:
-      Damage: 40
+      Damage: 40 ADD
   Group: 'Weapon'
   Skills:
   - skill{s=Azuriter_Item_Weapon_Melee_Halberd_Use} @self ~onSwing
@@ -91,13 +91,13 @@ Azuriter_エンディアム:
   Id: mace
   Display: "&9エンディアム"
   Lore:
-    Template: ItemInfoLore_Bow_1
+    Template: ItemInfoLore_Endiam_1
   Options:
     Unbreakable: true
   Hide:
   - ENCHANTS
   ItemUpdater:
-    Version: 1
+    Version: 2
   Attributes:
     MainHand:
       Damage: 32 ADD

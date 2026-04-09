@@ -1,0 +1,17 @@
+# ライムシャーマンの氷呪。
+Azuriter_Mob_Common_RimeShaman_Shot:
+  Cooldown: 5
+  Skills:
+  - setVar{k=skill.time;a="20";t=INTEGER} @self
+  - stun{f=false;t=90}
+  - projectile{
+    ot=[
+      - setVar{k=skill.time;a="<skill.var.time> - 1";t=INTEGER} @self
+      - delay <skill.var.time>
+      - e:pr{p=snowflake;pts=18;a=2;vs=0.05;hs=0.05;d=true;dir=0,1,0;s=0.9;audience=nearby;r=3;size=0.75;y=0.5} @origin
+      - addMask{b=PACKED_ICE;d=20;r=5} @origin
+      - sound{s=block.glass.break;sc=PLAYERS;p=1.3;v=0.45;delay=18} @origin
+      - damage{a="<caster.damage> + 8";pi=true;ii=true;delay=12} @PlayersNearOrigin{r=5}
+      - potion{t=SLOW;l=2;d=110;p=false;delay=12} @PlayersNearOrigin{r=5}
+    ];
+    v=18;i=1;hp=false;se=false;mr=24;d=40;tyo=1} @TL

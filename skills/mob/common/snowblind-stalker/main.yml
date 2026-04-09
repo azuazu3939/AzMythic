@@ -1,0 +1,24 @@
+# スノーブラインドストーカーの急襲。
+Azuriter_Mob_Common_SnowblindStalker_Loop:
+  Cooldown: 4
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - jump{v=0.8} @self
+  - delay 4
+  - projectile{
+    ot=[
+      - delay 2
+      - leap{v=235} @origin
+    ];
+    oe=[
+      - sound{s=entity.player.attack.sweep;sc=NEUTRAL;p=1.8;v=0.9} @origin
+      - damage{a="<caster.damage> + 5";pi=true;ii=true} @PlayersNearOrigin{r=3}
+      - potion{t=BLINDNESS;l=0;d=40;p=false} @PlayersNearOrigin{r=3}
+    ];
+    v=34;sfo=0;syo=0;i=1;hp=false;d=90;g=1;tyo=-0.3;vr=1.8} @TL
+  - delay <random.45to110>
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - skill{s=Azuriter_Mob_Common_SnowblindStalker_Loop} @self

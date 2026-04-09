@@ -1,0 +1,27 @@
+# パーマフロストブルートの突進叩きつけ。
+Azuriter_Mob_Common_PermafrostBrute_Loop:
+  Cooldown: 6
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - potion{t=SLOWNESS;d=28;l=3;p=false} @self
+  - delay 20
+  - sound{s=entity.polar_bear.warning;sc=NEUTRAL;p=0.7;v=1.5} @self
+  - projectile{
+    ot=[
+      - delay 16
+      - leap{v=250} @origin
+    ];
+    oe=[
+      - addMask{b=BLUE_ICE;r=10;d=20}
+      - sound{s=entity.generic.explode;sc=NEUTRAL;p=0.8;v=1.2} @origin
+      - damage{a="<caster.damage> * 1.5";pi=true;ii=true;delay=14} @PNO{r=10}
+      - potion{t=SLOW;l=2;d=140;p=false;delay=14} @PlayersNearOrigin{r=10}
+      - throw{v=3;yv=1;delay=14} @PlayersNearOrigin{r=10}
+    ];
+    v=18;syo=2;tyo=2;g=1;i=1;se=false;sfo=0;mr=48;vr=2.5} @T
+  - delay <random.85to180>
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - skill{s=Azuriter_Mob_Common_PermafrostBrute_Loop} @self

@@ -1,0 +1,12 @@
+# ホワイトアウトメンダーの回復波。
+Azuriter_Mob_Common_WhiteoutMender_Loop:
+  Cooldown: 8
+  Conditions:
+  - incombat true
+  Skills:
+  - sound{s=block.amethyst_block.resonate;sc=NEUTRAL;p=1.6;v=0.8} @self
+  - e:pr{p=snowflake;pts=20;a=2;vs=0.05;hs=0.05;d=true;dir=0,1,0;s=1.2;audience=nearby;r=3;size=0.75;y=0.5} @self
+  - heal{a="<caster.mhp> * 0.04"} @EIR{r=18;ignore=players}
+  - potion{t=REGENERATION;d=80;l=1;p=false} @EIR{r=18;ignore=players}
+  - delay <random.100to180>
+  - skill{s=Azuriter_Mob_Common_WhiteoutMender_Loop} @self

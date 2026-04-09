@@ -1,0 +1,26 @@
+# ホアフロストスパイダーの跳びつき。
+Azuriter_Mob_Common_HoarfrostSpider_Loop:
+  Cooldown: 4
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - jump{v=1.05} @self
+  - delay 6
+  - projectile{
+    ot=[
+      - delay 4
+      - leap{v=230} @origin
+    ];
+    oe=[
+      - addMask{b=PACKED_ICE;r=4;d=16}
+      - sound{s=block.glass.break;sc=NEUTRAL;p=1.5;v=1.0} @origin
+      - damage{a="<caster.damage> + 3";pi=true;ii=true} @PlayersNearOrigin{r=4}
+      - potion{t=SLOW;l=1;d=90;p=false} @PlayersNearOrigin{r=4}
+      - potion{t=WEAKNESS;l=0;d=80;p=false} @PlayersNearOrigin{r=4}
+    ];
+    v=28;sfo=0;syo=0;i=1;hp=false;d=120;g=1;tyo=-0.5;vr=2} @TL
+  - delay <random.55to130>
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - skill{s=Azuriter_Mob_Common_HoarfrostSpider_Loop} @self

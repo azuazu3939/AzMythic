@@ -85,6 +85,34 @@ ItemInfoLore_RangeEmpuria_1:
     - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
     - '{augments-each:Gem_1}<augment.display>'
 
+ItemInfoLore_WeakserL1_H:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>防具強度 +24'
+    - '<white>防御力 +27'
+    - '<white>最大体力 +10'
+    - '<white>攻撃力 +1'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
+ItemInfoLore_WeakserL1_B:
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '<yellow>Stats:'
+    - '<white>防具強度 +24'
+    - '<white>防御力 +27'
+    - '<white>最大体力 +12.5'
+    - '<white>攻撃力 +1'
+    - '<white>クリティカル率 +5%'
+    - '<white>クリティカルダメージ +5%'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
+    - '{augments-each:Gem_1}<augment.display>'
+
 ItemInfoLore_Normal_1:
   - Filler: '<rainbow>-----------------------'
   - Line:  

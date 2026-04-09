@@ -242,7 +242,7 @@ Azuriter_ウィクサーH:
   EquipSlot: HEAD
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_Normal_1
+    Template: ItemInfoLore_WeakserL1_H
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -254,7 +254,7 @@ Azuriter_ウィクサーH:
     Color: 55,172,255
     Unbreakable: true
   ItemUpdater:
-    Version: 1
+    Version: 2
   Attributes:
     Head:
       ArmorToughness: 24
@@ -275,7 +275,7 @@ Azuriter_ウィクサーC:
   EquipSlot: CHEST
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_Normal_1
+    Template: ItemInfoLore_WeakserL1_B
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -287,7 +287,7 @@ Azuriter_ウィクサーC:
     Color: 55,172,255
     Unbreakable: true
   ItemUpdater:
-    Version: 1
+    Version: 2
   Attributes:
     Chest:
       ArmorToughness: 24
@@ -306,7 +306,7 @@ Azuriter_ウィクサーL:
   EquipSlot: LEGS
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_Normal_1
+    Template: ItemInfoLore_WeakserL1_B
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -318,7 +318,7 @@ Azuriter_ウィクサーL:
     Color: 55,172,255
     Unbreakable: true
   ItemUpdater:
-    Version: 1
+    Version: 2
   Attributes:
     Legs:
       ArmorToughness: 24
@@ -337,7 +337,7 @@ Azuriter_ウィクサーB:
   EquipSlot: FEET
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_Normal_1
+    Template: ItemInfoLore_WeakserL1_B
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -349,7 +349,7 @@ Azuriter_ウィクサーB:
     Color: 55,172,255
     Unbreakable: true
   ItemUpdater:
-    Version: 1
+    Version: 2
   Attributes:
     Feet:
       ArmorToughness: 24

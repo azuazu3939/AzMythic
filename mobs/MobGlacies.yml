@@ -257,7 +257,7 @@ Azuriter_Permafrost_Brute:
 
 Azuriter_Whiteout_Mender:
   Template: Azuriter_Enemy_F1Base
-  Type: zombie_villager
+  Type: zombie
   Display: "&fホワイトアウトメンダー"
   Health: 150
   Damage: 14

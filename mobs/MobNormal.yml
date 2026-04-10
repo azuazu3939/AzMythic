@@ -376,6 +376,52 @@ Azuriter_Canopy_Raider:
 
   - classexp{a=<random.6to10>} @TTP ~onDeath
 
+Azuriter_Briar_Raider:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&6茨冠の追跡兵"
+  Health: 220
+  Damage: 28
+  Drops:
+  - money 10to16 0.7
+  Equipment:
+  - CHAINMAIL_CHESTPLATE CHEST
+  - IRON_AXE HAND
+  AITargetSelectors:
+  - clear
+  - fleeConditional{distance=22;speed=1.12;safespeed=1;conditions=[ - mobsInRadius{r=26;a=>0;t=Azuriter_Big_Zombie,Azuriter_Elite_Zombie} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack
+  - nothing{c=[ - samefaction true ]}
+  Options:
+    MaxCombatDistance: 52
+    FollowRange: 8
+    KnockbackResistance: 0.72
+    MovementSpeed: 0.24
+    AttackSpeed: 20
+    NoDamageTicks: 0
+    Scale: 1.22
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=52} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
+  - summon{t=Azuriter_Neutral_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.4"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.14"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.55"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.24"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_Bark <random.1to2> 0.45"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_Fruit <random.1to2> 0.28"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_Hardwood 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.12"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=60} @self ~onSpawn
+  - attribute{attr=ARMOR;a=72} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=42} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+
+  - classexp{a=<random.7to12>} @TTP ~onDeath
+
 Azuriter_Sandhorn_Camela:
   Template: Azuriter_Enemy_Generic
   Display: "&f砂角キャムラ"

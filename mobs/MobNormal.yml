@@ -425,7 +425,7 @@ Azuriter_Briar_Raider:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=52} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - summon{t=Azuriter_Neutral_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Canopy_Raider;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.54"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.12"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.3"} @ThreatTablePlayers ~onDeath
@@ -569,7 +569,7 @@ Azuriter_Supply_Raider:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=7} @self ~onDropcombat
-  - summon{t=Azuriter_Neutral_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Gleaner_Scout;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.4"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.42"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.3"} @ThreatTablePlayers ~onDeath

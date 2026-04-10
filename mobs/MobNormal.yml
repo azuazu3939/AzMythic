@@ -525,12 +525,12 @@ Azuriter_Gleaner_Scout:
   - attribute{attribute=FOLLOW_RANGE;a=44} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=6} @self ~onDropcombat
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.22"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.28"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread 1 0.14"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.12"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.3"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.16"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fiber <random.1to2> 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop 1 0.24"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.12"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=28} @self ~onSpawn
   - attribute{attr=ARMOR;a=34} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=20} @self ~onSpawn ?day
@@ -572,13 +572,13 @@ Azuriter_Supply_Raider:
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.34"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.36"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.24"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread 1 0.18"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.2"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread 1 0.26"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.24"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fiber <random.1to2> 0.42"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieFlower 1 0.16"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.16"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.18"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=44} @self ~onSpawn
   - attribute{attr=ARMOR;a=58} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=34} @self ~onSpawn ?day

@@ -441,8 +441,8 @@ Azuriter_Briar_Raider:
 Azuriter_Supply_Raider:
   Template: Azuriter_Enemy_F1Base
   Display: "&6補給路荒らし"
-  Health: 170
-  Damage: 24
+  Health: 145
+  Damage: 20
   Drops:
   - money 8to13 0.65
   Equipment:
@@ -467,15 +467,15 @@ Azuriter_Supply_Raider:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=7} @self ~onDropcombat
-  - summon{t=Azuriter_Neutral_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
-  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.22"} @ThreatTablePlayers ~onDeath
+  - summon{t=Azuriter_Neutral_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.34"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.24"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.18"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fiber <random.1to2> 0.42"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieFlower 1 0.16"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.12"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=44} @self ~onSpawn
   - attribute{attr=ARMOR;a=58} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=34} @self ~onSpawn ?day
@@ -487,8 +487,8 @@ Azuriter_Supply_Raider:
 Azuriter_Prairie_Reaver:
   Template: Azuriter_Enemy_F1Base
   Display: "&6荒穂の略奪兵"
-  Health: 230
-  Damage: 30
+  Health: 200
+  Damage: 26
   Drops:
   - money 11to18 0.72
   Equipment:
@@ -514,15 +514,15 @@ Azuriter_Prairie_Reaver:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=52} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - summon{t=Azuriter_Warrior_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
-  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.38"} @ThreatTablePlayers ~onDeath
+  - summon{t=Azuriter_Warrior_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.48"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.18"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.22"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fiber <random.1to2> 0.34"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.4"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieFlower 1 0.24"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.12"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=58} @self ~onSpawn
   - attribute{attr=ARMOR;a=72} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=42} @self ~onSpawn ?day
@@ -534,8 +534,8 @@ Azuriter_Prairie_Reaver:
 Azuriter_Gleaner_Captain:
   Template: Azuriter_Enemy_F1Base
   Display: "&6穂狩り隊長"
-  Health: 320
-  Damage: 34
+  Health: 285
+  Damage: 30
   Drops:
   - money 14to22 0.8
   Equipment:
@@ -561,16 +561,16 @@ Azuriter_Gleaner_Captain:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=9} @self ~onDropcombat
-  - summon{t=Azuriter_Warrior_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<3}
-  - summon{t=Azuriter_High_Zombie;a=1;r=5;s=true;delay=16} @self ~onEnterCombat ?children{a=<3}
-  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.52"} @ThreatTablePlayers ~onDeath
+  - summon{t=Azuriter_Warrior_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_High_Zombie;a=1;r=5;s=true;delay=20} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.6"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.36"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.24"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.26"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fiber <random.1to2> 0.46"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.52"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieFlower 1 0.22"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.18"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=64} @self ~onSpawn
   - attribute{attr=ARMOR;a=78} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=46} @self ~onSpawn ?day

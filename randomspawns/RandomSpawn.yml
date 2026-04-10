@@ -187,6 +187,26 @@ Azuriter_Supply_Raider_Spawn:
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Supply_Raider;amount=<2;radius=48} true
 
+Azuriter_Prairie_Reaver_Spawn:
+  Type: Azuriter_Prairie_Reaver
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 1
+  PositionType: LAND
+  Chance: 0.08
+  Priority: 238
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Prairie_Reaver;amount=<1;radius=48} true
+
 Azuriter_BigCamela_Spawn:
   Type: Azuriter_BigCamela
   Worlds: Elaeste

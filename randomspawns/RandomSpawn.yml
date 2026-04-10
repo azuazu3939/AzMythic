@@ -3,7 +3,7 @@ Azuriter_Neutral_Zombie_Spawn:
   Worlds: Elaeste
   Action: ADD 
   PositionType: LAND
-  Chance: 0.2
+  Chance: 0.14
   Cooldown: 0.5
   Priority: 100
   Conditions:
@@ -22,7 +22,7 @@ Azuriter_Big_Zombie_Spawn:
   Worlds: Elaeste
   Action: ADD 
   PositionType: LAND
-  Chance: 0.1
+  Chance: 0.06
   Cooldown: 60
   Priority: 25
   Conditions:
@@ -171,9 +171,9 @@ Azuriter_Gleaner_Scout_Spawn:
   Type: Azuriter_Gleaner_Scout
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.35
+  Cooldown: 0.3
   PositionType: LAND
-  Chance: 0.2
+  Chance: 0.28
   Priority: 226
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -185,15 +185,15 @@ Azuriter_Gleaner_Scout_Spawn:
   - containerRegion{r=Deny} false
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<3;radius=40} true
+  - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<4;radius=40} true
 
 Azuriter_Supply_Raider_Spawn:
   Type: Azuriter_Supply_Raider
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.5
+  Cooldown: 0.45
   PositionType: LAND
-  Chance: 0.18
+  Chance: 0.24
   Priority: 233
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -211,9 +211,9 @@ Azuriter_Prairie_Reaver_Spawn:
   Type: Azuriter_Prairie_Reaver
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.5
+  Cooldown: 0.45
   PositionType: LAND
-  Chance: 0.19
+  Chance: 0.22
   Priority: 238
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -231,9 +231,9 @@ Azuriter_Gleaner_Captain_Spawn:
   Type: Azuriter_Gleaner_Captain
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.75
+  Cooldown: 0.7
   PositionType: LAND
-  Chance: 0.11
+  Chance: 0.13
   Priority: 244
   Conditions:
   - mobsinworld{a=<2000} true 

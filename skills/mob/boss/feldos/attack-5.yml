@@ -27,4 +27,4 @@ Azuriter_Mob_Boss_Feldos_Attack5_OnGround:
   - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4";c=[ - hasAura{n=Azuriter_Mob_Aura_FeldosAttack5GroundHit} false - surface{r=<5} true ]}
   - aura{n=Azuriter_Mob_Aura_FeldosAttack5GroundHit;t=40} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4"}
   - e:p{p=explosion;a=1;size=1.5} @ring{r="<skill.var.itr> + 2";p=28}
-  - e:p{p=block_crack;m=DIRT;a=4;ys=2;hs=1} @ring{r="<skill.var.itr> + 2";p=28}
+  - e:p{p=block_crack;material=DIRT;a=4;ys=2;hs=1} @ring{r="<skill.var.itr> + 2";p=28}

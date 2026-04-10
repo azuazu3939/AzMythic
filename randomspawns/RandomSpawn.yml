@@ -131,9 +131,9 @@ Azuriter_Canopy_Raider_Spawn:
   Type: Azuriter_Canopy_Raider
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 1.5
+  Cooldown: 1
   PositionType: LAND
-  Chance: 0.08
+  Chance: 0.14
   Priority: 230
   Conditions:
   - mobsinworld{a=<2000} true 

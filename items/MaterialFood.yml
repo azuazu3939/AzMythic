@@ -39,6 +39,21 @@ Azuriter_ビッグステーキ:
   - potion{t=NIGHT_VISION;d=216000;p=false} @self ~onConsume
   - heal{a=6} @self ~onConsume
 
+Azuriter_FruitLove:
+  Id: glow_berries
+  Display: "&a&lフルーツラブ"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 0
+  Group: 'Food'
+  Skills:
+  - potion{t=NIGHT_VISION;d=216000;p=false;l=0} @self ~onConsume
+  - potion{t=SATURATION;d=60;p=false;l=0} @self ~onConsume
+  - heal{a=10} @self ~onConsume
+
 Azuriter_高揚の灯:
   Id: campfire
   Display: "&e&l高揚の灯"

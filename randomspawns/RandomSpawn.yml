@@ -191,13 +191,13 @@ Azuriter_Prairie_Reaver_Spawn:
   Type: Azuriter_Prairie_Reaver
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 1
+  Cooldown: 0.75
   PositionType: LAND
-  Chance: 0.08
+  Chance: 0.13
   Priority: 238
   Conditions:
   - mobsinworld{a=<2000} true 
-  - containerRegion{r=Azuriter_High_Zombie} true
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
   - containerRegion{r=Azuriter_letthelater} false
   - containerRegion{r=Azuriter_Altwolf} false
   - containerRegion{r=Azuriter_BigCamela} false

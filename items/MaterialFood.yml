@@ -46,13 +46,16 @@ Azuriter_FruitLove:
     Glint: true
   Hide:
   - ENCHANTS
+  Lore:
+  - "&f食べることで満足できる"
+  - "&f30分暗視・3秒満腹度回復・6HP回復"
   ItemUpdater:
     Version: 0
   Group: 'Food'
   Skills:
-  - potion{t=NIGHT_VISION;d=216000;p=false;l=0} @self ~onConsume
+  - potion{t=NIGHT_VISION;d=36000;p=false;l=0} @self ~onConsume
   - potion{t=SATURATION;d=60;p=false;l=0} @self ~onConsume
-  - heal{a=10} @self ~onConsume
+  - heal{a=6} @self ~onConsume
 
 Azuriter_高揚の灯:
   Id: campfire

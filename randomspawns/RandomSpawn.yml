@@ -171,9 +171,9 @@ Azuriter_Supply_Raider_Spawn:
   Type: Azuriter_Supply_Raider
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 1
+  Cooldown: 0.75
   PositionType: LAND
-  Chance: 0.11
+  Chance: 0.14
   Priority: 233
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -191,9 +191,9 @@ Azuriter_Prairie_Reaver_Spawn:
   Type: Azuriter_Prairie_Reaver
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.75
+  Cooldown: 0.6
   PositionType: LAND
-  Chance: 0.13
+  Chance: 0.16
   Priority: 238
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -211,9 +211,9 @@ Azuriter_Gleaner_Captain_Spawn:
   Type: Azuriter_Gleaner_Captain
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 1.25
+  Cooldown: 0.9
   PositionType: LAND
-  Chance: 0.06
+  Chance: 0.09
   Priority: 244
   Conditions:
   - mobsinworld{a=<2000} true 

@@ -167,6 +167,26 @@ Azuriter_Briar_Raider_Spawn:
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Briar_Raider;amount=<1;radius=48} true
 
+Azuriter_Gleaner_Scout_Spawn:
+  Type: Azuriter_Gleaner_Scout
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 0.35
+  PositionType: LAND
+  Chance: 0.2
+  Priority: 226
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<3;radius=40} true
+
 Azuriter_Supply_Raider_Spawn:
   Type: Azuriter_Supply_Raider
   Worlds: Elaeste

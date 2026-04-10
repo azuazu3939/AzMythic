@@ -267,6 +267,26 @@ Azuriter_Gleaner_Captain_Spawn:
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Gleaner_Captain;amount=<1;radius=56} true
 
+Azuriter_Gleaner_Horncaller_Spawn:
+  Type: Azuriter_Gleaner_Horncaller
+  Worlds: Elaeste
+  Action: ADD
+  Cooldown: 0.9
+  PositionType: LAND
+  Chance: 0.08
+  Priority: 246
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Gleaner_Horncaller;amount=<1;radius=56} true
+
 Azuriter_BigCamela_Spawn:
   Type: Azuriter_BigCamela
   Worlds: Elaeste

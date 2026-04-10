@@ -618,7 +618,7 @@ Azuriter_Prairie_Reaver:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=52} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - summon{t=Azuriter_Warrior_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Supply_Raider;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.52"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.18"} @ThreatTablePlayers ~onDeath
@@ -666,8 +666,8 @@ Azuriter_Gleaner_Captain:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=9} @self ~onDropcombat
-  - summon{t=Azuriter_Warrior_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
-  - summon{t=Azuriter_High_Zombie;a=1;r=5;s=true;delay=20} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Gleaner_Scout;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Gleaner_Horncaller;a=1;r=5;s=true;delay=20} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.6"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.36"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.24"} @ThreatTablePlayers ~onDeath

@@ -378,11 +378,13 @@ Azuriter_Canopy_Raider:
   - attribute{attribute=FOLLOW_RANGE;a=6} @self ~onDropcombat
   - summon{t=Azuriter_Neutral_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.32"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.55"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.22"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.14"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.06"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Bark <random.1to2> 0.55"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop 1 0.22"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Berry <random.1to2> 0.35"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Hardwood 1 0.15"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.14"} @ThreatTablePlayers ~onDeath
@@ -426,11 +428,13 @@ Azuriter_Briar_Raider:
   - summon{t=Azuriter_Neutral_Zombie;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.48"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.14"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.62"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.22"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Bark <random.1to2> 0.45"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.26"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fruit <random.1to2> 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Hardwood 1 0.18"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.18"} @ThreatTablePlayers ~onDeath
@@ -441,6 +445,55 @@ Azuriter_Briar_Raider:
   - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
 
   - classexp{a=<random.7to12>} @TTP ~onDeath
+
+Azuriter_Rootsnare_Trapper:
+  Template: Azuriter_Enemy_F1Base
+  Type: husk
+  Display: "&6根縄の伏兵"
+  Health: 165
+  Damage: 22
+  Drops:
+  - money 8to14 0.68
+  Equipment:
+  - LEATHER_CHESTPLATE CHEST
+  - STONE_HOE HAND
+  AITargetSelectors:
+  - clear
+  - fleeConditional{distance=21;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=24;a=>0;t=Azuriter_Big_Zombie,Azuriter_Elite_Zombie} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack
+  - nothing{c=[ - samefaction true ]}
+  Options:
+    MaxCombatDistance: 50
+    FollowRange: 7
+    KnockbackResistance: 0.5
+    MovementSpeed: 0.255
+    AttackSpeed: 20
+    NoDamageTicks: 0
+    Scale: 1.08
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=50} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=7} @self ~onDropcombat
+  - summon{t=Azuriter_Neutral_Zombie;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.4"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.42"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread 1 0.3"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.52"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_Bark 1 0.22"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_Fruit 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.16"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=42} @self ~onSpawn
+  - attribute{attr=ARMOR;a=48} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=28} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SLOW;d=60;l=1;p=false} @trigger ~onAttack
+
+  - classexp{a=<random.5to8>} @TTP ~onDeath
 
 Azuriter_Gleaner_Scout:
   Template: Azuriter_Enemy_F1Base
@@ -662,14 +715,16 @@ Azuriter_Canopy_Captain:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=9} @self ~onDropcombat
   - summon{t=Azuriter_Canopy_Raider;a=1;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
-  - summon{t=Azuriter_Neutral_Zombie;a=1;r=5;s=true;delay=20} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Rootsnare_Trapper;a=1;r=5;s=true;delay=20} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.68"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.34"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.72"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_GroveOil 1 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.32"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.16"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Bark <random.1to2> 0.46"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.38"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Fruit <random.1to2> 0.34"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Surface_Hardwood 1 0.22"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.22"} @ThreatTablePlayers ~onDeath

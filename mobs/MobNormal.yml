@@ -684,6 +684,55 @@ Azuriter_Gleaner_Captain:
 
   - classexp{a=<random.10to15>} @TTP ~onDeath
 
+Azuriter_Gleaner_Horncaller:
+  Template: Azuriter_Enemy_F1Base
+  Display: "&6穂笛の先導兵"
+  Health: 235
+  Damage: 28
+  Drops:
+  - money 12to19 0.76
+  Equipment:
+  - GOLDEN_HELMET HEAD
+  - CHAINMAIL_CHESTPLATE CHEST
+  - BELL HAND
+  AITargetSelectors:
+  - clear
+  - fleeConditional{distance=23;speed=1.12;safespeed=1;conditions=[ - mobsInRadius{r=28;a=>0;t=Azuriter_Elite_Zombie,Azuriter_Boss_Wedler} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack
+  - nothing{c=[ - samefaction true ]}
+  Options:
+    MaxCombatDistance: 54
+    FollowRange: 9
+    KnockbackResistance: 0.7
+    MovementSpeed: 0.248
+    AttackSpeed: 20
+    NoDamageTicks: 0
+    Scale: 1.18
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=54} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=9} @self ~onDropcombat
+  - summon{t=Azuriter_Gleaner_Scout;a=1;r=5;s=true;delay=8} @self ~onEnterCombat ?children{a=<2}
+  - summon{t=Azuriter_Supply_Raider;a=1;r=5;s=true;delay=18} @self ~onEnterCombat ?children{a=<2}
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.48"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.32"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.22"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.24"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_Fiber <random.1to2> 0.42"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieCrop <random.1to2> 0.38"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Surface_PrairieFlower 1 0.3"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.18"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=54} @self ~onSpawn
+  - attribute{attr=ARMOR;a=68} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=40} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+
+  - classexp{a=<random.8to12>} @TTP ~onDeath
+
 Azuriter_Canopy_Captain:
   Template: Azuriter_Enemy_F1Base
   Display: "&6樹冠の隊長"

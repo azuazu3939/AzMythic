@@ -669,8 +669,11 @@ Azuriter_Sandhorn_Camela:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
+  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.08"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff 1 0.45"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.12"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersResin 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersTonic 1 0.12"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ビッグなレザー 1 0.12"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=35} @self ~onSpawn
@@ -678,6 +681,68 @@ Azuriter_Sandhorn_Camela:
   - attribute{attr=ARMOR;a=24} @self ~onSpawn ?day
 
   - classexp{a=<random.5to8>} @TTP ~onDeath
+
+Azuriter_Stonevein_Camela:
+  Template: Azuriter_Enemy_Generic
+  Display: "&6石脈追いキャムラ"
+  Health: 125
+  Damage: 22
+  Drops:
+  - money 5to8 0.55
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: ENTITY
+      EntityType: CAMEL
+    Transform:
+      Translation: 0,0,0
+      Scale: 1.05,1.0,1.05
+    Living:
+      Baby: false
+      Silent: true
+      Glowing: false
+      Invulnerable: false
+      Gravity: true
+      Pose: STANDING
+      HealthDisplay: false
+    Combat:
+      HurtTint: true
+      KnockbackProfile: default
+      HeadTrack: true
+      HitboxScale: 1.05,1.05,1.05
+  AITargetSelectors:
+  - clear
+  - fleeConditional{distance=24;speed=1.14;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Basamos,Azuriter_BigCamela} true ]}
+  - attacker
+  AIGoalSelectors:
+  - clear
+  - meleeAttack
+  - nothing{c=[ - samefaction true ]}
+  Options:
+    MaxCombatDistance: 50
+    KnockbackResistance: 0.55
+    MovementSpeed: 0.245
+    AttackSpeed: 20
+    NoDamageTicks: 0
+    Scale: 1.05
+    Silent: true
+    FollowRange: 7
+  Skills:
+  - attribute{attribute=FOLLOW_RANGE;a=50} @self ~onEnterCombat
+  - attribute{attribute=FOLLOW_RANGE;a=7} @self ~onDropcombat
+  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.16"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff 1 0.55"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersResin 1 0.26"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersTonic 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.04"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_ビッグなレザー 1 0.16"} @ThreatTablePlayers ~onDeath
+  - attribute{attr=ARMOR_TOUGHNESS;a=42} @self ~onSpawn
+  - attribute{attr=ARMOR;a=48} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=28} @self ~onSpawn ?day
+
+  - classexp{a=<random.5to7>} @TTP ~onDeath
 
 Azuriter_BigCamela:
   Template: Azuriter_Enemy_Generic
@@ -728,10 +793,13 @@ Azuriter_BigCamela:
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
   - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.03"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.6"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersResin 1 0.22"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersTonic 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_GeodeWhetstone 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.06"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ビッグな生肉 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ビッグなレザー 1 0.3"} @ThreatTablePlayers ~onDeath
@@ -790,9 +858,12 @@ Azuriter_Dusthowler_Camela:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
   - summon{t=Azuriter_Sandhorn_Camela;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
-  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.55"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.65"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.8"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.28"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersResin 1 0.32"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersTonic 1 0.26"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersCompass 1 0.08"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.08"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.14"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_ビッグなレザー 1 0.35"} @ThreatTablePlayers ~onDeath

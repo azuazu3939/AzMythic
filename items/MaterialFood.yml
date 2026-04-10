@@ -41,7 +41,7 @@ Azuriter_ビッグステーキ:
 
 Azuriter_FruitLove:
   Id: glow_berries
-  Display: "&a&lフルーツラブ"
+  Display: "&a&lフルーツ好き"
   Options:
     Glint: true
   Hide:

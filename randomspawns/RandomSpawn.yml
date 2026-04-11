@@ -191,9 +191,9 @@ Azuriter_Gleaner_Scout_Spawn:
   Type: Azuriter_Gleaner_Scout
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.3
+  Cooldown: 0.45
   PositionType: LAND
-  Chance: 0.28
+  Chance: 0.2
   Priority: 226
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -205,15 +205,15 @@ Azuriter_Gleaner_Scout_Spawn:
   - containerRegion{r=Deny} false
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<4;radius=40} true
+  - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<3;radius=40} true
 
 Azuriter_Supply_Raider_Spawn:
   Type: Azuriter_Supply_Raider
   Worlds: Elaeste
   Action: ADD
-  Cooldown: 0.45
+  Cooldown: 0.65
   PositionType: LAND
-  Chance: 0.24
+  Chance: 0.18
   Priority: 233
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -225,7 +225,7 @@ Azuriter_Supply_Raider_Spawn:
   - containerRegion{r=Deny} false
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsInRadius{types=Azuriter_Supply_Raider;amount=<3;radius=48} true
+  - mobsInRadius{types=Azuriter_Supply_Raider;amount=<2;radius=48} true
 
 Azuriter_Prairie_Reaver_Spawn:
   Type: Azuriter_Prairie_Reaver

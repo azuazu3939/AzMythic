@@ -42,8 +42,9 @@ Azuriter_ShopKeepers:
     MaxCombatDistance: 0
     UseThreatTable: true
     MovementSpeed: 0.0001
-    Interactable: true
+    Interactable: false
     AlwaysShowName: true
+    Profession: NONE
   Skills:
 
 Azuriter_ShopKeepers_2:
@@ -63,6 +64,4 @@ Azuriter_ShopKeepers_2:
     MovementSpeed: 0.0001
     Interactable: false
     AlwaysShowName: true
-    HasTrades: true
-    Profession: NONE
   Skills:

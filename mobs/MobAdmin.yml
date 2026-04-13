@@ -63,4 +63,5 @@ Azuriter_ShopKeepers_2:
     MovementSpeed: 0.0001
     Interactable: false
     AlwaysShowName: true
+    Profession: NONE
   Skills:

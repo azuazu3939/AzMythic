@@ -1,5 +1,9 @@
 Azuriter_Core_StepAvoid_WindCombo:
   Skills:
+  - skill{s=Azuriter_Core_StepAvoid_WindCombo_Loop;repeat=2;repeati=8} @self
+
+Azuriter_Core_StepAvoid_WindCombo_Loop:
+  Skills:
   - mi{v=4;vo=3;vr=1.5;hr=1.5;i=1;in=18;hp=false;hnp=true;mr=24;d=100;syo=4.5;sfo=0;
     b=DISPLAY;mat=WOODEN_SWORD;scale=1.25,1.25,1.25;yaw=3.14;pitch=1.57;roll=0.785;
     ot=[

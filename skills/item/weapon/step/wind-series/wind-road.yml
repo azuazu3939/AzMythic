@@ -20,11 +20,6 @@ Azuriter_Item_Weapon_Step_WindRoad_R1_Use:
     ]} @self
 
   - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=18} @self
-  - skill{s=Azuriter_Item_Weapon_Step_WindRoad_R1_Use_Loop;repeat=2;repeati=8} @self
-
-
-Azuriter_Item_Weapon_Step_WindRoad_R1_Use_Loop:
-  Skills:
   - projectile{
     ot=[
       - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self

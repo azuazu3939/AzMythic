@@ -1,11 +1,11 @@
 Azuriter_Mob_Fedos:
   Template: Azuriter_Enemy_NormalBase
   Display: "<#ff8a5a>&lフェドス&R"
-  Health: 6000
-  Armor: 75
-  Damage: 20
+  Health: 7800
+  Armor: 82
+  Damage: 19
   Drops:
-  - money 100to300 1
+  - money 160to360 1
   Options:
     Silent: true
     Scale: 1.75
@@ -36,14 +36,14 @@ Azuriter_Mob_Fedos:
   - float
   Skills:
   - tracklocation @selfLocation ~onSpawn
-  - attribute{attr=ARMOR_TOUGHNESS;a=80} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=82} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Feldos_Attack1";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Feldos_Attack2";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Feldos_Attack3";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_Feldos_Attack4";t=STRING} @self ~onSpawn
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
-  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=110;shield_break=1200;heal_percent=0.0075} @self ~onEntercombat
+  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=120;shield_break=1300;heal_percent=0.008} @self ~onEntercombat
   - skill{s=Azuriter_Mob_Fedos_Loop} @self ~onEntercombat
 
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
@@ -71,4 +71,4 @@ Azuriter_Mob_Fedos:
   - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
 
-  - classexp{a=<random.120to200>} @TTP ~onDeath
+  - classexp{a=<random.150to240>} @TTP ~onDeath

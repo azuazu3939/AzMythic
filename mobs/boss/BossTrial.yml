@@ -34,8 +34,8 @@ Azuriter_Boss_マスターゾンビ:
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_MasterZombie_Attack1";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_MasterZombie_Attack2";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_MasterZombie_Attack3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_MasterZombie_Attack4";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_MasterZombie_Attack5";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_MasterZombie_Attack4";t=STRING} @self ~onSpawn
+  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill5;a="Azuriter_Mob_Boss_MasterZombie_Attack5";t=STRING} @self ~onSpawn
   - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack1} @self ~onSignal:raid_boss_skill1
   - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack2} @self ~onSignal:raid_boss_skill2
   - skill{s=Azuriter_Mob_Boss_MasterZombie_Attack3} @self ~onSignal:raid_boss_skill3
@@ -52,9 +52,12 @@ Azuriter_Boss_マスターゾンビ:
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.25"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G2 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.35"} @ThreatTablePlayers ~onDeath
+  - summon{t=Azuriter_Armor_Zombie;a=2;r=5;s=true;delay=10} @self ~onEnterCombat
+  - summon{t=Azuriter_ArmorFull_Zombie;a=1;r=6;s=true;delay=24} @self ~onEnterCombat
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged <=60%
 
-  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=100;shield_break=2000;heal_percent=0.01} @self ~onEntercombat
+  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=100;shield_break=2000;heal_percent=0.01} @self ~onEnterCombat
 
   - attribute{attr=ARMOR_TOUGHNESS;a=140} @self ~onSpawn
 

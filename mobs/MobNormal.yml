@@ -49,7 +49,7 @@ Azuriter_Neutral_Zombie:
 Azuriter_Big_Zombie:
   Template: Azuriter_Enemy_F1Base
   Display: "&f大きなゾンビ"
-  Health: 200
+  Health: 80
   Damage: 10
   Drops:
   - money 1to5

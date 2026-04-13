@@ -1,0 +1,18 @@
+# 深層監視者本体の行動ループ。
+Azuriter_Mob_Boss_DeepWatcher_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_DeepWatcher_Attack1,
+    Azuriter_Mob_Boss_DeepWatcher_Attack2,
+    Azuriter_Mob_Boss_DeepWatcher_Attack3,
+    Azuriter_Mob_Boss_DeepWatcher_Attack4,
+    Azuriter_Mob_Boss_DeepWatcher_Attack5;
+    fbs=Azuriter_Mob_Boss_DeepWatcher_Attack3;
+    repeat=1;repeati=80} @self
+  - delay <random.150to220>
+  - skill:Azuriter_Mob_Boss_DeepWatcher_Loop @T

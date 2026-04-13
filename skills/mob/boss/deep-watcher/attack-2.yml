@@ -1,0 +1,35 @@
+Azuriter_Mob_Boss_DeepWatcher_Attack2:
+  Cooldown: 10
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  - targetWithin{d=14} true
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - look{f=true} @T
+  - potion{t=SLOWNESS;l=7;d=18;p=false} @self
+  - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - sound{s=entity.ender_dragon.flap;v=1.25;p=1.75} @self
+  - delay 14
+  - projectile{
+    ot=[
+      - teleport @origin
+      - e:ps{p=cloud;a=30;s=0.15;r=1;cd=0.1} @origin
+      - e:p{p=end_rod;a=2;ys=0.2;hs=0.2} @origin
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg> * 0.9";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack}
+      - potion{t=SLOW;l=1;d=80;p=false}
+    ];
+    oe=[
+      - e:pr{r=4;pts=24;p=cloud;a=1;s=0.7;d=true;dir=0,1,0} @origin
+      - e:p{p=explosion_huge;a=1} @origin
+      - sound{s=entity.elder_guardian.curse;p=0.75;v=1.5} @origin
+      - damage{a="<skill.var.dmg> * 1.4";pi=true;ii=true;e=AQUA;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=5}
+      - potion{t=SLOW;l=2;d=100;p=false} @ENO{r=5;c=[ - samefaction false - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    v=9;i=1;md=120;hs=true;hfs=0;mdh=10;mch=10;hr=3;mr=14;hnp=true;c=[ - samefaction false ]} @T
+  - delay 24
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self

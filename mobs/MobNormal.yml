@@ -42,7 +42,7 @@ Azuriter_Neutral_Zombie:
     s=[
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
     ];cd=2} @trigger ~onDeath
-  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.015
+  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.01
 
   - classexp{a=1} @TTP ~onDeath
 
@@ -99,7 +99,7 @@ Azuriter_Big_Zombie:
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
       - signal{s=trial_drop_2} @MIR{r=32;t=Azuriter_トライアル_2_1}
     ];cd=2} @trigger ~onDeath
-  - skill{s=Azuriter_Big_Zombie_Summon} @self ~onDeath 0.25
+  - skill{s=Azuriter_Big_Zombie_Summon} @self ~onDeath 0.05
 
   - classexp{a=10} @TTP ~onDeath
 
@@ -150,7 +150,7 @@ Azuriter_Warrior_Zombie:
     s=[
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
     ];cd=2} @trigger ~onDeath
-  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.015
+  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.01
 
   - classexp{a=<random.3to5>} @TTP ~onDeath
 
@@ -202,7 +202,7 @@ Azuriter_High_Zombie:
     s=[
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
     ];cd=2} @trigger ~onDeath
-  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.015
+  - skill{s=Azuriter_Neutral_Zombie_Summon} @self ~onDeath 0.01
 
   - classexp{a=<random.2to3>} @TTP ~onDeath
 
@@ -254,7 +254,7 @@ Azuriter_Elite_Zombie:
     s=[
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
     ];cd=2} @trigger ~onDeath
-  - skill{s=Azuriter_Elite_Zombie_Summon} @self ~onDeath 0.25
+  - skill{s=Azuriter_Elite_Zombie_Summon} @self ~onDeath 0.05
 
   - classexp{a=25} @TTP ~onDeath
 

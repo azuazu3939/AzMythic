@@ -1,0 +1,23 @@
+# 近～中距離の読み合いを作る衝撃波。
+Azuriter_Mob_Boss_Wedler_Attack8:
+  Cooldown: 4
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  - targetWithin{d=24}
+  - targetnotwithin{d=12}
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - look{f=true} @T
+  - stun{t=20;f=true} @self
+  - potion{t=SLOWNESS;l=4;d=30;p=false} @self
+  - clearpotion{t=INVISIBILITY} @self
+  - sound{s=entity.wolf.howl;p=0.8;v=1.5} @self
+  - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @selfLocation
+  - delay 18
+  - setVar{var=skill.dmg;val="1 + <caster.damage>";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self
+  - delay 12
+  - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self

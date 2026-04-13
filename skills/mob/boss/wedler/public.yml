@@ -12,7 +12,8 @@ Azuriter_Mob_Boss_Wedler_Loop:
     Azuriter_Mob_Boss_Wedler_Attack3,
     Azuriter_Mob_Boss_Wedler_Attack5,
     Azuriter_Mob_Boss_Wedler_Attack6,
-    Azuriter_Mob_Boss_Wedler_Attack7;
+    Azuriter_Mob_Boss_Wedler_Attack7,
+    Azuriter_Mob_Boss_Wedler_Attack8;
     fbs=Azuriter_Mob_Boss_Wedler_Attack4;
     repeati=20;repeat=2} @self
   - clearpotion{t=INVISIBILITY} @self

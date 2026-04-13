@@ -18,3 +18,23 @@ Azuriter_Mob_Boss_Feldos_Loop:
   - potion{t=WEAKNESS;l=0;d=400} @self ?raining
   - delay 160
   - skill:Azuriter_Mob_Boss_Feldos_Loop @T
+
+# フェルドス弱体個体の行動ループ。
+Azuriter_Mob_Boss_FeldosWeak_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_Feldos_Attack1,
+    Azuriter_Mob_Boss_Feldos_Attack2,
+    Azuriter_Mob_Boss_Feldos_Attack3,
+    Azuriter_Mob_Boss_Feldos_Attack4;
+    fbs=Azuriter_Mob_Boss_Feldos_Attack0} @self
+  - sound{s=entity.blaze.burn;p=0;v=0.2} @self
+  - ignite{d=60} @PIR{r=4}
+  - potion{t=WEAKNESS;l=0;d=600} @self ?raining
+  - delay 220
+  - skill:Azuriter_Mob_Boss_FeldosWeak_Loop @T

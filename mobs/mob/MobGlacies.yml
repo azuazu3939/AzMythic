@@ -1,7 +1,7 @@
 # グラキエス周辺の通常敵。
 
 Azuriter_Frostfang:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: wolf
   Display: "&fフロストファング"
   Health: 120
@@ -44,7 +44,7 @@ Azuriter_Frostfang:
   - classexp{a=<random.4to8>} @TTP ~onDeath
 
 Azuriter_Iceveil_Archer:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: skeleton
   Display: "&fアイスベイルアーチャー"
   Health: 95
@@ -88,7 +88,7 @@ Azuriter_Iceveil_Archer:
   - classexp{a=<random.5to9>} @TTP ~onDeath
 
 Azuriter_Icebound_Guard:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Display: "&fアイスバウンドガード"
   Health: 260
   Damage: 28
@@ -133,7 +133,7 @@ Azuriter_Icebound_Guard:
   - classexp{a=<random.10to16>} @TTP ~onDeath
 
 Azuriter_Hoarfrost_Spider:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: spider
   Display: "&fホアフロストスパイダー"
   Health: 105
@@ -171,7 +171,7 @@ Azuriter_Hoarfrost_Spider:
   - classexp{a=<random.4to7>} @TTP ~onDeath
 
 Azuriter_Snowblind_Stalker:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: baby_zombie
   Display: "&fスノーブラインドストーカー"
   Health: 72
@@ -215,7 +215,7 @@ Azuriter_Snowblind_Stalker:
   - classexp{a=<random.4to8>} @TTP ~onDeath
 
 Azuriter_Permafrost_Brute:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: polar_bear
   Display: "&fパーマフロストブルート"
   Health: 360
@@ -256,7 +256,7 @@ Azuriter_Permafrost_Brute:
   - classexp{a=<random.14to20>} @TTP ~onDeath
 
 Azuriter_Whiteout_Mender:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: zombie
   Display: "&fホワイトアウトメンダー"
   Health: 150
@@ -299,7 +299,7 @@ Azuriter_Whiteout_Mender:
   - classexp{a=<random.8to12>} @TTP ~onDeath
 
 Azuriter_Rime_Shaman:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Type: stray
   Display: "&fライムシャーマン"
   Health: 145

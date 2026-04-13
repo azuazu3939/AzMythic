@@ -1,5 +1,5 @@
 Azuriter_Big_Zombie_Trial:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Display: "&f大きなゾンビ"
   Health: 200
   Damage: 10
@@ -45,7 +45,7 @@ Azuriter_Big_Zombie_Trial:
   - classexp{a=10} @TTP ~onDeath
 
 Azuriter_Elite_Zombie_Trial:
-  Template: Azuriter_Enemy_F1Base
+  Template: Azuriter_Enemy_NormalBase
   Display: "&fエリートゾンビ"
   Health: 1200
   Damage: 15

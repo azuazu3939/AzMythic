@@ -20,7 +20,7 @@ Azuriter_Mob_Boss_Feldos_Loop:
   - skill:Azuriter_Mob_Boss_Feldos_Loop @T
 
 # フェルドス弱体個体の行動ループ。
-Azuriter_Mob_Boss_FeldosWeak_Loop:
+Azuriter_Mob_Fedos_Loop:
   Conditions:
   - incombat true
   TargetConditions:
@@ -37,4 +37,4 @@ Azuriter_Mob_Boss_FeldosWeak_Loop:
   - ignite{d=60} @PIR{r=4}
   - potion{t=WEAKNESS;l=0;d=600} @self ?raining
   - delay 220
-  - skill:Azuriter_Mob_Boss_FeldosWeak_Loop @T
+  - skill:Azuriter_Mob_Fedos_Loop @T

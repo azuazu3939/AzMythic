@@ -6,7 +6,7 @@ Azuriter_Boss_Feldos:
   Armor: 130
   Damage: 36
   Drops:
-  - money 30to50 1
+  - money 1000to1500 1
   Options:
     Silent: true
     Scale: 3
@@ -82,7 +82,6 @@ Azuriter_Boss_Feldos:
   - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
 
   - skill{s=Azuriter_Mob_Boss_Feldos_Attack1} @self ~onSignal:raid_boss_skill1
   - skill{s=Azuriter_Mob_Boss_Feldos_Attack2} @self ~onSignal:raid_boss_skill2
@@ -96,101 +95,6 @@ Azuriter_Boss_Feldos:
   - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
 
   - classexp{a=<random.450to600>} @TTP ~onDeath
-
-Azuriter_Boss_Feldos_Weak:
-  Template: Azuriter_Enemy_RaidBoss_Base
-  Display: "<#ff8a5a>&l焔獣フェルドス・弱体個体&R"
-  Type: hoglin
-  Health: 30000
-  Armor: 95
-  Damage: 24
-  Drops:
-  - money 20to35 1
-  Options:
-    Silent: true
-    Scale: 2.75
-    MovementSpeed: 0.23
-    KnockbackResistance: 0.9
-    MaxCombatDistance: 32
-    FollowRange: 10
-    Adult: true
-    ImmuneToZombification: true
-  DamageModifiers:
-  - SUFFOCATION 0
-  - FALL 0
-  AITargetSelectors:
-  - clear
-  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
-  AIGoalSelectors:
-  - clear
-  - randomstroll
-  - gotoowner
-  - MoveTowardsTargetConditional{
-    s=1;maxrange=32;
-    targetConditions=[
-      - isPlayer true
-      - distanceFromTL{d=64} true
-    ]}
-  - goToSpawn{speed=2;max=80;min=1}
-  - moveTowardsTarget
-  - float
-  BossBar:
-    Enabled: true
-    Title: <caster.name>
-    Range: 32
-    Color: WHITE
-    Style: SEGMENTED_10
-  Skills:
-  - tracklocation @selfLocation ~onSpawn
-  - attribute{attr=ARMOR_TOUGHNESS;a=110} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Feldos_Attack1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Feldos_Attack2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Feldos_Attack3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_Feldos_Attack4";t=STRING} @self ~onSpawn
-
-  - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
-  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=110;shield_break=1200;heal_percent=0.0075} @self ~onEntercombat
-  - skill{s=Azuriter_Mob_Boss_FeldosWeak_Loop} @T ~onEntercombat
-
-  - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
-
-  - potionclear{t=STRENGTH} @self ~onDamaged >55%
-  - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =55%
-
-  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_炎核 1 0.08"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_焔獣の炎殻 1 0.45"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to2> 0.75"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_城壁の守護石 1 0.35"} @ThreatTablePlayers ~onDeath
-
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.01"}  @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.01"} @ThreatTablePlayers ~onDeath
-  - currencygive{amount=350}  @ThreatTablePlayers ~onDeath
-
-  - skill{s=Azuriter_Mob_Boss_Feldos_Attack1} @self ~onSignal:raid_boss_skill1
-  - skill{s=Azuriter_Mob_Boss_Feldos_Attack2} @self ~onSignal:raid_boss_skill2
-  - skill{s=Azuriter_Mob_Boss_Feldos_Attack3} @self ~onSignal:raid_boss_skill3
-  - skill{s=Azuriter_Mob_Boss_Feldos_Attack4} @self ~onSignal:raid_boss_skill4
-  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack1を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill1
-  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack2を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill2
-  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack3を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill3
-  - message{m="<trigger.name>が、Azuriter_Mob_Boss_Feldos_Attack4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
-
-  - classexp{a=<random.220to320>} @TTP ~onDeath
 
 Azuriter_Boss_Wedler:
   Template: Azuriter_Enemy_RaidBoss_Base

@@ -39,7 +39,7 @@ Azuriter_Enemy_Base:
   - raidBoss @self ~onSpawn
   - damage{a=<caster.damage>;ii=true;pi=true} @trigger ~onAttack
 
-Azuriter_Enemy_F1Base:
+Azuriter_Enemy_NormalBase:
   Template: Azuriter_Enemy_Base
   Skills:
   - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.0002"} @ThreatTablePlayers ~onDeath

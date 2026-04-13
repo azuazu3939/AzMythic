@@ -20,6 +20,10 @@ Azuriter_Item_Weapon_Step_WindTrace_R1_Use:
     ]} @self
 
   - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=15} @self
+  - skill{s=Azuriter_Item_Weapon_Step_WindTrace_R1_Use_Loop;repeat=2;repeati=8} @self
+
+Azuriter_Item_Weapon_Step_WindTrace_R1_Use_Loop:
+  Skills:
   - projectile{
     ot=[
       - setVar{k=skill.count;a="<skill.var.count> + 1";t=INTEGER} @self
@@ -35,4 +39,3 @@ Azuriter_Item_Weapon_Step_WindTrace_R1_Use:
       - removeaura{n=Azuriter_Core_Aura_StepAvoidFallCancel;delay=2} @self
     ];
     i=2;hp=false;hnp=false;sb=false;se=false;tyo=2;g=1;mr=12;vr=1;hr=1;v=1;d=40} @forward{lockpitch=true} ?!crouching
-

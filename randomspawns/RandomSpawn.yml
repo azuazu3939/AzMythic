@@ -129,7 +129,7 @@ Azuriter_Altwolf_Spawn:
 
 Azuriter_Canopy_Raider_Spawn:
   Type: Azuriter_Canopy_Raider
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.75
   PositionType: LAND
@@ -149,7 +149,7 @@ Azuriter_Canopy_Raider_Spawn:
 
 Azuriter_Rootsnare_Trapper_Spawn:
   Type: Azuriter_Rootsnare_Trapper
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.65
   PositionType: LAND
@@ -169,7 +169,7 @@ Azuriter_Rootsnare_Trapper_Spawn:
 
 Azuriter_Briar_Raider_Spawn:
   Type: Azuriter_Briar_Raider
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.85
   PositionType: LAND
@@ -189,7 +189,7 @@ Azuriter_Briar_Raider_Spawn:
 
 Azuriter_Gleaner_Scout_Spawn:
   Type: Azuriter_Gleaner_Scout
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.45
   PositionType: LAND
@@ -209,7 +209,7 @@ Azuriter_Gleaner_Scout_Spawn:
 
 Azuriter_Supply_Raider_Spawn:
   Type: Azuriter_Supply_Raider
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.65
   PositionType: LAND
@@ -229,7 +229,7 @@ Azuriter_Supply_Raider_Spawn:
 
 Azuriter_Prairie_Reaver_Spawn:
   Type: Azuriter_Prairie_Reaver
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.45
   PositionType: LAND
@@ -249,7 +249,7 @@ Azuriter_Prairie_Reaver_Spawn:
 
 Azuriter_Gleaner_Captain_Spawn:
   Type: Azuriter_Gleaner_Captain
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.7
   PositionType: LAND
@@ -269,7 +269,7 @@ Azuriter_Gleaner_Captain_Spawn:
 
 Azuriter_Gleaner_Horncaller_Spawn:
   Type: Azuriter_Gleaner_Horncaller
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.9
   PositionType: LAND
@@ -289,7 +289,7 @@ Azuriter_Gleaner_Horncaller_Spawn:
 
 Azuriter_BigCamela_Spawn:
   Type: Azuriter_BigCamela
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 1
   PositionType: LAND
@@ -306,7 +306,7 @@ Azuriter_BigCamela_Spawn:
 
 Azuriter_Stonevein_Camela_Spawn:
   Type: Azuriter_Stonevein_Camela
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.4
   PositionType: LAND
@@ -324,7 +324,7 @@ Azuriter_Stonevein_Camela_Spawn:
 
 Azuriter_Sandhorn_Camela_Spawn:
   Type: Azuriter_Sandhorn_Camela
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.5
   PositionType: LAND
@@ -342,7 +342,7 @@ Azuriter_Sandhorn_Camela_Spawn:
 
 Azuriter_Duskbound_Watcher_Spawn:
   Type: Azuriter_Duskbound_Watcher
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 0.8
   PositionType: LAND
@@ -360,7 +360,7 @@ Azuriter_Duskbound_Watcher_Spawn:
 
 Azuriter_Dusthowler_Camela_Spawn:
   Type: Azuriter_Dusthowler_Camela
-  Worlds: Elaeste
+  Worlds: testst
   Action: ADD
   Cooldown: 1
   PositionType: LAND

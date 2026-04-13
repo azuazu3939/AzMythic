@@ -228,27 +228,6 @@ Azuriter_Gleaner_Scout_Spawn:
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<3;radius=40} true
 
-Azuriter_Field_Picket_Spawn:
-  Type: Azuriter_Field_Picket
-  Worlds: testst
-  Action: ADD
-  Cooldown: 0.5
-  PositionType: LAND
-  Chance: 0.18
-  Priority: 224
-  Conditions:
-  - mobsinworld{a=<2000} true
-  - containerRegion{r=Azuriter_Neutral_Zombie} true
-  - containerRegion{r=Azuriter_letthelater} false
-  - containerRegion{r=Azuriter_Altwolf} false
-  - containerRegion{r=Azuriter_BigCamela} false
-  - containerRegion{r=Spawn} false
-  - containerRegion{r=Deny} false
-  - outside true
-  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsInRadius{types=Azuriter_Field_Picket;amount=<3;radius=44} true
-  - mobsInRadius{types=Azuriter_Boss_Wedler;amount=>0;radius=64} false
-
 Azuriter_Supply_Raider_Spawn:
   Type: Azuriter_Supply_Raider
   Worlds: testst

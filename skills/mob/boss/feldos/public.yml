@@ -36,7 +36,5 @@ Azuriter_Mob_Fedos_Loop:
   - sound{s=entity.blaze.burn;p=0;v=0.2} @self
   - ignite{d=60} @PIR{r=4}
   - potion{t=WEAKNESS;l=0;d=600} @self ?raining
-  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Azuriter_Core_Boss_GroundPulse @self
   - delay 220
   - skill:Azuriter_Mob_Fedos_Loop @T

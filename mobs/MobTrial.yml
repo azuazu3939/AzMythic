@@ -1,7 +1,7 @@
 Azuriter_Big_Zombie_Trial:
   Template: Azuriter_Enemy_F1Base
   Display: "&f大きなゾンビ"
-  Health: 500
+  Health: 200
   Damage: 10
   Drops:
   - money 1to5

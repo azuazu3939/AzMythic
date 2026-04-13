@@ -405,7 +405,7 @@ Azuriter_Forge_Alloy_MoonlitAethercore:
     Glint: true
   Lore:
     - '&7Tier4 forge素材'
-    - '&8聖域鍛造を支える月光核材'
+    - '&8Dusk Relay と月光聖域をつなぐ終盤核材'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'

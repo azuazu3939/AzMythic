@@ -108,7 +108,7 @@ Azuriter_letthelater_Spawn:
   - containerRegion{r=Deny} false
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsInRadius{types=Azuriter_Boss_Feldos,Azuriter_Boss_Feldos_Weak;amount=>0;radius=64} false
+  - mobsInRadius{types=Azuriter_Boss_Feldos,Azuriter_Mob_Fedos;amount=>0;radius=64} false
 
 Azuriter_Altwolf_Spawn:
   Type: Azuriter_Altwolf
@@ -206,7 +206,7 @@ Azuriter_Grove_Picket_Spawn:
   - outside true
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Grove_Picket;amount=<3;radius=44} true
-  - mobsInRadius{types=Azuriter_Boss_Feldos;amount=>0;radius=64} false
+  - mobsInRadius{types=Azuriter_Boss_Feldos,Azuriter_Mob_Fedos;amount=>0;radius=64} false
 
 Azuriter_Gleaner_Scout_Spawn:
   Type: Azuriter_Gleaner_Scout

@@ -271,7 +271,7 @@ Azuriter_letthelater:
   - money 5to8 0.4
   AITargetSelectors:
   - clear
-  - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Feldos,Azuriter_Boss_Feldos_Weak} true ]}
+  - fleeConditional{distance=24;speed=1.1;safespeed=1;conditions=[ - mobsInRadius{r=25;a=>0;t=Azuriter_Boss_Feldos,Azuriter_Mob_Fedos} true ]}
   - attacker
   AIGoalSelectors:
   - clear

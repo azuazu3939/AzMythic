@@ -1,0 +1,35 @@
+# バサモス系の中ボス召喚と行動補助。
+Azuriter_Mob_Boss_Basamos_Envoy_Call:
+  Skills:
+  - summon{t=Azuriter_Dusthowler_Envoy;a=1;r=4;s=true;delay=12} @self
+
+# 砂吠えの使者の行動ループ。
+Azuriter_Mob_Boss_Basamos_Envoy_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_Basamos_Envoy_Smash,
+    Azuriter_Mob_Boss_Basamos_Envoy_GroundPulse,
+    Azuriter_Mob_Boss_Basamos_Envoy_Rally;
+    fbs=Azuriter_Mob_Boss_Basamos_Envoy_Smash} @self
+  - delay <random.120to170>
+  - skill:Azuriter_Mob_Boss_Basamos_Envoy_Loop @T
+
+Azuriter_Mob_Boss_Basamos_Envoy_Smash:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.95";t=FLOAT} @self
+  - meta:Azuriter_Core_Melee_Single_Base @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Mob_Boss_Basamos_Envoy_GroundPulse:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 1.05";t=FLOAT} @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self
+
+Azuriter_Mob_Boss_Basamos_Envoy_Rally:
+  Skills:
+  - summon{t=Azuriter_Sandhorn_Camela;a=1;r=5;s=true;delay=8} @self
+  - summon{t=Azuriter_BigCamela;a=1;r=5;s=true;delay=18} @self

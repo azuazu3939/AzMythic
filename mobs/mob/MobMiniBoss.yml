@@ -2,9 +2,9 @@ Azuriter_Mob_Fedos:
   Template: Azuriter_Enemy_NormalBase
   Display: "<#ff8a5a>&lフェドス&R"
   Type: HOGLIN
-  Health: 6000
+  Health: 8000
   Armor: 82
-  Damage: 40
+  Damage: 80
   Drops:
   - money 160to360 1
   Options:
@@ -35,6 +35,12 @@ Azuriter_Mob_Fedos:
   - goToSpawn{speed=2;max=80;min=1}
   - moveTowardsTarget
   - float
+  BossBar:
+    Enabled: true
+    Title: <caster.name>
+    Range: 32
+    Color: WHITE
+    Style: SOLID
   Skills:
   - attribute{attr=ARMOR_TOUGHNESS;a=82} @self ~onSpawn
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ~onEntercombat

@@ -15,7 +15,7 @@ Azuriter_Mob_Boss_Feldos_Attack5:
   - jump{v=1.25} @self
   - delay 2
   - wait{c=[ - onground true ];tt=300} @self
-  - skill{s=Azuriter_Mob_Boss_Feldos_Attack5_OnGround} @self
+  - skill{s=Azuriter_Mob_Boss_Feldos_Attack5_OnGround;repeat=39;repeati=1} @self
   - delay 25
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 

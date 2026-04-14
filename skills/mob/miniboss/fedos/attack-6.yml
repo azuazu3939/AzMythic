@@ -21,7 +21,7 @@ Azuriter_Mob_Fedos_Attack6_Loop:
   - delay 2
   - leap{v=400} @T
   - wait{c=[ - onground true ];tt=300} @self
-  - skill{s=Azuriter_Mob_Fedos_Attack5_OnGround} @self
+  - skill{s=Azuriter_Mob_Fedos_Attack5_OnGround;repeat=29;repeati=1} @self
   - delay 5
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
   - skill{s=Azuriter_Mob_Fedos_Attack6_Loop} @self

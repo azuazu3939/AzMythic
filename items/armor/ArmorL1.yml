@@ -292,9 +292,6 @@ Azuriter_ウィクサーC:
       Health: 12.5
       Damage: 1 ADD
   Group: 'Armor'
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Skills:
 
 Azuriter_ウィクサーL:
@@ -323,9 +320,6 @@ Azuriter_ウィクサーL:
       Health: 12.5
       Damage: 1 ADD
   Group: 'Armor'
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Skills:
 
 Azuriter_ウィクサーB:
@@ -354,7 +348,4 @@ Azuriter_ウィクサーB:
       Health: 12.5
       Damage: 1 ADD
   Group: 'Armor'
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Skills:

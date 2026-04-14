@@ -3,7 +3,7 @@ GEM:
   Display: ""
   Formatting:
     Empty: '&f&l<augment.icon>&r&f 空 <augment.type>&r&f スロット'
-    Filled: '&f&l<augment.icon> <augment.type><&co> <augment.tooltip>'
+    Filled: '&f&l<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '&7&l☆'
     Filled: '&e&l★'

@@ -3,7 +3,8 @@ ItemInfoLore_Sword_1:
     - "<white>マナを消費し、回避判定モーションを繰り出す。"
     - "<white>回避するとアクションを行う。"
   - Filler: '<rainbow>-----------------------'
-  - Line:
+  - Line:  
+    - '{stats}'
     - '{stats}<yellow>Stats:'
     - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
@@ -13,7 +14,8 @@ ItemInfoLore_Sword_1:
 
 ItemInfoLore_Bow_1:
   - Filler: '<rainbow>-----------------------'
-  - Line:
+  - Line:  
+    - '{stats}'
     - '{stats}<yellow>Stats:'
     - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
@@ -23,9 +25,10 @@ ItemInfoLore_Bow_1:
 
 ItemInfoLore_Tomahawk_1:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>攻撃力 +40'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -33,11 +36,10 @@ ItemInfoLore_Tomahawk_1:
 
 ItemInfoLore_Endiam_1:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>攻撃力 +32'
-    - '<white>重力 -20%'
-    - '<white>攻撃速度 +100%'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -45,14 +47,10 @@ ItemInfoLore_Endiam_1:
 
 ItemInfoLore_RangeCurve_1:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>攻撃力 +28'
-    - '<white>防御力 -25%'
-    - '<white>防具強度 -25%'
-    - '<white>最大体力 -20%'
-    - '<white>移動速度 +40%'
-    - '<white>攻撃速度 +50%'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -60,14 +58,10 @@ ItemInfoLore_RangeCurve_1:
 
 ItemInfoLore_RangeFire_1:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>攻撃力 +36'
-    - '<white>移動速度 +25%'
-    - '<white>最大体力 -20%'
-    - '<white>防御力 -25%'
-    - '<white>防具強度 -25%'
-    - '<white>攻撃速度 +50%'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -75,11 +69,10 @@ ItemInfoLore_RangeFire_1:
 
 ItemInfoLore_RangeEmpuria_1:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>攻撃力 +32'
-    - '<white>移動速度 +35%'
-    - '<white>攻撃速度 +25%'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -87,12 +80,10 @@ ItemInfoLore_RangeEmpuria_1:
 
 ItemInfoLore_WeakserL1_H:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>防具強度 +24'
-    - '<white>防御力 +27'
-    - '<white>最大体力 +10'
-    - '<white>攻撃力 +1'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -100,14 +91,10 @@ ItemInfoLore_WeakserL1_H:
 
 ItemInfoLore_WeakserL1_B:
   - Filler: '<rainbow>-----------------------'
-  - Line:
-    - '<yellow>Stats:'
-    - '<white>防具強度 +24'
-    - '<white>防御力 +27'
-    - '<white>最大体力 +12.5'
-    - '<white>攻撃力 +1'
-    - '<white>クリティカル率 +5%'
-    - '<white>クリティカルダメージ +5%'
+  - Line:  
+    - '{stats}'
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'

@@ -19,7 +19,6 @@ Azuriter_Mob_Fedos_Attack5:
 Azuriter_Mob_Fedos_Attack5_OnGround:
   Conditions:
   - incombat true
-  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
   Skills:
   - damage{a="<skill.var.dmg> * 2";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4";c=[ - hasAura{n=Azuriter_Mob_Aura_FedosAttack5GroundHit} false - surface{r=<5} true ]}
   - aura{n=Azuriter_Mob_Aura_FedosAttack5GroundHit;t=40} @PRING{min="<skill.var.itr>";max="<skill.var.itr> + 4"}

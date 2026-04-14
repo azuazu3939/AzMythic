@@ -106,7 +106,7 @@ Azuriter_Canopy_Commander:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10} @self ~onDropcombat
   - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Loop} @self ~onEnterCombat
-  - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Call} @self ~onEnterCombat 0.08
+  - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Rally} @self ~onEnterCombat 0.08
   - summon{t=Azuriter_Briar_Raider;a=1;r=5;s=true;delay=8} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.96"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.7"} @ThreatTablePlayers ~onDeath

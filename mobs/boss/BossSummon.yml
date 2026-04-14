@@ -4,7 +4,7 @@ Azuriter_Boss_Feldos:
   Type: hoglin
   Health: 47500
   Armor: 130
-  Damage: 135
+  Damage: 85
   Drops:
   - money 1000to1500 1
   Options:
@@ -104,7 +104,7 @@ Azuriter_Boss_Wedler:
   Type: wolf
   Health: 45000
   Armor: 135
-  Damage: 120
+  Damage: 75
   Drops:
   - money 30to50 1
   Options:
@@ -206,7 +206,7 @@ Azuriter_Boss_Basamos:
   Display: "<#dac469>&l幻想獣バサモス&R"
   Health: 42500
   Armor: 120
-  Damage: 125
+  Damage: 80
   Drops:
   - money 30to50 1
   Packet:
@@ -325,7 +325,7 @@ Azuriter_Boss_Glacies:
   Type: polar_bear
   Health: 46250
   Armor: 138
-  Damage: 130
+  Damage: 80
   Drops:
   - money 30to50 1
   Options:

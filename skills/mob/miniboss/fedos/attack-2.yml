@@ -6,7 +6,7 @@ Azuriter_Mob_Fedos_Attack2:
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
   - e:pr{p=end_rod;a=3;ys=0.05;hs=0.1;pts=48;d=true;dir=0,1,0;s=1;r=12} @selfLocation{y=1}
   - delay 25
-  - skill{s=Azuriter_Mob_Fedos_Attack2_Loop;repeat=19;repeati=20} @self
+  - skill{s=Azuriter_Mob_Fedos_Attack2_Loop;repeat=9;repeati=20} @self
 
 Azuriter_Mob_Fedos_Attack2_Loop:
   Skills:

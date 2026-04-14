@@ -4,7 +4,7 @@ Azuriter_Mob_Fedos:
   Type: HOGLIN
   Health: 8000
   Armor: 82
-  Damage: 80
+  Damage: 70
   Drops:
   - money 160to360 1
   Options:

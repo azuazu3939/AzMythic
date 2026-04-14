@@ -1,7 +1,8 @@
 Azuriter_Mob_Fedos:
   Template: Azuriter_Enemy_NormalBase
   Display: "<#ff8a5a>&lフェドス&R"
-  Health: 7800
+  Type: HOGLIN
+  Health: 6000
   Armor: 82
   Damage: 19
   Drops:
@@ -35,19 +36,10 @@ Azuriter_Mob_Fedos:
   - moveTowardsTarget
   - float
   Skills:
-  - tracklocation @selfLocation ~onSpawn
   - attribute{attr=ARMOR_TOUGHNESS;a=82} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Feldos_Attack1";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Feldos_Attack2";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Feldos_Attack3";t=STRING} @self ~onSpawn
-  - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill4;a="Azuriter_Mob_Boss_Feldos_Attack4";t=STRING} @self ~onSpawn
+  - skill{s=Azuriter_Mob_Fedos_Loop} @self ~onEntercombat
 
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
-  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=120;shield_break=1300;heal_percent=0.008} @self ~onEntercombat
-  - skill{s=Azuriter_Mob_Fedos_Loop} @self ~onEntercombat
-  - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onSpawn
-  - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onDropcombat
-
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
 
   - potionclear{t=STRENGTH} @self ~onDamaged >55%
@@ -107,8 +99,6 @@ Azuriter_Canopy_Commander:
   - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onSpawn
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10} @self ~onDropcombat
-  - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Loop} @self ~onEnterCombat
-  - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Rally} @self ~onEnterCombat 0.08
   - summon{t=Azuriter_Briar_Raider;a=1;r=5;s=true;delay=8} @self ~onEnterCombat ?children{a=<2}
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.96"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.7"} @ThreatTablePlayers ~onDeath
@@ -157,8 +147,6 @@ Azuriter_Canopy_Warlord:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10} @self ~onDropcombat
   - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onDropcombat
-  - skill:Azuriter_Mob_Boss_Feldos_Commander_Call @self ~onEnterCombat 0.12
-  - skill{s=Azuriter_Mob_Boss_Feldos_Warlord_Loop} @self ~onEnterCombat
   - cmd{c="mlgo <target.name> Azuriter_Feldos_Summon_Paper 1 0.92"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.62"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.34"} @ThreatTablePlayers ~onDeath
@@ -218,8 +206,6 @@ Azuriter_Windpack_Herald:
   - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
   - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
-  - skill:Azuriter_Mob_Boss_Wedler_Herald_Loop @T ~onEnterCombat
-  - skill:Azuriter_Mob_Boss_Wedler_Herald_Rally @self ~onEnterCombat 0.12
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropcombat
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.85"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.68"} @ThreatTablePlayers ~onDeath
@@ -281,8 +267,6 @@ Azuriter_Dusthowler_Envoy:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
-  - skill:Azuriter_Mob_Boss_Basamos_Envoy_Rally @self ~onEnterCombat 0.12
-  - skill{s=Azuriter_Mob_Boss_Basamos_Envoy_Loop} @T ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropcombat
   - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.42"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.58"} @ThreatTablePlayers ~onDeath
@@ -351,8 +335,6 @@ Azuriter_Stonevein_Warden:
   Skills:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
-  - skill:Azuriter_Mob_Boss_Basamos_Warden_Loop @T ~onEnterCombat
-  - skill:Azuriter_Mob_Boss_Basamos_Warden_Rally @self ~onEnterCombat 0.12
   - attribute{attribute=FOLLOW_RANGE;a=8;delay=5} @self ~onDropcombat
   - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.32"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.62"} @ThreatTablePlayers ~onDeath

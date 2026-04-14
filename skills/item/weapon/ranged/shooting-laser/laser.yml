@@ -17,6 +17,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process:
     os=[
       - setvarloc{var=skill.ShootingLaser;v=@origin} @self
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=60;brightness=15,15;viewrange=64} @origin 
+    ];
+    os=[
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=60;brightness=15,15;viewrange=64;fo=true} @variableLocation{k=skill.ShootingLaser}
     ];
     oh=[

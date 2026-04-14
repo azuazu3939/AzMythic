@@ -13,7 +13,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
   Skills:
-  - projectile{v=24;i=2;vr=3;r=3;se=false;sb=false;syo=2;sfo=2;sso=2.5;d=60;ti=0;hp=false;hnp=true;
+  - projectile{v=24;i=1;vr=3;r=3;se=false;sb=false;syo=2;sfo=2;sso=2.5;d=60;ti=0;hp=false;hnp=true;
     os=[
       - setvarloc{var=skill.ShootingLaser1;v=@origin} @self
     ];
@@ -32,7 +32,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
   Skills:
-  - projectile{v=24;i=2;vr=3;r=3;se=false;sb=false;syo=2;sfo=2;sso=-2.5;d=60;ti=0;hp=false;hnp=true;
+  - projectile{v=24;i=1;vr=3;r=3;se=false;sb=false;syo=2;sfo=2;sso=-2.5;d=60;ti=0;hp=false;hnp=true;
     os=[
       - setvarloc{var=skill.ShootingLaser2;v=@origin} @self
     ];

@@ -17,4 +17,5 @@ Azuriter_Mob_Boss_Feldos_Loop:
   - ignite{d=100} @PIR{r=5}
   - potion{t=WEAKNESS;l=0;d=400} @self ?raining
   - delay 160
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
   - skill:Azuriter_Mob_Boss_Feldos_Loop @T

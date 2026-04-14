@@ -26,7 +26,6 @@ Azuriter_ガーディアH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -144,7 +143,6 @@ Azuriter_ヘルシティアH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -264,7 +262,6 @@ Azuriter_ウィクサーH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin

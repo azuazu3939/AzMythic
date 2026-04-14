@@ -1,5 +1,5 @@
 Azuriter_Mob_Fedos_Attack4:
-  Cooldown: 25
+  Cooldown: 15
   Conditions:
   - incombat true
   - hasTag{t=Azuriter_Core_Tag_AttackBusy} false

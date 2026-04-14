@@ -12,7 +12,7 @@ Azuriter_Mob_Fedos_Attack5:
   - delay 10
   - jump{v=1.25} @self
   - delay 2
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Fedos_Attack5_OnGround;s_repeat_i=1;s_repeat=39} @self
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Fedos_Attack5_OnGround;s_repeat_i=1;s_repeat=59} @self
   - delay 40
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 

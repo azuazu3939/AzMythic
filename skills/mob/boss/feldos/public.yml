@@ -18,5 +18,5 @@ Azuriter_Mob_Boss_Feldos_Loop:
   - potion{t=WEAKNESS;l=0;d=400} @self ?raining
   - wait{c=[ - hasTag{t=Azuriter_Core_Tag_AttackBusy} false ];tt=1200}
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
-  - delay 40
+  - delay 80
   - skill:Azuriter_Mob_Boss_Feldos_Loop @T

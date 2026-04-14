@@ -14,5 +14,5 @@ Azuriter_Mob_Fedos_Loop:
   - potion{t=WEAKNESS;l=0;d=600} @self ?raining
   - wait{c=[ - hasTag{t=Azuriter_Core_Tag_AttackBusy} false ];tt=1200}
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
-  - delay 40
+  - delay 100
   - skill:Azuriter_Mob_Fedos_Loop @T

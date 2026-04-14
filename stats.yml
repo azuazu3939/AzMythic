@@ -155,6 +155,8 @@ HEALTH_REGENERATION:
   MaxValue: 1000000
   MinValue: 0
   Frequency: 60
+  ShowInLore:
+    Compound: true
 
 LIFESTEAL_CHANCE:
   Enabled: true

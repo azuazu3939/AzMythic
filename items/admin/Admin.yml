@@ -26,16 +26,3 @@ Azuriter_操作Boss:
   - onDamaged{n=Azuriter_Core_Aura_NoCombat;t=9999999;i=1;rd=true;ce=true} @self ~onUse
   - auraRemove{n=Azuriter_Core_Aura_NoCombat} @self ~onSwapitems
 
-Azuriter_Admin_Sword_2:
-  Id: diamond_sword
-  Display: "&4&lアドミンソード"
-  ItemUpdater:
-    Version: 1
-  Group: 'Admin-Melee-Weapon'
-  Attributes:
-    MainHand:
-      Damage: 20 ADD
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.5 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 25.0 ADDITIVE
-  - HEALTH 20to30 ADDITIVE

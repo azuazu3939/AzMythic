@@ -156,7 +156,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
   Skills:
-  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=60;hp=false;hnp=true;mr=60;ho=<skill.ho>;
+  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=40;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser5;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -173,7 +173,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
   Skills:
-  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-8;d=60;hp=false;hnp=true;mr=60;ho=<skill.ho>;
+  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-8;d=40;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser6;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self

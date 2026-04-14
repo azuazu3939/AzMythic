@@ -134,7 +134,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
   - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=60;hp=false;hnp=true;mr=60;
     os=[
       - setvarloc{var=skill.ShootingLaser5;v=@origin} @self
-      - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self^
+      - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
       - displayline{material=RED_STAINED_GLASS;scale=2.5,2.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser5}

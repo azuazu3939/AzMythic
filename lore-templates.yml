@@ -3,21 +3,11 @@ ItemInfoLore_Sword_1:
     - "<white>マナを消費し、回避判定モーションを繰り出す。"
     - "<white>回避するとアクションを行う。"
   - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
-  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Bow_1:
-  - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
   - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -25,21 +15,11 @@ ItemInfoLore_Bow_1:
 
 ItemInfoLore_Tomahawk_1:
   - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
-  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Endiam_1:
-  - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
   - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -47,21 +27,11 @@ ItemInfoLore_Endiam_1:
 
 ItemInfoLore_RangeCurve_1:
   - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
-  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeFire_1:
-  - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
   - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -69,21 +39,11 @@ ItemInfoLore_RangeFire_1:
 
 ItemInfoLore_RangeEmpuria_1:
   - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
-  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_WeakserL1_H:
-  - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
   - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
@@ -91,21 +51,11 @@ ItemInfoLore_WeakserL1_H:
 
 ItemInfoLore_WeakserL1_B:
   - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
-  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Normal_1:
-  - Filler: '<gray>----'
-  - Line:  
-    - '{stats}'
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
   - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'

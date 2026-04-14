@@ -45,6 +45,8 @@ Azuriter_Mob_Fedos:
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=120;shield_break=1300;heal_percent=0.008} @self ~onEntercombat
   - skill{s=Azuriter_Mob_Fedos_Loop} @self ~onEntercombat
+  - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onSpawn
+  - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onDropcombat
 
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
 

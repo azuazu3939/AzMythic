@@ -19,6 +19,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_1:
   - hasTag{t=ShootingLaser1} false 
   - hasTag{t=ShootingLaser2} false 
   - hasTag{t=ShootingLaser3} false 
+  - matCooldown{m=enchanted_book} false
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=10} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
@@ -30,6 +31,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_2:
   - hasTag{t=ShootingLaser1} true
   - hasTag{t=ShootingLaser2} false 
   - hasTag{t=ShootingLaser3} false 
+  - matCooldown{m=enchanted_book} false
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=16} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
@@ -41,6 +43,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
   - hasTag{t=ShootingLaser1} true
   - hasTag{t=ShootingLaser2} true
   - hasTag{t=ShootingLaser3} false 
+  - matCooldown{m=enchanted_book} false
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=20} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
@@ -54,6 +57,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
   - hasTag{t=ShootingLaser1} true 
   - hasTag{t=ShootingLaser2} true 
   - hasTag{t=ShootingLaser3} true 
+  - matCooldown{m=enchanted_book} false
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=30} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5} @self

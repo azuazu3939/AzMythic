@@ -1119,6 +1119,7 @@ Azuriter_Dusthowler_Camela:
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
   - summon{t=Azuriter_Sandhorn_Camela;a=<random.1to2>;r=5;s=true;delay=10} @self ~onEnterCombat ?children{a=<2}
+  - skill:Azuriter_Mob_Boss_Basamos_Envoy_Call @self ~onEnterCombat 0.08
   - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.65"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.8"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.28"} @ThreatTablePlayers ~onDeath

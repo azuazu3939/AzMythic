@@ -1,4 +1,6 @@
 Azuriter_Mob_Boss_Feldos_RemoveMarker:
   Skills:
+  - removetag{t=Azuriter_Core_Tag_EnemyCycleStart} @self
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - removetag{t=Azuriter_Core_Tag_EnemyDown} @self
   - removetag{t=Azuriter_Mob_Tag_FeldosAimToggle} @self

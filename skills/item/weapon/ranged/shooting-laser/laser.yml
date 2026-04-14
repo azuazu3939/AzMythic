@@ -13,13 +13,13 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
   Skills:
-  - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=2.5;d=60;ti=0;
+  - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=2.5;d=60;ti=1;
     os=[
       - setvarloc{var=skill.ShootingLaser1;v=@origin} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=2} @variableLocation{k=skill.ShootingLaser1}
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=2;fo=true} @variableLocation{k=skill.ShootingLaser1}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=0} @variableLocation{k=skill.ShootingLaser1}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=0;fo=true} @variableLocation{k=skill.ShootingLaser1}
       - e:p{c=#22a4f0;a=2;ys=0.85;hs=0.85;audience=caster;s=0.1} @variableLocation{k=skill.ShootingLaser1}
       - e:p{p=end_rod;a=2;ys=0.5;hs=0.5;audience=caster;s=0.15} @variableLocation{k=skill.ShootingLaser1}
     ];
@@ -29,13 +29,13 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
   Skills:
-  - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=-2.5;d=60;ti=0;
+  - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=-2.5;d=60;ti=1;
     os=[
       - setvarloc{var=skill.ShootingLaser2;v=@origin} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=2} @variableLocation{k=skill.ShootingLaser2}
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=2;fo=true} @variableLocation{k=skill.ShootingLaser2}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=0} @variableLocation{k=skill.ShootingLaser2}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;interpolation=0;fo=true} @variableLocation{k=skill.ShootingLaser2}
       - e:p{c=#22a4f0;a=2;ys=0.85;hs=0.85;audience=caster;s=0.1} @variableLocation{k=skill.ShootingLaser2}
       - e:p{p=end_rod;a=2;ys=0.5;hs=0.5;audience=caster;s=0.15} @variableLocation{k=skill.ShootingLaser2}
     ];

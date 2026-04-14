@@ -1,4 +1,4 @@
-Azuriter_ウィクサー_Full:
+Azuriter_Item_Armor_Weakser_Full:
   Cooldown: 10
   Skills:
   - potion{t=REGENERATION;d=500;l=1;p=false} @self

@@ -1,4 +1,4 @@
-Azuriter_ガーディア_Full:
+Azuriter_Item_Armor_Guardia_Full:
   Cooldown: 5
   Skills:
   - potion{t=REGENERATION;l=1;d=600;p=false} @self
@@ -6,7 +6,7 @@ Azuriter_ガーディア_Full:
   - potion{t=RESISTANCE;l=0;d=600;p=false} @self
   - potion{t=RESISTANCE;l=0;d=600;p=false} @PIR{r=32}
 
-Azuriter_ガーディア_Full_Combat:
+Azuriter_Item_Armor_Guardia_Full_Combat:
   Cooldown: 0.5
   TriggerConditions:
   - isplayer false

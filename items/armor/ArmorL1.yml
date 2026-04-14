@@ -1,6 +1,6 @@
 Azuriter_ガーディアH:
   Id: netherite_helmet
-  Display: "&aガーディア・ヘルメット &f&lL1"
+  Display: "&aガーディア・ヘルメット"
   EquipSlot: HEAD
   EquipmentSet: Guardia
   Lore:
@@ -22,17 +22,12 @@ Azuriter_ガーディアH:
       Armor: 40
       Health: 10
       KnockbackResistance: 0.25
-      Damage: 2 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
 
 Azuriter_ガーディアC:
   Id: netherite_chestplate
-  Display: "&aガーディア・チェストプレート &f&lL1"
+  Display: "&aガーディア・チェストプレート"
   EquipSlot: CHEST
   EquipmentSet: Guardia
   Lore:
@@ -54,13 +49,13 @@ Azuriter_ガーディアC:
       Armor: 40
       Health: 12.5
       KnockbackResistance: 0.25
-      Damage: 2 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Skills:
 
 Azuriter_ガーディアL:
   Id: netherite_leggings
-  Display: "&aガーディア・レギンス &f&lL1"
+  Display: "&aガーディア・レギンス"
   EquipSlot: LEGS
   EquipmentSet: Guardia
   Lore:
@@ -82,13 +77,13 @@ Azuriter_ガーディアL:
       Armor: 40
       Health: 12.5
       KnockbackResistance: 0.25
-      Damage: 2 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Skills:
 
 Azuriter_ガーディアB:
   Id: netherite_boots
-  Display: "&aガーディア・ブーツ &f&lL1"
+  Display: "&aガーディア・ブーツ"
   EquipSlot: FEET
   EquipmentSet: Guardia
   Lore:
@@ -110,15 +105,15 @@ Azuriter_ガーディアB:
       Armor: 40
       Health: 12.5
       KnockbackResistance: 0.25
-      Damage: 2 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Skills:
 
 Azuriter_ヘルシティアH:
   Id: leather_helmet
-  Display: "&aヘルシティア・ヘルメット &f&lL1"
+  Display: "&aヘルシティア・ヘルメット"
   EquipSlot: HEAD
-  EquipmentSet: Healthal
+  EquipmentSet: Healthtia
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -135,23 +130,18 @@ Azuriter_ヘルシティアH:
     Version: 2
   Attributes:
     Head:
-      ArmorToughness: 24
-      Armor: 28
+      ArmorToughness: 21
+      Armor: 24
       Health: 10
-      Damage: 1.75 ADD
+      Damage: 1 ADD
       MovementSpeed: 0.125
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
 
 Azuriter_ヘルシティアC:
   Id: leather_chestplate
-  Display: "&aヘルシティア・チェストプレート &f&lL1"
+  Display: "&aヘルシティア・チェストプレート"
   EquipSlot: CHEST
-  EquipmentSet: Healthal
+  EquipmentSet: Healthtia
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -168,19 +158,19 @@ Azuriter_ヘルシティアC:
     Version: 2
   Attributes:
     Chest:
-      ArmorToughness: 24
-      Armor: 28
+      ArmorToughness: 21
+      Armor: 24
       Health: 15
-      Damage: 1.75 ADD
+      Damage: 1 ADD
       MovementSpeed: 0.125
   Group: 'Armor'
   Skills:
 
 Azuriter_ヘルシティアL:
   Id: leather_leggings
-  Display: "&aヘルシティア・レギンス &f&lL1"
+  Display: "&aヘルシティア・レギンス"
   EquipSlot: LEGS
-  EquipmentSet: Healthal
+  EquipmentSet: Healthtia
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -197,19 +187,19 @@ Azuriter_ヘルシティアL:
     Version: 2
   Attributes:
     Legs:
-      ArmorToughness: 24
-      Armor: 28
+      ArmorToughness: 21
+      Armor: 24
       Health: 15
-      Damage: 1.75 ADD
+      Damage: 1 ADD
       MovementSpeed: 0.125
   Group: 'Armor'
   Skills:
 
 Azuriter_ヘルシティアB:
   Id: leather_boots
-  Display: "&aヘルシティア・ブーツ &f&lL1"
+  Display: "&aヘルシティア・ブーツ"
   EquipSlot: FEET
-  EquipmentSet: Healthal
+  EquipmentSet: Healthtia
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -226,17 +216,17 @@ Azuriter_ヘルシティアB:
     Version: 2
   Attributes:
     Feet:
-      ArmorToughness: 24
-      Armor: 28
+      ArmorToughness: 21
+      Armor: 24
       Health: 15
-      Damage: 1.75 ADD
+      Damage: 1 ADD
       MovementSpeed: 0.125
   Group: 'Armor'
   Skills:
 
 Azuriter_ウィクサーH:
   Id: leather_helmet
-  Display: "&aウィクサー・ヘルメット &f&lL1"
+  Display: "&aウィクサー・ヘルメット"
   EquipSlot: HEAD
   EquipmentSet: Weakser
   Lore:
@@ -256,19 +246,16 @@ Azuriter_ウィクサーH:
   Attributes:
     Head:
       ArmorToughness: 24
-      Armor: 27
-      Health: 10
-      Damage: 1 ADD
+      Armor: 24
+      Health: 8
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
 
 Azuriter_ウィクサーC:
   Id: leather_chestplate
-  Display: "&aウィクサー・チェストプレート &f&lL1"
+  Display: "&aウィクサー・チェストプレート"
   EquipSlot: CHEST
   EquipmentSet: Weakser
   Lore:
@@ -285,18 +272,20 @@ Azuriter_ウィクサーC:
     Unbreakable: true
   ItemUpdater:
     Version: 2
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Attributes:
     Chest:
       ArmorToughness: 24
-      Armor: 27
-      Health: 12.5
-      Damage: 1 ADD
+      Armor: 24
+      Health: 8
   Group: 'Armor'
   Skills:
 
 Azuriter_ウィクサーL:
   Id: leather_leggings
-  Display: "&aウィクサー・レギンス &f&lL1"
+  Display: "&aウィクサー・レギンス"
   EquipSlot: LEGS
   EquipmentSet: Weakser
   Lore:
@@ -313,18 +302,20 @@ Azuriter_ウィクサーL:
     Unbreakable: true
   ItemUpdater:
     Version: 2
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Attributes:
     Legs:
       ArmorToughness: 24
-      Armor: 27
-      Health: 12.5
-      Damage: 1 ADD
+      Armor: 24
+      Health: 8
   Group: 'Armor'
   Skills:
 
 Azuriter_ウィクサーB:
   Id: leather_boots
-  Display: "&aウィクサー・ブーツ &f&lL1"
+  Display: "&aウィクサー・ブーツ"
   EquipSlot: FEET
   EquipmentSet: Weakser
   Lore:
@@ -341,11 +332,13 @@ Azuriter_ウィクサーB:
     Unbreakable: true
   ItemUpdater:
     Version: 2
+  Stats:
+  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
+  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Attributes:
     Feet:
       ArmorToughness: 24
-      Armor: 27
-      Health: 12.5
-      Damage: 1 ADD
+      Armor: 24
+      Health: 8
   Group: 'Armor'
   Skills:

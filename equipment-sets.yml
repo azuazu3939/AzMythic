@@ -1,47 +1,62 @@
-Diamond_S1End:
+Diagram:
   Enabled: true # Will default to true if not set
   Bonuses:
   - Pieces: 1
     Skills:
-    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use} @self ~onKill
-    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use} @self ~onDamaged
-    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use} @self ~onSwing
-    - skill{s=Azuriter_Item_Armor_SeriesEnd1_Use}@self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Andis_Use} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Andis_Use} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Andis_Use} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Diagram_Use}@self ~onAttack
   - Pieces: 4
     Skills:
-    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onKill
-    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onDamaged
-    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onSwing
-    - skill{s=Azuriter_シリーズエンド1_Full} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Diagram_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Diagram_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Diagram_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Diagram_Full} @self ~onAttack
+
+Andis:
+  Enabled: true # Will default to true if not set
+  Bonuses:
+  - Pieces: 1
+    Skills:
+    - skill{s=Azuriter_Item_Armor_Andis_Use} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Andis_Use} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Andis_Use} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Andis_Use}@self ~onAttack
+  - Pieces: 4
+    Skills:
+    - skill{s=Azuriter_Item_Armor_Andis_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Andis_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Andis_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Andis_Full} @self ~onAttack
 
 Guardia:
   Enabled: true # Will default to true if not set
   Bonuses:
   - Pieces: 4
     Skills:
-    - skill{s=Azuriter_ガーディア_Full} @self ~onKill
-    - skill{s=Azuriter_ガーディア_Full} @self ~onDamaged
-    - skill{s=Azuriter_ガーディア_Full} @self ~onSwing
-    - skill{s=Azuriter_ガーディア_Full} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Guardia_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Guardia_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Guardia_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Guardia_Full} @self ~onAttack
 
-    - skill{s=Azuriter_ガーディア_Full_Combat} @self ~onAttack
-    - skill{s=Azuriter_ガーディア_Full_Combat} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Guardia_Full_Combat} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Guardia_Full_Combat} @self ~onDamaged
 
-Healthal:
+Healthtia:
   Enabled: true # Will default to true if not set
   Bonuses:
   - Pieces: 4
     Skills:
-    - skill{s=Azuriter_ヘルシティア_Full} @self ~onKill
-    - skill{s=Azuriter_ヘルシティア_Full} @self ~onDamaged
-    - skill{s=Azuriter_ヘルシティア_Full} @self ~onSwing
-    - skill{s=Azuriter_ヘルシティア_Full} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full} @self ~onAttack
 
-    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onAttack
-    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onDamaged
-    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onSwing
-    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onUse
-    - skill{s=Azuriter_ヘルシティア_Full_Healthal} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full_Combat} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full_Combat} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full_Combat} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Healthtia_Full_Combat} @self ~onKill
 
 Attacker:
   Enabled: true # Will default to true if not set
@@ -54,10 +69,10 @@ Attacker:
     - skill{s=Azuriter_Item_Armor_Attacker_Use} @self ~onAttack
   - Pieces: 4
     Skills:
-    - skill{s=Azuriter_アタッカー_Full} @self ~onKill
-    - skill{s=Azuriter_アタッカー_Full} @self ~onDamaged
-    - skill{s=Azuriter_アタッカー_Full} @self ~onSwing
-    - skill{s=Azuriter_アタッカー_Full} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Attacker_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Attacker_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Attacker_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Attacker_Full} @self ~onAttack
 
 Defender:
   Enabled: true # Will default to true if not set
@@ -70,17 +85,17 @@ Defender:
     - skill{s=Azuriter_Item_Armor_Defense_Use} @self ~onAttack
   - Pieces: 4
     Skills:
-    - skill{s=Azuriter_ディフェンス_Full} @self ~onKill
-    - skill{s=Azuriter_ディフェンス_Full} @self ~onDamaged
-    - skill{s=Azuriter_ディフェンス_Full} @self ~onSwing
-    - skill{s=Azuriter_ディフェンス_Full} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Defense_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Defense_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Defense_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Defense_Full} @self ~onAttack
 
 Weakser:
   Enabled: true # Will default to true if not set
   Bonuses:
   - Pieces: 4
     Skills:
-    - skill{s=Azuriter_ウィクサー_Full} @self ~onKill
-    - skill{s=Azuriter_ウィクサー_Full} @self ~onDamaged
-    - skill{s=Azuriter_ウィクサー_Full} @self ~onSwing
-    - skill{s=Azuriter_ウィクサー_Full} @self ~onAttack
+    - skill{s=Azuriter_Item_Armor_Weakser_Full} @self ~onKill
+    - skill{s=Azuriter_Item_Armor_Weakser_Full} @self ~onDamaged
+    - skill{s=Azuriter_Item_Armor_Weakser_Full} @self ~onSwing
+    - skill{s=Azuriter_Item_Armor_Weakser_Full} @self ~onAttack

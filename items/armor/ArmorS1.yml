@@ -1,4 +1,4 @@
-Azuriter_ビギナーH:
+Azuriter_Item_Armor_ビギナーH:
   Id: leather_helmet
   Display: "&fビギナーヘルメット"
   Lore:
@@ -18,15 +18,10 @@ Azuriter_ビギナーH:
     Head:
       ArmorToughness: 2 ADD
       Armor: 3 ADD
+      Health: 1 ADD
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
-  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
-Azuriter_ビギナーC:
+Azuriter_Item_Armor_ビギナーC:
   Id: leather_chestplate
   Display: "&fビギナーチェストプレート"
   Lore:
@@ -46,9 +41,10 @@ Azuriter_ビギナーC:
     Chest:
       ArmorToughness: 2 ADD
       Armor: 8 ADD
+      Health: 1 ADD
   Group: 'Armor'
 
-Azuriter_ビギナーL:
+Azuriter_Item_Armor_ビギナーL:
   Id: leather_leggings
   Display: "&fビギナーレギンス"
   Lore:
@@ -68,9 +64,10 @@ Azuriter_ビギナーL:
     Legs:
       ArmorToughness: 2 ADD
       Armor: 6 ADD
+      Health: 1 ADD
   Group: 'Armor'
 
-Azuriter_ビギナーB:
+Azuriter_Item_Armor_ビギナーB:
   Id: leather_boots
   Display: "&fビギナーブーツ"
   Lore:
@@ -90,9 +87,10 @@ Azuriter_ビギナーB:
     Feet:
       ArmorToughness: 2 ADD
       Armor: 3 ADD
+      Health: 1 ADD
   Group: 'Armor'
 
-Azuriter_トラベラーH:
+Azuriter_Item_Armor_トラベラーH:
   Id: leather_helmet
   Display: "&fトラベラーヘルメット"
   Lore:
@@ -113,15 +111,10 @@ Azuriter_トラベラーH:
     Head:
       ArmorToughness: 4 ADD
       Armor: 8 ADD
+      Health: 2 ADD
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
-  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
-Azuriter_トラベラーC:
+Azuriter_Item_Armor_トラベラーC:
   Id: leather_chestplate
   Display: "&fトラベラーチェストプレート"
   Lore:
@@ -142,9 +135,10 @@ Azuriter_トラベラーC:
     Chest:
       ArmorToughness: 4 ADD
       Armor: 8 ADD
+      Health: 2 ADD
   Group: 'Armor'
 
-Azuriter_トラベラーL:
+Azuriter_Item_Armor_トラベラーL:
   Id: leather_leggings
   Display: "&fトラベラーレギンス"
   Lore:
@@ -165,9 +159,10 @@ Azuriter_トラベラーL:
     Legs:
       ArmorToughness: 4 ADD
       Armor: 8 ADD
+      Health: 2 ADD
   Group: 'Armor'
 
-Azuriter_トラベラーB:
+Azuriter_Item_Armor_トラベラーB:
   Id: leather_boots
   Display: "&fトラベラーブーツ"
   Lore:
@@ -188,9 +183,106 @@ Azuriter_トラベラーB:
     Feet:
       ArmorToughness: 4 ADD
       Armor: 8 ADD
+      Health: 2 ADD
   Group: 'Armor'
 
-Azuriter_ディフェンスH:
+Azuriter_Item_Armor_ブライトH:
+  Id: leather_helmet
+  Display: "&fブライトヘルメット"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 255,215,70
+  Attributes:
+    Head:
+      ArmorToughness: 6 ADD
+      Armor: 10 ADD
+      Health: 3 ADD
+  Group: 'Armor'
+
+Azuriter_Item_Armor_ブライトC:
+  Id: leather_chestplate
+  Display: "&fブライトチェストプレート"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 255,215,70
+  Attributes:
+    Chest:
+      ArmorToughness: 6 ADD
+      Armor: 12 ADD
+      Health: 3 ADD
+  Group: 'Armor'
+
+Azuriter_Item_Armor_ブライトL:
+  Id: leather_leggings
+  Display: "&fブライトレギンス"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 255,215,70
+  Attributes:
+    Legs:
+      ArmorToughness: 6 ADD
+      Armor: 12 ADD
+      Health: 3 ADD
+  Group: 'Armor'
+
+Azuriter_Item_Armor_ブライトB:
+  Id: leather_boots
+  Display: "&fブライトブーツ"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 2
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+    Color: 255,215,70
+  Attributes:
+    Feet:
+      ArmorToughness: 6 ADD
+      Armor: 10 ADD
+      Health: 3 ADD
+  Group: 'Armor'
+
+Azuriter_Item_Armor_ディフェンスH:
   Id: leather_helmet
   Display: "&fディフェンダーヘルメット"
   EquipSlot: HEAD
@@ -213,16 +305,10 @@ Azuriter_ディフェンスH:
     Head:
       ArmorToughness: 9 ADD
       Armor: 15 ADD
-      Health: 2 ADD
+      Health: 6 ADD
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
-  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
-Azuriter_ディフェンスC:
+Azuriter_Item_Armor_ディフェンスC:
   Id: leather_chestplate
   Display: "&fディフェンダーチェストプレート"
   EquipSlot: CHEST
@@ -245,11 +331,11 @@ Azuriter_ディフェンスC:
     Chest:
       ArmorToughness: 9 ADD
       Armor: 12 ADD
-      Health: 4 ADD
+      Health: 6 ADD
   Group: 'Armor'
   Skills:
 
-Azuriter_ディフェンスL:
+Azuriter_Item_Armor_ディフェンスL:
   Id: leather_leggings
   Display: "&fディフェンダーレギンス"
   EquipSlot: LEGS
@@ -272,11 +358,11 @@ Azuriter_ディフェンスL:
     Legs:
       ArmorToughness: 12 ADD
       Armor: 16 ADD
-      Health: 2 ADD
+      Health: 6 ADD
   Group: 'Armor'
   Skills:
 
-Azuriter_ディフェンスB:
+Azuriter_Item_Armor_ディフェンスB:
   Id: leather_boots
   Display: "&fディフェンダーブーツ"
   EquipSlot: FEET
@@ -299,11 +385,11 @@ Azuriter_ディフェンスB:
     Feet:
       ArmorToughness: 12 ADD
       Armor: 18 ADD
-      Health: 1 ADD
+      Health: 6 ADD
   Group: 'Armor'
   Skills:
 
-Azuriter_アタッカーH:
+Azuriter_Item_Armor_アタッカーH:
   Id: leather_helmet
   Display: "&fアタッカーヘルメット"
   EquipSlot: HEAD
@@ -324,18 +410,13 @@ Azuriter_アタッカーH:
     Version: 2
   Attributes:
     Head:
-      ArmorToughness: 4 ADD
-      Armor: 8 ADD
+      ArmorToughness: 8 ADD
+      Armor: 12 ADD
       Damage: 1 ADD
+      Health: 4 ADD
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
-  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
-Azuriter_アタッカーC:
+Azuriter_Item_Armor_アタッカーC:
   Id: leather_chestplate
   Display: "&fアタッカーチェストプレート"
   EquipSlot: CHEST
@@ -357,12 +438,13 @@ Azuriter_アタッカーC:
   Attributes:
     Chest:
       ArmorToughness: 8 ADD
-      Armor: 10 ADD
+      Armor: 15 ADD
       Damage: 1 ADD
+      Health: 4 ADD
   Group: 'Armor'
   Skills:
 
-Azuriter_アタッカーL:
+Azuriter_Item_Armor_アタッカーL:
   Id: leather_leggings
   Display: "&fアタッカーレギンス"
   EquipSlot: LEGS
@@ -383,13 +465,14 @@ Azuriter_アタッカーL:
     Version: 2
   Attributes:
     Legs:
-      ArmorToughness: 6 ADD
-      Armor: 10 ADD
+      ArmorToughness: 8 ADD
+      Armor: 15 ADD
       Damage: 1 ADD
+      Health: 4 ADD
   Group: 'Armor'
   Skills:
 
-Azuriter_アタッカーB:
+Azuriter_Item_Armor_アタッカーB:
   Id: leather_boots
   Display: "&fアタッカーブーツ"
   EquipSlot: FEET
@@ -410,17 +493,125 @@ Azuriter_アタッカーB:
     Version: 2
   Attributes:
     Feet:
-      ArmorToughness: 4 ADD
-      Armor: 8 ADD
+      ArmorToughness: 8 ADD
+      Armor: 12 ADD
       Damage: 1 ADD
+      Health: 4 ADD
   Group: 'Armor'
   Skills:
 
-Azuriter_シリーズエンド1H:
-  Material: diamond_helmet
-  Display: "&aシリーズエンド・I・ヘルメット"
+Azuriter_Item_Armor_アンディスH:
+  Id: golden_helmet
+  Display: "&fアンディスヘルメット"
   EquipSlot: HEAD
-  EquipmentSet: Diamond_S1End
+  EquipmentSet: Andis
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Head:
+      ArmorToughness: 15 ADD
+      Armor: 20 ADD
+      Damage: 1.5 ADD
+      Health: 7.5 ADD
+  Group: 'Armor'
+
+Azuriter_Item_Armor_アンディスC:
+  Id: golden_chestplate
+  Display: "&fアンディスチェストプレート"
+  EquipSlot: CHEST
+  EquipmentSet: Andis
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Chest:
+      ArmorToughness: 15 ADD
+      Armor: 20 ADD
+      Damage: 1.5 ADD
+      Health: 7.5 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_Item_Armor_アンディスL:
+  Id: golden_leggings
+  Display: "&fアンディスレギンス"
+  EquipSlot: LEGS
+  EquipmentSet: Andis
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Legs:
+      ArmorToughness: 15 ADD
+      Armor: 20 ADD
+      Damage: 1.5 ADD
+      Health: 7.5 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_Item_Armor_アンディスB:
+  Id: golden_boots
+  Display: "&fアンディスブーツ"
+  EquipSlot: FEET
+  EquipmentSet: Andis
+  Hide:
+  - ENCHANTS
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1
+    Chance: 1
+    MaxAmount: 2
+  Options:
+    Unbreakable: true
+  ItemUpdater:
+    Version: 2
+  Attributes:
+    Feet:
+      ArmorToughness: 15 ADD
+      Armor: 20 ADD
+      Damage: 1.5 ADD
+      Health: 7.5 ADD
+  Group: 'Armor'
+  Skills:
+
+Azuriter_Item_Armor_ダイヤグラムH:
+  Material: diamond_helmet
+  Display: "&aダイヤグラムヘルメット"
+  EquipSlot: HEAD
+  EquipmentSet: Diagram
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -436,23 +627,17 @@ Azuriter_シリーズエンド1H:
     Version: 3
   Attributes:
     Head:
-      ArmorToughness: 25 ADD
-      Armor: 32 ADD
+      ArmorToughness: 20 ADD
+      Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2.5 ADD
+      Damage: 2 ADD
   Group: 'Armor'
-  Skills:
-  - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
-  - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
-  - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
-  - skill{s=Azuriter_Core_HealthColor} @self ~onAttack
 
-Azuriter_シリーズエンド1C:
+Azuriter_Item_Armor_ダイヤグラムC:
   Material: diamond_chestplate
-  Display: "&aシリーズエンド・I・チェストプレート"
+  Display: "&aダイヤグラムチェストプレート"
   EquipSlot: CHEST
-  EquipmentSet: Diamond_S1End
+  EquipmentSet: Diagram
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -468,17 +653,17 @@ Azuriter_シリーズエンド1C:
     Version: 3
   Attributes:
     Chest:
-      ArmorToughness: 25 ADD
-      Armor: 32 ADD
+      ArmorToughness: 20 ADD
+      Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2.5 ADD
+      Damage: 2 ADD
   Group: 'Armor'
 
-Azuriter_シリーズエンド1L:
+Azuriter_Item_Armor_ダイヤグラムL:
   Material: diamond_leggings
-  Display: "&aシリーズエンド・I・レギンス"
+  Display: "&aダイヤグラムレギンス"
   EquipSlot: LEGS
-  EquipmentSet: Diamond_S1End
+  EquipmentSet: Diagram
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -494,17 +679,17 @@ Azuriter_シリーズエンド1L:
     Version: 3
   Attributes:
     Legs:
-      ArmorToughness: 25 ADD
-      Armor: 32 ADD
+      ArmorToughness: 20 ADD
+      Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2.5 ADD
+      Damage: 2 ADD
   Group: 'Armor'
 
-Azuriter_シリーズエンド1B:
+Azuriter_Item_Armor_ダイヤグラムB:
   Material: diamond_boots
-  Display: "&aシリーズエンド・I・ブーツ"
+  Display: "&aダイヤグラムブーツ"
   EquipSlot: FEET
-  EquipmentSet: Diamond_S1End
+  EquipmentSet: Diagram
   Lore:
     Template: ItemInfoLore_Normal_1
   Hide:
@@ -520,8 +705,8 @@ Azuriter_シリーズエンド1B:
     Version: 3
   Attributes:
     Feet:
-      ArmorToughness: 25 ADD
-      Armor: 32 ADD
+      ArmorToughness: 20 ADD
+      Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2.5 ADD
+      Damage: 2 ADD
   Group: 'Armor'

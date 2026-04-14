@@ -1,9 +1,11 @@
 Azuriter_Item_Armor_Defense_Use:
-  Cooldown: 1
+  Cooldown: 10
   Skills:
+  - potion{t=REGENERATION;d=500;l=0;p=false} @self
   - heal{a=1} @self
 
-Azuriter_ディフェンス_Full:
-  Cooldown: 1
+Azuriter_Item_Armor_Defense_Full:
+  Cooldown: 10
   Skills:
+  - potion{t=REGENERATION;d=500;l=1;p=false} @self
   - heal{a=4} @self

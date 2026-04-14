@@ -1,10 +1,12 @@
-Azuriter_Item_Armor_SeriesEnd1_Use:
+Azuriter_Item_Armor_Diagram_Use:
   Cooldown: 10
   Skills:
+  - heal{a=1} @self
   - potion{t=REGENERATION;d=500;l=0;p=false} @self
 
-Azuriter_シリーズエンド1_Full:
+Azuriter_Item_Armor_Diagram_Full:
   Cooldown: 10
   Skills:
+  - heal{a=5} @self
   - potion{t=REGENERATION;d=500;l=1;p=false} @self
   - potion{t=SPEED;d=500;l=0;p=false} @self

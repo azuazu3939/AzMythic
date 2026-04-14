@@ -79,16 +79,16 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5:
   Skills:
   - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
   - setMaterialCooldown{m=enchanted_book;d=40} @self
-
-Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_Count:
-  Skills:
-  - setVar{k=caster.ShootingStar;t=INTEGER;a="<caster.var.ShootingStar|0> + 1"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;repeat=2;repeati=<random.5to15>;delay=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;repeat=2;repeati=<random.5to15>;delay=1} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;repeat=2;repeati=<random.5to15>;delay=2} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4;repeat=2;repeati=<random.5to15>;delay=3} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process7;repeat=2;repeati=10} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process8;repeat=2;repeati=10} @self
+
+Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_Count:
+  Skills:
+  - setVar{k=caster.ShootingStar;t=INTEGER;a="<caster.var.ShootingStar|0> + 1"} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
   Skills:

@@ -25,7 +25,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
     ];
     c=[
       - isliving true
-    ]} @forward{fo=30;lockpitch=true}
+    ]} @TL{cpitch=0}
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
   Skills:
@@ -41,4 +41,4 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
     ];
     c=[
       - isliving true
-    ]} @forward{fo=30;lockpitch=true}
+    ]} @TL{cpitch=0}

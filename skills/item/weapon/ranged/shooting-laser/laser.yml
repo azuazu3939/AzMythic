@@ -98,11 +98,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3:
   Skills:
   - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=18;sfo=5;sso=12;d=20;hp=false;hnp=true;mr=40;
     os=[
-      - setvarloc{var=skill.ShootingLaser1;v=@origin} @self
+      - setvarloc{var=skill.ShootingLaser3;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser1}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser3}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
@@ -114,11 +114,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4:
   Skills:
   - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=18;sfo=5;sso=-12;d=20;hp=false;hnp=true;mr=40;
     os=[
-      - setvarloc{var=skill.ShootingLaser2;v=@origin} @self
+      - setvarloc{var=skill.ShootingLaser4;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser2}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser4}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
@@ -130,11 +130,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
   Skills:
   - projectile{v=80;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=3;d=20;hp=false;hnp=true;mr=60;
     os=[
-      - setvarloc{var=skill.ShootingLaser1;v=@origin} @self
+      - setvarloc{var=skill.ShootingLaser5;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=1.5,1.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser1}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=1.5,1.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser5}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
@@ -147,11 +147,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
   Skills:
   - projectile{v=80;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-3;d=20;hp=false;hnp=true;mr=60;
     os=[
-      - setvarloc{var=skill.ShootingLaser2;v=@origin} @self
+      - setvarloc{var=skill.ShootingLaser6;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=1.5,1.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser2}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=1.5,1.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser6}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[

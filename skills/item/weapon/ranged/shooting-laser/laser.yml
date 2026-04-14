@@ -23,7 +23,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser1}
     ];
     oh=[
-      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage>;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
     ];
     c=[
       - isliving true
@@ -39,7 +39,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser2}
     ];
     oh=[
-      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage>;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
     ];
     c=[
       - isliving true

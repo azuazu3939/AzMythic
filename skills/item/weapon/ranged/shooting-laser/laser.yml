@@ -155,7 +155,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=1.5,1.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser6}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=2.5,2.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser6}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[

@@ -2,51 +2,91 @@ ItemInfoLore_Sword_1:
   - Line:
     - "<white>マナを消費し、回避判定モーションを繰り出す。"
     - "<white>回避するとアクションを行う。"
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Bow_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Tomahawk_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Endiam_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeCurve_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeFire_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeEmpuria_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_WeakserL1_H:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_WeakserL1_B:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Normal_1:
+  - Line:  
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<gray>----'
   - Line:
     - '{augments:GEM}<#5ec7ff>装飾<white>:'
     - '{augments-each:GEM}<augment.display>'

@@ -108,3 +108,8 @@ Azuriter_Weapon_シューティングレーザー:
     MaxAmount: 3
   Skills:
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Use} @self ~onUse
+  - skill{s=[
+    - removetag{t=ShootingLaser1} @self
+    - removetag{t=ShootingLaser2} @self
+    - removetag{t=ShootingLaser3} @self
+    ]} @self ~onSwing 

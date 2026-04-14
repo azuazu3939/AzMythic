@@ -21,7 +21,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_1:
   - hasTag{t=ShootingLaser2} false 
   - hasTag{t=ShootingLaser3} false 
   - matCooldown{m=enchanted_book} false
-  - varrange{k=caster.ShootingStar;r=4} false 
+  - varrange{k=caster.ShootingStar;r=10} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=6} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self

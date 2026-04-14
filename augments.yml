@@ -1,52 +1,8 @@
-Gem_1:
+GEM:
   Enabled: true
   Display: ""
   Formatting:
     Empty: '&f&l<augment.icon>&r&f 空 <augment.type>&r&f スロット'
-    Filled: '&f&l<augment.icon> <augment.type>・ <augment.tooltip>'
-  Icons:
-    Empty: '&7&l☆'
-    Filled: '&e&l★'
-    Invalid: ''
-
-Gem_2:
-  Enabled: true
-  Display: ""
-  Formatting:
-    Empty: '&f&l<augment.icon> 空 <augment.type> スロット'
-    Filled: '&f&l<augment.icon> <augment.type>・ <augment.tooltip>'
-  Icons:
-    Empty: '&7&l☆'
-    Filled: '&e&l★'
-    Invalid: ''
-
-Gem_3:
-  Enabled: true
-  Display: ""
-  Formatting:
-    Empty: '&f&l<augment.icon> 空 <augment.type> スロット'
-    Filled: '&f&l<augment.icon> <augment.type>・ <augment.tooltip>'
-  Icons:
-    Empty: '&7&l☆'
-    Filled: '&e&l★'
-    Invalid: ''
-
-Gem_4:
-  Enabled: true
-  Display: ""
-  Formatting:
-    Empty: '&f&l<augment.icon> 空 <augment.type> スロット'
-    Filled: '&f&l<augment.icon> <augment.type>・ <augment.tooltip>'
-  Icons:
-    Empty: '&7&l☆'
-    Filled: '&e&l★'
-    Invalid: ''
-
-Gem_5:
-  Enabled: true
-  Display: ""
-  Formatting:
-    Empty: '&f&l<augment.icon> 空 <augment.type> スロット'
     Filled: '&f&l<augment.icon> <augment.type>・ <augment.tooltip>'
   Icons:
     Empty: '&7&l☆'

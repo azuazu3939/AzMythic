@@ -7,7 +7,7 @@ Azuriter_Augment_力のジェム_1:
   Lore:
   - "&f攻撃力 0.25~1"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&c&l力のジェム'  
     Icon: ''
     Stats:
@@ -22,7 +22,7 @@ Azuriter_Augment_守備のジェム_1:
   Lore:
   - "&f防御力 4~8"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&3&l守備のジェム'  
     Icon: ''
     Stats:
@@ -38,7 +38,7 @@ Azuriter_Augment_忍耐のジェム_1:
   Lore:
   - "&f防具強度 4~8"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&6&l忍耐のジェム'  
     Icon: ''
     Stats:
@@ -54,7 +54,7 @@ Azuriter_Augment_回復のジェム_1:
   Lore:
   - "&f自然回復力 0.5~1"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&d&l回復のジェム'  
     Icon: ''
     Stats:
@@ -71,7 +71,7 @@ Azuriter_Augment_背水のジェム_1:
   - "&f自然回復力 -0.5~-0.25"
   - "&f攻撃力 0.75~1.5"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&d&l背水のジェム'  
     Icon: ''
     Stats:
@@ -87,7 +87,7 @@ Azuriter_Augment_体力のジェム_1:
   Lore:
   - "&f最大体力 4~8"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&a&l体力のジェム'  
     Icon: ''
     Stats:
@@ -102,7 +102,7 @@ Azuriter_Augment_速度のジェム_1:
   Lore:
   - "&f移動速度 5%~15%"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&f&l速度のジェム'  
     Icon: ''
     Stats:
@@ -117,7 +117,7 @@ Azuriter_Augment_速攻のジェム_1:
   Lore:
   - "&f攻撃速度 5%~15%"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&e&l速攻のジェム'  
     Icon: ''
     Stats:
@@ -134,7 +134,7 @@ Azuriter_Augment_汎用のジェム_1:
   - "&f防御力 1"
   - "&f防具強度 1"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&e&l汎用のジェム'  
     Icon: ''
     Stats:
@@ -154,7 +154,7 @@ Azuriter_Augment_贄のジェム_1:
   - "&f防御力 -5%"
   - "&f防具強度 -5%"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&c&l贄のジェム'  
     Icon: ''
     Stats:
@@ -174,7 +174,7 @@ Azuriter_Augment_矢走のジェム_1:
   - "&f攻撃速度 12.5%"
   - "&f移動速度 5%~10%"
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&c&l矢走のジェム'  
     Icon: ''
     Stats:
@@ -191,7 +191,7 @@ Azuriter_Augment_会心のジェム_1:
   - "&fクリティカル率 5%~10%"
   Group: 'Augment'
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&6&l会心のジェム'  
     Icon: ''
     Stats:
@@ -206,7 +206,7 @@ Azuriter_Augment_会心攻撃のジェム_1:
   ItemUpdater:
     Version: 1
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&6&l会心攻撃のジェム'  
     Icon: ''
     Stats:
@@ -223,7 +223,7 @@ Azuriter_Augment_戦棍のジェム_1:
   ItemUpdater:
     Version: 1
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&8&l戦棍のジェム'  
     Icon: ''
     Stats:
@@ -241,7 +241,7 @@ Azuriter_Augment_魔力のジェム_1:
   ItemUpdater:
     Version: 1
   Augmentation:
-    Type: Gem_1
+    Type: GEM
     Tooltip: '&5&l魔力のジェム'  
     Icon: ''
     Skills:
@@ -255,7 +255,7 @@ Azuriter_Augment_Remover_1:
   ItemUpdater:
     Version: 1
   AugmentationRemover:
-    Type: Gem_1 
+    Type: GEM 
     DestroySocket: false
     ReturnAugment: false
 
@@ -265,7 +265,7 @@ Azuriter_Augment_Remover_2:
   ItemUpdater:
     Version: 1
   AugmentationRemover:
-    Type: Gem_1 
+    Type: GEM 
     DestroySocket: false
     ReturnAugment: true
 
@@ -275,7 +275,7 @@ Azuriter_Augment_Unlocker_1:
   ItemUpdater:
     Version: 1
   AugmentationSocket:
-    Type: Gem_1 
+    Type: GEM 
     MaxSockets: 1
 
 
@@ -285,7 +285,7 @@ Azuriter_Augment_Unlocker_2:
   ItemUpdater:
     Version: 1
   AugmentationSocket:
-    Type: Gem_1 
+    Type: GEM 
     MaxSockets: 2
 
 Azuriter_Augment_Unlocker_3:
@@ -294,7 +294,7 @@ Azuriter_Augment_Unlocker_3:
   ItemUpdater:
     Version: 1
   AugmentationSocket:
-    Type: Gem_1 
+    Type: GEM 
     MaxSockets: 3
 
 
@@ -304,7 +304,7 @@ Azuriter_Augment_Unlocker_4:
   ItemUpdater:
     Version: 1
   AugmentationSocket:
-    Type: Gem_1 
+    Type: GEM 
     MaxSockets: 4
 
 Azuriter_Augment_Unlocker_5:
@@ -313,5 +313,5 @@ Azuriter_Augment_Unlocker_5:
   ItemUpdater:
     Version: 1
   AugmentationSocket:
-    Type: Gem_1 
+    Type: GEM 
     MaxSockets: 5

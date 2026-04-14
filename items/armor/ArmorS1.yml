@@ -8,7 +8,7 @@ Azuriter_ビギナーH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -21,7 +21,6 @@ Azuriter_ビギナーH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -37,7 +36,7 @@ Azuriter_ビギナーC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -59,7 +58,7 @@ Azuriter_ビギナーL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -81,7 +80,7 @@ Azuriter_ビギナーB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -103,7 +102,7 @@ Azuriter_トラベラーH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -117,7 +116,6 @@ Azuriter_トラベラーH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -133,7 +131,7 @@ Azuriter_トラベラーC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -156,7 +154,7 @@ Azuriter_トラベラーL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -179,7 +177,7 @@ Azuriter_トラベラーB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -204,7 +202,7 @@ Azuriter_ディフェンスH:
   ItemUpdater:
     Version: 2
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -219,7 +217,6 @@ Azuriter_ディフェンスH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -237,7 +234,7 @@ Azuriter_ディフェンスC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -262,7 +259,7 @@ Azuriter_ディフェンスL:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -289,7 +286,7 @@ Azuriter_ディフェンスB:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -316,7 +313,7 @@ Azuriter_アタッカーH:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -333,7 +330,6 @@ Azuriter_アタッカーH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -349,7 +345,7 @@ Azuriter_アタッカーC:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -376,7 +372,7 @@ Azuriter_アタッカーL:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -403,7 +399,7 @@ Azuriter_アタッカーB:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -430,7 +426,7 @@ Azuriter_シリーズエンド1H:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3
@@ -447,7 +443,6 @@ Azuriter_シリーズエンド1H:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -463,7 +458,7 @@ Azuriter_シリーズエンド1C:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3
@@ -489,7 +484,7 @@ Azuriter_シリーズエンド1L:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3
@@ -515,7 +510,7 @@ Azuriter_シリーズエンド1B:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3

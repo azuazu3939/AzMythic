@@ -108,7 +108,7 @@ Azuriter_letthelater_Spawn:
   - containerRegion{r=Deny} false
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsInRadius{types=Azuriter_Boss_Feldos;amount=>0;radius=64} false
+  - mobsInRadius{types=Azuriter_Boss_Feldos,Azuriter_Mob_Fedos;amount=>0;radius=64} false
 
 Azuriter_Altwolf_Spawn:
   Type: Azuriter_Altwolf
@@ -187,6 +187,27 @@ Azuriter_Briar_Raider_Spawn:
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Briar_Raider;amount=<1;radius=48} true
 
+Azuriter_Grove_Picket_Spawn:
+  Type: Azuriter_Grove_Picket
+  Worlds: testst
+  Action: ADD
+  Cooldown: 0.55
+  PositionType: LAND
+  Chance: 0.16
+  Priority: 224
+  Conditions:
+  - mobsinworld{a=<2000} true
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - mobsInRadius{types=Azuriter_Grove_Picket;amount=<3;radius=44} true
+  - mobsInRadius{types=Azuriter_Boss_Feldos,Azuriter_Mob_Fedos;amount=>0;radius=64} false
+
 Azuriter_Gleaner_Scout_Spawn:
   Type: Azuriter_Gleaner_Scout
   Worlds: testst
@@ -203,7 +224,7 @@ Azuriter_Gleaner_Scout_Spawn:
   - containerRegion{r=Azuriter_BigCamela} false
   - containerRegion{r=Spawn} false
   - containerRegion{r=Deny} false
-  - outside true 
+  - outside true
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
   - mobsInRadius{types=Azuriter_Gleaner_Scout;amount=<3;radius=40} true
 

@@ -6,7 +6,7 @@ Azuriter_ガーディアH:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -26,7 +26,6 @@ Azuriter_ガーディアH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -41,7 +40,7 @@ Azuriter_ガーディアC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -69,7 +68,7 @@ Azuriter_ガーディアL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -97,7 +96,7 @@ Azuriter_ガーディアB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -125,7 +124,7 @@ Azuriter_ヘルシティアH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -144,7 +143,6 @@ Azuriter_ヘルシティアH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -159,7 +157,7 @@ Azuriter_ヘルシティアC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -188,7 +186,7 @@ Azuriter_ヘルシティアL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -217,7 +215,7 @@ Azuriter_ヘルシティアB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -242,11 +240,11 @@ Azuriter_ウィクサーH:
   EquipSlot: HEAD
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_H
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -264,7 +262,6 @@ Azuriter_ウィクサーH:
   Group: 'Armor'
   Skills:
   - skill{s=Azuriter_Core_HealthColor} @self ~onDamaged
-  - skill{s=Azuriter_Core_HealthColor} @self ~onHeal
   - skill{s=Azuriter_Core_HealthColor} @self ~onRespawn
   - skill{s=Azuriter_Core_HealthColor} @self ~onSwing
   - skill{s=Azuriter_Core_HealthColor} @self ~onJoin
@@ -275,11 +272,11 @@ Azuriter_ウィクサーC:
   EquipSlot: CHEST
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_B
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -295,9 +292,6 @@ Azuriter_ウィクサーC:
       Health: 12.5
       Damage: 1 ADD
   Group: 'Armor'
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Skills:
 
 Azuriter_ウィクサーL:
@@ -306,11 +300,11 @@ Azuriter_ウィクサーL:
   EquipSlot: LEGS
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_B
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -326,9 +320,6 @@ Azuriter_ウィクサーL:
       Health: 12.5
       Damage: 1 ADD
   Group: 'Armor'
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Skills:
 
 Azuriter_ウィクサーB:
@@ -337,11 +328,11 @@ Azuriter_ウィクサーB:
   EquipSlot: FEET
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_B
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -357,7 +348,4 @@ Azuriter_ウィクサーB:
       Health: 12.5
       Damage: 1 ADD
   Group: 'Armor'
-  Stats:
-  - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
-  - CRITICAL_STRIKE_DAMAGE 0.05 ADDITIVE
   Skills:

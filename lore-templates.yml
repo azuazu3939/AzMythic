@@ -2,7 +2,6 @@ ItemInfoLore_Sword_1:
   Lines:
   - '<white>マナを消費し、回避判定モーションを繰り出す。'
   - '<white>回避するとアクションを行う。'
-  - '{stats}'
   - '{stats}<yellow>Stats:'
   - '{stats-each}<white><stat.display>'
   - '<gray>----'
@@ -11,7 +10,6 @@ ItemInfoLore_Sword_1:
 
 ItemInfoLore_Normal_1:
   Lines:
-  - '{stats}'
   - '{stats}<yellow>Stats:'
   - '{stats-each}<white><stat.display>'
   - '<gray>----'

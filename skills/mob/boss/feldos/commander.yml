@@ -1,0 +1,35 @@
+# 樹冠の隊長から呼ばれる中ボス。通常 mob からフェルドス本体へつなぐ橋渡し。
+Azuriter_Mob_Boss_Feldos_Commander_Call:
+  Skills:
+  - summon{t=Azuriter_Canopy_Commander;a=1;r=4;s=true;delay=10} @self
+
+# 樹冠の司令官の行動ループ。
+Azuriter_Mob_Boss_Feldos_Commander_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_Feldos_Commander_Smash,
+    Azuriter_Mob_Boss_Feldos_Commander_GroundPulse,
+    Azuriter_Mob_Boss_Feldos_Commander_Rally;
+    fbs=Azuriter_Mob_Boss_Feldos_Commander_Smash} @self
+  - delay <random.120to180>
+  - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Loop} @T
+
+Azuriter_Mob_Boss_Feldos_Commander_Smash:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.9";t=FLOAT} @self
+  - meta:Azuriter_Core_Melee_Single_Base @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Mob_Boss_Feldos_Commander_GroundPulse:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 1.1";t=FLOAT} @self
+  - meta:Azuriter_Core_Boss_GroundPulse @self
+
+Azuriter_Mob_Boss_Feldos_Commander_Rally:
+  Skills:
+  - summon{t=Azuriter_Briar_Raider;a=1;r=5;s=true;delay=8} @self
+  - summon{t=Azuriter_Canopy_Raider;a=1;r=5;s=true;delay=18} @self

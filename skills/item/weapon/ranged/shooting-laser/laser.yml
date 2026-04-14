@@ -131,13 +131,13 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
   Skills:
-  - projectile{v=80;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=20;hp=false;hnp=true;mr=60;
+  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=60;hp=false;hnp=true;mr=60;
     os=[
       - setvarloc{var=skill.ShootingLaser5;v=@origin} @self
-      - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
+      - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self^
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=2.5,2.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser5}
+      - displayline{material=RED_STAINED_GLASS;scale=2.5,2.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser5}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
@@ -148,13 +148,13 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
   Skills:
-  - projectile{v=80;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-8;d=20;hp=false;hnp=true;mr=60;
+  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-8;d=60;hp=false;hnp=true;mr=60;
     os=[
       - setvarloc{var=skill.ShootingLaser6;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=2.5,2.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser6}
+      - displayline{material=RED_STAINED_GLASS;scale=2.5,2.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser6}
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[

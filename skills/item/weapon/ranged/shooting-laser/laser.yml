@@ -24,8 +24,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_1:
   - varrange{k=caster.ShootingStar;r=4} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=6} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - addtag{t=ShootingLaser1} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_2:
@@ -37,8 +37,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_2:
   - varrange{k=caster.ShootingStar;r=4} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=8} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - addtag{t=ShootingLaser2} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
@@ -50,10 +50,10 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
   - varrange{k=caster.ShootingStar;r=4} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=20} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;ho=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4;ho=0} @self
   - addtag{t=ShootingLaser3} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
@@ -65,8 +65,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
   - varrange{k=caster.ShootingStar;r=4} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=30} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5;ho=0} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6;ho=0} @self
   - removetag{t=ShootingLaser1} @self
   - removetag{t=ShootingLaser2} @self
   - removetag{t=ShootingLaser3} @self
@@ -79,12 +79,12 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5:
   Skills:
   - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
   - setMaterialCooldown{m=enchanted_book;d=40} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;repeat=2;repeati=<random.5to15>;delay=0} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;repeat=2;repeati=<random.5to15>;delay=1} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;repeat=2;repeati=<random.5to15>;delay=2} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4;repeat=2;repeati=<random.5to15>;delay=3} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process7;repeat=2;repeati=10} @self
-  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process8;repeat=2;repeati=10} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;repeat=2;repeati=<random.5to15>;delay=0;ho=<random.-30to30>} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;repeat=2;repeati=<random.5to15>;delay=1;ho=<random.-30to30>} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;repeat=2;repeati=<random.5to15>;delay=2;ho=<random.-30to30>} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4;repeat=2;repeati=<random.5to15>;delay=3;ho=<random.-30to30>} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process7;repeat=2;repeati=10;ho=<random.-30to30>} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process8;repeat=2;repeati=10;ho=<random.-30to30>} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_Count:
   Skills:
@@ -92,7 +92,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_Count:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
   Skills:
-  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=2;sfo=-5;sso=3;d=20;hp=false;hnp=true;mr=40;
+  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=2;sfo=-5;sso=3;d=20;hp=false;hnp=true;mr=40;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser1;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -108,7 +108,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
   Skills:
-  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=2;sfo=-5;sso=-3;d=20;hp=false;hnp=true;mr=40;
+  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=2;sfo=-5;sso=-3;d=20;hp=false;hnp=true;mr=40;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser2;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -124,7 +124,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3:
   Skills:
-  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=5;sso=10;d=20;hp=false;hnp=true;mr=60;
+  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=5;sso=10;d=20;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser3;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -140,7 +140,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4:
   Skills:
-  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=5;sso=-10;d=20;hp=false;hnp=true;mr=60;
+  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=5;sso=-10;d=20;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser4;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -156,7 +156,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
   Skills:
-  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=60;hp=false;hnp=true;mr=60;
+  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=8;d=60;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser5;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -173,7 +173,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
   Skills:
-  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-8;d=60;hp=false;hnp=true;mr=60;
+  - projectile{v=25;i=1;vr=5;r=5;se=false;sb=false;syo=2;sfo=-5;sso=-8;d=60;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser6;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -190,7 +190,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process7:
   Skills:
-  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=<random.1to5>;sso=<random.5to15>;d=20;hp=false;hnp=true;mr=60;
+  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=<random.1to5>;sso=<random.5to15>;d=20;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser3;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self
@@ -206,7 +206,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process7:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process8:
   Skills:
-  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=<random.1to5>;sso=<random.-15to-5>;d=20;hp=false;hnp=true;mr=60;
+  - projectile{v=50;i=1;vr=3;r=3;se=false;sb=false;syo=12;sfo=<random.1to5>;sso=<random.-15to-5>;d=20;hp=false;hnp=true;mr=60;ho=<skill.ho>;
     os=[
       - setvarloc{var=skill.ShootingLaser4;v=@origin} @self
       - sound{s=block.trial_spawner.about_to_spawn_item;p=2;v=0.5;audience=caster;sc=AMBIENT} @self

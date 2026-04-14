@@ -16,41 +16,51 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use:
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_1:
   Conditions:
-  - hasAura{n=ShootingLaser} false 
+  - hasTag{t=ShootingLaser1} false 
+  - hasTag{t=ShootingLaser2} false 
+  - hasTag{t=ShootingLaser3} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=10} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
-  - aura{n=ShootingLaser;ms=3;rd=true;t=60} @self
+  - addtag{t=ShootingLaser1} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_2:
   Conditions:
-  - hasAuraStacks{n=ShootingLaser;s=1} true
+  - hasTag{t=ShootingLaser1} true
+  - hasTag{t=ShootingLaser2} false 
+  - hasTag{t=ShootingLaser3} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=16} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
-  - aura{n=ShootingLaser;ms=3;rd=true;t=60} @self
+  - addtag{t=ShootingLaser2} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
   Conditions:
-  - hasAuraStacks{n=ShootingLaser;s=2} true
+  - hasTag{t=ShootingLaser1} true
+  - hasTag{t=ShootingLaser2} true
+  - hasTag{t=ShootingLaser3} false 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=20} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4} @self
-  - aura{n=ShootingLaser;ms=3;rd=true;t=60} @self
+  - addtag{t=ShootingLaser3} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
   Conditions:
-  - hasAuraStacks{n=ShootingLaser;s=3} true
+  - hasTag{t=ShootingLaser1} true 
+  - hasTag{t=ShootingLaser2} true 
+  - hasTag{t=ShootingLaser3} true 
   Skills:
   - setMaterialCooldown{m=enchanted_book;d=30} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6} @self
-  - auraRemove{n=ShootingLaser} @self
+  - removetag{t=ShootingLaser1} @self
+  - removetag{t=ShootingLaser2} @self
+  - removetag{t=ShootingLaser3} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
   Skills:

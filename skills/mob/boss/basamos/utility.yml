@@ -33,3 +33,38 @@ Azuriter_Mob_Boss_Basamos_Envoy_Rally:
   Skills:
   - summon{t=Azuriter_Sandhorn_Camela;a=1;r=5;s=true;delay=8} @self
   - summon{t=Azuriter_BigCamela;a=1;r=5;s=true;delay=18} @self
+
+# 石脈の護衛長を経由して、使者系へつなぐ中ボス補助。
+Azuriter_Mob_Boss_Basamos_Warden_Call:
+  Skills:
+  - summon{t=Azuriter_Stonevein_Warden;a=1;r=4;s=true;delay=12} @self
+
+# 石脈の護衛長の行動ループ。
+Azuriter_Mob_Boss_Basamos_Warden_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_Basamos_Warden_Smash,
+    Azuriter_Mob_Boss_Basamos_Warden_GroundPulse,
+    Azuriter_Mob_Boss_Basamos_Warden_Rally;
+    fbs=Azuriter_Mob_Boss_Basamos_Warden_Smash} @self
+  - delay <random.115to165>
+  - skill:Azuriter_Mob_Boss_Basamos_Warden_Loop @T
+
+Azuriter_Mob_Boss_Basamos_Warden_Smash:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.98";t=FLOAT} @self
+  - meta:Azuriter_Core_Melee_Single_Base @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Mob_Boss_Basamos_Warden_GroundPulse:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 1.08";t=FLOAT} @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self
+
+Azuriter_Mob_Boss_Basamos_Warden_Rally:
+  Skills:
+  - skill:Azuriter_Mob_Boss_Basamos_Envoy_Call @self

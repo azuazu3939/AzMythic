@@ -112,4 +112,5 @@ Azuriter_Weapon_シューティングレーザー:
     - removetag{t=ShootingLaser1} @self
     - removetag{t=ShootingLaser2} @self
     - removetag{t=ShootingLaser3} @self
+    - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
     ]} @self ~onSwing 

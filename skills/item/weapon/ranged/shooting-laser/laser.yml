@@ -1,13 +1,15 @@
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use:
-  Cooldown: 1
+  Cooldown: 0.8
   Conditions:
   - wearing{s=HAND;i=Azuriter_Weapon_シューティングレーザー} true
-  - hasMana{m=>10;
+  - hasMana{m=>30;
     onFail=[
       - message{m="&cマナが足りません。"} @self
     ]} true 
   - matCooldown{m=enchanted_book} false
   Skills:
+  - setMaterialCooldown{m=BOW;d=16} @self
+  - modifyMana{a=30;m=consume} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2} @self
 
@@ -21,7 +23,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser1}
     ];
     oh=[
-      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE}
+      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
     ];
     c=[
       - isliving true
@@ -37,7 +39,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;interpolation=1} @variableLocation{k=skill.ShootingLaser2}
     ];
     oh=[
-      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE}
+      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
     ];
     c=[
       - isliving true

@@ -1,0 +1,19 @@
+Azuriter_Mob_Fedos_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Fedos_Attack1,
+    Azuriter_Mob_Fedos_Attack2,
+    Azuriter_Mob_Fedos_Attack3,
+    Azuriter_Mob_Fedos_Attack4,
+    Azuriter_Mob_Fedos_Attack5,
+    Azuriter_Mob_Fedos_Attack6;
+    fbs=Azuriter_Mob_Fedos_Attack1} @self
+  - sound{s=entity.blaze.burn;p=0;v=0.2} @self
+  - potion{t=WEAKNESS;l=0;d=600} @self ?raining
+  - delay 220
+  - skill:Azuriter_Mob_Fedos_Loop @T

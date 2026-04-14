@@ -1,19 +1,17 @@
-Azuriter_Mob_Boss_Feldos_Attack3:
+Azuriter_Mob_Fedos_Attack3:
   Cooldown: 5
   Conditions:
   - incombat true
-  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - setVar{var=skill.count;val="1";t=INTEGER} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Azuriter_Core_Enemy_DamageBuff @self
-  - skill:Azuriter_Mob_Boss_Feldos_Attack3_Run{repeat=<random.0to3>;repeati=40} @self
+  - skill:Azuriter_Mob_Fedos_Attack3_Run{repeat=<random.0to3>;repeati=40} @self
 
-Azuriter_Mob_Boss_Feldos_Attack3_Run:
+Azuriter_Mob_Fedos_Attack3_Run:
   Skills:
-  - skill:Azuriter_Mob_Boss_Feldos_Attack3_Meteor @RLNC{a=40;r=40;minr=1;s=4;os=true}
+  - skill:Azuriter_Mob_Fedos_Attack3_Meteor @RLNC{a=25;r=25;minr=1;s=4;os=true}
 
-Azuriter_Mob_Boss_Feldos_Attack3_Meteor:
+Azuriter_Mob_Fedos_Attack3_Meteor:
   Skills:
   - sound{s=block.beacon.ambient;p=2;v=0.5} @targetedLoc
   - e:pr{r=4;pts=10;a=1;s=0.2;d=true;dir=0,-1,0;p=flame} @targetedLoc{y=0.5}

@@ -37,8 +37,8 @@ Azuriter_Mob_Fedos:
   - float
   Skills:
   - attribute{attr=ARMOR_TOUGHNESS;a=82} @self ~onSpawn
-  - skill{s=Azuriter_Mob_Fedos_Loop} @self ~onEntercombat
-
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ~onEntercombat
+  - skill{s=Azuriter_Mob_Fedos_Loop} @self ~onEntercombat  
   - attribute{attribute=FOLLOW_RANGE;a=64} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
 
@@ -49,7 +49,6 @@ Azuriter_Mob_Fedos:
   - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_城壁の守護石 1 0.05"} @ThreatTablePlayers ~onDeath
-
   - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath

@@ -1,0 +1,58 @@
+Azuriter_Mob_Boss_Feldos_Attack6:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - setVar{var=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;val="0";t=INTEGER} @self
+  - projectile{
+    ot=[
+      - endprojectile @self ?hasTag{t=Azuriter_Core_Tag_EnemyDown}
+      - setProjectileDirection{m=0.05} @TL
+      - teleport @origin
+      - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
+      - look{f=true} @projectileforward
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack6_Falling} @self 0.1
+    ];
+    oh=[
+      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - damage{a="<skill.var.dmg> * 2.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - delay 5
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - delay 2
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - throw{v=10;vy=20} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    os=[
+      - sound{s=entity.hoglin.death;p=0;sc=PLAYERS;repeat=19;repeati=2;v=2} @self
+      - delay 30
+      - sound{s=entity.hoglin.death;p=0.8;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
+      - e:p{p=villager_angry;a=20;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
+      - delay 10
+      - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
+      - delay 20
+      - modifyprojectile{t=VELOCITY;a=SET;v=27} @self
+    ];
+    oe=[
+      - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+    ];
+    v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
+    mr=64;vr=3;hr=3;d=200} @TL
+
+Azuriter_Mob_Boss_Feldos_Attack6_Falling:
+  Skills:
+  - projectile{
+    ot=[
+      - modifyprojectile{t=VELOCITY;v=1.025;a=MULTIPLY} @self
+      - sound{s=entity.zoglin.step;v=1.25;cd=0.05} @self
+    ];
+    oh=[
+      - damage{a="<skill.var.dmg> * 0.75";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+    ];
+    v=16;i=1;g=0.35;sfo=2;syo=1;tyo=5;mr=32;c=[ - samefaction false ];vr=1.5;hr=1.5;
+    ho=<skill.ho>;b=DISPLAY;mat=MAGMA_BLOCK;ps=1;rs=1;ys=1;scale=1,1,1;vo=1;ho=<random.0to360>} @forward

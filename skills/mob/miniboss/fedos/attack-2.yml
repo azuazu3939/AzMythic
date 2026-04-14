@@ -1,13 +1,15 @@
-Azuriter_Mob_Boss_Feldos_Attack2:
+Azuriter_Mob_Fedos_Attack2:
   Cooldown: 12
   Conditions:
   - incombat true
-  - hasTag{t=Azuriter_Core_Tag_EnemyDown} false
   Skills:
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - e:pr{p=end_rod;a=3;ys=0.05;hs=0.1;pts=48;d=true;dir=0,1,0;s=1;r=12} @selfLocation{y=1}
   - delay 25
+  - skill{s=Azuriter_Mob_Fedos_Attack2_Loop;repeat=19;repeati=10} @self
+
+Azuriter_Mob_Fedos_Attack2_Loop:
+  Skills:
   - projectile{
     ot=[
       - e:p{p=flame;a=3;ys=1;hs=1;s=0.5} @origin
@@ -25,4 +27,4 @@ Azuriter_Mob_Boss_Feldos_Attack2:
       - sound{s=entity.generic.explode} @origin
       - sound{s=entity.wither.ambient;p=0} @origin
     ];
-    b=DISPLAY;mat=OBSIDIAN;scale=3,3,3;rs=0.25;ys=0.25;ps=0.25;sfo=2;se=false;vr=2.75;hr=2.75;hs=true;hfs=2.5;mch=0;mdh=20;v=12;i=1} @forward
+    b=DISPLAY;mat=OBSIDIAN;scale=1,1,1;rs=0.25;ys=0.25;ps=0.25;sfo=2;se=false;vr=2.75;hr=2.75;hs=true;hfs=2.5;mch=0;mdh=20;v=12;i=1} @forward

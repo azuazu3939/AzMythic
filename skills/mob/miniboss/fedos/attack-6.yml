@@ -1,0 +1,26 @@
+Azuriter_Mob_Fedos_Attack6:
+  Cooldown: 5
+  Conditions:
+  - incombat true
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} false
+  Skills:
+  - setVar{k=skill.loop;a="<random.1to5>";t=INTEGER} @self
+
+Azuriter_Mob_Fedos_Attack6_Loop:
+  Conditions:
+  - varrange{k=skill.loop;r=<1} false
+  Skills:
+  - setVar{k=skill.loop;a="<skill.var.loop> - 1";t=INTEGER} @self
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - potion{t=SLOWNESS;l=7;d=10;p=false} @self
+  - sound{s=entity.ender_dragon.flap;v=2} @self
+  - sound{s=entity.breeze.idle_air;p=0;v=2} @self
+  - delay 10
+  - jump{v=1.25} @self
+  - delay 2
+  - leap{v=400} @T
+  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Fedos_Attack5_OnGround;s_repeat_i=1;s_repeat=39} @self
+  - delay 40
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - skill{s=Azuriter_Mob_Fedos_Attack6_Loop} @self

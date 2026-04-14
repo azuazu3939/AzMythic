@@ -33,7 +33,7 @@ Azuriter_トマホーク:
   - skill{s=Azuriter_Item_Weapon_Melee_Tomahawk_Use} @self ~onUse
   - skill{s=Azuriter_Item_Weapon_Melee_Tomahawk_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 0.6
     MaxAmount: 3
@@ -56,7 +56,7 @@ Azuriter_ハルバード:
   Skills:
   - skill{s=Azuriter_Item_Weapon_Melee_Halberd_Use} @self ~onSwing
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 0.6
     MaxAmount: 3
@@ -108,7 +108,7 @@ Azuriter_エンディアム:
   - skill{s=Azuriter_Item_Weapon_Melee_Endiam_R1} @self ~onUse
   - skill{s=Azuriter_Item_Weapon_Melee_Endiam_L1} @self ~onSwing
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to5
     Chance: 0.6
     MaxAmount: 5

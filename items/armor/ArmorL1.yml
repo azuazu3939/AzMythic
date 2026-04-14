@@ -6,7 +6,7 @@ Azuriter_ガーディアH:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -40,7 +40,7 @@ Azuriter_ガーディアC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -68,7 +68,7 @@ Azuriter_ガーディアL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -96,7 +96,7 @@ Azuriter_ガーディアB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -124,7 +124,7 @@ Azuriter_ヘルシティアH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -157,7 +157,7 @@ Azuriter_ヘルシティアC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -186,7 +186,7 @@ Azuriter_ヘルシティアL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -215,7 +215,7 @@ Azuriter_ヘルシティアB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -244,7 +244,7 @@ Azuriter_ウィクサーH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -276,7 +276,7 @@ Azuriter_ウィクサーC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -307,7 +307,7 @@ Azuriter_ウィクサーL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3
@@ -338,7 +338,7 @@ Azuriter_ウィクサーB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1to3
     Chance: 1
     MaxAmount: 3

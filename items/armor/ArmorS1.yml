@@ -8,7 +8,7 @@ Azuriter_ビギナーH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -36,7 +36,7 @@ Azuriter_ビギナーC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -58,7 +58,7 @@ Azuriter_ビギナーL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -80,7 +80,7 @@ Azuriter_ビギナーB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -102,7 +102,7 @@ Azuriter_トラベラーH:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -131,7 +131,7 @@ Azuriter_トラベラーC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -154,7 +154,7 @@ Azuriter_トラベラーL:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -177,7 +177,7 @@ Azuriter_トラベラーB:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -202,7 +202,7 @@ Azuriter_ディフェンスH:
   ItemUpdater:
     Version: 2
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -234,7 +234,7 @@ Azuriter_ディフェンスC:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -259,7 +259,7 @@ Azuriter_ディフェンスL:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -286,7 +286,7 @@ Azuriter_ディフェンスB:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -313,7 +313,7 @@ Azuriter_アタッカーH:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -345,7 +345,7 @@ Azuriter_アタッカーC:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -372,7 +372,7 @@ Azuriter_アタッカーL:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -399,7 +399,7 @@ Azuriter_アタッカーB:
   Lore:
     Template: ItemInfoLore_Normal_1
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 2
@@ -426,7 +426,7 @@ Azuriter_シリーズエンド1H:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3
@@ -458,7 +458,7 @@ Azuriter_シリーズエンド1C:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3
@@ -484,7 +484,7 @@ Azuriter_シリーズエンド1L:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3
@@ -510,7 +510,7 @@ Azuriter_シリーズエンド1B:
   Hide:
   - ENCHANTS
   AugmentationSlots:
-  - Type: Gem_1
+  - Type: GEM
     Amount: 2
     Chance: 1
     MaxAmount: 3

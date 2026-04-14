@@ -8,8 +8,8 @@ ItemInfoLore_Sword_1:
     - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Bow_1:
   - Filler: '<rainbow>-----------------------'
@@ -18,8 +18,8 @@ ItemInfoLore_Bow_1:
     - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Tomahawk_1:
   - Filler: '<rainbow>-----------------------'
@@ -28,8 +28,8 @@ ItemInfoLore_Tomahawk_1:
     - '<white>攻撃力 +40'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Endiam_1:
   - Filler: '<rainbow>-----------------------'
@@ -40,8 +40,8 @@ ItemInfoLore_Endiam_1:
     - '<white>攻撃速度 +100%'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeCurve_1:
   - Filler: '<rainbow>-----------------------'
@@ -55,8 +55,8 @@ ItemInfoLore_RangeCurve_1:
     - '<white>攻撃速度 +50%'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeFire_1:
   - Filler: '<rainbow>-----------------------'
@@ -70,8 +70,8 @@ ItemInfoLore_RangeFire_1:
     - '<white>攻撃速度 +50%'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_RangeEmpuria_1:
   - Filler: '<rainbow>-----------------------'
@@ -82,8 +82,8 @@ ItemInfoLore_RangeEmpuria_1:
     - '<white>攻撃速度 +25%'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_WeakserL1_H:
   - Filler: '<rainbow>-----------------------'
@@ -95,8 +95,8 @@ ItemInfoLore_WeakserL1_H:
     - '<white>攻撃力 +1'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_WeakserL1_B:
   - Filler: '<rainbow>-----------------------'
@@ -110,8 +110,8 @@ ItemInfoLore_WeakserL1_B:
     - '<white>クリティカルダメージ +5%'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Normal_1:
   - Filler: '<rainbow>-----------------------'
@@ -121,5 +121,5 @@ ItemInfoLore_Normal_1:
     - '{stats-each}<white><stat.display>'
   - Filler: '<rainbow>-----------------------'
   - Line:
-    - '{augments:Gem_1}<#5ec7ff>装飾<white>:'
-    - '{augments-each:Gem_1}<augment.display>'
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'

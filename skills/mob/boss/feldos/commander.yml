@@ -1,8 +1,3 @@
-# 樹冠の隊長から呼ばれる中ボス。通常 mob からフェルドス本体へつなぐ橋渡し。
-Azuriter_Mob_Boss_Feldos_Commander_Call:
-  Skills:
-  - summon{t=Azuriter_Canopy_Commander;a=1;r=4;s=true;delay=10} @self
-
 # 樹冠の司令官の行動ループ。
 Azuriter_Mob_Boss_Feldos_Commander_Loop:
   Conditions:
@@ -27,7 +22,7 @@ Azuriter_Mob_Boss_Feldos_Commander_Smash:
 Azuriter_Mob_Boss_Feldos_Commander_GroundPulse:
   Skills:
   - setVar{k=skill.dmg;a="<caster.damage> * 1.1";t=FLOAT} @self
-  - meta:Azuriter_Core_Boss_GroundPulse @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self
 
 Azuriter_Mob_Boss_Feldos_Commander_Rally:
   Skills:

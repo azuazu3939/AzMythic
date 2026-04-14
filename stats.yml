@@ -6,11 +6,8 @@ ARMOR:
     Additive: '&9防御力 <value>'
     Multiply: '&9防御力 <value>'
     Compound: '&9防御力 x<value>'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 GRAVITY:
   Enabled: true
@@ -20,11 +17,8 @@ GRAVITY:
     Additive: '&9重力 <value>'
     Multiply: '&9重力 <value>'
     Compound: '&9重力 <value>'
+    ShowInItemLore: true
   BaseValue: 0.08
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 ARMOR_TOUGHNESS:
   Enabled: true
@@ -34,11 +28,8 @@ ARMOR_TOUGHNESS:
     Additive: '&9防具強度 <value>'
     Multiply: '&9防具強度 <value>'
     Compound: '&9防具強度 <value>'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 ATTACK_DAMAGE:
   Enabled: true
@@ -48,11 +39,8 @@ ATTACK_DAMAGE:
     Additive: '&9攻撃力 <value>'
     Multiply: '&9攻撃力 <value>'
     Compound: '&9攻撃力 <value>'
+    ShowInItemLore: true
   BaseValue: 1
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 ATTACK_SPEED:
   Enabled: true
@@ -63,10 +51,6 @@ ATTACK_SPEED:
     Multiply: '&9攻撃速度 <value>'
     Compound: '&9攻撃速度 <value>'
   BaseValue: 4.0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 BONUS_DAMAGE:
   Enabled: true
@@ -76,11 +60,8 @@ BONUS_DAMAGE:
     Additive: '&9追加ダメージ <value>'
     Multiply: '&9追加ダメージ <value>'
     Compound: '&9追加ダメージ <value>'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 CRITICAL_STRIKE_CHANCE:
   Enabled: true
@@ -90,14 +71,11 @@ CRITICAL_STRIKE_CHANCE:
     Additive: '&9クリティカル率 <value>'
     Multiply: '&9クリティカル率 <value>'
     Compound: '&9クリティカル率 <value>'
+    ShowInItemLore: true
   BaseValue: 0.05
   MinValue: 0
   Skills:
   - particles{p=crit;a=50;hS=1;y=1;s=1;audience=caster} @trigger
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 CRITICAL_STRIKE_DAMAGE:
   Enabled: true
@@ -107,11 +85,8 @@ CRITICAL_STRIKE_DAMAGE:
     Additive: '&9クリティカルダメージ <value>'
     Multiply: '&9クリティカルダメージ <value>'
     Compound: '&9クリティカルダメージ <value>'
+    ShowInItemLore: true
   BaseValue: 0.05
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 CRITICAL_STRIKE_RESILIENCE:
   Enabled: true
@@ -121,11 +96,8 @@ CRITICAL_STRIKE_RESILIENCE:
     Additive: '&9+<value> Resilience'
     Multiply: '&9+<value> Resilience'
     Compound: '&9x<value> Resilience'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 DAMAGE_REDUCTION:
   Enabled: false
@@ -135,11 +107,8 @@ DAMAGE_REDUCTION:
     Additive: '&9+<value> Damage Reduction'
     Multiply: '&9+<value> Damage Reduction'
     Compound: '&9x<value> Damage Reduction'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 DEFENSE:
   Enabled: false
@@ -149,11 +118,8 @@ DEFENSE:
     Additive: '&9+<value> Defense'
     Multiply: '&9+<value> Defense'
     Compound: '&9x<value> Defense'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 DODGE_CHANCE:
   Enabled: false
@@ -163,12 +129,9 @@ DODGE_CHANCE:
     Additive: '&9+<value> Dodge Chance'
     Multiply: '&9+<value> Dodge Chance'
     Compound: '&9x<value> Dodge Chance'
+    ShowInItemLore: true
   BaseValue: 0
   Skills: []
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 DODGE_NEGATION:
   Enabled: false
@@ -178,11 +141,8 @@ DODGE_NEGATION:
     Additive: '&9+<value> Accuracy'
     Multiply: '&9+<value> Accuracy'
     Compound: '&9x<value> Accuracy'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 HEALTH:
   Enabled: true
@@ -192,12 +152,9 @@ HEALTH:
     Additive: '&9最大体力 <value>'
     Multiply: '&9最大体力 <value>'
     Compound: '&9最大体力 <value>'
+    ShowInItemLore: true
   BaseValue: 20
   MinValue: 1
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 HEALTH_REGENERATION:
   Enabled: true
@@ -207,14 +164,11 @@ HEALTH_REGENERATION:
     Additive: '&9自然回復力 <value>'
     Multiply: '&9自然回復力 <value>'
     Compound: '&9自然回復力 <value>'
+    ShowInItemLore: true
   BaseValue: 0
   MaxValue: 1000000
   MinValue: 0
   Frequency: 60
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 LIFESTEAL_CHANCE:
   Enabled: true
@@ -224,11 +178,8 @@ LIFESTEAL_CHANCE:
     Additive: '&9奪命確率 <value>'
     Multiply: '&9奪命確率 <value>'
     Compound: '&9奪命確率 <value>'
+    ShowInItemLore: true
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 LIFESTEAL_POWER:
   Enabled: true
@@ -238,11 +189,8 @@ LIFESTEAL_POWER:
     Additive: '&9奪命力 <value>'
     Multiply: '&9奪命力 <value>'
     Compound: '&9奪命力 <value>'
+    ShowInItemLore: true
   BaseValue: 0.1
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 MOVEMENT_SPEED:
   Enabled: true
@@ -252,13 +200,10 @@ MOVEMENT_SPEED:
     Additive: '&9移動速度 <value>'
     Multiply: '&9移動速度 <value>'
     Compound: '&9移動速度 <value>'
+    ShowInItemLore: true
   ParentStats:
     - SPEED
   Formula: '0.2 + (0.2 / (1 + e^(-0.005 * (SPD - 1000))))'
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 PARRY_CHANCE:
   Enabled: false
@@ -278,10 +223,6 @@ PARRY_CHANCE:
     - DIAMOND_SWORD
     - NETHERITE_SWORD
   Skills: []
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 PARRY_NEGATION:
   Enabled: false
@@ -291,10 +232,6 @@ PARRY_NEGATION:
     Multiply: '&9+<value> Expertise'
     Compound: '&9x<value> Expertise'
   BaseValue: 0
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 PARRY_POWER:
   Enabled: false
@@ -304,10 +241,6 @@ PARRY_POWER:
     Additive: '&9+<value> Parry Power'
     Multiply: '&9+<value> Parry Power'
     Compound: '&9x<value> Parry Power'
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 PARRY_COUNTERATTACK:
   Enabled: false
@@ -317,10 +250,6 @@ PARRY_COUNTERATTACK:
     Additive: '&9+<value> Parry Counterattack'
     Multiply: '&9+<value> Parry Counterattack'
     Compound: '&9x<value> Parry Counterattack'
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true
 
 SPEED:
   Enabled: true
@@ -331,9 +260,6 @@ SPEED:
     Additive: '+<value> Speed'
     Multiply: '+<value>% Speed'
     Compound: 'x<value>% Speed'
+    ShowInItemLore: true
   MaxValue: 3
   MinValue: -3
-  ShowInLore:
-    Additive: true
-    Compound: true
-    Multiply: true

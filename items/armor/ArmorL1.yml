@@ -240,7 +240,7 @@ Azuriter_ウィクサーH:
   EquipSlot: HEAD
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_H
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -272,7 +272,7 @@ Azuriter_ウィクサーC:
   EquipSlot: CHEST
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_B
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -303,7 +303,7 @@ Azuriter_ウィクサーL:
   EquipSlot: LEGS
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_B
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:
@@ -334,7 +334,7 @@ Azuriter_ウィクサーB:
   EquipSlot: FEET
   EquipmentSet: Weakser
   Lore:
-    Template: ItemInfoLore_WeakserL1_B
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   AugmentationSlots:

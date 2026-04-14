@@ -4,7 +4,7 @@ Azuriter_カーブショットボウ:
   Options:
     Unbreakable: true
   Lore:
-    Template: ItemInfoLore_RangeCurve_1
+    Template: ItemInfoLore_Normal_1
   ItemUpdater:
     Version: 4
   Attributes:
@@ -35,7 +35,7 @@ Azuriter_ファイアバレットボウ:
   Options:
     Unbreakable: true
   Lore:
-    Template: ItemInfoLore_RangeFire_1
+    Template: ItemInfoLore_Normal_1
   ItemUpdater:
     Version: 4
   Attributes:
@@ -65,7 +65,7 @@ Azuriter_エンピュリアボウ:
   Options:
     Unbreakable: true
   Lore:
-    Template: ItemInfoLore_RangeEmpuria_1
+    Template: ItemInfoLore_Normal_1
   ItemUpdater:
     Version: 2
   Attributes:

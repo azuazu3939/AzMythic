@@ -22,7 +22,7 @@ Azuriter_トマホーク:
   ItemUpdater:
     Version: 2
   Lore:
-    Template: ItemInfoLore_Tomahawk_1
+    Template: ItemInfoLore_Normal_1
   Hide:
   - ENCHANTS
   Attributes:
@@ -48,7 +48,7 @@ Azuriter_ハルバード:
   ItemUpdater:
     Version: 3
   Lore:
-    Template: ItemInfoLore_Tomahawk_1
+    Template: ItemInfoLore_Normal_1
   Attributes:
     MainHand:
       Damage: 40 ADD
@@ -91,7 +91,7 @@ Azuriter_エンディアム:
   Id: mace
   Display: "&9エンディアム"
   Lore:
-    Template: ItemInfoLore_Endiam_1
+    Template: ItemInfoLore_Normal_1
   Options:
     Unbreakable: true
   Hide:

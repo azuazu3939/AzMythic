@@ -15,11 +15,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
   Skills:
   - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=2.5;d=60;
     os=[
-      - setvarloc{var=skill.ShootingLaser;v=@origin} @origin 
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=60;brightness=15,15;viewrange=64} @origin 
+      - setvarloc{var=skill.ShootingLaser1;v=@origin} @origin 
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@origin} @variableLocation{k=skill.ShootingLaser}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@self} @variableLocation{k=skill.ShootingLaser1}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@origin} @variableLocation{k=skill.ShootingLaser1}
     ];
     oh=[
       - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE}
@@ -29,12 +29,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
   Skills:
   - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=-2.5;d=60;
     os=[
-      - setvarloc{var=skill.ShootingLaser;v=@origin} @origin 
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=60;brightness=15,15;viewrange=64} @origin 
+      - setvarloc{var=skill.ShootingLaser2;v=@origin} @origin 
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@self} @variableLocation{k=skill.ShootingLaser}
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@origin} @variableLocation{k=skill.ShootingLaser}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@self} @variableLocation{k=skill.ShootingLaser2}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@origin} @variableLocation{k=skill.ShootingLaser2}
     ];
     oh=[
       - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE}

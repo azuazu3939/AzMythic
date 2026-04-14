@@ -947,6 +947,7 @@ Azuriter_Stonevein_Camela:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=50} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=7} @self ~onDropcombat
+  - skill:Azuriter_Mob_Boss_Basamos_Warden_Call @self ~onEnterCombat 0.08
   - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.16"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff 1 0.55"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.18"} @ThreatTablePlayers ~onDeath

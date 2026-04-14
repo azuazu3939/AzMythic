@@ -27,7 +27,7 @@ Azuriter_Mob_Boss_Feldos_Commander_Smash:
 Azuriter_Mob_Boss_Feldos_Commander_GroundPulse:
   Skills:
   - setVar{k=skill.dmg;a="<caster.damage> * 1.1";t=FLOAT} @self
-  - meta:Azuriter_Core_Boss_GroundPulse @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self
 
 Azuriter_Mob_Boss_Feldos_Commander_Rally:
   Skills:

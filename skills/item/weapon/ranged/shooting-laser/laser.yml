@@ -19,7 +19,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process:
       - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=60;brightness=15,15;viewrange=64} @origin 
     ];
     ot=[
-      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=1;brightness=15,15;viewrange=64;fo=true;origin=@origin} @variableLocation{k=skill.ShootingLaser}
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=5;brightness=15,15;viewrange=64;fo=true;origin=@origin} @variableLocation{k=skill.ShootingLaser}
     ];
     oh=[
       - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE}

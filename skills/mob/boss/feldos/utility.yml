@@ -8,4 +8,4 @@ Azuriter_Mob_Boss_Feldos_RemoveMarker:
 # 樹冠の隊長から樹冠の司令官を呼び出す共通呼び出し。
 Azuriter_Mob_Boss_Feldos_Commander_Call:
   Skills:
-  - summon{t=Azuriter_Canopy_Commander;a=1;r=4;s=true;delay=10} @self
+  - signal{s=feldos_commander_call} @self

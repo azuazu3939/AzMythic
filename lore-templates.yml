@@ -1,17 +1,22 @@
 ItemInfoLore_Sword_1:
-  Lines:
-  - '<white>マナを消費し、回避判定モーションを繰り出す。'
-  - '<white>回避するとアクションを行う。'
-  - '{stats}<yellow>Stats:'
-  - '{stats-each}<white><stat.display>'
-  - '<gray>----'
-  - '{augments:GEM}<#5ec7ff>装飾<white>:'
-  - '{augments-each:GEM}<augment.display>'
+  - Line:
+    - "<white>マナを消費し、回避判定モーションを繰り出す。"
+    - "<white>回避するとアクションを行う。"
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'
 
 ItemInfoLore_Normal_1:
-  Lines:
-  - '{stats}<yellow>Stats:'
-  - '{stats-each}<white><stat.display>'
-  - '<gray>----'
-  - '{augments:GEM}<#5ec7ff>装飾<white>:'
-  - '{augments-each:GEM}<augment.display>'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+  - Filler: '<rainbow>-----------------------'
+  - Line:
+    - '{augments:GEM}<#5ec7ff>装飾<white>:'
+    - '{augments-each:GEM}<augment.display>'

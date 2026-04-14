@@ -96,7 +96,7 @@ Azuriter_Weapon_シューティングレーザー:
     Version: 1
   Attributes:
     MainHand:
-      Damage: 30 ADD
+      Damage: 16 ADD
       MovementSpeed: -0.25 MULTIPLY_BASE
   Group: 'Range-Weapon'
   Hide:

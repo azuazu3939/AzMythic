@@ -171,3 +171,62 @@ Azuriter_Canopy_Warlord:
   - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
 
   - classexp{a=<random.90to120>} @TTP ~onDeath
+
+# 風牙の先導狼。
+Azuriter_Windpack_Herald:
+  Template: Azuriter_Enemy_NormalBase
+  Type: wolf
+  Display: "&6風牙の先導狼"
+  Health: 1180
+  Armor: 90
+  Damage: 33
+  Drops:
+  - money 22to36 1
+  Options:
+    Variant: black
+    Silent: true
+    Scale: 2.2
+    MovementSpeed: 0.265
+    KnockbackResistance: 0.95
+    MaxCombatDistance: 56
+    FollowRange: 10
+    AttackSpeed: 20
+    NoDamageTicks: 0
+  DamageModifiers:
+  - SUFFOCATION 0
+  - FALL 0
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
+  AIGoalSelectors:
+  - clear
+  - randomstroll
+  - gotoowner
+  - MoveTowardsTargetConditional{
+    s=1;maxrange=32;
+    targetConditions=[
+      - isPlayer true
+      - distanceFromTL{d=64} true
+    ]}
+  - goToSpawn{speed=2;max=80;min=1}
+  - moveTowardsTarget
+  Skills:
+  - tracklocation @selfLocation ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=105} @self ~onSpawn
+  - attribute{attr=ARMOR;a=110} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=76} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
+  - skill:Azuriter_Mob_Boss_Wedler_Herald_Loop @T ~onEnterCombat
+  - skill:Azuriter_Mob_Boss_Wedler_Herald_Rally @self ~onEnterCombat 0.12
+  - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropcombat
+  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.85"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.68"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.42"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.28"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_Altwolf_牙 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlgo <target.name> Azuriter_堅牢の守護石 1 0.04"} @ThreatTablePlayers ~onDeath
+
+  - classexp{a=<random.30to48>} @TTP ~onDeath

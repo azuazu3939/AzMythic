@@ -1,0 +1,29 @@
+# 風牙の先導狼の行動ループ。
+Azuriter_Mob_Boss_Wedler_Herald_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_Wedler_Herald_Smash,
+    Azuriter_Mob_Boss_Wedler_Herald_GroundPulse,
+    Azuriter_Mob_Boss_Wedler_Herald_Rally;
+    fbs=Azuriter_Mob_Boss_Wedler_Herald_Smash} @self
+  - delay <random.120to170>
+  - skill:Azuriter_Mob_Boss_Wedler_Herald_Loop @T
+
+Azuriter_Mob_Boss_Wedler_Herald_Smash:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.95";t=FLOAT} @self
+  - meta:Azuriter_Core_Melee_Single_Base @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Mob_Boss_Wedler_Herald_GroundPulse:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 1.05";t=FLOAT} @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self
+
+Azuriter_Mob_Boss_Wedler_Herald_Rally:
+  Skills:
+  - skill:Azuriter_Mob_Boss_Wedler_Herald_Reinforce @self

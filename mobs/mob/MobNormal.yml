@@ -768,6 +768,7 @@ Azuriter_Gleaner_Horncaller:
   - attribute{attribute=FOLLOW_RANGE;a=9} @self ~onDropcombat
   - summon{t=Azuriter_Gleaner_Scout;a=1;r=5;s=true;delay=8} @self ~onEnterCombat ?children{a=<2}
   - summon{t=Azuriter_Prairie_Reaver;a=1;r=5;s=true;delay=18} @self ~onEnterCombat ?children{a=<2}
+  - skill:Azuriter_Mob_Boss_Wedler_Herald_Call @self ~onEnterCombat 0.08
   - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.64"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.34"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.28"} @ThreatTablePlayers ~onDeath

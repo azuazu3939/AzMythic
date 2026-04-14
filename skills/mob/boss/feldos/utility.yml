@@ -14,3 +14,38 @@ Azuriter_Mob_Boss_Feldos_Commander_Call:
 Azuriter_Mob_Boss_Feldos_Captain_Call:
   Skills:
   - summon{t=Azuriter_Canopy_Warlord;a=1;r=4;s=true;delay=10} @self
+
+# 樹冠の前衛長を呼び出す共通呼び出し。
+Azuriter_Mob_Boss_Feldos_Vanguard_Call:
+  Skills:
+  - summon{t=Azuriter_Canopy_Vanguard;a=1;r=4;s=true;delay=10} @self
+
+# 樹冠の前衛長から樹冠の隊長へつなぐ共通呼び出し。
+Azuriter_Mob_Boss_Feldos_Vanguard_Bridge:
+  Skills:
+  - summon{t=Azuriter_Canopy_Captain;a=1;r=4;s=true;delay=12} @self
+
+# 樹冠の前衛長の行動ループ。
+Azuriter_Mob_Boss_Feldos_Vanguard_Loop:
+  Conditions:
+  - incombat true
+  TargetConditions:
+  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
+  - isplayer true
+  Skills:
+  - randomskill{s=
+    Azuriter_Mob_Boss_Feldos_Vanguard_Smash,
+    Azuriter_Mob_Boss_Feldos_Vanguard_GroundPulse;
+    fbs=Azuriter_Mob_Boss_Feldos_Vanguard_Smash} @self
+  - delay <random.110to150>
+  - skill{s=Azuriter_Mob_Boss_Feldos_Vanguard_Loop} @T
+
+Azuriter_Mob_Boss_Feldos_Vanguard_Smash:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 0.9";t=FLOAT} @self
+  - meta:Azuriter_Core_Melee_Single_Base @EIC{r=8;a=60;ignore=players;limit=1;sort=NEAREST;p=true;yo=1}
+
+Azuriter_Mob_Boss_Feldos_Vanguard_GroundPulse:
+  Skills:
+  - setVar{k=skill.dmg;a="<caster.damage> * 1.05";t=FLOAT} @self
+  - skill:Azuriter_Core_Boss_GroundPulse @self

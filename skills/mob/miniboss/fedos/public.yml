@@ -1,9 +1,6 @@
 Azuriter_Mob_Fedos_Loop:
   Conditions:
   - incombat true
-  TargetConditions:
-  - hasAura{n=Azuriter_Core_Aura_NoCombat} false
-  - isplayer true
   Skills:
   - randomskill{s=
     Azuriter_Mob_Fedos_Attack1,

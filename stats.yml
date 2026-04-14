@@ -251,6 +251,43 @@ PARRY_CHANCE:
     - NETHERITE_SWORD
   Skills: []
 
+PARRY_COUNTERATTACK:
+  Enabled: false
+  AlwaysActive: false
+  Display: 'Parry Counterattack'
+  BaseValue: 1
+  Formatting:
+    Additive: '+<value> Parry Counterattack'
+    Multiply: '+<value> Parry Counterattack'
+    Compound: 'x<value> Parry Counterattack'
+    Static: 'Force <value> <display>'
+    Rounding: 2
+
+PARRY_NEGATION:
+  Enabled: false
+  AlwaysActive: false
+  Display: 'Expertise'
+  Formatting:
+    Additive: '+<value> Expertise'
+    Multiply: '+<value> Expertise'
+    Compound: 'x<value> Expertise'
+    Static: 'Force <value> <display>'
+    Rounding: 2
+  BaseValue: 0
+
+PARRY_POWER:
+  Enabled: false
+  AlwaysActive: false
+  Display: 'Parry Power'
+  BaseValue: 0.5
+  Formatting:
+    Additive: '+<value> Parry Power'
+    Multiply: '+<value> Parry Power'
+    Compound: 'x<value> Parry Power'
+    Static: 'Force <value> <display>'
+    Rounding: 2
+
+
 ################################################################
 #
 # Example Custom Stats

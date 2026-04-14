@@ -49,7 +49,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
   - matCooldown{m=enchanted_book} false
   - varrange{k=caster.ShootingStar;r=4} false 
   Skills:
-  - setMaterialCooldown{m=enchanted_book;d=20} @self
+  - setMaterialCooldown{m=enchanted_book;d=16} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;ho=0} @self
@@ -64,7 +64,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
   - matCooldown{m=enchanted_book} false
   - varrange{k=caster.ShootingStar;r=4} false 
   Skills:
-  - setMaterialCooldown{m=enchanted_book;d=30} @self
+  - setMaterialCooldown{m=enchanted_book;d=24} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6;ho=0} @self
   - removetag{t=ShootingLaser1} @self
@@ -78,7 +78,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5:
   - varrange{k=caster.ShootingStar;r=4} true
   Skills:
   - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
-  - setMaterialCooldown{m=enchanted_book;d=40} @self
+  - setMaterialCooldown{m=enchanted_book;d=30} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;repeat=2;repeati=<random.5to15>;delay=0;ho=<random.-30to30>} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;repeat=2;repeati=<random.5to15>;delay=1;ho=<random.-30to30>} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;repeat=2;repeati=<random.5to15>;delay=2;ho=<random.-30to30>} @self

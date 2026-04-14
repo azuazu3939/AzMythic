@@ -104,6 +104,7 @@ Azuriter_Canopy_Commander:
     NoDamageTicks: 0
     Scale: 1.35
   Skills:
+  - skill:Azuriter_Mob_Boss_Feldos_RemoveMarker @self ~onSpawn
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10} @self ~onDropcombat
   - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Loop} @self ~onEnterCombat

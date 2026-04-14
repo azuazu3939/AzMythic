@@ -88,7 +88,7 @@ Azuriter_ステップソード:
     Unbreakable: true
   Attributes:
     MainHand:
-      Damage: 20 ADD
+      Damage: 24 ADD
       Armor: 15 ADD
       ArmorToughness: 15 ADD
       AttackSpeed: -0.3 MULTIPLY_BASE

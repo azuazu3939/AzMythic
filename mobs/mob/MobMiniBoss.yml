@@ -9,7 +9,7 @@ Azuriter_Mob_Fedos:
   - money 160to360 1
   Options:
     Silent: true
-    Scale: 1.75
+    Scale: 2
     MovementSpeed: 0.215
     KnockbackResistance: 0.9
     MaxCombatDistance: 32

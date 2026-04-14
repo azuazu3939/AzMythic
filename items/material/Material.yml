@@ -271,7 +271,7 @@ Azuriter_トライアラン勲章:
   Display: "&eトライアラン勲章"
   Lore:
   - "&fトライアルクリア報酬。"
-  - "&f/shopで様々なものと交換できる。"
+  - "&fNPCショップで様々なものと交換できる。"
   ItemUpdater:
     Version: 1
   Options:

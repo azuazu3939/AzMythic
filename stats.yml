@@ -257,3 +257,25 @@ SPEED:
     Compound: 'x<value>% Speed'
   MaxValue: 3
   MinValue: -3
+
+SCALE:
+  Enabled: false
+  AlwaysActive: false
+  Display: 'Scale'
+  BaseValue: 1
+  Formatting:
+    Additive: '+<value> Scale'
+    Multiply: '+<value> Scale'
+    Compound: 'x<value> Scale'
+
+LOOT_BIAS:
+  Enabled: true
+  Type: STATIC
+  Display: 'Loot Bias'
+  BaseValue: 0
+  MinValue: -100
+  Formatting:
+    Rounding: 1
+    Additive: '+<value> Loot Bias'
+    Multiply: '+<value> Loot Bias'
+    Compound: 'x<value> Loot Bias'

@@ -1,9 +1,3 @@
-################################################################
-#
-# Hard-coded stats
-#
-################################################################
-
 ARMOR:
   Enabled: true
   AlwaysActive: true
@@ -239,12 +233,6 @@ PARRY_COUNTERATTACK:
     Additive: '&9+<value> Parry Counterattack'
     Multiply: '&9+<value> Parry Counterattack'
     Compound: '&9x<value> Parry Counterattack'
-
-################################################################
-#
-# Example Custom Stats
-#
-################################################################
 
 SPEED:
   Enabled: true

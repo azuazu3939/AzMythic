@@ -86,3 +86,23 @@ Azuriter_エンピュリアボウ:
     Amount: 1to5
     Chance: 0.6
     MaxAmount: 5
+
+Azuriter_Weapon_シューティングレーザー:
+  Id: Enchanted_book
+  Display: "&dシューティングレーザー"
+  Lore:
+    Template: ItemInfoLore_Normal_1
+  ItemUpdater:
+    Version: 1
+  Attributes:
+    MainHand:
+      Damage: 30 ADD
+      MovementSpeed: -0.25 MULTIPLY_BASE
+  Group: 'Range-Weapon'
+  Hide:
+  - ENCHANTS
+  AugmentationSlots:
+  - Type: GEM
+    Amount: 1to3
+    Chance: 0.6
+    MaxAmount: 3

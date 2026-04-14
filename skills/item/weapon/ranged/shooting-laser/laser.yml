@@ -1,0 +1,27 @@
+Azuriter_Item_Weapon_Ranged_ShootingLaser_Use:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=HAND;i=Azuriter_Weapon_シューティングレーザー} true
+  - hasMana{m=>10;
+    onFail=[
+      - message{m="&cマナが足りません。"} @self
+    ]} true 
+  - matCooldown{m=enchanted_book} false
+  Skills:
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process;sso=2.5} @self
+  - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process;sso=-2.5} @self
+
+Azuriter_Item_Weapon_Ranged_ShootingLaser_Process:
+  Skills:
+  - projectile{v=24;i=1;vr=2;r=2;se=false;sb=false;syo=2;sfo=2;sso=<skill.sso>;d=40;
+    os=[
+      - setvarloc{var=skill.ShootingLaser;v=@origin} @self
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=40;brightness=15,15;viewrange=64} @origin 
+      - displayline{material=LIGHT_BLUE_STAINED_GLASS;scale=0.5,0.5;keepalive=40;brightness=15,15;viewrange=64;origin=@origin} @variableLocation{k=skill.ShootingLaser}
+    ];
+    ot=[
+      - setvarloc{var=skill.ShootingLaser;v=@origin} @self
+    ];
+    oh=[
+      - damage{a=<skill.var.damage>;pi=true;ii=true;e=PURPLE}
+    ]} @TL

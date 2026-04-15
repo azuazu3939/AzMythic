@@ -10,21 +10,6 @@ Azuriter_Mob_Boss_Feldos_Commander_Call:
   Skills:
   - signal{s=feldos_commander_call} @self
 
-# 樹冠の隊長から中ボスの戦団長を呼び出す共通呼び出し。
-Azuriter_Mob_Boss_Feldos_Captain_Call:
-  Skills:
-  - summon{t=Azuriter_Canopy_Warlord;a=1;r=4;s=true;delay=10} @self
-
-# 樹冠の前衛長を呼び出す共通呼び出し。
-Azuriter_Mob_Boss_Feldos_Vanguard_Call:
-  Skills:
-  - summon{t=Azuriter_Canopy_Vanguard;a=1;r=4;s=true;delay=10} @self
-
-# 樹冠の前衛長から樹冠の隊長へつなぐ共通呼び出し。
-Azuriter_Mob_Boss_Feldos_Vanguard_Bridge:
-  Skills:
-  - summon{t=Azuriter_Canopy_Captain;a=1;r=4;s=true;delay=12} @self
-
 # 樹冠の前衛長の行動ループ。
 Azuriter_Mob_Boss_Feldos_Vanguard_Loop:
   Conditions:

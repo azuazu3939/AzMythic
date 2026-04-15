@@ -2,9 +2,3 @@
 Azuriter_Mob_Boss_Wedler_Herald_Call:
   Skills:
   - summon{t=Azuriter_Windpack_Herald;a=1;r=4;s=true;delay=12} @self
-
-# 風牙の先導狼が配下を呼び込む共通呼び出し。
-Azuriter_Mob_Boss_Wedler_Herald_Reinforce:
-  Skills:
-  - summon{t=Azuriter_Gleaner_Captain;a=1;r=5;s=true;delay=8} @self
-  - summon{t=Azuriter_Gleaner_Horncaller;a=1;r=5;s=true;delay=16} @self

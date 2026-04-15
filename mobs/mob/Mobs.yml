@@ -91,9 +91,9 @@ Azuriter_Big_Zombie:
 
 
 Azuriter_Mob_Piledger:
-  Template: Azuriter_Enemy_Generic
+  Template: Azuriter_Enemy_NormalBase
   Display: "&fピレジャー"
-  Health: 280
+  Health: 450
   Damage: 15
   Drops:
   - money 20to60
@@ -104,10 +104,10 @@ Azuriter_Mob_Piledger:
       EntityType: PIG
     Transform:
       Translation: 0,0,0
-      Scale: 1.5,1.0,1.0
+      Scale: 2.0,1.0,1.0
     Living:
       Baby: false
-      Silent: true
+      Silent: false
       Glowing: false
       Invulnerable: false
       Gravity: true
@@ -131,7 +131,7 @@ Azuriter_Mob_Piledger:
     KnockbackResistance: 0.5
     FollowRange: 4
     MovementSpeed: 0.235
-    Scale: 2
+    Scale: 1
     Silent: true
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat

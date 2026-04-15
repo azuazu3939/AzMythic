@@ -5,13 +5,13 @@ Azuriter_Augment_力のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f攻撃力 0.25~1"
+  - "&f攻撃力 0.5~1.5"
   Augmentation:
     Type: GEM
     Tooltip: '&c&l力のジェム'  
     Icon: ''
     Stats:
-    - ATTACK_DAMAGE <random.float.0.25to1{round=2}> ADDITIVE
+    - ATTACK_DAMAGE <random.float.0.5to1.5{round=2}> ADDITIVE
 
 Azuriter_Augment_守備のジェム_1:
   Id: gunpowder
@@ -69,14 +69,14 @@ Azuriter_Augment_背水のジェム_1:
     Version: 1
   Lore:
   - "&f自然回復力 -0.5~-0.25"
-  - "&f攻撃力 0.75~1.5"
+  - "&f攻撃力 1.0~2.0"
   Augmentation:
     Type: GEM
     Tooltip: '&d&l背水のジェム'  
     Icon: ''
     Stats:
     - HEALTH_REGENERATION <random.float.-0.5to-0.25{round=2}> ADDITIVE
-    - ATTACK_DAMAGE <random.float.0.75to1.5{round=2}> ADDITIVE
+    - ATTACK_DAMAGE <random.float.1.0to2.0{round=2}> ADDITIVE
 
 Azuriter_Augment_体力のジェム_1:
   Id: redstone
@@ -149,7 +149,7 @@ Azuriter_Augment_贄のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f攻撃力 0.5~1"
+  - "&f攻撃力 0.5~1.5"
   - "&f最大体力 -5%"
   - "&f防御力 -5%"
   - "&f防具強度 -5%"
@@ -158,7 +158,7 @@ Azuriter_Augment_贄のジェム_1:
     Tooltip: '&c&l贄のジェム'  
     Icon: ''
     Stats:
-    - ATTACK_DAMAGE <random.float.0.5to1{round=2}> ADDITIVE
+    - ATTACK_DAMAGE <random.float.0.5to1.5{round=2}> ADDITIVE
     - HEALTH -0.05 ADDITIVE_MULTIPLIER
     - ARMOR_TOUGHNESS -0.05 ADDITIVE_MULTIPLIER
     - ARMOR -0.05 ADDITIVE_MULTIPLIER
@@ -170,7 +170,7 @@ Azuriter_Augment_矢走のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f攻撃力 0.25~0.5"
+  - "&f攻撃力 0.5~1.0"
   - "&f攻撃速度 12.5%"
   - "&f移動速度 5%~10%"
   Augmentation:
@@ -178,7 +178,7 @@ Azuriter_Augment_矢走のジェム_1:
     Tooltip: '&c&l矢走のジェム'  
     Icon: ''
     Stats:
-    - ATTACK_DAMAGE <random.float.0.25to0.5{round=2}> ADDITIVE
+    - ATTACK_DAMAGE <random.float.0.5to1.0{round=2}> ADDITIVE
     - ATTACK_SPEED 0.125 ADDITIVE_MULTIPLIER
     - MOVEMENT_SPEED <random.float.0.05to0.1{round=2}> ADDITIVE_MULTIPLIER
 
@@ -217,7 +217,7 @@ Azuriter_Augment_戦棍のジェム_1:
   Display: '&8&l戦棍のジェム'
   Lore:
   - "&f攻撃時マナを5回復する"
-  - "&f攻撃力 0.75~1"
+  - "&f攻撃力 1.5~2.5"
   - "&f攻撃速度 -15%"
   Group: 'Augment'
   ItemUpdater:
@@ -227,7 +227,7 @@ Azuriter_Augment_戦棍のジェム_1:
     Tooltip: '&8&l戦棍のジェム'  
     Icon: ''
     Stats:
-    - ATTACK_DAMAGE <random.float.0.75to1{round=2}> ADDITIVE
+    - ATTACK_DAMAGE <random.float.1.5to2.5{round=2}> ADDITIVE
     - ATTACK_SPEED -0.15 ADDITIVE_MULTIPLIER
     Skills:
     - modifyMana{a=5;m=give;cd=1} @self ~onAttack 

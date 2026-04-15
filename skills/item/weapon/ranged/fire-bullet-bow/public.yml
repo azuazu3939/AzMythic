@@ -8,16 +8,11 @@ Azuriter_Item_Weapon_Ranged_FireBulletBow_Use:
     ]}
   - matCooldown{m=BOW} false
   Skills:
-  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="max(60 - <az.attack_speed.double> * 8, 8)";t=INTEGER} @self
-  - setMaterialCooldown{m=BOW;d="<caster.var.Azuriter_Item_Var_RangedShotCounter|60>"} @self
+  - setVar{k=caster.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=INTEGER} @self
+  - setMaterialCooldown{m=BOW;d="<caster.var.Azuriter_Item_Var_RangedShot>"} @self
   - modifyMana{a=20;m=consume} @self
   - setVar{k=skill.damage;a="<caster.damage> * 0.85";t=FLOAT} @self
-  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="<caster.var.Azuriter_Item_Var_RangedShotCounter|0> + 1";t=INTEGER} @self
-  - setVar{k=skill.damage;a="<skill.var.damage> * 0.995";t=FLOAT;repeat=<caster.var.Azuriter_Item_Var_RangedShotCounter|0>;repeati=0} @self
   - delay 2
   - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_Shot;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_Shot;ho=45} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_Shot;ho=-45} @self
-  - delay 250
-  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="<caster.var.Azuriter_Item_Var_RangedShotCounter|0> - 1";t=INTEGER} @self
-  - setVar{k=caster.Azuriter_Item_Var_RangedShotCounter;a="0";t=INTEGER} @self ?varrange{k=caster.Azuriter_Item_Var_RangedShotCounter;r=<0}

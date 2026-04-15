@@ -137,9 +137,9 @@ Azuriter_Mob_Piledger:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
   - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
-  - attribute{attr=ARMOR_TOUGHNESS;a=25} @self ~onSpawn
-  - attribute{attr=ARMOR;a=35} @self ~onSpawn ?!day
-  - attribute{attr=ARMOR;a=25} @self ~onSpawn ?day
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
+  - attribute{attr=ARMOR;a=25} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
   - skill{s=Azuriter_Mob_Piledger_Combat} @self ~onEntercombat 
   - sound{s=entity.pig.hurt;cd=0.5} @self ~onDamaged 
   - sound{s=entity.pig.death;cd=0.5} @self ~onDeath 

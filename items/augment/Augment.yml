@@ -230,7 +230,7 @@ Azuriter_Augment_戦棍のジェム_1:
     - ATTACK_DAMAGE <random.float.0.75to1{round=2}> ADDITIVE
     - ATTACK_SPEED -0.15 ADDITIVE_MULTIPLIER
     Skills:
-    - modifyMana{a=5;m=give} @self ~onAttack 
+    - modifyMana{a=5;m=give;cd=1} @self ~onAttack 
 
 Azuriter_Augment_魔力のジェム_1:
   Id: blaze_rod
@@ -245,7 +245,7 @@ Azuriter_Augment_魔力のジェム_1:
     Tooltip: '&5&l魔力のジェム'  
     Icon: ''
     Skills:
-    - modifyMana{a=5;m=give} @self ~onAttack 
+    - modifyMana{a=5;m=give;cd=0.5} @self ~onAttack 
 
 #### Options
 

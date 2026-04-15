@@ -5,10 +5,11 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_1:
   - hasTag{t=ShootingLaser2} false
   - hasTag{t=ShootingLaser3} false
   - matCooldown{m=enchanted_book} false
-  - varrange{k=caster.ShootingStar;r=10} false
+  - varrange{k=skill.ShootingStar;r=10} false
   Skills:
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 6";t=DOUBLE} @self
   - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
+  - message{m="<az.attack_speed.double> <skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - addtag{t=ShootingLaser1} @self
@@ -20,7 +21,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_2:
   - hasTag{t=ShootingLaser2} false
   - hasTag{t=ShootingLaser3} false
   - matCooldown{m=enchanted_book} false
-  - varrange{k=caster.ShootingStar;r=10} false
+  - varrange{k=skill.ShootingStar;r=10} false
   Skills:
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 9";t=DOUBLE} @self
   - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
@@ -35,7 +36,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
   - hasTag{t=ShootingLaser2} true
   - hasTag{t=ShootingLaser3} false
   - matCooldown{m=enchanted_book} false
-  - varrange{k=caster.ShootingStar;r=10} false
+  - varrange{k=skill.ShootingStar;r=10} false
   Skills:
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=DOUBLE} @self
   - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
@@ -52,7 +53,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
   - hasTag{t=ShootingLaser2} true
   - hasTag{t=ShootingLaser3} true
   - matCooldown{m=enchanted_book} false
-  - varrange{k=caster.ShootingStar;r=10} false
+  - varrange{k=skill.ShootingStar;r=10} false
   Skills:
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 24";t=DOUBLE} @self
   - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
@@ -67,9 +68,9 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5:
   Conditions:
   - matCooldown{m=enchanted_book} false
-  - varrange{k=caster.ShootingStar;r=>9} true
+  - varrange{k=skill.ShootingStar;r=>9} true
   Skills:
-  - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
+  - setVar{k=skill.ShootingStar;t=INTEGER;a="0"} @self
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 30";t=DOUBLE} @self
   - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;repeat=5;repeati=<random.5to15>;delay=0;ho=<random.-30to30>} @self
@@ -82,4 +83,4 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5:
 # 4段階目の発動回数を蓄積する。
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_Count:
   Skills:
-  - setVar{k=caster.ShootingStar;t=INTEGER;a="<caster.var.ShootingStar|0> + 1"} @self
+  - setVar{k=skill.ShootingStar;t=INTEGER;a="<skill.var.ShootingStar|0> + 1"} @self

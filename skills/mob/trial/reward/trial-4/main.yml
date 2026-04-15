@@ -13,7 +13,8 @@ Azuriter_トライアル_4_Drop1:
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.02"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=>7} true ]}
   - classexp{a=80} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=>7} true ]}
   - auraRemove{n=Azuriter_Mob_Aura_Trial4Clear} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=>7} true ]}
-
+  
+  - delay 1
   - currencygive{amount=450} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=4to7} true]}
   - cmd{c="mlg <target.name> Azuriter_お肉 1 1"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=4to7} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 0.5"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=4to7} true ]}
@@ -24,6 +25,7 @@ Azuriter_トライアル_4_Drop1:
   - classexp{a=70} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=4to7} true ]}
   - auraRemove{n=Azuriter_Mob_Aura_Trial4Clear} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=4to7} true ]}
 
+  - delay 1
   - currencygive{amount=400} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=2to3} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 1 0.75"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=2to3} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 0.25"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=2to3} true ]}
@@ -33,7 +35,8 @@ Azuriter_トライアル_4_Drop1:
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.005"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=2to3} true ]}
   - classexp{a=60} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=2to3} true ]}
   - auraRemove{n=Azuriter_Mob_Aura_Trial4Clear} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=2to3} true ]}
-
+  
+  - delay 1
   - currencygive{amount=300} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=1} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 1 0.5"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=1} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 0.125"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial4Clear;s=1} true ]}

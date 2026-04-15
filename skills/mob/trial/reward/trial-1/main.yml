@@ -13,6 +13,7 @@ Azuriter_トライアル_1_Drop1:
   - classexp{a=50} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=>7} true ]}
   - auraRemove{n=Azuriter_Mob_Aura_Trial1Clear} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=>7} true ]}
 
+  - delay 1
   - currencygive{amount=200} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=4to7} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 1 1"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=4to7} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 0.5"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=4to7} true ]}
@@ -21,6 +22,7 @@ Azuriter_トライアル_1_Drop1:
   - classexp{a=40} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=4to7} true ]}
   - auraRemove{n=Azuriter_Mob_Aura_Trial1Clear} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=4to7} true ]}
 
+  - delay 1
   - currencygive{amount=150} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=2to3} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 1 0.75"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=2to3} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 0.25"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=2to3} true ]}
@@ -29,6 +31,7 @@ Azuriter_トライアル_1_Drop1:
   - classexp{a=30} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=2to3} true ]}
   - auraRemove{n=Azuriter_Mob_Aura_Trial1Clear} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=2to3} true ]}
 
+  - delay 1
   - currencygive{amount=100} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=1} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 1 0.5"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=1} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 0.125"} @PIR{r=40;c=[ - hasAuraStacks{n=Azuriter_Mob_Aura_Trial1Clear;s=1} true ]}

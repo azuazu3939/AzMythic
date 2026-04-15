@@ -1,5 +1,5 @@
 Azuriter_Mob_Piledger_Combat:
-  Cooldown: 12
+  Cooldown: 1
   Conditions:
   - incombat true
   Skills:
@@ -12,7 +12,6 @@ Azuriter_Mob_Piledger_Combat:
 Azuriter_Mob_Piledger_Combat_Process:
   Conditions:
   - incombat 
-  - hasTag{t=Azuriter_Core_Tag_AttackBusy} true
   Skills: 
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self

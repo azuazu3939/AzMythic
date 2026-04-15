@@ -11,11 +11,10 @@ Azuriter_Mob_Piledger_Combat:
 
 Azuriter_Mob_Piledger_Combat_Process:
   Conditions:
-  - incombat 
+  - incombat true
   Skills: 
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
-  - skill:Azuriter_Core_Enemy_DamageBuff @self
   - projectile{
     ot=[
       - setProjectileDirection{m=0.05} @TL

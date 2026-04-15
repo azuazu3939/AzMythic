@@ -93,8 +93,8 @@ Azuriter_Big_Zombie:
 Azuriter_Mob_Piledger:
   Template: Azuriter_Enemy_NormalBase
   Display: "&fピレジャー"
-  Health: 450
-  Damage: 20
+  Health: 1800
+  Damage: 25
   Drops:
   - money 20to60
   Packet:
@@ -130,7 +130,7 @@ Azuriter_Mob_Piledger:
     MaxCombatDistance: 48
     KnockbackResistance: 0.5
     FollowRange: 4
-    MovementSpeed: 0.3
+    MovementSpeed: 0.25
     Scale: 1
     Silent: true
   Skills:

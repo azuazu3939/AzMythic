@@ -142,6 +142,7 @@ Azuriter_Mob_Piledger:
   - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
   - skill{s=Azuriter_Mob_Piledger_Combat} @self ~onEntercombat 
   - sound{s=entity.pig.hurt;cd=0.5;sc=PLAYERS} @self ~onDamaged 
+  - sound{s=entity.hoglin.hurt;cd=0.5;sc=PLAYERS} @self ~onDamaged 
   - sound{s=entity.pig.death;sc=PLAYERS} @self ~onDeath 
   - sound{s=entity.hoglin.death;sc=PLAYERS} @self ~onDeath 
   - classexp{a=25} @TTP ~onDeath

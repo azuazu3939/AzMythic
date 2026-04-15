@@ -54,8 +54,6 @@ Azuriter_Boss_Feldos:
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ~onEntercombat
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=125;shield_break=1500;heal_percent=0.01} @self ~onEntercombat
   - skill{s=Azuriter_Mob_Boss_Feldos_Loop} @T ~onEntercombat
-  - summon{t=Azuriter_Canopy_Commander;a=1;r=4;s=true;delay=10} @self ~onSignal:feldos_commander_call
-
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropCombat
 
   - potionclear{t=STRENGTH} @self ~onDamaged >70%

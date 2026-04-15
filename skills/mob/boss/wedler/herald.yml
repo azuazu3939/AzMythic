@@ -8,8 +8,7 @@ Azuriter_Mob_Boss_Wedler_Herald_Loop:
   Skills:
   - randomskill{s=
     Azuriter_Mob_Boss_Wedler_Herald_Smash,
-    Azuriter_Mob_Boss_Wedler_Herald_GroundPulse,
-    Azuriter_Mob_Boss_Wedler_Herald_Rally;
+    Azuriter_Mob_Boss_Wedler_Herald_GroundPulse;
     fbs=Azuriter_Mob_Boss_Wedler_Herald_Smash} @self
   - delay <random.120to170>
   - skill:Azuriter_Mob_Boss_Wedler_Herald_Loop @T
@@ -23,7 +22,3 @@ Azuriter_Mob_Boss_Wedler_Herald_GroundPulse:
   Skills:
   - setVar{k=skill.dmg;a="<caster.damage> * 1.05";t=FLOAT} @self
   - skill:Azuriter_Core_Boss_GroundPulse @self
-
-Azuriter_Mob_Boss_Wedler_Herald_Rally:
-  Skills:
-  - skill:Azuriter_Mob_Boss_Wedler_Herald_Reinforce @self

@@ -8,8 +8,7 @@ Azuriter_Mob_Boss_Feldos_Warlord_Loop:
   Skills:
   - randomskill{s=
     Azuriter_Mob_Boss_Feldos_Commander_Smash,
-    Azuriter_Mob_Boss_Feldos_Commander_GroundPulse,
-    Azuriter_Mob_Boss_Feldos_Commander_Rally;
+    Azuriter_Mob_Boss_Feldos_Commander_GroundPulse;
     fbs=Azuriter_Mob_Boss_Feldos_Commander_Smash} @self
   - delay <random.100to160>
   - skill{s=Azuriter_Mob_Boss_Feldos_Warlord_Loop} @T

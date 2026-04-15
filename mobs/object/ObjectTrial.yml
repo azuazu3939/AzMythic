@@ -16,9 +16,9 @@ Azuriter_トライアル_1_1:
           - skill{s=Azuriter_トライアル_1_Drop1}
           - suicide
 
-        ]} @self ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<30}
+        ]} @self ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>29}
 
-      - aura{n=Azuriter_Mob_Aura_Trial1Clear;rd=true;t=600} @trigger ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>29}
+      - aura{n=Azuriter_Mob_Aura_Trial1Clear;rd=true;t=600} @trigger ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<30}
 
     ]} @self ~onSignal:trial_drop_1
   - barCreate{name="<caster.uuid>";display="[&6&l★&f×1] &f&lゾンビを&a&l30体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn
@@ -42,9 +42,9 @@ Azuriter_トライアル_2_1:
           - skill{s=Azuriter_トライアル_2_Drop1}
           - suicide
 
-        ]} @self ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<10}
+        ]} @self ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>9}
 
-      - aura{n=Azuriter_Mob_Aura_Trial2Clear;rd=true;t=600} ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>9}
+      - aura{n=Azuriter_Mob_Aura_Trial2Clear;rd=true;t=600} @trigger ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<10}
 
     ]} @self ~onSignal:trial_drop_2
   - barCreate{name="<caster.uuid>";display="[&6&l★&f×2] &f&l大きなゾンビを&a&l10体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn
@@ -68,9 +68,9 @@ Azuriter_トライアル_3_1:
           - skill{s=Azuriter_トライアル_3_Drop1}
           - suicide
 
-        ]} @self ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<10}
+        ]} @self ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>9}
 
-      - aura{n=Azuriter_Mob_Aura_Trial3Clear;rd=true;t=600} @trigger ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>9}
+      - aura{n=Azuriter_Mob_Aura_Trial3Clear;rd=true;t=600} @trigger ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<10}
 
     ]} @self ~onSignal:trial_drop_3
   - barCreate{name="<caster.uuid>";display="[&6&l★&f×3] &f&lエリートゾンビを&a&l10体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn
@@ -94,9 +94,9 @@ Azuriter_トライアル_4_1:
           - skill{s=Azuriter_トライアル_4_Drop1}
           - suicide
 
-        ]} @self ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<30}
+        ]} @self ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>29}
 
-      - aura{n=Azuriter_Mob_Aura_Trial4Clear;rd=true;t=600} @trigger ?!varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=>29}
+      - aura{n=Azuriter_Mob_Aura_Trial4Clear;rd=true;t=600} @trigger ?varrange{k=caster.Azuriter_Mob_Var_TrialCount;r=<30}
 
     ]} @self ~onSignal:trial_drop_4
   - barCreate{name="<caster.uuid>";display="[&6&l★&f×4] &f&l革ゾンビを&a&l30体&f&l倒す &r- &b&l進行度";value="0.0";color=GREEN;style=SEGMENTED_10;delay=1} @self ~onSpawn

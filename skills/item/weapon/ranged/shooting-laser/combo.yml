@@ -7,8 +7,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_1:
   - matCooldown{m=enchanted_book} false
   - varrange{k=caster.ShootingStar;r=10} false
   Skills:
-  - setVar{k=caster.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 6";t=INTEGER} @self
-  - setMaterialCooldown{m=enchanted_book;d="<caster.var.Azuriter_Item_Var_RangedShot>"} @self
+  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 6";t=INTEGER} @self
+  - setMaterialCooldown{m=enchanted_book;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - addtag{t=ShootingLaser1} @self
@@ -22,8 +22,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_2:
   - matCooldown{m=enchanted_book} false
   - varrange{k=caster.ShootingStar;r=10} false
   Skills:
-  - setVar{k=caster.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 9";t=INTEGER} @self
-  - setMaterialCooldown{m=enchanted_book;d="<caster.var.Azuriter_Item_Var_RangedShot>"} @self
+  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 9";t=INTEGER} @self
+  - setMaterialCooldown{m=enchanted_book;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - addtag{t=ShootingLaser2} @self
@@ -37,8 +37,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_3:
   - matCooldown{m=enchanted_book} false
   - varrange{k=caster.ShootingStar;r=10} false
   Skills:
-  - setVar{k=caster.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=INTEGER} @self
-  - setMaterialCooldown{m=enchanted_book;d="<caster.var.Azuriter_Item_Var_RangedShot>"} @self
+  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=INTEGER} @self
+  - setMaterialCooldown{m=enchanted_book;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;ho=0} @self
@@ -54,8 +54,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_4:
   - matCooldown{m=enchanted_book} false
   - varrange{k=caster.ShootingStar;r=10} false
   Skills:
-  - setVar{k=caster.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 24";t=INTEGER} @self
-  - setMaterialCooldown{m=enchanted_book;d="<caster.var.Azuriter_Item_Var_RangedShot>"} @self
+  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 24";t=INTEGER} @self
+  - setMaterialCooldown{m=enchanted_book;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5;ho=0} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6;ho=0} @self
   - removetag{t=ShootingLaser1} @self
@@ -70,8 +70,8 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5:
   - varrange{k=caster.ShootingStar;r=>9} true
   Skills:
   - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
-  - setVar{k=caster.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 30";t=INTEGER} @self
-  - setMaterialCooldown{m=enchanted_book;d="<caster.var.Azuriter_Item_Var_RangedShot>"} @self
+  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 30";t=INTEGER} @self
+  - setMaterialCooldown{m=enchanted_book;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1;repeat=5;repeati=<random.5to15>;delay=0;ho=<random.-30to30>} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2;repeat=5;repeati=<random.5to15>;delay=1;ho=<random.-30to30>} @self
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3;repeat=5;repeati=<random.5to15>;delay=2;ho=<random.-30to30>} @self

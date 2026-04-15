@@ -30,12 +30,11 @@ Azuriter_Mob_Piledger_Combat_Process:
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - delay 2
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
-      - throw{v=16;vy=32} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - throw{v=16;vy=16} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
     ];
     os=[
       - sound{s=entity.hoglin.death;p=0;sc=PLAYERS;repeat=19;repeati=2;v=1} @self
       - delay 30
-      - sound{s=entity.hoglin.death;p=0.8;sc=PLAYERS;repeat=9;repeati=2;v=1} @self
       - e:p{p=villager_angry;a=10;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
       - delay 10
       - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=9;repeati=2;v=1} @self

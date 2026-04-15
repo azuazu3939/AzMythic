@@ -1,0 +1,51 @@
+Azuriter_Mob_Piledger_Combat:
+  Cooldown: 12
+  Conditions:
+  - incombat true
+  Skills:
+  - skill{s=Azuriter_Mob_Piledger_Combat_Process} @self
+  - wait{c=[ - hasTag{t=Azuriter_Core_Tag_AttackBusy} false ];tt=1200}
+  - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - delay 60
+  - skill{s=Azuriter_Mob_Piledger_Combat} @self
+
+Azuriter_Mob_Piledger_Combat_Process:
+  Conditions:
+  - incombat 
+  - hasTag{t=Azuriter_Core_Tag_AttackBusy} true
+  Skills: 
+  - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
+  - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
+  - skill:Azuriter_Core_Enemy_DamageBuff @self
+  - projectile{
+    ot=[
+      - setProjectileDirection{m=0.05} @TL
+      - teleport @origin
+      - sound{s=entity.zoglin.step;v=1;cd=0.1} @self
+      - look{f=true} @projectileforward
+    ];
+    oh=[
+      - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - damage{a="<skill.var.dmg> * 2.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - delay 5
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - delay 2
+      - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+      - throw{v=10;vy=20} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
+    ];
+    os=[
+      - sound{s=entity.hoglin.death;p=0;sc=PLAYERS;repeat=19;repeati=2;v=2} @self
+      - delay 30
+      - sound{s=entity.hoglin.death;p=0.8;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
+      - e:p{p=villager_angry;a=20;vs=3.5;hs=3;s=1;d=true;dir=0,2,0;repeat=1;repeati=15} @self
+      - delay 10
+      - sound{s=entity.hoglin.angry;p=0;sc=PLAYERS;repeat=9;repeati=2;v=2} @self
+      - delay 20
+      - modifyprojectile{t=VELOCITY;a=SET;v=18} @self
+    ];
+    oe=[
+      - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
+    ];
+    v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
+    mr=64;vr=3;hr=3;d=200} @TL

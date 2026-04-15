@@ -8,8 +8,7 @@ Azuriter_Mob_Boss_Feldos_Commander_Loop:
   Skills:
   - randomskill{s=
     Azuriter_Mob_Boss_Feldos_Commander_Smash,
-    Azuriter_Mob_Boss_Feldos_Commander_GroundPulse,
-    Azuriter_Mob_Boss_Feldos_Commander_Rally;
+    Azuriter_Mob_Boss_Feldos_Commander_GroundPulse;
     fbs=Azuriter_Mob_Boss_Feldos_Commander_Smash} @self
   - delay <random.120to180>
   - skill{s=Azuriter_Mob_Boss_Feldos_Commander_Loop} @T
@@ -23,8 +22,3 @@ Azuriter_Mob_Boss_Feldos_Commander_GroundPulse:
   Skills:
   - setVar{k=skill.dmg;a="<caster.damage> * 1.1";t=FLOAT} @self
   - skill:Azuriter_Core_Boss_GroundPulse @self
-
-Azuriter_Mob_Boss_Feldos_Commander_Rally:
-  Skills:
-  - summon{t=Azuriter_Briar_Raider;a=1;r=5;s=true;delay=8} @self
-  - summon{t=Azuriter_Canopy_Raider;a=1;r=5;s=true;delay=18} @self

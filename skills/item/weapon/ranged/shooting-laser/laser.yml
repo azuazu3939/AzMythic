@@ -16,7 +16,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Use:
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Use_5} @self
 
 Azuriter_Item_Weapon_Ranged_ShootingLaser_Kill:
-  Cooldown: 2
+  Cooldown: 1
   Conditions:
   - wearing{s=HAND;i=Azuriter_Weapon_シューティングレーザー} true
   - matCooldown{m=enchanted_book} false

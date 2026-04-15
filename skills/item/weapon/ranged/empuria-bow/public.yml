@@ -8,8 +8,8 @@ Azuriter_Item_Weapon_Ranged_EmpuriaBow_Use:
     ]}
   - matCooldown{m=BOW} false
   Skills:
-  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=DOUBLE} @self
-  - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot.toInteger>"} @self
+  - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=INTEGER} @self
+  - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
   - modifyMana{a=20;m=consume} @self
   - setVar{k=caster.Azuriter_Item_Var_EmpuriaBowCharge;a="<caster.var.Azuriter_Item_Var_EmpuriaBowCharge|0>";t=INTEGER} @self
   - skill{

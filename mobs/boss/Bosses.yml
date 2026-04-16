@@ -60,28 +60,28 @@ Azuriter_Boss_Feldos:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_炎核 1 0.2"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_焔獣の炎殻 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_炎核 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_焔獣の炎殻 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_城壁の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_城壁の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
 
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
 
   - skill{s=Azuriter_Mob_Boss_Feldos_Attack1} @self ~onSignal:raid_boss_skill1
   - skill{s=Azuriter_Mob_Boss_Feldos_Attack2} @self ~onSignal:raid_boss_skill2
@@ -158,28 +158,28 @@ Azuriter_Boss_Wedler:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_風核 1 0.2"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_風牙狼の皮 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_風核 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_風牙狼の皮 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_堅牢の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_堅牢の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
 
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
 
   - skill{s=Azuriter_Mob_Boss_Wedler_Attack1} @self ~onSignal:raid_boss_skill1
@@ -278,28 +278,28 @@ Azuriter_Boss_Basamos:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.2"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_幻想獣の皮 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_砂核 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_幻想獣の皮 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_安寧の球界 1 0.75"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_安寧の球界 1 0.75"} @ThreatTablePlayers ~onDeath
 
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
 
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
@@ -376,27 +376,27 @@ Azuriter_Boss_Glacies:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_MoonlitAethercore 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_PrismarineCore 1 0.2"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_EchoCalcite 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_MoonlitAethercore 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_PrismarineCore 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_EchoCalcite 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_堅牢の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_堅牢の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
 
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_体力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速度のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_回復のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_背水のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_矢走のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_贄のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - currencygive{amount=1000} @ThreatTablePlayers ~onDeath
 
   - skill{s=Azuriter_Mob_Boss_Glacies_Attack1} @self ~onSignal:raid_boss_skill1

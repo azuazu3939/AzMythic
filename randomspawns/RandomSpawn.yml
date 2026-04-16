@@ -36,8 +36,8 @@ Azuriter_Big_Zombie_Spawn:
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
 
-Azuriter_Mob_Piledger_Spawn:
-  Type: Azuriter_Mob_Piledger
+Azuriter_Mob_Pidger_Spawn:
+  Type: Azuriter_Mob_Pidger
   Worlds: Elaeste
   Action: ADD 
   PositionType: LAND

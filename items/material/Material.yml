@@ -55,6 +55,20 @@ Azuriter_鉄片:
   Hide:
   - ENCHANTS
 
+Azuriter_ピジャーの皮:
+  Id: leather
+  Display: "&fピジャーの皮"
+  Lore:
+  - "&fピジャーから獲得できる皮。"
+  - "&f荒々しい印象を持つ。"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
 Azuriter_加工鉄片:
   Id: iron_ingot
   Display: "&f加工鉄片"

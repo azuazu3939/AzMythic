@@ -19,11 +19,11 @@ Azuriter_Core_Gift_Combat_G1_Loot:
   - cmd{c="mlg <caster.name> Azuriter_CombatGift_G1_Ticket <random.1to3> 1"} @self
   - cmd{c="mlg <caster.name> Azuriter_お肉 1 0.75"} @self
   - cmd{c="mlg <caster.name> Azuriter_パラライズワールド 1 0.01"} @self ?varrange{k=skill.get_chance;r=>60}
-  - cmd{c="mlgo <target.name> Azuriter_Augment_Remover_1 1 0.15"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_Remover_2 1 0.05"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_Unlocker_3 1 0.03"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_Unlocker_4 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_Unlocker_5 1 0.005"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_Remover_1 1 0.15"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_Remover_2 1 0.05"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_Unlocker_3 1 0.03"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_Unlocker_4 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_Unlocker_5 1 0.005"} @self
 
 Azuriter_Core_Gift_Combat_G1_BulkUse:
   Cooldown: 0.5

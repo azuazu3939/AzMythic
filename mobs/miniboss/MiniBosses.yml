@@ -51,24 +51,24 @@ Azuriter_Mob_Fedos:
   - potionclear{t=STRENGTH} @self ~onDamaged >55%
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =55%
 
-  - cmd{c="mlgo <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_城壁の守護石 1 0.05"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.001"}  @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_城壁の守護石 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_体力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速度のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_回復のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_背水のジェム_1 1 0.001"}  @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_矢走のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_贄のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.001"} @ThreatTablePlayers ~onDeath
 
   - classexp{a=<random.120to200>} @TTP ~onDeath
 
@@ -119,13 +119,13 @@ Azuriter_Windpack_Herald:
   - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropcombat
-  - cmd{c="mlgo <target.name> Azuriter_Wedler_Summon_Paper 1 0.85"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.68"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_HarvestTonic 1 0.42"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierEmblem 1 0.28"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.2"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Altwolf_牙 1 0.08"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_堅牢の守護石 1 0.04"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Wedler_Summon_Paper 1 0.85"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_FrontierThread <random.1to2> 0.68"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_HarvestTonic 1 0.42"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_FrontierEmblem 1 0.28"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.2"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Altwolf_牙 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_堅牢の守護石 1 0.04"} @ThreatTablePlayers ~onDeath
 
   - classexp{a=<random.30to48>} @TTP ~onDeath
 
@@ -180,15 +180,15 @@ Azuriter_Dusthowler_Envoy:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=10;delay=5} @self ~onDropcombat
-  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.42"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.58"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.22"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersResin 1 0.34"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersTonic 1 0.24"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersCompass 1 0.05"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.08"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.12"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_安寧の球界 1 0.01"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Basamos_Summon_Paper 1 0.42"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.58"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.22"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_MinersResin 1 0.34"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_MinersTonic 1 0.24"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_MinersCompass 1 0.05"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.08"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_砂核 1 0.12"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_安寧の球界 1 0.01"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=96} @self ~onSpawn
   - attribute{attr=ARMOR;a=88} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=60} @self ~onSpawn ?day
@@ -248,14 +248,14 @@ Azuriter_Stonevein_Warden:
   - tracklocation @selfLocation ~onSpawn
   - attribute{attribute=FOLLOW_RANGE;a=56} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8;delay=5} @self ~onDropcombat
-  - cmd{c="mlgo <target.name> Azuriter_Basamos_Summon_Paper 1 0.32"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.62"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.22"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersResin 1 0.24"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_MinersTonic 1 0.18"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_Utility_FrontierRation 1 0.1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_CombatGift_G1 1 0.06"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlgo <target.name> Azuriter_砂核 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Basamos_Summon_Paper 1 0.32"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.62"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_AzuroMalachite 1 0.22"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_MinersResin 1 0.24"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_MinersTonic 1 0.18"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_Utility_FrontierRation 1 0.1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.06"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_砂核 1 0.1"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=106} @self ~onSpawn
   - attribute{attr=ARMOR;a=92} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=60} @self ~onSpawn ?day

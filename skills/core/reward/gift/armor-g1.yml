@@ -32,20 +32,20 @@ Azuriter_Core_Gift_Armor_G1_Loot:
   - cmd{c="mlg <caster.name> Azuriter_ウィクサーL 1 0.05"} @self ?varrange{k=skill.get_chance;r=11}
   - cmd{c="mlg <caster.name> Azuriter_ウィクサーB 1 0.05"} @self ?varrange{k=skill.get_chance;r=12}
 
-  - cmd{c="mlgo <target.name> Azuriter_Augment_守備のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_体力のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速度ジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_力のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_回復のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_背水のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_矢走のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_贄のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_速攻のジェム_1 1 0.01"} @self
-  - cmd{c="mlgo <target.name> Azuriter_Augment_魔力のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_忍耐のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_体力のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_速度ジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_力のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_回復のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_背水のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_矢走のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_贄のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_会心攻撃のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.01"} @self
+  - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.01"} @self
 
 Azuriter_Core_Gift_Armor_G1_BulkUse:
   Cooldown: 0.5

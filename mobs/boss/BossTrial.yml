@@ -143,6 +143,7 @@ Azuriter_Boss_ソール_ワンダラー:
   - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.01"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ソールファイア 1 1"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 <random.2to6> 1"} @ThreatTablePlayers ~onDeath
 
   - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
 

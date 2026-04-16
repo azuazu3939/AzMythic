@@ -354,6 +354,34 @@ Azuriter_トライアル_1_1_Spawn:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
+
+Azuriter_トライアル_1_2_Spawn:
+  Type: Azuriter_トライアル_1_2
+  Worlds: Elaeste
+  Action: ADD 
+  PositionType: LAND
+  Chance: 0.01
+  Cooldown: 600
+  Priority: 1
+  Conditions:
+  - mobsinworld{a=<2000} true 
+  - containerRegion{r=Azuriter_Neutral_Zombie} true
+  - containerRegion{r=Azuriter_letthelater} false
+  - containerRegion{r=Azuriter_Altwolf} false
+  - containerRegion{r=Azuriter_BigCamela} false
+  - containerRegion{r=Spawn} false
+  - containerRegion{r=Deny} false
+  - outside true 
+  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
+  - playerInRadius{a=<1;d=>24} true
+  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
@@ -380,18 +408,19 @@ Azuriter_トライアル_2_1_Spawn:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
 
-Azuriter_トライアル_1_1_Spawn_2:
-  Type: Azuriter_トライアル_1_1
+Azuriter_トライアル_2_2_Spawn:
+  Type: Azuriter_トライアル_2_2
   Worlds: Elaeste
   Action: ADD 
   PositionType: LAND
-  Chance: 0.005
-  Cooldown: 300
-  Priority: 3
+  Chance: 0.01
+  Cooldown: 600
+  Priority: 1
   Conditions:
   - mobsinworld{a=<2000} true 
   - containerRegion{r=Azuriter_Neutral_Zombie} true
@@ -406,32 +435,7 @@ Azuriter_トライアル_1_1_Spawn_2:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
-       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
-       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
-       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
-
-Azuriter_トライアル_2_1_Spawn_2:
-  Type: Azuriter_トライアル_2_1
-  Worlds: Elaeste
-  Action: ADD 
-  PositionType: LAND
-  Chance: 0.005
-  Cooldown: 300
-  Priority: 3
-  Conditions:
-  - mobsinworld{a=<2000} true 
-  - containerRegion{r=Azuriter_Neutral_Zombie} true
-  - containerRegion{r=Azuriter_letthelater} false
-  - containerRegion{r=Azuriter_Altwolf} false
-  - containerRegion{r=Azuriter_BigCamela} false
-  - containerRegion{r=Spawn} false
-  - containerRegion{r=Deny} false
-  - outside true 
-  - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - playerInRadius{a=<1;d=>24} true
-  - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
-       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
-       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
@@ -458,6 +462,7 @@ Azuriter_トライアル_3_1_Spawn:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
@@ -484,6 +489,7 @@ Azuriter_トライアル_4_1_Spawn:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
@@ -510,6 +516,7 @@ Azuriter_トライアル_3_1_Spawn_2:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
@@ -536,6 +543,7 @@ Azuriter_トライアル_4_1_Spawn_2:
   - (mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_1_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_1} && 
+       mobsinradius{a=<1;r=64;t=Azuriter_トライアル_2_2} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_3_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_4_1} && 
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true

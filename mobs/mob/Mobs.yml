@@ -30,8 +30,8 @@ Azuriter_Neutral_Zombie:
   - attribute{attr=ARMOR;a=10} @self ~onSpawn ?day
   - skill{s=Azuriter_DayMaterial_NoDay} @self ~onSpawn 0.1
   - skill{s=Azuriter_DayMaterial_NoDay_Drop} @self ~onDeath
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
   - sudo{
     s=[
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
@@ -75,9 +75,9 @@ Azuriter_Big_Zombie:
   - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
   - skill{s=Azuriter_DayMaterial_NoDay} @self ~onSpawn 0.15
   - skill{s=Azuriter_DayMaterial_NoDay_Drop} @self ~onDeath
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=1} @EIR{r=20;ignore=players} ~onEntercombat
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=1;p=false} @EIR{r=20;ignore=players} ~onEntercombat
   - potion{t=WEAKNESS;d=100;l=0;p=false} @trigger ~onAttack
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.03"} @ThreatTablePlayers ~onDeath
   - sudo{
@@ -187,8 +187,8 @@ Azuriter_Warrior_Zombie:
   - skill{s=Azuriter_DayMaterial_Day_Drop} @self ~onDeath
   - attribute{attr=ARMOR;a=25} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
   - skill{s=Azuriter_Mob_WarriorZombie_Combat} @self ~onEntercombat
   - sudo{
     s=[
@@ -237,7 +237,7 @@ Azuriter_High_Zombie:
   - skill{s=Azuriter_DayMaterial_Day_Drop} @self ~onDeath
   - attribute{attr=ARMOR;a=30} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=20} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=1} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=1;p=false} @self ~onSpawn ?!day
   - sudo{
     s=[
       - signal{s=trial_drop_1} @MIR{r=32;t=Azuriter_トライアル_1_1}
@@ -287,8 +287,8 @@ Azuriter_Elite_Zombie:
   - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
   - attribute{attr=ARMOR;a=30} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=25} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
   - skill{s=Azuriter_Mob_Common_EliteZombie_Loop} @self ~onEntercombat
   - sudo{
     s=[
@@ -336,7 +336,7 @@ Azuriter_letthelater:
   - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
   - attribute{attr=ARMOR;a=40} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=25} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=1} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=1;p=false} @self ~onSpawn ?!day
   - cancelEvent{sync=true} @self ~onShoot
   - skill{s=Azuriter_Mob_Common_Letthelater_Shot} @self ~onShoot
 
@@ -379,8 +379,8 @@ Azuriter_Altwolf:
   - attribute{attr=ARMOR_TOUGHNESS;a=75} @self ~onSpawn
   - attribute{attr=ARMOR;a=75} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=50} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=1} @self ~onSpawn ?day
-  - potion{t=SPEED;d=99999999;l=1} @self ~onSpawn ?day
+  - potion{t=STRENGTH;d=99999999;l=1;p=false} @self ~onSpawn ?day
+  - potion{t=SPEED;d=99999999;l=1;p=false} @self ~onSpawn ?day
 
   - classexp{a=<random.1to13>} @TTP ~onDeath
 
@@ -545,8 +545,8 @@ Azuriter_Duskbound_Watcher:
   - attribute{attr=ARMOR_TOUGHNESS;a=54} @self ~onSpawn
   - attribute{attr=ARMOR;a=64} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=38} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
 
   - classexp{a=<random.6to10>} @TTP ~onDeath
 
@@ -724,9 +724,9 @@ Azuriter_Armor_Zombie:
   - attribute{attr=ARMOR_TOUGHNESS;a=50} @self ~onSpawn
   - attribute{attr=ARMOR;a=80} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=50} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=ABSORPTION;d=99999999;l=9} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=ABSORPTION;d=99999999;l=9;p=false} @self ~onSpawn ?!day
   - leap{v=350} @trigger ~onDamaged 0.25
   - sudo{
     s=[
@@ -785,9 +785,9 @@ Azuriter_ArmorFull_Zombie:
   - attribute{attr=ARMOR_TOUGHNESS;a=60} @self ~onSpawn
   - attribute{attr=ARMOR;a=90} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=60} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=ABSORPTION;d=99999999;l=19} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=ABSORPTION;d=99999999;l=19;p=false} @self ~onSpawn ?!day
   - skill{s=Azuriter_ArmorFull_Zombie_Summon} @self ~onDeath 0.05
   - sudo{
     s=[
@@ -845,11 +845,11 @@ Azuriter_Elder_Zombie:
   - attribute{attr=ARMOR_TOUGHNESS;a=70} @self ~onSpawn
   - attribute{attr=ARMOR;a=100} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=70} @self ~onSpawn ?day
-  - potion{t=STRENGTH;d=99999999;l=0} @self ~onSpawn ?!day
-  - potion{t=SPEED;d=99999999;l=0} @self ~onSpawn ?!day
+  - potion{t=STRENGTH;d=99999999;l=0;p=false} @self ~onSpawn ?!day
+  - potion{t=SPEED;d=99999999;l=0;p=false} @self ~onSpawn ?!day
 
-  - potion{t=RESISTANCE;d=200;l=1} @EIR{r=32;ignore=players} ~onDamaged
-  - potion{t=SPEED;d=200;l=1} @EIR{r=32;ignore=players} ~onDamaged
+  - potion{t=RESISTANCE;d=200;l=1;p=false} @EIR{r=32;ignore=players} ~onDamaged
+  - potion{t=SPEED;d=200;l=1;p=false} @EIR{r=32;ignore=players} ~onDamaged
 
   - potionclear{t=RESISTANCE,SPEED} @EIR{r=40;ignore=players} ~onDeath
   - skill{s=Azuriter_Elder_Zombie_Summon} @trigger ~onDeath

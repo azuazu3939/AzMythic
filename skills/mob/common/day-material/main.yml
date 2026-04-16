@@ -1,13 +1,9 @@
 Azuriter_DayMaterial_Day:
   Cooldown: 1
   Conditions:
-  - day
+  - day true
   Skills:
-  - glow{t=99999999;i=20;c=DARK_PURPLE} @self
-  - aura{n=Azuriter_Mob_Aura_DayMaterialDay;i=10;t=99999999;cod=false;
-    ot=[
-      - remove @self ?!day
-    ]} @self
+  - glow{t=1200;i=20;color=DARK_PURPLE;buffname=Azuriter_Mob_Aura_DayMaterialDay} @self
   - skill{s=Azuriter_DayMaterial_Buff} @self
 
 Azuriter_DayMaterial_Buff:
@@ -23,17 +19,13 @@ Azuriter_DayMaterial_NoDay:
   Conditions:
   - day false
   Skills:
-  - glow{t=99999999;i=20;color=YELLOW} @self
-  - aura{n=Azuriter_Mob_Aura_DayMaterialNight;i=10;t=99999999;cod=false;
-    ot=[
-      - remove @self ?day
-    ]} @self
+  - glow{t=1200;i=20;color=YELLOW;buffname=Azuriter_Mob_Aura_DayMaterialNight} @self
   - skill{s=Azuriter_DayMaterial_Buff} @self
 
 Azuriter_DayMaterial_Day_Drop:
   Skills:
-  - cmd{c="mlg <target.name> Azuriter_黒マテリア 1 1"} @ThreatTablePlayers{c=[ - hasAura{n=Azuriter_Core_Aura_PlayerInCombat} true ]} ?day ?hasAura{n=Azuriter_Mob_Aura_DayMaterialDay}
+  - cmd{c="mlg <target.name> Azuriter_黒マテリア 1 1"} @ThreatTablePlayers ?hasAura{n=Azuriter_Mob_Aura_DayMaterialDay}
 
 Azuriter_DayMaterial_NoDay_Drop:
   Skills:
-  - cmd{c="mlg <target.name> Azuriter_白マテリア 1 1"} @ThreatTablePlayers{c=[ - hasAura{n=Azuriter_Core_Aura_PlayerInCombat} true ]} ?!day ?hasAura{n=Azuriter_Mob_Aura_DayMaterialNight}
+  - cmd{c="mlg <target.name> Azuriter_白マテリア 1 1"} @ThreatTablePlayers ?hasAura{n=Azuriter_Mob_Aura_DayMaterialNight}

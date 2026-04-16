@@ -9,6 +9,6 @@ Azuriter_Summon_トライアル_1:
        mobsinradius{a=<1;r=64;t=Azuriter_トライアル_5_1}) true
   Skills:
   - sound{s=block.note_block.pling;sc=PLAYERS} @self
-  - setVar{k=skill.chance;a="<random.1to5>";t=INTEGER} @self
-  - summon{t=Azuriter_トライアル_1_1;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=1to4}
-  - summon{t=Azuriter_トライアル_1_2;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=5}
+  - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
+  - summon{t=Azuriter_トライアル_1_1;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=1to3}
+  - summon{t=Azuriter_トライアル_1_2;a=1;r=0;s=true} @self ?variableInRange{k=skill.chance;r=4}

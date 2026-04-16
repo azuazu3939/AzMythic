@@ -93,7 +93,7 @@ Azuriter_Big_Zombie:
 Azuriter_Mob_Pidger:
   Template: Azuriter_Enemy_NormalBase
   Display: "&fピジャー"
-  Health: 1000
+  Health: 800
   Damage: 25
   Drops:
   - money 20to60

@@ -83,6 +83,19 @@ Azuriter_ピジャークリスタル:
     Version: 1
   Group: 'Material'
 
+Azuriter_新たなる装備片:
+  Id: gold_ingot
+  Display: "&f新たなる装備片"
+  Lore:
+  - "&f再生成された次の新しい装備片"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
+
 Azuriter_加工鉄片:
   Id: iron_ingot
   Display: "&f加工鉄片"

@@ -117,7 +117,6 @@ Azuriter_Weapon_シューティングレーザー:
     - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
     ]} @self ~onSwing ?crouching ?onGround
 
-
 Azuriter_Weapon_シューティングレイ:
   Id: Enchanted_book
   Display: "&dシューティングレイ"
@@ -142,8 +141,8 @@ Azuriter_Weapon_シューティングレイ:
   - modifyMana{a=10;m=give;cd=0.1} @self ~onKill 
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingRay_Kill} @self ~onKill 
   - skill{s=[
-    - removetag{t=ShootingRay1} @self
-    - removetag{t=ShootingRay2} @self
-    - removetag{t=ShootingRay3} @self
+    - removetag{t=ShootingLaser1} @self
+    - removetag{t=ShootingLaser2} @self
+    - removetag{t=ShootingLaser3} @self
     - setVar{k=caster.ShootingStar;t=INTEGER;a="0"} @self
     ]} @self ~onSwing ?crouching ?onGround

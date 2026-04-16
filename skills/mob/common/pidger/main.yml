@@ -45,4 +45,4 @@ Azuriter_Mob_Piledger_Combat_Process:
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
     ];
     v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
-    mr=64;vr=3;hr=3;d=200} @TL
+    mr=64;vr=1.5;hr=1.5;d=200} @TL

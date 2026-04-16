@@ -33,7 +33,7 @@ Azuriter_Mob_Fedos_Attack1_Process:
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
       - skill:Azuriter_Mob_Fedos_Attack1_Process_Finish
     ];
-    v=8;vr=3;hr=3;i=1;se=false;sfo=0;syo=0;mr=20;d=40;sb=false;hs=true;hfs=0;mdh=10;mch=10;c=[ - samefaction false ]} @forward{lockpitch=true;fo=5}
+    v=8;vr=2;hr=2;i=1;se=false;sfo=0;syo=0;mr=20;d=40;sb=false;hs=true;hfs=0;mdh=10;mch=10;c=[ - samefaction false ]} @forward{lockpitch=true;fo=5}
 
 Azuriter_Mob_Fedos_Attack1_Process_Finish:
   Skills:

@@ -9,7 +9,6 @@ Azuriter_Core_Gift_Combat_G1_Use:
   - skill{s=Azuriter_Core_Gift_Combat_G1_Loot} @self
 
   - currencygive{amount=100} @self
-  - am{m="&e100Mine &fを獲得しました。"}
 
 Azuriter_Core_Gift_Combat_G1_Loot:
   Skills:
@@ -38,4 +37,3 @@ Azuriter_Core_Gift_Combat_G1_BulkUse:
 
   - setVar{k=skill.msg;a="100 * <skill.var.repeatC>";t=INTEGER} @self
   - currencygive{amount="<skill.var.msg>"} @self
-  - am{m="&e<skill.var.msg>Mine &fを獲得しました。"}

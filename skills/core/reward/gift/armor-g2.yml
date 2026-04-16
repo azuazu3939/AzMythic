@@ -47,5 +47,3 @@ Azuriter_Core_Gift_Armor_G2_BulkUse:
 
   - setVar{k=skill.msg;a="1500 * <skill.var.repeatA>";t=INTEGER} @self
   - currencygive{amount="<skill.var.msg>"} @self
-  - delay 80
-  - am{m="&e<skill.var.msg>Mine &fを獲得しました。"}

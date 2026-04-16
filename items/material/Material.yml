@@ -69,6 +69,20 @@ Azuriter_ピジャーの皮:
     Version: 1
   Group: 'Material'
 
+Azuriter_ピジャークリスタル:
+  Id: diamond
+  Display: "&eピジャークリスタル"
+  Lore:
+  - "&fピジャーから獲得できる希少な水晶"
+  - "&f豚に真珠とでも？"
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+
 Azuriter_加工鉄片:
   Id: iron_ingot
   Display: "&f加工鉄片"

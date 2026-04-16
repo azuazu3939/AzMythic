@@ -115,6 +115,7 @@ Azuriter_ソールファイア:
   Display: "&fソールファイア"
   Lore:
   - "&f命をも燃やすかの如く強い力を持つ。"
+  - "&fソール・ワンダラーを倒すと獲得可能。"
   ItemUpdater:
     Version: 1
   Group: 'Material'

@@ -110,6 +110,19 @@ Azuriter_加工鉄片:
   Hide:
   - ENCHANTS
 
+Azuriter_ソールファイア:
+  Id: soul_campfire
+  Display: "&fソールファイア"
+  Lore:
+  - "&f命をも燃やすかの如く強い力を持つ。"
+  ItemUpdater:
+    Version: 1
+  Group: 'Material'
+  Options:
+    Glint: true
+  Hide:
+  - ENCHANTS
+
 Azuriter_ハイソール:
   Id: blaze_powder
   Display: "&fハイソール"

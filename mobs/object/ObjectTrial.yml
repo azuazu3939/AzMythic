@@ -227,7 +227,7 @@ Azuriter_Soul_Wanderer_Soul1:
       ViewRange: 1.0
   Options:
     MaxCombatDistance: 0
-    PassthroughDamage: false
+    PassthroughDamage: true
     LockPitch: true
     Scale: 0.5
     NoAI: true
@@ -241,7 +241,7 @@ Azuriter_Soul_Wanderer_Soul1:
       - sound{s=entity.blaze.ambient;sc=PLAYERS;v=2;audience=@PIR{r=32}} @self
       - e:p{p=cloud;a=15;hs=1;s=1;audience=@PIR{r=32};vd=32} @self
       - look{f=true;delay=1} @parent
-      - delay 200
+      - delay 400
       - remove @self
     ]} @self ~onSpawn
 

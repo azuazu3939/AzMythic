@@ -41,9 +41,9 @@ Azuriter_Mob_Pidger_Spawn:
   Worlds: Elaeste
   Action: ADD 
   PositionType: LAND
-  Chance: 0.06
+  Chance: 0.01
   Cooldown: 10
-  Priority: 15
+  Priority: 5
   Conditions:
   - mobsinworld{a=<2000} true 
   - containerRegion{r=Azuriter_Neutral_Zombie} true

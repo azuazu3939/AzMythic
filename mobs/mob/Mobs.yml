@@ -19,8 +19,6 @@ Azuriter_Neutral_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_粗悪な装備片 <random.1to3> 0.4"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_粗悪な装備片 <random.4to8> 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
@@ -64,8 +62,6 @@ Azuriter_Big_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.002"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 1 0.5"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.5"} @ThreatTablePlayers ~onDeath ?!day
@@ -137,7 +133,6 @@ Azuriter_Mob_Pidger:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.75"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 <random.1to4> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.1to2> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ピジャーの皮 1 0.7"} @ThreatTablePlayers ~onDeath
@@ -176,8 +171,6 @@ Azuriter_Warrior_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.1to3> 0.5"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.4to8> 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
@@ -225,8 +218,6 @@ Azuriter_High_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.1to3> 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.4to8> 0.05"} @ThreatTablePlayers ~onDeath
@@ -274,8 +265,6 @@ Azuriter_Elite_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.002"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.1to5> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_加工鉄片 1 0.5"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.8to14> 0.4"} @ThreatTablePlayers ~onDeath
@@ -325,8 +314,6 @@ Azuriter_letthelater:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=12} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Feldos_Summon_Paper 1 0.16"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_タレットレーザー_骨 1 0.3"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_タレットレーザー_頭 1 0.03"} @ThreatTablePlayers ~onDeath
@@ -368,8 +355,6 @@ Azuriter_Altwolf:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Wedler_Summon_Paper 1 0.16"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Altwolf_牙 1 0.03"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.03"} @ThreatTablePlayers ~onDeath
@@ -597,8 +582,6 @@ Azuriter_BigCamela:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Basamos_Summon_Paper 1 0.28"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.03"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_StoneveinTuff <random.1to2> 0.6"} @ThreatTablePlayers ~onDeath
@@ -708,8 +691,6 @@ Azuriter_Armor_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_粗悪な装備片 <random.1to3> 0.25"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.005"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.0005"} @ThreatTablePlayers ~onDeath
@@ -767,8 +748,6 @@ Azuriter_ArmorFull_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_粗悪な装備片 <random.1to3> 0.5"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_粗悪な装備片 <random.4to8> 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 1 0.01"} @ThreatTablePlayers ~onDeath
@@ -829,8 +808,6 @@ Azuriter_Elder_Zombie:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=4} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_守備のジェム_1 1 0.002"} @ThreatTablePlayers ~onDeath

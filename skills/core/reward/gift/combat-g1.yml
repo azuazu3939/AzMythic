@@ -14,7 +14,7 @@ Azuriter_Core_Gift_Combat_G1_Loot:
   Skills:
   - setVar{k=skill.get_chance;a="<random.1to64>";t=INTEGER} @self
   - cmd{c="mlg <caster.name> Azuriter_CombatGift_G1_Ticket <random.4to10> 1"} @self ?varrange{k=skill.get_chance;r=<11}
-  - cmd{c="mlg <caster.name> Azuriter_ハイステップソード 1 0.1"} @self ?varrange{k=skill.get_chance;r=16}
+  - cmd{c="mlg <caster.name> Azuriter_ハイステップソード 1 0.05"} @self ?varrange{k=skill.get_chance;r=16}
   - cmd{c="mlg <caster.name> Azuriter_CombatGift_G1_Ticket <random.1to3> 1"} @self
   - cmd{c="mlg <caster.name> Azuriter_お肉 1 0.75"} @self
   - cmd{c="mlg <caster.name> Azuriter_パラライズワールド 1 0.01"} @self ?varrange{k=skill.get_chance;r=>60}

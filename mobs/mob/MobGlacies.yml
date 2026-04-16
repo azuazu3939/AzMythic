@@ -27,8 +27,6 @@ Azuriter_Frostfang:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.08"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ハイソール 1 0.15"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.08"} @ThreatTablePlayers ~onDeath
@@ -71,8 +69,6 @@ Azuriter_Iceveil_Archer:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=12} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_PrismarineCore 1 0.03"} @ThreatTablePlayers ~onDeath
@@ -115,8 +111,6 @@ Azuriter_Icebound_Guard:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.12"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_加工鉄片 1 0.25"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_黒マテリア 1 0.08"} @ThreatTablePlayers ~onDeath
@@ -156,8 +150,6 @@ Azuriter_Hoarfrost_Spider:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.08"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.08"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_PrismarineCore 1 0.012"} @ThreatTablePlayers ~onDeath
@@ -198,8 +190,6 @@ Azuriter_Snowblind_Stalker:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.06"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ハイソール 1 0.18"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.06"} @ThreatTablePlayers ~onDeath
@@ -239,8 +229,6 @@ Azuriter_Permafrost_Brute:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.15"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_加工鉄片 1 0.35"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_EchoCalcite 1 0.03"} @ThreatTablePlayers ~onDeath
@@ -282,8 +270,6 @@ Azuriter_Whiteout_Mender:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=8} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_PrismarineCore 1 0.02"} @ThreatTablePlayers ~onDeath
@@ -325,8 +311,6 @@ Azuriter_Rime_Shaman:
   Skills:
   - attribute{attribute=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attribute=FOLLOW_RANGE;a=12} @self ~onDropcombat
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Glacies_Summon_Paper 1 0.12"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_白マテリア 1 0.1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Forge_Alloy_PrismarineCore 1 0.025"} @ThreatTablePlayers ~onDeath

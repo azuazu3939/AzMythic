@@ -47,8 +47,8 @@ Azuriter_Boss_マスターゾンビ:
   - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack4を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill4
   - message{m="<trigger.name>が、Azuriter_Mob_Boss_MasterZombie_Attack5を<caster.name>に実行させた。"} @PIR{r=32} ~onSignal:raid_boss_skill5
 
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.25"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G2 1 0.05"} @ThreatTablePlayers ~onDeath
@@ -139,8 +139,8 @@ Azuriter_Boss_ソール_ワンダラー:
   - attribute{attr=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attr=FOLLOW_RANGE;a=4} @self ~onDropcombat
 
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0002"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.01"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ソールファイア 1 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 <random.2to6> 1"} @ThreatTablePlayers ~onDeath
@@ -194,8 +194,8 @@ Azuriter_Boss_ブルート_ワンダラー:
   - attribute{attr=FOLLOW_RANGE;a=48} @self ~onEnterCombat
   - attribute{attr=FOLLOW_RANGE;a=4} @self ~onDropcombat
 
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0002"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.01"} @ThreatTablePlayers ~onDeath
 
   - attribute{attr=ARMOR_TOUGHNESS;a=80} @self ~onSpawn

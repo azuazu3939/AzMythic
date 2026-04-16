@@ -60,8 +60,8 @@ Azuriter_Boss_Feldos:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_炎核 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_焔獣の炎殻 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
@@ -158,8 +158,8 @@ Azuriter_Boss_Wedler:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_風核 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_風牙狼の皮 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
@@ -278,8 +278,8 @@ Azuriter_Boss_Basamos:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =70%
   - potion{t=STRENGTH;l=1;d=9999999;p=false;or=true} @self ~onDamaged =40%
 
-  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0001"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_砂核 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_幻想獣の皮 1 0.7"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath

@@ -126,8 +126,8 @@ Azuriter_Weapon_シューティングレイ:
     Version: 1
   Attributes:
     MainHand:
-      Damage: 32 ADD
-      AttackSpeed: -0.25 MULTIPLY_BASE 
+      Damage: 24 ADD
+      AttackSpeed: -0.5 MULTIPLY_BASE 
   Group: 'Range-Weapon'
   Hide:
   - ENCHANTS

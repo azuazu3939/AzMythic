@@ -2,7 +2,7 @@ Azuriter_Boss_マスターゾンビ:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "[&d&l★&f×5] &c&lマスターゾンビ"
   Health: 40000
-  Damage: 30
+  Damage: 65
   DamageModifiers:
   - FALL 0
   Equipment:
@@ -100,7 +100,7 @@ Azuriter_Boss_ソール_ワンダラー:
   Template: Azuriter_Enemy_RaidBoss_Base_Attack
   Display: "[&d&l★&f×1] &9&lソール・ワンダラー"
   Health: 3500
-  Damage: 10
+  Damage: 15
   DamageModifiers:
   - FALL 0
   Packet:
@@ -169,7 +169,7 @@ Azuriter_Boss_ブルート_ワンダラー:
   Display: "[&d&l★&f×2] &6&lブルート・ワンダラー"
   Type: PIGLIN_BRUTE
   Health: 10000
-  Damage: 11
+  Damage: 30
   Equipment:
   - GOLDEN_AXE HAND
   DamageModifiers:

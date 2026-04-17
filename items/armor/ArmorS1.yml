@@ -630,7 +630,7 @@ Azuriter_Item_Armor_ダイヤグラムH:
       ArmorToughness: 20 ADD
       Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2 ADD
+      Damage: 3 ADD
   Group: 'Armor'
 
 Azuriter_Item_Armor_ダイヤグラムC:
@@ -656,7 +656,7 @@ Azuriter_Item_Armor_ダイヤグラムC:
       ArmorToughness: 20 ADD
       Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2 ADD
+      Damage: 3 ADD
   Group: 'Armor'
 
 Azuriter_Item_Armor_ダイヤグラムL:
@@ -682,7 +682,7 @@ Azuriter_Item_Armor_ダイヤグラムL:
       ArmorToughness: 20 ADD
       Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2 ADD
+      Damage: 3 ADD
   Group: 'Armor'
 
 Azuriter_Item_Armor_ダイヤグラムB:
@@ -708,5 +708,5 @@ Azuriter_Item_Armor_ダイヤグラムB:
       ArmorToughness: 20 ADD
       Armor: 28 ADD
       Health: 10 ADD
-      Damage: 2 ADD
+      Damage: 3 ADD
   Group: 'Armor'

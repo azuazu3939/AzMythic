@@ -596,9 +596,6 @@ Azuriter_Utility_FrontierThread:
   Display: '&f開拓糸'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility reagent'
-    - '&8前線補修と高位鍛造の両方に使える強化繊維'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -608,9 +605,6 @@ Azuriter_Utility_GeodeWhetstone:
   Display: '&d晶洞砥石'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility reagent'
-    - '&8高硬度鍛材の研磨工程を支える砥石'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -620,9 +614,6 @@ Azuriter_Utility_GroveOil:
   Display: '&a樹苑オイル'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility reagent'
-    - '&8木質と植物系鍛造材の流れを整える調整油'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -632,9 +623,6 @@ Azuriter_Utility_MinersTonic:
   Display: '&b採鉱トニック'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility consumable'
-    - '&8採掘前線向けに調整した視界強化と掘削支援の薬液'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -644,9 +632,6 @@ Azuriter_Utility_LoggersTea:
   Display: '&a伐採茶'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility consumable'
-    - '&8伐採のテンポと足運びを整える樹葉茶'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -656,9 +641,6 @@ Azuriter_Utility_HarvestTonic:
   Display: '&e収穫トニック'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility consumable'
-    - '&8採取と農耕向けの巡りを整える滋養液'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -668,9 +650,6 @@ Azuriter_Utility_FrontierRation:
   Display: '&6辺境携行食'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility consumable'
-    - '&8前線作業を長く支える補給食'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'

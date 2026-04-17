@@ -103,7 +103,7 @@ Azuriter_Boss_Wedler:
   Type: wolf
   Health: 45000
   Armor: 30
-  Damage: 46
+  Damage: 50
   Drops:
   - money 30to50 1
   Options:
@@ -206,7 +206,7 @@ Azuriter_Boss_Basamos:
   Display: "<#dac469>&l幻想獣バサモス&R"
   Health: 42500
   Armor: 30
-  Damage: 47
+  Damage: 50
   Drops:
   - money 30to50 1
   Packet:
@@ -326,7 +326,7 @@ Azuriter_Boss_Glacies:
   Type: polar_bear
   Health: 46250
   Armor: 30
-  Damage: 48
+  Damage: 50
   Drops:
   - money 30to50 1
   Options:

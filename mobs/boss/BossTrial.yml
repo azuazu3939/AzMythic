@@ -170,7 +170,7 @@ Azuriter_Boss_ブルート_ワンダラー:
   Display: "[&d&l★&f×2] &6&lブルート・ワンダラー"
   Type: PIGLIN_BRUTE
   Health: 5500
-  Damage: 40
+  Damage: 35
   Equipment:
   - GOLDEN_AXE HAND
   DamageModifiers:

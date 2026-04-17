@@ -29,8 +29,8 @@ Azuriter_Enemy_Abstract_Generic:
     UseThreatTable: true
   Skills:
   - remove{delay=15} @self ~onDeath
-  - damage{a=1;pi=true;pk=true} @self ~onSpawn 
   - heal{a=<caster.mhp>;delay=1} @self ~onSpawn
+  - heal{a=<caster.mhp>;delay=1;cd=1200} @self ~onEntercombat 
 
 Azuriter_Enemy_Base:
   Template: Azuriter_Enemy_Abstract_Generic

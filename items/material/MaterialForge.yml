@@ -463,9 +463,6 @@ Azuriter_Utility_MinersSigil:
   Display: '&b採鉱刻印'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility sigil'
-    - '&8石脈素材を束ねて刻んだ採掘用の刻印'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -475,9 +472,6 @@ Azuriter_Utility_LoggersSigil:
   Display: '&a伐採刻印'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility sigil'
-    - '&8木質繊維と樹皮を編み込んだ伐採用の刻印'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -487,9 +481,6 @@ Azuriter_Utility_HarvestersSigil:
   Display: '&e農耕刻印'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility sigil'
-    - '&8作物と花材の流れを整える農業用の刻印'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -499,10 +490,6 @@ Azuriter_Utility_PioneersCore:
   Display: '&d開拓者のコア'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility core'
-    - '&8採掘・伐採・農耕の刻印を束ねた上位中核素材'
-    - '&8今後の専用装備や強化素材の芯になる'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -512,9 +499,6 @@ Azuriter_Utility_MinersCompass:
   Display: '&b採鉱羅針盤'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility tool'
-    - '&8鉱脈の流れを読む採掘者向けの羅針盤'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -524,9 +508,6 @@ Azuriter_Utility_LoggersBundle:
   Display: '&a伐採束具'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility tool'
-    - '&8樹皮と枝材を束ねた伐採者向けの携行具'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -536,9 +517,6 @@ Azuriter_Utility_HarvestSatchel:
   Display: '&e収穫サッチェル'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility tool'
-    - '&8花材と果実を整えて運ぶ農耕者向けの袋'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -548,9 +526,6 @@ Azuriter_Utility_FrontierEmblem:
   Display: '&d辺境章'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility relic'
-    - '&8開拓者の導線を刻んだ上位ユーティリティ章'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -560,9 +535,6 @@ Azuriter_Utility_MinersResin:
   Display: '&7採鉱樹脂'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility reagent'
-    - '&8石脈と粉材を束ねる鍛造用の基礎樹脂'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -572,9 +544,6 @@ Azuriter_Utility_LoggersPitch:
   Display: '&8伐採ピッチ'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility reagent'
-    - '&8木質材から抽出した粘性の高い結着材'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'
@@ -584,9 +553,6 @@ Azuriter_Utility_HarvestSpore:
   Display: '&a収穫胞子'
   Options:
     Glint: true
-  Lore:
-    - '&7Utility reagent'
-    - '&8花材と果実から引き出した再生寄りの胞子材'
   ItemUpdater:
     Version: 1
   Group: 'ForgeResource'

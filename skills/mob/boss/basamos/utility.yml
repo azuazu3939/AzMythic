@@ -31,7 +31,6 @@ Azuriter_Mob_Boss_Basamos_Envoy_GroundPulse:
 
 Azuriter_Mob_Boss_Basamos_Envoy_Rally:
   Skills:
-  - summon{t=Azuriter_Sandhorn_Camela;a=1;r=5;s=true;delay=8} @self
   - summon{t=Azuriter_BigCamela;a=1;r=5;s=true;delay=18} @self
 
 # 石脈の護衛長を経由して、使者系へつなぐ中ボス補助。

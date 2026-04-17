@@ -20,13 +20,13 @@ Azuriter_Augment_守備のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f防御力 5~12"
+  - "&f防御力 8~12"
   Augmentation:
     Type: GEM
     Tooltip: '&3&l守備のジェム'  
     Icon: ''
     Stats:
-    - ARMOR <random.float.5to12{round=2}> ADDITIVE
+    - ARMOR <random.float.8to12{round=2}> ADDITIVE
     - HEALTH 4 ADDITIVE
 
 Azuriter_Augment_忍耐のジェム_1:
@@ -36,13 +36,13 @@ Azuriter_Augment_忍耐のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f防具強度 5~12"
+  - "&f防具強度 8~12"
   Augmentation:
     Type: GEM
     Tooltip: '&6&l忍耐のジェム'  
     Icon: ''
     Stats:
-    - ARMOR_TOUGHNESS <random.float.5to12{round=2}> ADDITIVE
+    - ARMOR_TOUGHNESS <random.float.8to12{round=2}> ADDITIVE
     - HEALTH 4 ADDITIVE
 
 Azuriter_Augment_回復のジェム_1:
@@ -85,13 +85,13 @@ Azuriter_Augment_体力のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f最大体力 5~12"
+  - "&f最大体力 8~12"
   Augmentation:
     Type: GEM
     Tooltip: '&a&l体力のジェム'  
     Icon: ''
     Stats:
-    - HEALTH <random.float.5to12{round=2}> ADDITIVE
+    - HEALTH <random.float.8to12{round=2}> ADDITIVE
 
 Azuriter_Augment_速度のジェム_1:
   Id: sugar

@@ -61,3 +61,223 @@ Azuriter_Overload_Axe:
   Group: 'Tools'
   Enchantments:
   - EFFICIENCY 6
+
+Azuriter_StorageBox_1:
+  Id: white_wool
+  Lore:
+  - "&6段階: I"
+  - "&e収納数: 0 / 512"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box1
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_2:
+  Id: light_blue_wool
+  Lore:
+  - "&6段階: II"
+  - "&e収納数: 0 / 1024"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box2
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_3:
+  Id: lime_wool
+  Lore:
+  - "&6段階: III"
+  - "&e収納数: 0 / 2048"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box3
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_4:
+  Id: yellow_wool
+  Lore:
+  - "&6段階: IV"
+  - "&e収納数: 0 / 4096"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box4
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_5:
+  Id: orange_wool
+  Lore:
+  - "&6段階: V"
+  - "&e収納数: 0 / 16384"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box5
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_6:
+  Id: red_wool
+  Lore:
+  - "&6段階: VI"
+  - "&e収納数: 0 / 65536"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box6
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_7:
+  Id: pink_wool
+  Lore:
+  - "&6段階: VII"
+  - "&e収納数: 0 / 262144"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box7
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_8:
+  Id: purple_wool
+  Lore:
+  - "&6段階: VIII"
+  - "&e収納数: 0 / 1048576"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box8
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_9:
+  Id: blue_wool
+  Lore:
+  - "&6段階: IX"
+  - "&e収納数: 0 / 4194304"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box9
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+
+Azuriter_StorageBox_10:
+  Id: black_wool
+  Lore:
+  - "&6段階: X"
+  - "&e収納数: 0 / 16777216"
+  - "&7登録対象: 未設定"
+  - "&b右クリック: 1スタック取り出し"
+  - "&bカーソルのアイテムを重ねる: 収納"
+  - "&aStorageBox を重ねる: 同じ中身なら移送"
+  - "&aCtrl+ドロップキー: インベントリへ取り出し"
+  - "&aブロックに右クリック: 中身を1個設置"
+  Options:
+    AppendType: false
+  NBT:
+    PublicBukkitValues:
+      azuritecore:storage_box: byte/1
+      azuritecore:storage_box_tier: string/box10
+      azuritecore:storage_box_amount: int/0
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'

@@ -2,7 +2,7 @@ Azuriter_Boss_マスターゾンビ:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "[&d&l★&f×5] &c&lマスターゾンビ"
   Health: 40000
-  Damage: 65
+  Damage: 55
   DamageModifiers:
   - FALL 0
   Equipment:

@@ -8,7 +8,6 @@ Azuriter_Mob_Boss_Feldos_Attack6:
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - setVar{var=skill.dmg;val="<caster.damage> + 1";t=FLOAT} @self
   - skill:Azuriter_Core_Enemy_DamageBuff @self
-  - setVar{var=caster.Azuriter_Mob_Var_FeldosAttack4ExtendCount;val="0";t=INTEGER} @self
   - projectile{
     ot=[
       - endprojectile @self ?hasTag{t=Azuriter_Core_Tag_EnemyDown}
@@ -21,7 +20,7 @@ Azuriter_Mob_Boss_Feldos_Attack6:
     oh=[
       - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
-      - damage{a="<skill.var.dmg> * 2.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 1.75";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
       - delay 5
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - delay 2

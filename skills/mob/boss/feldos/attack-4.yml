@@ -40,7 +40,7 @@ Azuriter_Mob_Boss_Feldos_Attack4:
     oe=[
       - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
       - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_NoExtend} @self ?varrange{k=skill.chance;r=1}
-      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_Extend} @self ?!varrange{k=skill.chance;r=1}
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_Extend} @self ?varrange{k=skill.chance;r=2to4}
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ?varrange{k=skill.chance;r=1}
     ];
     v=1;i=1;se=false;sb=false;hs=true;hfs=0;sfo=0;syo=0;c=[ - samefaction false ];
@@ -85,7 +85,7 @@ Azuriter_Mob_Boss_Feldos_Attack4_Extend:
     ];
     oe=[
       - setVar{k=skill.chance;a="<random.1to4>";t=INTEGER} @self
-      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_Extend} @self ?!varrange{k=skill.chance;r=1}
+      - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_Extend} @self ?varrange{k=skill.chance;r=2to4}
       - skill{s=Azuriter_Mob_Boss_Feldos_Attack4_NoExtend} @self ?varrange{k=skill.chance;r=1}
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self ?varrange{k=skill.chance;r=1}
     ];

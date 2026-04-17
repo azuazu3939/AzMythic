@@ -22,7 +22,7 @@ Azuriter_ガーディアH:
       Armor: 36
       Health: 10
       KnockbackResistance: 0.25
-      Damage: 1.5 ADD
+      Damage: 1 ADD
   Group: 'Armor'
 
 Azuriter_ガーディアC:
@@ -49,7 +49,7 @@ Azuriter_ガーディアC:
       Armor: 36
       Health: 12.5
       KnockbackResistance: 0.25
-      Damage: 1.5 ADD
+      Damage: 1 ADD
   Group: 'Armor'
   Skills:
 
@@ -77,7 +77,7 @@ Azuriter_ガーディアL:
       Armor: 36
       Health: 12.5
       KnockbackResistance: 0.25
-      Damage: 1.5 ADD
+      Damage: 1 ADD
   Group: 'Armor'
   Skills:
 
@@ -105,7 +105,7 @@ Azuriter_ガーディアB:
       Armor: 36
       Health: 12.5
       KnockbackResistance: 0.25
-      Damage: 1.5 ADD
+      Damage: 1 ADD
   Group: 'Armor'
   Skills:
 
@@ -248,7 +248,7 @@ Azuriter_ウィクサーH:
       ArmorToughness: 24
       Armor: 24
       Health: 8
-      Damage: 1 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Stats:
   - CRITICAL_STRIKE_CHANCE 0.05 ADDITIVE
@@ -281,7 +281,7 @@ Azuriter_ウィクサーC:
       ArmorToughness: 24
       Armor: 24
       Health: 8
-      Damage: 1 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Skills:
 
@@ -312,7 +312,7 @@ Azuriter_ウィクサーL:
       ArmorToughness: 24
       Armor: 24
       Health: 8
-      Damage: 1 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Skills:
 
@@ -343,6 +343,6 @@ Azuriter_ウィクサーB:
       ArmorToughness: 24
       Armor: 24
       Health: 8
-      Damage: 1 ADD
+      Damage: 1.5 ADD
   Group: 'Armor'
   Skills:

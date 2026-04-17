@@ -55,4 +55,4 @@ Azuriter_Mob_Boss_Feldos_Attack6_Falling:
       - damage{a="<skill.var.dmg> * 0.75";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
     ];
     v=16;i=1;g=1.25;sfo=2;syo=1;tyo=5;mr=48;c=[ - samefaction false ];vr=1.5;hr=1.5;d=400;
-    ho=<skill.ho>;b=DISPLAY;mat=MAGMA_BLOCK;ps=1;rs=1;ys=1;scale=1,1,1;vo=0.3;ho=<random.0to360>} @forward
+    ho=<skill.ho>;b=DISPLAY;mat=MAGMA_BLOCK;ps=1;rs=1;ys=1;scale=1,1,1;vo=1;ho=<random.0to360>} @forward

@@ -64,6 +64,7 @@ Azuriter_Boss_Feldos:
   - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_炎核 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_焔獣の炎殻 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_獣の大骨 <random.2to5> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_城壁の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
@@ -162,6 +163,7 @@ Azuriter_Boss_Wedler:
   - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_風核 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_風牙狼の皮 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_獣の大骨 <random.2to5> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_堅牢の守護石 1 0.75"} @ThreatTablePlayers ~onDeath
@@ -282,6 +284,7 @@ Azuriter_Boss_Basamos:
   - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.001"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_砂核 1 0.2"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_幻想獣の皮 1 0.7"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_獣の大骨 <random.2to5> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_安寧の球界 1 0.75"} @ThreatTablePlayers ~onDeath

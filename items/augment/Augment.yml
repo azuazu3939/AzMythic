@@ -130,9 +130,9 @@ Azuriter_Augment_汎用のジェム_1:
   ItemUpdater:
     Version: 1
   Lore:
-  - "&f最大体力 1"
-  - "&f防御力 1"
-  - "&f防具強度 1"
+  - "&f最大体力 2"
+  - "&f防御力 4"
+  - "&f防具強度 4"
   Augmentation:
     Type: GEM
     Tooltip: '&e&l汎用のジェム'  

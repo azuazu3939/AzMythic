@@ -2,7 +2,7 @@ Azuriter_Boss_Feldos:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "<#c20a0a>&l焔獣フェルドス&R"
   Type: hoglin
-  Health: 27500
+  Health: 47500
   Armor: 30
   Damage: 50
   Drops:
@@ -101,7 +101,7 @@ Azuriter_Boss_Wedler:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "<#15d455>&l風牙狼ウィデラー&R"
   Type: wolf
-  Health: 25000
+  Health: 45000
   Armor: 30
   Damage: 46
   Drops:
@@ -204,7 +204,7 @@ Azuriter_Boss_Wedler:
 Azuriter_Boss_Basamos:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "<#dac469>&l幻想獣バサモス&R"
-  Health: 22500
+  Health: 42500
   Armor: 30
   Damage: 47
   Drops:
@@ -324,7 +324,7 @@ Azuriter_Boss_Glacies:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "<#9fe6ff>&l氷牙獣グラキエス&R"
   Type: polar_bear
-  Health: 26250
+  Health: 46250
   Armor: 30
   Damage: 48
   Drops:

@@ -44,7 +44,7 @@ Azuriter_トライアル_2_Drop2:
   - currencygive{amount=600} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 <random.1to2> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
-  - cmd{c="mlg <target.name> Azuriter_白マテリア <random.4to16> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
+  - cmd{c="mlg <target.name> Azuriter_白マテリア <random.4to10> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
   - cmd{c="mlg <target.name> Azuriter_ハイソール <random.1to8> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 <random.1to3> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}
   - cmd{c="mlg <target.name> Azuriter_トライアラン勲章 3 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial2BossClear} true ]}

@@ -7,6 +7,15 @@ Azuriter_Item_Weapon_CrossBulletBow_Use:
   - setMaterialCooldown{m=CROSSBOW;d=160} @self
   - skill{s=Azuriter_Item_Weapon_CrossBulletBow_Process;repeat=5;repeati=3}
 
+Azuriter_Item_Weapon_CrossBulletBow_Full:
+  Cooldown: 60
+   Conditions:
+  - wearing{s=HAND;i=Azuriter_クロスバレットボウ} true
+  - matCooldown{m=CROSSBOW} false
+  Skills:
+  - setMaterialCooldown{m=CROSSBOW;d=1200} @self
+  - skill{s=Azuriter_Item_Weapon_CrossBulletBow_Process;repeat=15;repeati=1}
+
 Azuriter_Item_Weapon_CrossBulletBow_Process:
   Skills:
   - projectile{

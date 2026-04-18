@@ -164,6 +164,7 @@ Azuriter_クロスバレットボウ:
   Group: 'Weapon'
   Skills:
   - skill{s=Azuriter_Item_Weapon_CrossBulletBow_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_CrossBulletBow_Full} @self ~onSwing 
   AugmentationSlots:
   - Type: GEM
     Amount: 1

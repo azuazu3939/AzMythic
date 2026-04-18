@@ -7,7 +7,6 @@ Azuriter_Admin_Mob_DamageTest:
     Silent: true
     PreventVanillaDamage: true
     NoAI: true
-    Interactable: true
   Skills:
   - message{m="&aHealth<&co> &f<caster.mhp{round=2}>/<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @trigger ~onDamaged
   - aura{

@@ -3,7 +3,7 @@ Azuriter_Boss_Feldos:
   Display: "<#c20a0a>&l焔獣フェルドス&R"
   Type: hoglin
   Health: 47500
-  Armor: 30
+  Armor: 15
   Damage: 50
   Drops:
   - money 1000to1500 1
@@ -43,7 +43,7 @@ Azuriter_Boss_Feldos:
     Style: SEGMENTED_10
   Skills:
   - tracklocation @selfLocation ~onSpawn
-  - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Feldos_Attack1";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Feldos_Attack2";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Feldos_Attack3";t=STRING} @self ~onSpawn
@@ -102,7 +102,7 @@ Azuriter_Boss_Wedler:
   Display: "<#15d455>&l風牙狼ウィデラー&R"
   Type: wolf
   Health: 45000
-  Armor: 30
+  Armor: 15
   Damage: 50
   Drops:
   - money 30to50 1
@@ -140,7 +140,7 @@ Azuriter_Boss_Wedler:
     Style: SEGMENTED_10
   Skills:
   - tracklocation @selfLocation ~onSpawn
-  - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Wedler_Attack1";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Wedler_Attack2";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Wedler_Attack3";t=STRING} @self ~onSpawn
@@ -205,7 +205,7 @@ Azuriter_Boss_Basamos:
   Template: Azuriter_Enemy_RaidBoss_Base
   Display: "<#dac469>&l幻想獣バサモス&R"
   Health: 42500
-  Armor: 30
+  Armor: 15
   Damage: 50
   Drops:
   - money 30to50 1
@@ -263,7 +263,7 @@ Azuriter_Boss_Basamos:
     Style: SEGMENTED_10
   Skills:
   - tracklocation @selfLocation ~onSpawn
-  - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Basamos_Attack1";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Basamos_Attack2";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Basamos_Attack3";t=STRING} @self ~onSpawn
@@ -325,7 +325,7 @@ Azuriter_Boss_Glacies:
   Display: "<#9fe6ff>&l氷牙獣グラキエス&R"
   Type: polar_bear
   Health: 46250
-  Armor: 30
+  Armor: 15
   Damage: 50
   Drops:
   - money 30to50 1
@@ -362,7 +362,7 @@ Azuriter_Boss_Glacies:
     Style: SEGMENTED_10
   Skills:
   - tracklocation @selfLocation ~onSpawn
-  - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill1;a="Azuriter_Mob_Boss_Glacies_Attack1";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill2;a="Azuriter_Mob_Boss_Glacies_Attack2";t=STRING} @self ~onSpawn
   - setVar{k=caster.Azuriter_Core_Var_RaidBossSkill3;a="Azuriter_Mob_Boss_Glacies_Attack3";t=STRING} @self ~onSpawn

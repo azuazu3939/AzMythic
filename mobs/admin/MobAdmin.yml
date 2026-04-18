@@ -1,5 +1,6 @@
 Azuriter_Admin_Mob_DamageTest:
   Template: Azuriter_Enemy_Base
+  Type: VILLAGER
   Health: 99999
   Damage: 1
   Faction: Admin

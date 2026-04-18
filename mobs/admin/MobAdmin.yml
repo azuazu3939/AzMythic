@@ -9,23 +9,11 @@ Azuriter_Admin_Mob_DamageTest:
     NoAI: true
     Interactable: true
   Skills:
-  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @trigger ~onDamaged ?!hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-  - message{m="&aMaxHealth<&co> &f<caster.mhp{round=2}> &aHealth<&co> &f<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @PIR{r=16} ~onDamaged ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-  - heal{a="<caster.mhp>"} @self ~onTimer:200
-  - skill{
-    s=[
-      - addtag{t=Azuriter_Admin_Tag_DamageToggleCooldown} @self ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-      - removetag{t=Azuriter_Admin_Tag_DamageToggleCooldown;delay=20} @self ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-
-      - message{m="ダメージ表示を個別に変更しました。"} ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-      - removetag{t=Azuriter_Admin_Tag_BroadcastDamage} @self ?hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-
-      - return ?hasTag{t=Azuriter_Admin_Tag_DamageToggleCooldown}
-
-      - message{m="ダメージ表示を周囲に変更しました。"} ?!hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-      - addtag{t=Azuriter_Admin_Tag_BroadcastDamage} @self ?!hasTag{t=Azuriter_Admin_Tag_BroadcastDamage}
-
-    ];cd=1.2} @trigger ~onInteract
+  - message{m="&aHealth<&co> &f<caster.mhp{round=2}>/<caster.mhp{round=2}> &cDamage<&co> <skill.var.damage-amount{round=2}>"} @trigger ~onDamaged
+  - aura{
+    oe=[
+      - heal{a="<caster.mhp>"} @self
+    ];t=200;rd=true} @self ~onDamaged 
 
 Azuriter_ShopKeepers:
   Type: VILLAGER

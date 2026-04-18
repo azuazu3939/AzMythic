@@ -61,9 +61,3 @@ Azuriter_ショップアイコン_1:
   - teleport @selfLocation{y=6} ~onSpawn
   - e:p{p=end_rod;a=1;ys=0.3;hs=0.2;audience=@PIR{r=32}} @self ~onTimer:20
   - e:p{p=falling_nectar;a=1;audience=@PIR{r=32}} @self ~onTimer:10
-
-Azuriter_CrossBulletBow_Arrow:
-  Type: arrow
-  Options:
-    PreventOtherDrops: false
-    PreventMobKillDrops: false

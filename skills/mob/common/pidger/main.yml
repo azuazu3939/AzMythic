@@ -25,7 +25,7 @@ Azuriter_Mob_Piledger_Combat_Process:
     oh=[
       - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
-      - damage{a="<skill.var.dmg>";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg>";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
       - delay 5
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - delay 2

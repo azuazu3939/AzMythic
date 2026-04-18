@@ -29,7 +29,7 @@ Azuriter_Mob_Boss_Feldos_Attack1_Process:
       - setProjectileDirection{m=0.2} @TL ?!hasTag{t=Azuriter_Mob_Tag_FeldosAimToggle}
     ];
     oh=[
-      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
     ];
     oe=[
       - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
@@ -51,7 +51,7 @@ Azuriter_Mob_Boss_Feldos_Attack1_Process_Finish_Projectile:
       - sound{s=entity.zoglin.step;v=1.25;cd=0.05} @self
     ];
     oh=[
-      - damage{a="<skill.var.dmg> * 0.75";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 0.75";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
     ];
     v=10;i=1;g=0.5;sfo=2;syo=1;tyo=5;mr=12;c=[ - samefaction false ];vr=1.5;hr=1.5;
     ho=<skill.ho>;b=DISPLAY;mat=MAGMA_BLOCK;ps=1;rs=1;ys=1;scale=1,1,1} @forward

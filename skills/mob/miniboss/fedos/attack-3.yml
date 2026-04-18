@@ -23,5 +23,5 @@ Azuriter_Mob_Fedos_Attack3_Meteor:
   - delay 5
   - addMask{b=RED_TERRACOTTA;r=3;d=20;h=9} @targetedLoc
   - delay 20
-  - damage{a="<skill.var.dmg>";pi=true;ii=true;e=RED} @LNTL{r=3;c=[ - samefaction false ]}
+  - damage{a="<skill.var.dmg>";pi=true;ii=true} @LNTL{r=3;c=[ - samefaction false ]}
   - sound{s=entity.blaze.shoot;p=2;v=0.5;sc=AMBIENT} @targetedLoc

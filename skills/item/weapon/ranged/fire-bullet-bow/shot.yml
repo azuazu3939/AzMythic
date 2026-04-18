@@ -14,7 +14,7 @@ Azuriter_Item_Weapon_Ranged_FireBulletBow_Shot:
     ];
     oh=[
       - modifyMana{a=5;m=give} @self
-      - damage{a=<skill.var.damage>;pi=true;ii=true;e=RED;dc=PROJECTILE}
+      - damage{a=<skill.var.damage>;pi=true;ii=true;dc=PROJECTILE}
       - e:p{p=crit_magic;a=10;vs=0.5;hs=0.5;audience=caster}
       - setVar{k=caster.Azuriter_Item_Var_FireBulletBowHitCount;a="<caster.var.Azuriter_Item_Var_FireBulletBowHitCount|0> + 1";t=INTEGER} @self
       - skill{s=Azuriter_Item_Weapon_Ranged_FireBulletBow_ShotCharge} @self

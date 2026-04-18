@@ -11,7 +11,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process1:
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.5;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.5;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=3;repeati=5}
     ]} @forward{a=24;lockpitch=true}
 
@@ -27,7 +27,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process2:
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.5;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.5;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=3;repeati=5}
     ]} @forward{a=24;lockpitch=true}
 
@@ -44,7 +44,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process3:
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.3;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.3;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=3;repeati=5}
     ]} @forward{a=24;lockpitch=true}
 
@@ -60,7 +60,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process4:
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.3;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.3;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=3;repeati=5}
     ]} @forward{a=24;lockpitch=true}
 
@@ -77,7 +77,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process5:
       - e:p{c=#ff375f;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.75;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.75;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=5;repeati=5}
       - throw{v=3;yv=4;delay=20}
     ]} @forward{a=24;lockpitch=true}
@@ -94,7 +94,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process6:
       - e:p{c=#ff375f;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.75;pi=true;ii=true;e=PURPLE;repeat=5;repeati=5}
+      - damage{a=<caster.damage> * 0.75;pi=true;ii=true;repeat=5;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=5;repeati=5}
       - throw{v=3;yv=4;delay=20}
     ]} @forward{a=24;lockpitch=true}
@@ -112,7 +112,7 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process7:
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.8;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.8;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=3;repeati=5}
     ]} @forward{a=24;lockpitch=true}
 
@@ -128,6 +128,6 @@ Azuriter_Item_Weapon_Ranged_ShootingLaser_Process8:
       - e:p{c=#37abff;a=3;ys=0.35;hs=0.35;audience=caster;s=0.25} @origin
     ];
     oh=[
-      - damage{a=<caster.damage> * 0.8;pi=true;ii=true;e=PURPLE;repeat=3;repeati=5}
+      - damage{a=<caster.damage> * 0.8;pi=true;ii=true;repeat=3;repeati=5}
       - sound{s=entity.zombie.attack_iron_door;p=2;v=1;audience=caster;sc=AMBIENT;repeat=3;repeati=5}
     ]} @forward{a=24;lockpitch=true}

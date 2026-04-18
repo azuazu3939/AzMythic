@@ -16,7 +16,7 @@ Azuriter_Mob_Fedos_Attack2_Loop:
       - e:p{p=explosion;size=2;a=1;delay=2} @origin
     ];
     oh=[
-      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
       - throw{v=25;yv=20}
     ];
     os=[

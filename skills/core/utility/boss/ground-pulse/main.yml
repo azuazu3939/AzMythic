@@ -6,6 +6,6 @@ Azuriter_Core_Boss_GroundPulse:
   - e:pr{r=8;pts=32;p=cloud;a=1;s=0.9;d=true;dir=0,1,0} @origin
   - e:pr{r=10;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
   - e:pr{r=4;pts=24;a=1;s=1;d=true;dir=0,2,0;dr=true;p=sweep_attack} @origin
-  - damage{a=<skill.var.dmg> * 1.05;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=6}
+  - damage{a=<skill.var.dmg> * 1.05;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PIR{r=6}
   - throw{v=7;vy=4} @PIR{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]} 0.65
   - potion{t=SLOW;l=2;d=80;p=false} @PIR{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]} 0.85

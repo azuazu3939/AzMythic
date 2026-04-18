@@ -25,7 +25,7 @@ Azuriter_Item_Weapon_Melee_ManaBladeAlpha_RightSlash:
     ];
     oh=[
       - setVar{k=skill.dmg;a="75";t=INTEGER} @self ?hasAura{n=Azuriter_Item_Aura_ManaBladeAlpha_RightBurst}
-      - damage{a="<caster.damage> + <skill.var.dmg|0>";pi=true;ii=true;e=GREEN}
+      - damage{a="<caster.damage> + <skill.var.dmg|0>";pi=true;ii=true}
       - sound{s=entity.zombie_villager.cure;p=1.25;v=0.05;audience=caster;sc=AMBIENT}
       - velocity{x=0;y=0;z=0;m=SET}
     ];

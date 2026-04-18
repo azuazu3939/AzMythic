@@ -20,7 +20,7 @@ Azuriter_Mob_Boss_SoulWanderer_Signal_Run:
   - addmask{shape=cone;r=48;angle=60;h=25;material=RED_TERRACOTTA;d=20} @selfLocation{cpitch=0}
   - setvar{k=skill.loc;val="<caster.l.x.double>,<caster.l.y.double>,<caster.l.z.double>,<caster.l.yaw>";t=STRING} @self
   - delay 20
-  - damage{a="<caster.damage> * 2";pi=true;ii=true;e=RED;dc=FIRE} @ACone{a=60;r=48;h=25;loc=<skill.var.loc>}
+  - damage{a="<caster.damage> * 2";pi=true;ii=true;dc=FIRE} @ACone{a=60;r=48;h=25;loc=<skill.var.loc>}
   - ignite{d=200} @ACone{a=45;r=32;h=25;loc=<skill.var.loc>;yaw=<skill.var.yaw>;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
   - delay  20
   - sound{s=entity.blaze.burn;v=2;sc=PLAYERS} @self

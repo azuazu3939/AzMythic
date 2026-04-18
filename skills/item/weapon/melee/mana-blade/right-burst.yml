@@ -30,7 +30,7 @@ Azuriter_Item_Weapon_Melee_ManaBladeAlpha_RightBurst:
         ]} @origin{cpitch=<caster.l.pitch>}
     ];
     oh=[
-      - damage{a=<caster.damage> + 225;pi=true;ii=true;e=GREEN}
+      - damage{a=<caster.damage> + 225;pi=true;ii=true}
       - sound{s=entity.zombie_villager.cure;p=1;v=0.15;audience=caster;sc=AMBIENT}
     ];
     v=20;i=4;se=false;vr=2.5;hr=6;mr=20;d=60;hp=false;hnp=true} @TL

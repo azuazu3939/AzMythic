@@ -20,7 +20,7 @@ Azuriter_Mob_Boss_Feldos_Attack4:
     oh=[
       - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
-      - damage{a="<skill.var.dmg> * 1.75";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 1.75";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
       - delay 5
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - delay 2
@@ -71,7 +71,7 @@ Azuriter_Mob_Boss_Feldos_Attack4_Extend:
     oh=[
       - sound{s=entity.hoglin.attack;p=0;sc=PLAYERS} @self
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
-      - damage{a="<skill.var.dmg> * 1.5";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 1.5";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
       - delay 5
       - sound{s=entity.wither.break_block;sc=PLAYERS} @targeted{c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - delay 2
@@ -111,7 +111,7 @@ Azuriter_Mob_Boss_Feldos_Attack4_Wave:
       - e:p{p=explosion;a=1;size=1.5} @origin ?varrange{k=skill.wave;r=>16}
     ];
     oh=[
-      - damage{a="<skill.var.dmg> * 0.8";pi=true;ii=true;e=RED;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a="<skill.var.dmg> * 0.8";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
       - aura{n=Azuriter_Mob_Aura_FeldosAttack4Wave;t=40;t=10}
     ];
     c=[

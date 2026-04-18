@@ -20,7 +20,7 @@ Azuriter_Mob_Boss_Wedler_Attack5:
     ];
     oe=[
       - sound{s=item.totem.use;p=2} @origin
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=5}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=5}
       - throw{v=15;vy=8} @PNO{r=5;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - potion{t=MINING_FATIGUE;l=2;d=200;p=false} @PNO{r=5;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
       - potion{t=SLOW;l=1;d=200;p=false} @PNO{r=5;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]} 0.5

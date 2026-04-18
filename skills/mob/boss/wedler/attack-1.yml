@@ -285,4 +285,4 @@ Azuriter_Mob_Boss_Wedler_Attack1_Process_Shoot_Damage:
   - hasAura{n=Azuriter_Mob_Aura_WedlerAttack1Hit} false
   Skills:
   - aura{n=Azuriter_Mob_Aura_WedlerAttack1Hit;i=20;t=100}
-  - damage{a="<skill.var.dmg> * 2.15";pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
+  - damage{a="<skill.var.dmg> * 2.15";pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}

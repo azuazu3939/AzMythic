@@ -28,14 +28,14 @@ Azuriter_Mob_Boss_Wedler_Attack7_Run:
       - e:ps{p=cloud;a=10;s=0.2;r=0.5;cd=0.2} @origin
     ];
     oh=[
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
     ];
     oe=[
       - e:pr{r=4;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
       - e:pr{r=8;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
       - e:pr{r=10;pts=32;a=1;s=2;d=true;dir=0,2,0;dr=true;p=wax_off} @origin
       - e:p{p=explosion_huge;a=1;vs=1;hs=1} @origin
-      - damage{a=<skill.var.dmg>;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
+      - damage{a=<skill.var.dmg>;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
       - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
     ];
     v=0;i=1;vr=3;hr=3;md=200;syo=<random.2to8>;sfo=-3;sso=<random.-12to12>;hnp=true;c=[ - samefaction false ];

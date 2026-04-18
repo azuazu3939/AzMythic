@@ -36,7 +36,7 @@ Azuriter_Mob_Boss_Wedler_Attack6_Sphere:
       - skill:Azuriter_Mob_Boss_Wedler_Attack2_Process_Tick @self
     ];
     oh=[
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack}
     ];
     oe=[
       - e:pr{r=4;pts=32;p=cloud;a=1;s=1;d=true;dir=0,1,0} @origin
@@ -48,7 +48,7 @@ Azuriter_Mob_Boss_Wedler_Attack6_Sphere:
 
       - e:p{p=explosion_huge;a=1;vs=1;hs=1} @origin
       - sound{s=block.end_portal.spawn;p=2;v=1} @origin
-      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;e=GREEN;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
+      - damage{a=<skill.var.dmg> * 0.8;pi=true;ii=true;tag=Azuriter_Core_DamageTag_Attack} @PNO{r=4}
       - potion{t=SLOW;l=2;d=100;p=false} @PNO{r=6;c=[ - hasAura{n=Azuriter_Core_Aura_StepAvoid} false ]}
     ];
     v=2;i=1;vr=2;hr=3;syo=3;sfo=3;hnp=true;c=[ - samefaction false ];

@@ -10,7 +10,7 @@ Azuriter_Admin_Mob_DamageTest:
     NoAI: true
     MaxCombatDistance: 128
   Skills:
-  - message{m="&aHealth<&co> &f<caster.mhp.toInteger>/<caster.mhp.toInteger> &cDamage<&co> <skill.var.damage-amount>"} @trigger ~onDamaged
+  - message{m="&aHealth<&co> &f<caster.mhp.toInteger>/<caster.mhp.toInteger> &cDamage<&co> <skill.var.damage-amount.toInteger>"} @trigger ~onDamaged
   - aura{
     oe=[
       - heal{a="<caster.mhp>"} @self

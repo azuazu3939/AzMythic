@@ -281,3 +281,12 @@ Azuriter_StorageBox_10:
   ItemUpdater:
     Version: 1
   Group: 'Tools'
+
+Azuriter_BuildTools:
+  Id: stick
+  Display: "&6建築ツール"
+  ItemUpdater:
+    Version: 1
+  Group: 'Tools'
+  Hide:
+  - ENCHANTS

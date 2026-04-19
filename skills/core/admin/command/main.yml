@@ -1,8 +1,0 @@
-Azuriter_Core_Command_Hub:
-  Command:
-    Id: hub
-    Completions:
-      target:
-      - players
-  Skills:
-  - cmd{c="huskhomes:warp hub <caster.name>"} @self

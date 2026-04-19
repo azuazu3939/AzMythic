@@ -13,7 +13,7 @@ Azuriter_Item_Weapon_Ranged_FireBulletBow_ShotExplode:
       - e:p{p=flame;a=4;ys=0.5;hs=0.5;s=0.75;audience=caster} @origin
     ];
     oh=[
-      - damage{a="<caster.damage> * 1.25";pi=true;ii=true;dc=PROJECTILE}
+      - damage{a="<caster.damage> + 20";pi=true;ii=true;dc=PROJECTILE}
       - modifyMana{a=15;m=give} @self
     ];
     c=[

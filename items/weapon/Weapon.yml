@@ -36,7 +36,7 @@ Azuriter_トマホーク:
   - Type: GEM
     Amount: 1
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5
 
 Azuriter_ハルバード:
   Id: iron_axe
@@ -59,7 +59,7 @@ Azuriter_ハルバード:
   - Type: GEM
     Amount: 1
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5
 
 Azuriter_マナブレード_アルファ:
   Id: diamond_sword
@@ -111,4 +111,4 @@ Azuriter_エンディアム:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5

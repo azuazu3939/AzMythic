@@ -26,7 +26,7 @@ Azuriter_カーブショットボウ:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
 
 
 Azuriter_ファイアバレットボウ:
@@ -57,7 +57,7 @@ Azuriter_ファイアバレットボウ:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
 
 Azuriter_エンピュリアボウ:
   Id: bow
@@ -85,7 +85,7 @@ Azuriter_エンピュリアボウ:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5
 
 Azuriter_Weapon_シューティングレーザー:
   Id: Enchanted_book
@@ -105,7 +105,7 @@ Azuriter_Weapon_シューティングレーザー:
   - Type: GEM
     Amount: 1to3
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5
   Skills:
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingLaser_Use} @self ~onUse
   - modifyMana{a=10;m=give;cd=0.1} @self ~onKill 
@@ -135,7 +135,7 @@ Azuriter_Weapon_シューティングレイ:
   - Type: GEM
     Amount: 1to3
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5
   Skills:
   - skill{s=Azuriter_Item_Weapon_Ranged_ShootingRay_Use} @self ~onUse
   - modifyMana{a=10;m=give;cd=0.1} @self ~onKill 
@@ -169,4 +169,4 @@ Azuriter_クロスバレットボウ:
   - Type: GEM
     Amount: 1
     Chance: 0.6
-    MaxAmount: 3
+    MaxAmount: 5

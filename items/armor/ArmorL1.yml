@@ -9,7 +9,7 @@ Azuriter_ガーディアH:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Hide:
   - ENCHANTS
   Options:
@@ -38,7 +38,7 @@ Azuriter_ガーディアC:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Unbreakable: true
   ItemUpdater:
@@ -66,7 +66,7 @@ Azuriter_ガーディアL:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Unbreakable: true
   ItemUpdater:
@@ -94,7 +94,7 @@ Azuriter_ガーディアB:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Unbreakable: true
   ItemUpdater:
@@ -122,7 +122,7 @@ Azuriter_ヘルシティアH:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,255,145
     Unbreakable: true
@@ -150,7 +150,7 @@ Azuriter_ヘルシティアC:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,255,145
     Unbreakable: true
@@ -179,7 +179,7 @@ Azuriter_ヘルシティアL:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,255,145
     Unbreakable: true
@@ -208,7 +208,7 @@ Azuriter_ヘルシティアB:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,255,145
     Unbreakable: true
@@ -237,7 +237,7 @@ Azuriter_ウィクサーH:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,172,255
     Unbreakable: true
@@ -267,7 +267,7 @@ Azuriter_ウィクサーC:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,172,255
     Unbreakable: true
@@ -298,7 +298,7 @@ Azuriter_ウィクサーL:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,172,255
     Unbreakable: true
@@ -329,7 +329,7 @@ Azuriter_ウィクサーB:
   - Type: GEM
     Amount: 1to3
     Chance: 1
-    MaxAmount: 3
+    MaxAmount: 5
   Options:
     Color: 55,172,255
     Unbreakable: true

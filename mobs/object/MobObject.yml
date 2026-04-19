@@ -113,7 +113,7 @@ Azuriter_PvEアイコン_テキスト:
 Azuriter_Lobbyアイコン_テキスト:
   Type: text_display
   DisplayOptions:
-    Text: "<aqaa><bold>Lobby"
+    Text: "<aqua><bold>Lobby"
     Opacity: 255
     DefaultBackground: false
     Alignment: CENTER
@@ -128,3 +128,4 @@ Azuriter_Lobbyアイコン_テキスト:
   Options:
     Despawn: CHUNK
   Skills:
+  - setrot{y=90} @self ~onSpawn 

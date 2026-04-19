@@ -129,3 +129,60 @@ Azuriter_Lobbyアイコン_テキスト:
     Despawn: CHUNK
   Skills:
   - setrot{y=90} @self ~onSpawn 
+
+Azuriter_資源ワールドアイコン_テキスト:
+  Type: text_display
+  DisplayOptions:
+    Text: "<green><bold>資源ワールド"
+    Opacity: 255
+    DefaultBackground: false
+    Alignment: CENTER
+    Shadowed: false
+    Transform: GROUND
+    SeeThrough: true
+    Billboard: FIXED
+    BlockLight: 15
+    Scale: 4,4,4
+    SkyLight: 15
+    ViewRange: 1.25
+  Options:
+    Despawn: CHUNK
+  Skills:
+
+Azuriter_資源ネザーアイコン_テキスト:
+  Type: text_display
+  DisplayOptions:
+    Text: "<red><bold>資源ネザー"
+    Opacity: 255
+    DefaultBackground: false
+    Alignment: CENTER
+    Shadowed: false
+    Transform: GROUND
+    SeeThrough: true
+    Billboard: FIXED
+    BlockLight: 15
+    Scale: 4,4,4
+    SkyLight: 15
+    ViewRange: 1.25
+  Options:
+    Despawn: CHUNK
+  Skills:
+
+Azuriter_資源エンドアイコン_テキスト:
+  Type: text_display
+  DisplayOptions:
+    Text: "<yellow><bold>資源エンド"
+    Opacity: 255
+    DefaultBackground: false
+    Alignment: CENTER
+    Shadowed: false
+    Transform: GROUND
+    SeeThrough: true
+    Billboard: FIXED
+    BlockLight: 15
+    Scale: 4,4,4
+    SkyLight: 15
+    ViewRange: 1.25
+  Options:
+    Despawn: CHUNK
+  Skills:

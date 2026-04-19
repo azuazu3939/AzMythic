@@ -229,8 +229,8 @@ Azuriter_Escape_Chest_1_Spawn:
   Action: ADD 
   PositionType: LAND
   Chance: 0.05
-  Cooldown: 180
-  Priority: 1
+  Cooldown: 60
+  Priority: 30
   Conditions:
   - mobsinworld{a=<2000} true 
   - containerRegion{r=Elaeste} true

@@ -1,6 +1,6 @@
 Azuriter_Core_HealthColor:
   Skills:
   - delay 10
-  - glow{c=YELLOW;t=99999999999;n=Health_Color;n=HealthColor;oc=true;rd=true} @self ?healthpercent{p=<70%}
-  - glow{c=RED;t=99999999999;n=Health_Color;n=HealthColor;oc=true;rd=true} @self ?healthpercent{p=<50%}
-  - glow{c=GREEN;t=99999999999;n=Health_Color;n=HealthColor;oc=true;rd=true} @self ?!healthpercent{p=<70%}
+  - glow{c=YELLOW;t=9999999;n=HealthColor;oc=true;rd=true} @self ?healthpercent{p=<70%}
+  - glow{c=RED;t=999999;n=HealthColor;oc=true;rd=true} @self ?healthpercent{p=<50%}
+  - glow{c=GREEN;t=9999999;n=HealthColor;oc=true;rd=true} @self ?!healthpercent{p=<70%}

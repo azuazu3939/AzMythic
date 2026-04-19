@@ -18,7 +18,7 @@ Azuriter_Item_Weapon_CrossBulletBow_Full:
   Skills:
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 1200";t=INTEGER} @self
   - setMaterialCooldown{m=CROSSBOW;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
-  - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot> / 4"} @self
+  - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot> / 8"} @self
   - setVar{k=skill.run;t=METASKILL;
     a=[ 
       - sound{s=entity.firework_rocket.blast;v=0.35;audience=caster;sc=PLAYERS} @self

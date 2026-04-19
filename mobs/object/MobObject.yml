@@ -89,6 +89,7 @@ Azuriter_PvEアイコン_斧:
   Options:
     Despawn: CHUNK
   Skills:
+  - setrot{y=180} @self ~onSpawn 
 
 Azuriter_PvEアイコン_テキスト:
   Type: text_display

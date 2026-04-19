@@ -85,7 +85,7 @@ Azuriter_エンピュリアボウ:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 5
+    MaxAmount: 3
 
 Azuriter_Weapon_シューティングレーザー:
   Id: Enchanted_book

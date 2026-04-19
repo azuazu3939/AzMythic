@@ -11,7 +11,7 @@ Azuriter_Item_Armor_ビギナーH:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
   Attributes:
@@ -34,7 +34,7 @@ Azuriter_Item_Armor_ビギナーC:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
   Attributes:
@@ -57,7 +57,7 @@ Azuriter_Item_Armor_ビギナーL:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
   Attributes:
@@ -80,7 +80,7 @@ Azuriter_Item_Armor_ビギナーB:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
   Attributes:
@@ -103,7 +103,7 @@ Azuriter_Item_Armor_トラベラーH:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 90,184,73
@@ -127,7 +127,7 @@ Azuriter_Item_Armor_トラベラーC:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 90,184,73
@@ -151,7 +151,7 @@ Azuriter_Item_Armor_トラベラーL:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 90,184,73
@@ -175,7 +175,7 @@ Azuriter_Item_Armor_トラベラーB:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 1
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 90,184,73
@@ -199,7 +199,7 @@ Azuriter_Item_Armor_ブライトH:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 255,215,70
@@ -223,7 +223,7 @@ Azuriter_Item_Armor_ブライトC:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 255,215,70
@@ -247,7 +247,7 @@ Azuriter_Item_Armor_ブライトL:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 255,215,70
@@ -271,7 +271,7 @@ Azuriter_Item_Armor_ブライトB:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 255,215,70
@@ -297,7 +297,7 @@ Azuriter_Item_Armor_ディフェンスH:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 28,30,137
@@ -323,7 +323,7 @@ Azuriter_Item_Armor_ディフェンスC:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 28,30,137
@@ -348,7 +348,7 @@ Azuriter_Item_Armor_ディフェンスL:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 28,30,137
@@ -375,7 +375,7 @@ Azuriter_Item_Armor_ディフェンスB:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 28,30,137
@@ -402,7 +402,7 @@ Azuriter_Item_Armor_アタッカーH:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 228,32,32
@@ -429,7 +429,7 @@ Azuriter_Item_Armor_アタッカーC:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 228,32,32
@@ -457,7 +457,7 @@ Azuriter_Item_Armor_アタッカーL:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 228,32,32
@@ -485,7 +485,7 @@ Azuriter_Item_Armor_アタッカーB:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
     Color: 228,32,32
@@ -513,7 +513,7 @@ Azuriter_Item_Armor_アンディスH:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
   ItemUpdater:
@@ -539,7 +539,7 @@ Azuriter_Item_Armor_アンディスC:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
   ItemUpdater:
@@ -566,7 +566,7 @@ Azuriter_Item_Armor_アンディスL:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
   ItemUpdater:
@@ -593,7 +593,7 @@ Azuriter_Item_Armor_アンディスB:
   - Type: GEM
     Amount: 1
     Chance: 1
-    MaxAmount: 2
+    MaxAmount: 3
   Options:
     Unbreakable: true
   ItemUpdater:

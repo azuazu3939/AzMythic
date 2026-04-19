@@ -154,7 +154,7 @@ Azuriter_ステップライズソード:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 5
+    MaxAmount: 3
 
 Azuriter_ステップダッシュソード:
   Id: stone_sword
@@ -180,7 +180,7 @@ Azuriter_ステップダッシュソード:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 5
+    MaxAmount: 3
 
 Azuriter_ステップヒールソード:
   Id: stone_sword
@@ -206,4 +206,4 @@ Azuriter_ステップヒールソード:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 5
+    MaxAmount: 3

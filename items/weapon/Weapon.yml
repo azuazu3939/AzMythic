@@ -101,7 +101,7 @@ Azuriter_エンディアム:
   Attributes:
     MainHand:
       Damage: 32 ADD
-      Gravity: -0.2 MULTIPLY_BASE
+      Gravity: -0.25 MULTIPLY_BASE
       AttackSpeed: 1 MULTIPLY_BASE
   Group: 'Weapon'
   Skills:
@@ -111,4 +111,4 @@ Azuriter_エンディアム:
   - Type: GEM
     Amount: 1to5
     Chance: 0.6
-    MaxAmount: 5
+    MaxAmount: 3

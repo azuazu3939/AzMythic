@@ -36,6 +36,6 @@ Azuriter_Item_Weapon_CrossBulletBow_Process:
       - e:p{p=explosion;size=0.15;a=1;audience=caster} @origin 
     ];
     oh=[
-      - damage{a="<caster.damage> + 10";pi=true;ii=true}
+      - damage{a="<caster.damage> + 25";pi=true;ii=true}
     ];
     g=0.5;tyo=1;v=32;i=2;vr=2;r=2;hp=false;hnp=true} @TL{d=24}

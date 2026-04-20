@@ -14,7 +14,7 @@ Azuriter_Core_StepAvoid_WindCombo_Loop:
       - sound{s=block.trial_spawner.ominous_activate;p=2;v=0.25;sc=PLAYERS;audience=caster} @self
     ];
     oh=[
-      - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 32";t=FLOAT} @self
+      - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> * 1.5 + 40";t=FLOAT} @self
       - setVar{k=skill.damage;a="<skill.var.damage|0> / 2";t=FLOAT} @self ?!wearing{s=HAND;i=WOODEN_SWORD}
       - damage{a="<skill.var.damage>";pi=true;ii=true}
       - sound{s=entity.zombie.attack_wooden_door;sc=PLAYERS;audience=caster}

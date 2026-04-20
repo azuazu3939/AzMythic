@@ -146,16 +146,16 @@ Azuriter_Boss_ソール_ワンダラー:
   - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 <random.2to6> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_アンガスタ 1 0.4"} @ThreatTablePlayers ~onDeath
 
-  - attribute{attr=ARMOR_TOUGHNESS;a=30} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
 
   - aura{n=Azuriter_Mob_Aura_Trial1BossClear;rd=true;t=600} @trigger ~onDamaged ?~isplayer
 
-  - attribute{attr=ARMOR;a=50} @self ~onSpawn ?!day
-  - attribute{attr=ARMOR;a=30} @self ~onSpawn ?day
+  - attribute{attr=ARMOR;a=30} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
   - potion{t=SPEED;d=200;l=0} @self ~onSpawn ?!day
 
-  - attribute{attr=ARMOR;a=50} @self ~onDamaged ?!day
-  - attribute{attr=ARMOR;a=30} @self ~onDamaged ?day
+  - attribute{attr=ARMOR;a=30} @self ~onDamaged ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onDamaged ?day
   - potion{t=SPEED;d=200;l=0} @self ~onDamaged ?!day
 
   - skill{s=Azuriter_Mob_Boss_SoulWanderer_Loop} @self ~onEntercombat
@@ -169,7 +169,7 @@ Azuriter_Boss_ブルート_ワンダラー:
   Template: Azuriter_Enemy_RaidBoss_Base_Attack
   Display: "[&d&l★&f×2] &6&lブルート・ワンダラー"
   Type: PIGLIN_BRUTE
-  Health: 5500
+  Health: 3500
   Damage: 35
   Equipment:
   - GOLDEN_AXE HAND
@@ -200,16 +200,16 @@ Azuriter_Boss_ブルート_ワンダラー:
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.01"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_アンガスタ 1 1"} @ThreatTablePlayers ~onDeath
 
-  - attribute{attr=ARMOR_TOUGHNESS;a=80} @self ~onSpawn
+  - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
 
   - aura{n=Azuriter_Mob_Aura_Trial2BossClear;rd=true;t=600} @trigger ~onDamaged ?~isplayer
 
-  - attribute{attr=ARMOR;a=50} @self ~onSpawn ?!day
-  - attribute{attr=ARMOR;a=30} @self ~onSpawn ?day
+  - attribute{attr=ARMOR;a=30} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day
   - potion{t=SPEED;d=200;l=0} @self ~onSpawn ?!day
 
-  - attribute{attr=ARMOR;a=50} @self ~onDamaged ?!day
-  - attribute{attr=ARMOR;a=30} @self ~onDamaged ?day
+  - attribute{attr=ARMOR;a=30} @self ~onDamaged ?!day
+  - attribute{attr=ARMOR;a=15} @self ~onDamaged ?day
   - potion{t=SPEED;d=200;l=0} @self ~onDamaged ?!day
 
   - skill{s=Azuriter_Mob_Boss_BruteWanderer_Loop} @self ~onEntercombat

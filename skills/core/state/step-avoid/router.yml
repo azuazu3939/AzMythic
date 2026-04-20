@@ -12,5 +12,6 @@ Azuriter_Core_StepAvoid_Router:
   - skill{s=Azuriter_Core_StepAvoid_StepDashSword} @self
   - skill{s=Azuriter_Core_StepAvoid_StepHealSword} @self
   - skill{s=Azuriter_Core_StepAvoid_WindTrace} @self
+  - skill{s=Azuriter_Core_StepAvoid_WindLead} @self
   - delay 18
   - skill{s=Azuriter_Core_StepAvoid_AuraFix} @self

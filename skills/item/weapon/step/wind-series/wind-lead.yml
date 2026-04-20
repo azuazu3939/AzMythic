@@ -17,6 +17,9 @@ Azuriter_Item_Weapon_Step_WindLead_R1_Use:
   - ondamaged{t=15;n=Azuriter_Core_Aura_StepAvoid;damagemod="ENTITY_ATTACK 0.05,CUSTOM 0.05";rd=true;
     oh=[
       - skill{s=Azuriter_Core_StepAvoid_Router} @self
+    ];
+    os=[
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
     ]} @self
 
   - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=15} @self
@@ -28,7 +31,6 @@ Azuriter_Item_Weapon_Step_WindLead_R1_Use:
     ];
     os=[
       - lunge{v=3.5;vy=0.25} @self
-      - setVar{k=skill.damageStepAvoid;a="<caster.damage> + 15";t=FLOAT} @self
       - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster} @self
     ];
     oe=[

@@ -17,19 +17,16 @@ Azuriter_Core_StepAvoid_StepRiseSword_Success:
   - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
   - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
   - e:pr{pts=12;p=explosion;a=1;audience=caster;r=5} @self
-  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
-  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players}
   - delay 2
   - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
   - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
   - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
   - e:pr{pts=12;p=explosion;a=1;audience=caster;r=7} @self
-  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
-  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players}
   - delay 2
   - sound{s=entity.generic.explode;p=1.25;v=0.4;audience=caster;sc=PLAYERS} @self
   - sound{s=block.grass.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
   - sound{s=block.gravel.break;p=0.5;v=1;audience=caster;sc=PLAYERS} @self
   - e:pr{pts=12;p=explosion;a=1;audience=caster;r=9} @self
-  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players} ?wearing{s=HAND;i=DIAMOND_SWORD}
-  - damage{a="<skill.var.damage> / 2";pi=true;ii=true} @EIR{r=12;ignore=players} ?!wearing{s=HAND;i=DIAMOND_SWORD}
+  - damage{a="<skill.var.damage>";pi=true;ii=true} @EIR{r=12;ignore=players}

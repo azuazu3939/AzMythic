@@ -28,7 +28,7 @@ Azuriter_Item_Weapon_Step_WindWalk_R1_Use:
     ];
     os=[
       - lunge{v=3.5;vy=0.25} @self
-      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage> + 5";t=FLOAT} @self
       - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster} @self
     ];
     oe=[

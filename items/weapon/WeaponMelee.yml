@@ -95,14 +95,14 @@ Azuriter_風上の導:
   Hide:
   - ENCHANTS
   Skills:
-  - skill{s=Azuriter_Item_Weapon_Step_WindTrace_R1_Use} @self ~onUse
-  - skill{s=Azuriter_Item_Weapon_Step_WindTrace_R1_Use} @self ~onInteract ?!crouching
+  - skill{s=Azuriter_Item_Weapon_Step_WindLead_R1_Use} @self ~onUse
+  - skill{s=Azuriter_Item_Weapon_Step_WindLead_R1_Use} @self ~onInteract ?!crouching
   AugmentationSlots:
   - Type: GEM
     Amount: 1
     Chance: 1
     MaxAmount: 5
-    
+
 Azuriter_ステップソード:
   Id: stone_sword
   Display: "&aステップソード"

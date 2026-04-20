@@ -1,7 +1,7 @@
-Azuriter_Item_Weapon_Step_WindTrace_R1_Use:
+Azuriter_Item_Weapon_Step_WindLead_R1_Use:
   Cooldown: 3
   Conditions:
-  - wearing{m=Azuriter_風上の軌跡;s=HAND} true
+  - wearing{m=Azuriter_風上の導;s=HAND} true
   - hasMana{m=>50;
     onFail=[
       - message{m="&cマナが足りません。"} @self
@@ -28,7 +28,7 @@ Azuriter_Item_Weapon_Step_WindTrace_R1_Use:
     ];
     os=[
       - lunge{v=3.5;vy=0.25} @self
-      - setVar{k=skill.damageStepAvoid;a="<caster.damage> + 10";t=FLOAT} @self
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage> + 15";t=FLOAT} @self
       - sound{s=entity.wither.shoot;sc=PLAYERS;audience=caster} @self
     ];
     oe=[

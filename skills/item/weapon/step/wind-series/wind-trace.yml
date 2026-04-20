@@ -19,7 +19,7 @@ Azuriter_Item_Weapon_Step_WindTrace_R1_Use:
       - skill{s=Azuriter_Core_StepAvoid_Router} @self
     ];
     os=[
-      - setVar{k=skill.damageStepAvoid;a="<caster.damage>";t=FLOAT} @self
+      - setVar{k=skill.damageStepAvoid;a="<caster.damage> + 10";t=FLOAT} @self
     ]} @self
 
   - removetag{t=Azuriter_Core_Tag_StepAvoidLock;delay=15} @self

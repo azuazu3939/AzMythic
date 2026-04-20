@@ -63,7 +63,7 @@ Azuriter_Core_StepAvoid_WindTrace:
 
 Azuriter_Core_StepAvoid_WindLead:
   Conditions:
-  - wearing{s=HAND;i=Azuriter_風上の軌跡}
+  - wearing{s=HAND;i=Azuriter_風上の導}
   Skills:
   - modifyMana{a=80;m=give} @self ?wearing{s=HAND;i=WOODEN_SWORD}
   - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}

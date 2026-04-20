@@ -229,7 +229,7 @@ Azuriter_Escape_Chest_1_Spawn:
   Action: ADD 
   PositionType: LAND
   Chance: 0.05
-  Cooldown: 60
+  Cooldown: 20
   Priority: 30
   Conditions:
   - mobsinworld{a=<2000} true 
@@ -238,8 +238,6 @@ Azuriter_Escape_Chest_1_Spawn:
   - containerRegion{r=Deny} false
   - outside true 
   - (livinginradius{a=<7;r=24} && livinginradius{a=<5;r=20} && livinginradius{a=<3;r=16}) true
-  - mobsinradius{a=<1;r=32;t=Azuriter_Escape_Chest_1} false 
-  - playerInRadius{a=<1;d=>20} true
 
 Azuriter_トライアル_1_1_Spawn:
   Type: Azuriter_トライアル_1_1

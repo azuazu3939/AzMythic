@@ -2,11 +2,11 @@ Azuriter_Core_Melee_Single_Base:
   Skills:
   - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster} @self
   - signal{s=delete_object}
-  - damage{a="<skill.var.dmg> * 1.2";pi=true;ii=true}
+  - damage{a="<skill.var.dmg> * 1.2";pi=true;ii=true;e=RED}
 
 Azuriter_Core_Melee_Single_Full:
   Skills:
-  - damage{a="<skill.var.dmg> * 1.2";pi=true;ii=true}
+  - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true;e=RED}
   - signal{s=delete_object}
   - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
   - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self

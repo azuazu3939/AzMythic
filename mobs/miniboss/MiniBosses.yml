@@ -52,6 +52,7 @@ Azuriter_Mob_Fedos:
   - potion{t=STRENGTH;l=0;d=9999999;p=false;or=true} @self ~onDamaged =55%
 
   - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0001"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ピジャークリスタル 1 0.5"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.15"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_城壁の守護石 1 0.05"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_獣の大骨 1 1"} @ThreatTablePlayers ~onDeath

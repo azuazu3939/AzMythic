@@ -6,7 +6,7 @@ Azuriter_Item_Weapon_Ranged_CurveShotBow_Use:
   Skills:
   - setVar{k=skill.Azuriter_Item_Var_RangedShot;a="1 / ((<az.attack_speed.double> - 4) * 0.1 + 1) * 16";t=INTEGER} @self
   - setMaterialCooldown{m=BOW;d="<skill.var.Azuriter_Item_Var_RangedShot>"} @self
-  - setVar{k=skill.damage;a="<caster.damage> * 0.3";t=FLOAT} @self
+  - setVar{k=skill.damage;a="<caster.damage> * 0.4";t=FLOAT} @self
   - delay 2
   - skill{s=Azuriter_Item_Weapon_Ranged_CurveShotBow_Shot;repeat=3;repeati=0} @self
   - delay 2

@@ -135,8 +135,8 @@ Azuriter_Mob_Pidger:
   - cmd{c="mlg <target.name> Azuriter_CombatGift_G1 1 0.75"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_バラケタ装備片 <random.1to4> 1"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_鉄片 <random.1to2> 1"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ピジャーの皮 1 0.7"} @ThreatTablePlayers ~onDeath
-  - cmd{c="mlg <target.name> Azuriter_ピジャークリスタル 1 0.07"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ピジャーの皮 1 0.6"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ピジャークリスタル 1 0.2"} @ThreatTablePlayers ~onDeath
   - attribute{attr=ARMOR_TOUGHNESS;a=15} @self ~onSpawn
   - attribute{attr=ARMOR;a=25} @self ~onSpawn ?!day
   - attribute{attr=ARMOR;a=15} @self ~onSpawn ?day

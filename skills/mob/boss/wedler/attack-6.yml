@@ -8,11 +8,14 @@ Azuriter_Mob_Boss_Wedler_Attack6:
   Skills:
   - addtag{t=Azuriter_Core_Tag_AttackBusy} @self
   - delay 20
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Wedler_Attack6_Sphere}
+  - wait{c=[ - onground true ];tt=300} @self
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack6_Sphere} @self
   - delay 32
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Wedler_Attack6_Sphere}
+  - wait{c=[ - onground true ];tt=300} @self
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack6_Sphere} @self
   - delay 48
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Wedler_Attack6_Sphere}
+  - wait{c=[ - onground true ];tt=300} @self
+  - skill{s=Azuriter_Mob_Boss_Wedler_Attack6_Sphere} @self
   - delay 16
   - clearpotion{t=INVISIBILITY} @self
   - removeTag{t=Azuriter_Core_Tag_AttackBusy} @self

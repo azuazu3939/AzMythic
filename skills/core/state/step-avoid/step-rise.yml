@@ -3,7 +3,8 @@ Azuriter_Core_StepAvoid_StepRiseSword:
   - wearing{s=HAND;i=Azuriter_ステップライズソード}
   Skills:
   - setVar{k=skill.damage;a="<skill.var.damageStepAvoid|0> + 225";t=FLOAT} @self
-  - skill{s=Azuriter_Core_Trigger_OnGround;s_name=Azuriter_Core_StepAvoid_StepRiseSword_Success} @self
+  - wait{c=[ - onground true ];tt=300} @self
+  - skill{s=Azuriter_Core_StepAvoid_StepRiseSword_Success} @self
   - modifyMana{a=50;m=give} @self ?wearing{s=HAND;i=DIAMOND_SWORD}
   - sound{s=block.note_block.chime;p=1.68;audience=caster;sc=PLAYERS}
   - sound{s=block.note_block.chime;p=1.26;delay=2;audience=caster;sc=PLAYERS}

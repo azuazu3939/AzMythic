@@ -12,7 +12,8 @@ Azuriter_Mob_Boss_Glacies_Attack5:
   - delay 10
   - jump{v=1.05} @self
   - delay 2
-  - skill:Azuriter_Core_Trigger_OnGround{s_name=Azuriter_Mob_Boss_Glacies_Attack5_OnGround;s_repeat_i=2;s_repeat=18} @self
+  - wait{c=[ - onground true ];tt=300} @self
+  - skill{s=Azuriter_Mob_Boss_Glacies_Attack5_OnGround;repeat=18;repeati=2} @self
   - delay 70
   - removetag{t=Azuriter_Core_Tag_AttackBusy} @self
 

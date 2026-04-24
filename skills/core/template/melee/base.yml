@@ -10,7 +10,7 @@ Azuriter_Core_Melee_Single_Full:
   Conditions:
   - targets{a=>0} true
   Skills:
-  - damage{a="<skill.var.dmg> * 1.25";pi=true;ii=true}
+  - damage{a="<skill.var.dmg> * 1.5";pi=true;ii=true}
   - signal{s=delete_object}
   - sound{s=entity.player.attack.sweep;sc=PLAYERS;audience=caster;p=0.6} @self
   - sound{s=entity.player.attack.knockback;sc=PLAYERS;audience=caster;p=0.5;delay=1} @self

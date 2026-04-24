@@ -132,7 +132,7 @@ Azuriter_Boss_ソール_ワンダラー:
     Despawn: CHUNK
     Silent: true
   Skills:
-  - tracklocation @casterSpawnLocation  ~onSpawn
+  - tracklocation @casterSpawnLocation ~onSpawn
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=100;shield_break=3500;heal_percent=0.01} @self ~onEntercombat
 
   - attribute{attr=GRAVITY;a=5} @self ~onSpawn
@@ -189,7 +189,7 @@ Azuriter_Boss_ブルート_ワンダラー:
     Despawn: CHUNK
     Silent: false
   Skills:
-  - tracklocation @casterSpawnLocation  ~onSpawn
+  - tracklocation @casterSpawnLocation ~onSpawn
   - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=100;shield_break=3250;heal_percent=0.01} @self ~onEntercombat
 
   - attribute{attr=FOLLOW_RANGE;a=48} @self ~onEnterCombat
@@ -216,3 +216,76 @@ Azuriter_Boss_ブルート_ワンダラー:
   - signal{s=trial_drop_2_2;cd=2} @parent ~onDeath
 
   - classexp{a=<random.150to200>} @TTP ~onDeath
+
+Azuriter_Boss_シープ_ワンダラー:
+  Template: Azuriter_Enemy_RaidBoss_Base_Attack
+  Display: "[&d&l★&f×3] &a&lシープ・ワンダラー"
+  Health: 8500
+  Damage: 37
+  DamageModifiers:
+  - FALL 0
+  Packet:
+    Mode: disguise
+    Disguise:
+      Kind: ENTITY
+      EntityType: SHEEP
+    Transform:
+      Translation: 0,0,0
+      Scale: 3.0,1.0,1.0
+    Living:
+      Baby: false
+      Silent: true
+      Glowing: false
+      Invulnerable: false
+      Gravity: true
+      Pose: STANDING
+      HealthDisplay: false
+    Combat:
+      HurtTint: true
+      KnockbackProfile: default
+      HeadTrack: true
+      HitboxScale: 2.5,2.5,2.5
+  Drops:
+  - money 40to80 1
+  AITargetSelectors:
+  - clear
+  - nearestIf{c=[ - hasAura{n=Azuriter_Core_Aura_NoCombat} false - samefaction false ]}
+  Options:
+    MaxCombatDistance: 32
+    FollowRange: 4
+    KnockbackResistance: 1
+    MovementSpeed: 0.275
+    Scale: 1.5
+    Despawn: CHUNK
+    Silent: true
+  Skills:
+  - tracklocation @casterSpawnLocation ~onSpawn
+  - skill:Azuriter_Core_Enemy_EnterCombat{down_tick=120;shield_break=3250;heal_percent=0.025} @self ~onEntercombat
+
+  - attribute{attr=FOLLOW_RANGE;a=48} @self ~onEnterCombat
+  - attribute{attr=FOLLOW_RANGE;a=4} @self ~onDropcombat
+
+  - cmd{c="mlg <target.name> Azuriter_パラライズワールド 1 0.0002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ハイステップソード 1 0.0002"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.01"} @ThreatTablePlayers ~onDeath
+  - cmd{c="mlg <target.name> Azuriter_アンガスタ <random.1to2> 1"} @ThreatTablePlayers ~onDeath
+
+  - attribute{attr=ARMOR_TOUGHNESS;a=20} @self ~onSpawn
+
+  - aura{n=Azuriter_Mob_Aura_Trial2BossClear;rd=true;t=600} @trigger ~onDamaged ?~isplayer
+
+  - attribute{attr=ARMOR;a=35} @self ~onSpawn ?!day
+  - attribute{attr=ARMOR;a=20} @self ~onSpawn ?day
+  - potion{t=SPEED;d=200;l=0} @self ~onSpawn ?!day
+
+  - attribute{attr=ARMOR;a=35} @self ~onDamaged ?!day
+  - attribute{attr=ARMOR;a=20} @self ~onDamaged ?day
+  - potion{t=SPEED;d=200;l=0} @self ~onDamaged ?!day
+
+  #- skill{s=Azuriter_Mob_Boss_BruteWanderer_Loop} @self ~onEntercombat
+  - signal{s=trial_drop_3_2;cd=2} @parent ~onDeath
+
+  - classexp{a=<random.150to200>} @TTP ~onDeath
+
+  - sound{s=entity.sheep.hurt;cd=0.5;sc=PLAYERS;p=0.5} @self ~onDamaged 
+  - sound{s=entity.sheep.death;sc=PLAYERS;p=0.5} @self ~onDeath 

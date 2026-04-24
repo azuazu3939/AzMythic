@@ -20,7 +20,7 @@ Azuriter_Core_StepAvoid_WindCombo_Loop:
     ];
     conditions=[
       - isLiving true
-    ]} @EIR{r=24;limit=5;sort=RANDOM}
+    ]} @EIR{r=24;limit=5;sort=RANDOM;ignore=players}
 
 Azuriter_Core_StepAvoid_WindPath:
   Conditions:

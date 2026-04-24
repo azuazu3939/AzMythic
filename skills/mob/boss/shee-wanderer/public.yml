@@ -1,0 +1,7 @@
+Azuriter_Mob_Boss_SheepWanderer_Loop:
+  Cooldown: 1
+  Conditions:
+  - incombat true 
+  Skills:
+  - delay <random.160to240>
+  - skill{s=Azuriter_Mob_Boss_SheepWanderer_Loop} @self

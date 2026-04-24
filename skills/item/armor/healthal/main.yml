@@ -9,6 +9,9 @@ Azuriter_Item_Armor_Healthtia_Full_Combat:
   Skills:
   - sound{s=block.brewing_stand.brew;audience=caster;sc=AMBIENT;v=0.5} @PIR{r=32}
   - heal{a=10} @PIR{r=32}
-  - potion{t=STRENGTH;l=0;d=600;p=false} @PIR{r=32}
-  - potion{t=STRENGTH;l=0;d=600;p=false} @self
+  - aura{auraName=Healthtia_Full_Combat;d=600;components=[
+    - stat{stat=CRITICAL_STRIKE_DAMAGE;type=ADDITIVE;val=0.1} 
+    - stat{stat=ATTACK_DAMAGE;type=ADDITIVE;val=5} 
+    ]} @PIR{r=32;target=self,players}
+
   - potion{t=HASTE;l=0;d=600;p=false} @self 

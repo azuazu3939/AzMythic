@@ -347,34 +347,6 @@ Azuriter_トライアラン勲章:
   - ENCHANTS
   Group: 'Material'
 
-
-Azuriter_包装されたバックパック1:
-  Id: paper
-  Display: "&f包装されたバックパック"
-  Lore:
-  - "&f未使用のベーシックバックパックを包装したもの。"
-  ItemUpdater:
-    Version: 2
-  Options:
-    Glint: true
-  Hide:
-  - ENCHANTS
-  Group: 'Material'
-
-Azuriter_包装されたバックパック2:
-  Id: paper
-  Display: "&f包装されたバックパック"
-  Lore:
-  - "&f未使用のゴールデンバックパックを包装したもの。"
-  ItemUpdater:
-    Version: 2
-  Options:
-    Glint: true
-  Hide:
-  - ENCHANTS
-  Group: 'Material'
-
-
 ### 敵視
 
 Azuriter_アンガスタ:

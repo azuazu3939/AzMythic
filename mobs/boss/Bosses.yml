@@ -105,7 +105,7 @@ Azuriter_Boss_Wedler:
   Armor: 15
   Damage: 50
   Drops:
-  - money 30to50 1
+  - money 1000to1500 1
   Options:
     Variant: black
     Silent: true
@@ -182,7 +182,7 @@ Azuriter_Boss_Wedler:
   - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
+  - azmoneygive{amount="1000";reason=boss_reward;label="&fボス討伐報酬"} @ThreatTablePlayers ~onDeath
 
   - skill{s=Azuriter_Mob_Boss_Wedler_Attack1} @self ~onSignal:raid_boss_skill1
   - skill{s=Azuriter_Mob_Boss_Wedler_Attack2} @self ~onSignal:raid_boss_skill2
@@ -208,7 +208,7 @@ Azuriter_Boss_Basamos:
   Armor: 15
   Damage: 50
   Drops:
-  - money 30to50 1
+  - money 1000to1500 1
   Packet:
     Mode: disguise
     Disguise:
@@ -303,7 +303,7 @@ Azuriter_Boss_Basamos:
   - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - currencygive{amount=1000}  @ThreatTablePlayers ~onDeath
+  - azmoneygive{amount="1000";reason=boss_reward;label="&fボス討伐報酬"} @ThreatTablePlayers ~onDeath
 
   - cmd{c="mlg <target.name> Azuriter_ArmorGift_G1 1 0.05"} @ThreatTablePlayers ~onDeath
 
@@ -328,7 +328,7 @@ Azuriter_Boss_Glacies:
   Armor: 15
   Damage: 50
   Drops:
-  - money 30to50 1
+  - money 1000to1500 1
   Options:
     Silent: true
     Scale: 3.1
@@ -400,7 +400,7 @@ Azuriter_Boss_Glacies:
   - cmd{c="mlg <target.name> Azuriter_Augment_戦棍のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_速攻のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
   - cmd{c="mlg <target.name> Azuriter_Augment_魔力のジェム_1 1 0.02"} @ThreatTablePlayers ~onDeath
-  - currencygive{amount=1000} @ThreatTablePlayers ~onDeath
+  - azmoneygive{amount="1000";reason=boss_reward;label="&fボス討伐報酬"} @ThreatTablePlayers ~onDeath
 
   - skill{s=Azuriter_Mob_Boss_Glacies_Attack1} @self ~onSignal:raid_boss_skill1
   - skill{s=Azuriter_Mob_Boss_Glacies_Attack2} @self ~onSignal:raid_boss_skill2

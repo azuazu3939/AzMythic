@@ -46,4 +46,4 @@ Azuriter_Core_Gift_Armor_G2_BulkUse:
   - skill{s=Azuriter_Core_Gift_Armor_G2_Loot;repeat="<skill.var.repeatA> - 1";repeati=1} @self
 
   - setVar{k=skill.msg;a="1500 * <skill.var.repeatA>";t=INTEGER} @self
-  - currencygive{amount="<skill.var.msg>"} @self
+  - azmoneygive{amount="<skill.var.msg>";reason=armor_gift;label="&fアーマーGift"} @self

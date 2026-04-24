@@ -4,7 +4,7 @@ Azuriter_トライアル_5_Drop1:
   - world{w=<caster.l.w>} true
   Skills:
   - message{m="&a「マスターゾンビ討伐戦」をクリアした!!"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
-  - currencygive{amount=1000} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
+  - azmoneygive{amount="1000";reason=trial_reward;label="&fトライアル報酬"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
   - cmd{c="mlg <target.name> Azuriter_お肉 <random.1to2> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
   - cmd{c="mlg <target.name> Azuriter_ウルフード 1 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}
   - cmd{c="mlg <target.name> Azuriter_トライアラン勲章 <random.8to12> 1"} @PIR{r=40;c=[ - hasAura{n=Azuriter_Mob_Aura_Trial5Clear} true ]}

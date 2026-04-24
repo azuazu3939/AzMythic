@@ -7,7 +7,7 @@ Azuriter_Core_Gift_Money_G1_Use:
   - sound{s=block.note_block.pling;p=2;sc=PLAYERS;audience=caster} @self
   - sound{s=entity.firework_rocket.blast;sc=PLAYERS;audience=caster} @self
   - setVar{k=skill.gift;a="100 + <random.0to100>";t=INTEGER} @self
-  - currencygive{amount=<skill.var.gift|0>} @self
+  - azmoneygive{amount="<skill.var.gift|0>";reason=money_gift;label="&fお金Gift"} @self
 
 Azuriter_Core_Gift_Money_G1_BulkUse:
   Cooldown: 4
@@ -24,4 +24,4 @@ Azuriter_Core_Gift_Money_G1_BulkUse:
 Azuriter_Core_Gift_Money_G1_Loot:
   Skills:
   - setVar{k=skill.gift;a="100 + <random.0to100>";t=INTEGER} @self
-  - currencygive{amount=<skill.var.gift|0>} @self
+  - azmoneygive{amount="<skill.var.gift|0>";reason=money_gift;label="&fお金Gift"} @self

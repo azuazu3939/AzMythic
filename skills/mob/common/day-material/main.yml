@@ -1,7 +1,7 @@
 Azuriter_DayMaterial_Day:
   Cooldown: 1
   Conditions:
-  - day true
+  - night true 
   Skills:
   - glow{t=1200;i=20;color=DARK_PURPLE;buffname=Azuriter_Mob_Aura_DayMaterialDay} @self
   - skill{s=Azuriter_DayMaterial_Buff} @self
